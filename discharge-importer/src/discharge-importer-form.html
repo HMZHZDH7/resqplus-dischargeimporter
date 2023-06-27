@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Discharge importer</title>
+        <script src="../build/discharge-importer-form.js"></script>
+        <link rel="stylesheet" href="css/discharge-importer-form.css">
+    </head>
+    <body>
+        <div class="application">
+            <div>
+
+            </div>
+            <div class="content">
+                <div class="body">
+                    <div class="note">
+                        <div class="note-body">
+                            <div class="note-body-padding">
+                                <div class="note-template">
+                                    <div class="note-editor">
+                                        <textarea rows="5" id="note-editor-textarea" placeholder="Enter text here ..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-element">
+                        <div class="form-body">
+                            <div class="form-body-padding">
+                                <div class="form-field">
+                                    <form class="form">
+
+                                        <div class="title">
+                                            <span>
+                                                Admission data
+                                            </span>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="input-item item">
+                                                <input class="form-input" type="number" name="age-at-admission" id="age" pattern="\w{1,}" required />
+                                                <label class="input-label" for="age">AGE AT ADMISSION</label>
+                                            </div>
+
+                                            <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        SEX
+                                                    </span>
+                                                </div>
+                                                <div class="select" id="sexDiv">
+                                                    <select id="sex" class="selection" required>
+                                                        <option value="" disabled selected hidden>Select the Sex of the patient</option>
+                                                        <option value="1">Female</option>
+                                                        <option value="2">Male</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        WAKEUP STROKE
+                                                    </span>
+                                                </div>
+                                                <div class="div-button-form div-button-form-switch">
+                                                    <label>
+                                                        <input type="radio" name="radioWakeUpStroke" id="wakeUpStrokeCheck"/>
+                                                        <span class="switch-button">YES</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="radioWakeUpStroke" id="wakeUpStrokeUnCheck" checked/>
+                                                        <span class="switch-button-2">NO</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="input-item" id="wakeUpDiv" style="display: none">
+                                                    <input class="form-input" type="time" name="wakeUpDate" id="wakeUpDate" pattern="\w{1,}" required />
+                                                    <label class="input-label" for="wakeUpDate">TIME WHEN PATIENT WENT TO BED</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        STROKE WHILE ALREADY HOSPITALIZED
+                                                    </span>
+                                                </div>
+                                                <div class="div-button-form div-button-form-switch">
+                                                    <label>
+                                                        <input type="radio" name="radioStroke" id="StrokeCheck"/>
+                                                        <span class="switch-button">YES</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="radioStroke" id="StrokeUnCheck" checked/>
+                                                        <span class="switch-button-2">NO</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div style="display: none" id="strokeDiv">
+                                                    <div class="title-header">
+                                                        <span>
+                                                            WHERE WAS THE PATIENT FIRST ATTENDED TO AT YOUR HOSPITAL?
+                                                        </span>
+                                                    </div>
+                                                    <div class="select">
+                                                        <select class="selection" required id="firstAttented">
+                                                            <option value="" disabled selected hidden>Select an option</option>
+                                                            <option value="1">Direct to CT/MR imaging suite</option>
+                                                            <option value="2">Emergency department/Casualty</option>
+                                                            <option value="3">Outpatient clinic/facility</option>
+                                                            <option value="4">Other department</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="input-item item">
+                                                <input class="form-input" type="date" name="arrivalDate" id="arrivalDate" pattern="\w{1,}" required />
+                                                <label class="input-label" for="arrivalDate">ARRIVAL DATE TO HOSPITAL</label>
+                                            </div>
+                                            <div class="input-item item">
+                                                <input class="form-input" type="time" name="arrivalTime" id="arrivalTime" pattern="\w{1,}" required />
+                                                <label class="input-label" for="arrivalTime">ARRIVAL TIME TO HOSPITAL</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        PATIENT ARRIVED TO YOUR HOSPITAL FROM?
+                                                    </span>
+                                                </div>
+                                                <div class="select">
+                                                    <select class="selection" required id="arrivedFrom">
+                                                        <option value="" disabled selected hidden>Select an option</option>
+                                                        <option value="1">From home/scene by EMS/ambulance</option>
+                                                        <option value="2">From home/scene by private transportation</option>
+                                                        <option value="3">From another hospital</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        THE PATIENT HOSPITALIZED IN (DAY 1)
+                                                    </span>
+                                                </div>
+                                                <div class="select">
+                                                    <select class="selection" required id="hospitalizedIn">
+                                                        <option value="" disabled selected hidden>Select an option</option>
+                                                        <option value="1">ICU / Stroke unit</option>
+                                                        <option value="2">Other monitored bed with telemetry</option>
+                                                        <option value="3">Standard bed</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        PATIENT ADMITTED UNDER WHICH DEPARTMENT?
+                                                    </span>
+                                                </div>
+                                                <div class="select">
+                                                    <select class="selection" required id="department">
+                                                        <option value="" disabled selected hidden>Select an option</option>
+                                                        <option value="1">Neurology</option>
+                                                        <option value="2">Neurosurgery</option>
+                                                        <option value="3">Critical care</option>
+                                                        <option value="4">Internal medicine</option>
+                                                        <option value="5">Other</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="title">
+                                            <span>
+                                                Hospitalization data
+                                            </span>
+                                        </div>
+
+                                        <div class="form-row" style="align-items: start">
+                                            <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        IS PATIENT'S PREVIOUS MEDICAL HISTORY KNOWN?
+                                                    </span>
+                                                </div>
+                                                <div class="div-button-form" id="radioMedicalHistory" style="border-radius: unset;">
+                                                    <label>
+                                                        <input type="radio" name="radioMedicalHistory" value="yes" id="radioMedicalHistoryYes"/>
+                                                        <span>YES</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="radioMedicalHistory" value="none" id="radioMedicalHistoryNone"/>
+                                                        <span>None of below</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="radioMedicalHistory" value="unknown" checked id="radioMedicalHistoryUnknown"/>
+                                                        <span>Unknown</span>
+                                                    </label>
+                                                </div>
+                                                <div class="div-button-form" id="checkBoxMedicalHistory" style="display: none;">
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryHypertension"/>
+                                                        <span class="checkbox">Hypertension (ICD-10: I10-I15)</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryDiabetes"/>
+                                                        <span class="checkbox">Diabetes (ICD-10: E10-E14)</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryHyperlipidemia"/>
+                                                        <span class="checkbox">Hyperlypidemia (ICD-10: E78)</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryActiveSmoker"/>
+                                                        <span class="checkbox">Active smoker in last 10 years (ICD-10: Z72.0)</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryPreviousIschemic"/>
+                                                        <span class="checkbox">Previous ischemic stroke/TIA leading to hospitalization (ICD-10: I63, G45)</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryPreviousHemorrhage"/>
+                                                        <span class="checkbox">Previous hemorrhage stroke leading to hospitalization (ICD-10: I60, I61)</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryAtrialFibrillation"/>
+                                                        <span class="checkbox">Atrial fibrillation or flutter (paroxysmal/persistent/permanent) (ICD-10: I48)</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryCoronaryArtery"/>
+                                                        <span class="checkbox">Coronary artery disease/previous myocardial infarction (ICD-10: I21, I25)</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryCongestiveHeartFailure"/>
+                                                        <span class="checkbox">Congestive heart failure (ICD-10: I50.0)</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryHIV"/>
+                                                        <span class="checkbox">HIV (ICD-10: B20-B24)</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryCOVIDPositive"/>
+                                                        <span class="checkbox">COVID positive in last 6 months (ICD-10: U07.1, U08, U09)</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        ANY KNOWN TREATMENT BEFORE ADMISSION/EVENT?
+                                                    </span>
+                                                </div>
+                                                <div class="div-button-form" id="radioTreatment" style="border-radius: unset;">
+                                                    <label>
+                                                        <input type="radio" name="radioTreatment" value="yes" id="radioTreatmentYes"/>
+                                                        <span>YES</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="radioTreatment" value="none" id="radioTreatmentNone"/>
+                                                        <span>None of below</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="radioTreatment" value="unknown" checked id="radioTreatmentUnknown"/>
+                                                        <span>Unknown</span>
+                                                    </label>
+                                                </div>
+                                                <div class="div-button-form" id="checkBoxTreatment" style="display: none;">
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxTreatment" id="checkBoxTreatmentAntidiabetics"/>
+                                                        <span class="checkbox">Antidiabetics (ATC: A10)</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxTreatment" id="checkBoxTreatmentAntihypertensives"/>
+                                                        <span class="checkbox">Antihypertensives (ATC: C02)</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxTreatment" id="checkBoxTreatmentAntiplatelets"/>
+                                                        <span class="checkbox">Antiplatelets (ATC: B01AC)</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxTreatment" id="checkBoxTreatmentAnticoagulants"/>
+                                                        <span class="checkbox">Anticoagulants (ATC: B01AA, B01AB, B01AE, B01AF)</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxTreatment" id="checkBoxTreatmentHormonalContraception"/>
+                                                        <span class="checkbox">Hormonal contraception (ATC: G03A)</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxTreatment" id="checkBoxTreatmentStatin"/>
+                                                        <span class="checkbox">Statin (ATC: C10AA)</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="input-item item">
+                                                <input style="padding-left: 40px" class="form-input" type="number" name="glucose" id="glucose" pattern="\w{1,}" />
+                                                <label style="padding-left: 30px" class="input-label" for="glucose">GLUCOSE (FIRST MEASUREMENT IN HOSP.)</label>
+                                                <button class="input-button" id="nullButtonGlucose">
+                                                    <img src="../assets/cancel.svg" alt="Set to null"/>
+                                                </button>
+                                            </div>
+                                            <div class="input-item item">
+                                                <input style="padding-left: 40px" class="form-input" type="number" name="cholesterol" id="cholesterol" pattern="\w{1,}" />
+                                                <label style="padding-left: 30px" class="input-label" for="cholesterol">LDL CHOLESTEROL (FIRST MEASUREMENT IN HOSP.)</label>
+                                                <button class="input-button" id="nullButtonCholesterol">
+                                                    <img src="../assets/cancel.svg" alt="Set to null"/>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="input-item item">
+                                                <input class="form-input" type="number" name="systolic" id="systolic" pattern="\w{1,}" required />
+                                                <label class="input-label" for="systolic">SYSTOLIC BLOOD PRESSURE (FIRST MEASUREMENT IN HOSP. IN MMHG)</label>
+                                            </div>
+                                            <div class="input-item item">
+                                                <input class="form-input" type="number" name="diastolic" id="diastolic" pattern="\w{1,}" required />
+                                                <label class="input-label" for="diastolic">DIASTOLIC BLOOD PRESSURE (FIRST MEASUREMENT IN HOSP. IN MMHG)</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="input-item item">
+                                                <input style="padding-left: 40px" class="form-input" type="number" name="nihss" id="nihss" pattern="\w{1,}" />
+                                                <label style="padding-left: 30px" class="input-label" for="nihss">NIHSS SCORE</label>
+                                                <button class="input-button" id="nullButtonNihss">
+                                                    <img src="../assets/cancel.svg" alt="Set to null"/>
+                                                </button>
+                                            </div>
+                                            <div class="input-item item">
+                                                <input style="padding-left: 40px" class="form-input" type="number" name="mrs" id="mrs" pattern="\w{1,}" />
+                                                <label style="padding-left: 30px" class="input-label" for="mrs">MODIFIED RANKING SCALE (MRS) BEFORE STROKE</label>
+                                                <button class="input-button" id="nullButtonMrs">
+                                                    <img src="../assets/cancel.svg" alt="Set to null"/>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        FIRST INR TESTING DONE?
+                                                    </span>
+                                                </div>
+                                                <div class="select">
+                                                    <select class="selection" required id="firstInrTesting">
+                                                        <option value="" disabled selected hidden>Select an option</option>
+                                                        <option value="1">Yes with point of care device</option>
+                                                        <option value="2">Yes sample sent to lab</option>
+                                                        <option value="3">Not done</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="input-item item">
+                                                <input class="form-input" type="number" name="coma" id="coma" pattern="\w{1,}" required />
+                                                <label class="input-label" for="coma">GLASGOW COMA SCALE (GCS)</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="title">
+                                            <span>
+                                                Imaging, diagnosis and treatment
+                                            </span>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        BRAIN IMAGING
+                                                    </span>
+                                                </div>
+                                                <div class="select">
+                                                    <select class="selection" required style="width: 80%" onchange="toggleSubDiv(this.value)" id="brainImaging">
+                                                        <option value="" disabled selected hidden>Select an option</option>
+                                                        <option value="1">Non-contrast CT (SCTID: 396205005)</option>
+                                                        <option value="2">Non-contrast CT (SCTID: 396205005) + CT angiography (SCTID: 418272005)</option>
+                                                        <option value="3">Non-contrast CT (SCTID: 396205005) + CT angiography (SCTID: 418272005) + CT perfusion (SCTID: 433111008)</option>
+                                                        <option value="4">MR DWI/FLAIR</option>
+                                                        <option value="5">MR DWI/FLAIR + MR angiography</option>
+                                                        <option value="6">MR DWI/FLAIR + angiography + MR perfusion</option>
+                                                        <option value="7">Imaging done in another hospital</option>
+                                                        <option value="8">Imaging not done</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="input-item" id="imagingDiv">
+                                                    <input class="form-input" type="date" name="imagingDate" id="imagingDate" pattern="\w{1,}" required />
+                                                    <label class="input-label" for="imagingDate">IMAGING DONE AT WHAT TIME?</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="infarctsDiv">
+                                            <div class="title-header">
+                                                <span>
+                                                    OLD INFARCTS SEEN ON THE IMAGING?
+                                                </span>
+                                            </div>
+                                            <div class="div-button-form" id="radioInfarcts" style="border-radius: unset;">
+                                                <label>
+                                                    <input type="radio" name="radioInfarcts" value="yes" id="infarctsYes"/>
+                                                    <span>YES</span>
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="radioInfarcts" value="no" id="infarctsNo" checked/>
+                                                    <span>No</span>
+                                                </label>
+                                            </div>
+                                            <div class="div-button-form" id="checkBoxInfarcts" style="display: none;">
+                                                <label>
+                                                    <input type="checkbox" name="checkBoxInfarcts" id="checkBoxInfarctsCortical"/>
+                                                    <span class="checkbox">Cortical</span>
+                                                </label>
+                                                <label>
+                                                    <input type="checkbox" name="checkBoxInfarcts" id="checkBoxInfarctsSubCortical"/>
+                                                    <span class="checkbox">Subcortical (basal ganglia, internal capsule)</span>
+                                                </label>
+                                                <label>
+                                                    <input type="checkbox" name="checkBoxInfarcts" id="checkBoxBrainstem"/>
+                                                    <span class="checkbox">Brainstem</span>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        STROKE TYPE
+                                                    </span>
+                                                </div>
+                                                <div class="select">
+                                                    <select class="selection" required onchange="toggleDivImaging(this.value)" id="strokeType">
+                                                        <option value="" disabled selected hidden>Select an option</option>
+                                                        <option value="1">Ischemic stroke (ICD-10: 163 except 163.6)</option>
+                                                        <option value="2">Intracerebral hemorrhage (ICD-10: 161)</option>
+                                                        <option value="3">Transient Ischemic Attack (ICD-10: G45)</option>
+                                                        <option value="4">Subarachnoid hemorrhage (ICD-10: 160)</option>
+                                                        <option value="5">Cerebral venous thrombosis (ICD-10: 163.6)</option>
+                                                        <option value="6">Stroke mimics</option>
+                                                        <option value="7">Undetermined</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+
+                                            </div>
+                                        </div>
+
+                                        <div class="toggle-div" id="imagingDiv1" style="display: none;">
+                                            <div class="form-row">
+                                                <div class="input-item item">
+                                                    <input class="form-input" type="number" name="aspectScore" id="aspectScore" pattern="\w{1,}" required />
+                                                    <label class="input-label" for="aspectScore">Aspects Score</label>
+                                                </div>
+                                                <div class="item">
+
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div id="imagingSubDiv" style="width: 100%">
+                                                    <div class="title-header">
+                                                        <span>
+                                                            WAS ARTERIAL OCCLUSION DETECTED ON CTA/MRA?
+                                                        </span>
+                                                    </div>
+                                                    <div class="div-button-form" id="radioArterial" style="border-radius: unset;">
+                                                        <label>
+                                                            <input type="radio" name="radioArterial" value="yes" id="radioArterialYes" />
+                                                            <span>YES</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="radioArterial" value="no" checked id="radioArterialNo" />
+                                                            <span>No</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="div-button-form" id="checkBoxArterial" style="display: none; flex-direction: row; flex-wrap: wrap;">
+                                                        <label style="flex: 50%">
+                                                            <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialMCA1Left" />
+                                                            <span class="checkbox">MCA M1 - Middle cerebral artery M1 (LEFT)</span>
+                                                        </label>
+                                                        <label style="flex: 50%">
+                                                            <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialMCA2Left" />
+                                                            <span class="checkbox">MCA M2 - Middle cerebral artery M2 (LEFT)</span>
+                                                        </label>
+                                                        <label style="flex: 50%">
+                                                            <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialMCA3Left" />
+                                                            <span class="checkbox">MCA M3 - Middle cerebral artery M3 (LEFT)</span>
+                                                        </label>
+                                                        <label style="flex: 50%">
+                                                            <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialACA" />
+                                                            <span class="checkbox">Anterior cerebral artery (LEFT)</span>
+                                                        </label>
+                                                        <label style="flex: 50%">
+                                                            <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialPCA1Left" />
+                                                            <span class="checkbox">PCA P1 - Posterior cerebral artery P1 (LEFT)</span>
+                                                        </label>
+                                                        <label style="flex: 50%">
+                                                            <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialPCA2Left" />
+                                                            <span class="checkbox">PCA P2 Posterior cerebral artery P2 (LEFT)</span>
+                                                        </label>
+                                                        <label style="flex: 50%">
+                                                            <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialCEALeft" />
+                                                            <span class="checkbox">Carotid artery extracranial (LEFT)</span>
+                                                        </label>
+                                                        <label style="flex: 50%">
+                                                            <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialCIALeft" />
+                                                            <span class="checkbox">Carotid artery intracranial (LEFT)</span>
+                                                        </label>
+                                                        <label style="flex: 50%">
+                                                            <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialVertebral" />
+                                                            <span class="checkbox">Vertebral artery</span>
+                                                        </label>
+                                                        <label style="flex: 50%">
+                                                            <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialMCA1Right" />
+                                                            <span class="checkbox">MCA M1 Middle cerebral artery M1 (RIGHT)</span>
+                                                        </label>
+                                                        <label style="flex: 50%">
+                                                            <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialMCA2Right" />
+                                                            <span class="checkbox">MCA M2 - Middle cerebral artery M2 (RIGHT)</span>
+                                                        </label>
+                                                        <label style="flex: 50%">
+                                                            <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialMCA3Right" />
+                                                            <span class="checkbox">MCA M3 - Middle cerebral artery M3 (RIGHT)</span>
+                                                        </label>
+                                                        <label style="flex: 50%">
+                                                            <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialACARight" />
+                                                            <span class="checkbox">Anterior cerebral artery (RIGHT)</span>
+                                                        </label>
+                                                        <label style="flex: 50%">
+                                                            <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialPCA1Right" />
+                                                            <span class="checkbox">PCA P1 - Posterior cerebral artery P1 (RIGHT)</span>
+                                                        </label>
+                                                        <label style="flex: 50%">
+                                                            <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialPCA2Right" />
+                                                            <span class="checkbox">PCA P2 Posterior cerebral artery P2 (RIGHT)</span>
+                                                        </label>
+                                                        <label style="flex: 50%">
+                                                            <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialCEARight" />
+                                                            <span class="checkbox">Carotid artery extracranial (RIGHT)</span>
+                                                        </label>
+                                                        <label style="flex: 50%">
+                                                            <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialCIARight" />
+                                                            <span class="checkbox">Carotid artery intracranial (RIGHT)</span>
+                                                        </label>
+                                                        <label style="flex: 50%">
+                                                            <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialBasilar" />
+                                                            <span class="checkbox">Basilar artery</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="item">
+                                                    <div class="title-header" style="height: 45px">
+                                                        <span>
+                                                            WAS THE PATIENT TREATED WITH IV THROMBOLYSIS IN YOUR HOSPITAL?
+                                                        </span>
+                                                    </div>
+                                                    <div class="div-button-form div-button-form-switch">
+                                                        <label>
+                                                            <input type="radio" name="radioThrombolysis" id="thrombolysisCheck"/>
+                                                            <span class="switch-button">YES</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="radioThrombolysis" id="thrombolysisUnCheck" checked/>
+                                                            <span class="switch-button-2">NO</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div id="thrombolysisSelectDiv">
+                                                        <div class="title-header">
+                                                            <span>
+                                                                PLEASE SELECT MAIN REASON FOR NOT DOING THROMBOLYSIS
+                                                            </span>
+                                                        </div>
+                                                        <div class="select">
+                                                            <select class="selection" onchange="thrombolysisTimeToggle(this.value)" required id="thrombolysisReason">
+                                                                <option value="" disabled selected hidden>Select an option</option>
+                                                                <option value="1">Already received IVT in another hospital</option>
+                                                                <option value="2">Out of time window</option>
+                                                                <option value="3">Mild deficit</option>
+                                                                <option value="4">Consent not given</option>
+                                                                <option value="5">Cost of treatment</option>
+                                                                <option value="6">Transferred to another hospital for IVT</option>
+                                                                <option value="7">Only mechanical thrombectomy preferred</option>
+                                                                <option value="8">Thrombolysis drug not available</option>
+                                                                <option value="9">Other</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div id="thrombolysisDiv" class="item" style="display: none;">
+                                                    <div class="input-item">
+                                                        <input class="form-input" type="date" name="thrombolysisDate" id="thrombolysisDate" pattern="\w{1,}" required />
+                                                        <label class="input-label" for="thrombolysisDate">TRANSFER TIME (DOOR-OUT)</label>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="toggle-div" id="thrombolysisCheckDiv" style="display: none">
+                                                <div class="form-row">
+                                                    <div class="item">
+                                                        <div>
+                                                            <div class="title-header">
+                                                                <span>
+                                                                    DRUG USED
+                                                                </span>
+                                                            </div>
+                                                            <div class="select">
+                                                                <select class="selection" required id="drugUsed">
+                                                                    <option value="" disabled selected hidden>Select an option</option>
+                                                                    <option value="1">Alteplase</option>
+                                                                    <option value="2">Tenecteplase</option>
+                                                                    <option value="3">Streptokinase</option>
+                                                                    <option value="4">Staphylokinase</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="title-header">
+                                                        <span>
+                                                            ANTIDOTE TO ANTICOAGULANT GIVEN
+                                                        </span>
+                                                        </div>
+                                                        <div class="div-button-form div-button-form-switch">
+                                                            <label>
+                                                                <input type="radio" name="radioAnticoagulant" id="radioAnticoagulantYes" />
+                                                                <span class="switch-button">YES</span>
+                                                            </label>
+                                                            <label>
+                                                                <input type="radio" name="radioAnticoagulant" id="radioAnticoagulantNo" checked />
+                                                                <span class="switch-button-2">NO</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="input-item item">
+                                                        <input class="form-input" type="number" name="treatmentDose" id="treatmentDose" pattern="\w{1,}" required />
+                                                        <label class="input-label" for="treatmentDose">TREATMENT DOSE (IN MG)</label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="input-item" id="bolusDiv">
+                                                            <input class="form-input" type="date" name="bolusDate" id="bolusDate" pattern="\w{1,}" required />
+                                                            <label class="input-label" for="bolusDate">BOLUS TIME</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row" style="width: 100%">
+                                                    <div style="width: 100%">
+                                                        <div class="title-header">
+                                                            <span>
+                                                                IV THROMBOLYSIS GIVEN IN
+                                                            </span>
+                                                        </div>
+                                                        <div class="select">
+                                                            <select class="selection" required id="thrombolysisGiven">
+                                                                <option value="" disabled selected hidden>Select an option</option>
+                                                                <option value="1">CT/MRI room</option>
+                                                                <option value="2">Stroke unit or ICU</option>
+                                                                <option value="3">Emergency room</option>
+                                                                <option value="4">Other</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="item">
+                                                    <div class="title-header" style="height: 45px">
+                                                            <span>
+                                                                WAS THE PATIENT TREATED WITH THROMBECTOMY IN YOUR HOSPITAL?
+                                                            </span>
+                                                    </div>
+                                                    <div class="div-button-form div-button-form-switch">
+                                                        <label>
+                                                            <input type="radio" name="radioThrombectomy" id="thrombectomyCheck"/>
+                                                            <span class="switch-button">YES</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="radioThrombectomy" id="thrombectomyUnCheck" checked/>
+                                                            <span class="switch-button-2">NO</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div id="thrombectomyDiv">
+                                                        <div class="title-header">
+                                                            <span>
+                                                                PLEASE SELECT MAIN REASON FOR NOT DOING THROMBECTOMY
+                                                            </span>
+                                                        </div>
+                                                        <div class="select">
+                                                            <select class="selection" onchange="thrombectomyTimeToggle(this.value)" required id="thrombectomyReason">
+                                                                <option value="" disabled selected hidden>Select an option</option>
+                                                                <option value="1">Already received MT in another hospital</option>
+                                                                <option value="2">Out of time window</option>
+                                                                <option value="3">Mild deficit</option>
+                                                                <option value="4">No large vessel occlusion</option>
+                                                                <option value="5">Premorbid disability</option>
+                                                                <option value="6">Consent not given</option>
+                                                                <option value="7">Cost of treatment</option>
+                                                                <option value="8">Transferred to another hospital for MT</option>
+                                                                <option value="9">MT facility not available</option>
+                                                                <option value="10">Technically not possible</option>
+                                                                <option value="11">Other</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="item"  id="thrombectomyTimeDiv" style="display: none;">
+                                                    <div class="input-item">
+                                                        <input class="form-input" type="date" name="thrombectomyDate" id="thrombectomyDate" pattern="\w{1,}" required />
+                                                        <label class="input-label" for="thrombectomyDate">TRANSFER TIME (DOOR-OUT)</label>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+
+                                                </div>
+                                            </div>
+                                            <div class="toggle-div" id="thrombectomyCheckDiv" style="display: none">
+                                                <div class="form-row">
+                                                    <div class="item">
+                                                        <div class="input-item" id="groinDiv">
+                                                            <input class="form-input" type="date" name="bolusDate" id="groinDate" pattern="\w{1,}" required />
+                                                            <label class="input-label" for="groinDate">GROIN PUNCTURE TIME</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="title-header">
+                                                            <span>
+                                                                mTICI SCORE
+                                                            </span>
+                                                        </div>
+                                                        <div class="select">
+                                                            <select class="selection" required onchange="mticiToggle(this.value)" id="mTICIScore">
+                                                                <option value="" disabled selected hidden>Select an option</option>
+                                                                <option value="0">0 (no occlusion)</option>
+                                                                <option value="1">2A (ICA/M1 occlusion)</option>
+                                                                <option value="2">2B (M2/3 occlusion)</option>
+                                                                <option value="3">2C (ICA occlusion)</option>
+                                                                <option value="4">3 (MCA/PCA/BA occlusion)</option>
+                                                                <option value="5">Occlusion was not confirmed</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="item">
+                                                        <div class="input-item" id="mticiDiv" style="display: none;">
+                                                            <input class="form-input" type="date" name="reperfusionDate" id="reperfusionDate" pattern="\w{1,}" required />
+                                                            <label class="input-label" for="reperfusionDate">REPERFUSION TIME</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="title-header">
+                                                            <span>
+                                                                PROCEDURE COMPLICATIONS IN THROMBECTOMY
+                                                            </span>
+                                                    </div>
+                                                    <div class="div-button-form" id="radioComplicationThrombectomy" style="border-radius: unset;">
+                                                        <label>
+                                                            <input type="radio" name="radioComplicationThrombectomy" value="yes" id="radioComplicationThrombectomyYes" />
+                                                            <span>YES</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="radioComplicationThrombectomy" value="no" checked id="radioComplicationThrombectomyNo" />
+                                                            <span>No</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="div-button-form" id="checkBoxThrombectomy" style="display: none;">
+                                                        <label>
+                                                            <input type="checkbox" name="checkBoxThrombectomy" id="checkBoxThrombectomyVesselPerforation" />
+                                                            <span class="checkbox">Vessel perforation</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" name="checkBoxThrombectomy" id="checkBoxThrombectomyDissection" />
+                                                            <span class="checkbox">Dissection</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" name="checkBoxThrombectomy" id="checkBoxThrombectomyEmbolization" />
+                                                            <span class="checkbox">Embolization to different vascular territory</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" name="checkBoxThrombectomy" id="checkBoxThrombectomyHematoma" />
+                                                            <span class="checkbox">Hematoma at arterial access requiring transfusion</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" name="checkBoxThrombectomy" id="checkBoxThrombectomyOther" />
+                                                            <span class="checkbox">Other</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="imagingDiv2" class="toggle-div" style="display: none;">
+                                            <div class="form-row">
+                                                <div class="input-item item">
+                                                    <input class="form-input" type="number" name="bleedingVolume" id="bleedingVolume" pattern="\w{1,}" required />
+                                                    <label class="input-label" for="bleedingVolume">BLEEDING VOLUME (IN ML)</label>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="title-header">
+                                                        <span>
+                                                            INFRATENTORIAL SOURCE OF BLEEDING
+                                                        </span>
+                                                    </div>
+                                                    <div class="div-button-form div-button-form-switch">
+                                                        <label>
+                                                            <input type="radio" name="radioInfratentorial" id="infratentorialCheck"/>
+                                                            <span class="switch-button">YES</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="radioInfratentorial" id="infratentorialUnCheck" checked/>
+                                                            <span class="switch-button-2">NO</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="item">
+                                                    <div class="title-header">
+                                                        <span>
+                                                            SOURCE OF BLEEDING FOUND
+                                                        </span>
+                                                    </div>
+                                                    <div class="div-button-form div-button-form-switch">
+                                                        <label>
+                                                            <input type="radio" name="radioBleeding" id="bleedingCheck"/>
+                                                            <span class="switch-button">YES</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="radioBleeding" id="bleedingUnCheck" checked/>
+                                                            <span class="switch-button-2">NO</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="title-header">
+                                                        <span>
+                                                            INTRAVENTRICULAR HEMORRHAGE (IVH)
+                                                        </span>
+                                                    </div>
+                                                    <div class="div-button-form div-button-form-switch">
+                                                        <label>
+                                                            <input type="radio" name="radioIntraventricular" id="intraventricularCheck"/>
+                                                            <span class="switch-button">YES</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="radioIntraventricular" id="intraventricularUnCheck" checked/>
+                                                            <span class="switch-button-2">NO</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row" style="align-items: start">
+                                                <div class="item">
+                                                    <div class="title-header">
+                                                        <span>
+                                                            WAS REASON FOR BLEEDING FOUND?
+                                                        </span>
+                                                    </div>
+                                                    <div class="div-button-form" id="radioBleedingReason" style="border-radius: unset;">
+                                                        <label>
+                                                            <input type="radio" name="radioBleedingReason" value="yes" id="radioBleedingReasonYes" />
+                                                            <span>YES</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="radioBleedingReason" value="no" id="radioBleedingReasonNo" />
+                                                            <span>No</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="div-button-form" id="checkBoxBleedingReason" style="display: none;">
+                                                        <label>
+                                                            <input type="checkbox" name="checkBoxBleedingReason" id="checkBoxBleedingReasonArterialHypertension" />
+                                                            <span class="checkbox">Arterial hypertension</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" name="checkBoxBleedingReason" id="checkBoxBleedingReasonAneurysm" />
+                                                            <span class="checkbox">Aneurysm</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" name="checkBoxBleedingReason" id="checkBoxBleedingReasonArteriovenousMalformation" />
+                                                            <span class="checkbox">Arteriovenous malformation</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" name="checkBoxBleedingReason" id="checkBoxBleedingReasonAnticoagulationTherapy" />
+                                                            <span class="checkbox">Anticoagulation therapy</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" name="checkBoxBleedingReason" id="checkBoxBleedingReasonAmyloidAngiopathy" />
+                                                            <span class="checkbox">Amyloid angiopathy</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" name="checkBoxBleedingReason" id="checkBoxBleedingReasonOther" />
+                                                            <span class="checkbox">Other</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="title-header">
+                                                        <span>
+                                                            WHAT ANTIDOTE TO ANTICOAGULANTS WAS USED?
+                                                        </span>
+                                                    </div>
+                                                    <div class="select">
+                                                        <select class="selection" required id="antidoteAnticoagulants">
+                                                            <option value="" disabled selected hidden>Select an option</option>
+                                                            <option value="1">Andexanete</option>
+                                                            <option value="2">Idarucizumab</option>
+                                                            <option value="3">Fresh frozen plasma</option>
+                                                            <option value="4">Prothrombin complex concentrate</option>
+                                                            <option value="5">Other</option>
+                                                            <option value="6">None</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div style="width: 100%">
+                                                    <div class="title-header">
+                                                        <span>
+                                                            WAS ANY NEUROSURGERY PERFORMED?
+                                                        </span>
+                                                    </div>
+                                                    <div class="div-button-form" id="radioNeurosurgery" style="border-radius: unset;">
+                                                        <label>
+                                                            <input type="radio" name="radioNeurosurgery" value="yes" id="radioNeurosurgeryYes" />
+                                                            <span>YES</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="radioNeurosurgery" value="no" id="radioNeurosurgeryNo" />
+                                                            <span>No</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="div-button-form" id="checkBoxNeurosurgery" style="display: none;">
+                                                        <label>
+                                                            <input type="checkbox" name="checkBoxNeurosurgery" id="checkBoxNeurosurgeryIntracranialHematomaEvacuation" />
+                                                            <span class="checkbox">Intracranial hematoma evacuation</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" name="checkBoxNeurosurgery" id="checkBoxNeurosurgeryExternalVentricularDrainage" />
+                                                            <span class="checkbox">External ventricular drainage</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" name="checkBoxNeurosurgery" id="checkBoxNeurosurgeryDecompresiveCraniectomy" />
+                                                            <span class="checkbox">Decompresive craniectomy</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="imagingDiv3" style="display: none;">
+                                            <div class="form-row">
+                                                <div class="item">
+                                                    <div class="title-header">
+                                                        <span>
+                                                            CLINICAL SYMPTOMS OF THE TIA
+                                                        </span>
+                                                    </div>
+                                                    <div class="select">
+                                                        <select class="selection" required id="clinicalSymptoms">
+                                                            <option value="" disabled selected hidden>Select an option</option>
+                                                            <option value="1">Unilateral weakness</option>
+                                                            <option value="2">Speech disturbance without weakness</option>
+                                                            <option value="3">Other symptoms</option>
+                                                        </select>
+
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="title-header">
+                                                        <span>
+                                                            DURATION OF SYMPTOMS
+                                                        </span>
+                                                    </div>
+                                                    <div class="select">
+                                                        <select class="selection" required id="symptomsDuration">
+                                                            <option value="" disabled selected hidden>Select an option</option>
+                                                            <option value="1">&lt;10 minutes</option>
+                                                            <option value="2">10-59 minutes</option>
+                                                            <option value="3">&ge; 60 minutes</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="toggle-div" id="imagingDiv4" style="display: none;">
+                                            <div class="form-row">
+                                                <div class="item">
+                                                    <div class="title-header">
+                                                        <span>
+                                                            SOURCE OF BLEEDING FOUND
+                                                        </span>
+                                                    </div>
+                                                    <div class="div-button-form div-button-form-switch">
+                                                        <label>
+                                                            <input type="radio" name="radioBleedingSubarachnoid" id="bleedingSubarachnoidCheck"/>
+                                                            <span class="switch-button">YES</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="radioBleedingSubarachnoid" id="bleedingSubarachnoidUnCheck" checked/>
+                                                            <span class="switch-button-2">NO</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+
+                                                </div>
+                                            </div>
+                                            <div style="width: 100%">
+                                                <div class="title-header">
+                                                    <span>
+                                                        HUNT HESS SCORE
+                                                    </span>
+                                                </div>
+                                                <div class="select">
+                                                    <select class="selection" required id="huntHess">
+                                                        <option value="" disabled selected hidden>Select an option</option>
+                                                        <option value="1">1 (lucid; mild headache; slight neck stiffness)</option>
+                                                        <option value="2">2 (moderate to severe headache; neck stiffness; no neurologic deficit except cranial nerve palsy)</option>
+                                                        <option value="3">3 (drowsy; minimal neurologic deficit)</option>
+                                                        <option value="4">4 (stuporous; moderate to severe hemiparesis; possibly early decerebrate rigidity and vegetative disturbances)</option>
+                                                        <option value="5">5 (deep coma; severe neurological deficit)</option>
+                                                        <option value="6">None</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div style="width: 100%">
+                                                <div class="title-header">
+                                                    <span>
+                                                        WAS ANY INTERVENTION PERFORMED?
+                                                    </span>
+                                                </div>
+                                                <div class="div-button-form" id="radioIntervention" style="border-radius: unset;">
+                                                    <label>
+                                                        <input type="radio" name="radioIntervention" value="yes" id="radioInterventionYes" />
+                                                        <span>YES</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="radioIntervention" value="no" id="radioInterventionNo" />
+                                                        <span>No</span>
+                                                    </label>
+                                                </div>
+                                                <div class="div-button-form" id="checkBoxIntervention" style="display: none;">
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxIntervention" id="checkBoxInterventionEndovascular" />
+                                                        <span class="checkbox">Endovascular (coiling)</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxIntervention" id="checkBoxInterventionNeurosurgical" />
+                                                        <span class="checkbox">Neurosurgical (clipping)</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxIntervention" id="checkBoxInterventionVentricularDrainage" />
+                                                        <span class="checkbox">Ventricular drainage</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxIntervention" id="checkBoxInterventionDecompressiveCraniectomy" />
+                                                        <span class="checkbox">Decompressive craniectomy</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxIntervention" id="checkBoxInterventionOther" />
+                                                        <span class="checkbox">Other</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div style="width: 100%">
+                                                <div class="title-header">
+                                                    <span>
+                                                        NIMODIPINE TREATMENT ADMINISTERED?
+                                                    </span>
+                                                </div>
+                                                <div class="select">
+                                                    <select class="selection" required id="nimodipineTreatment">
+                                                        <option value="" disabled selected hidden>Select an option</option>
+                                                        <option value="1">Yes, within the first 24h of admission</option>
+                                                        <option value="2">Yes, later than 24h after admission</option>
+                                                        <option value="3">Not administered</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="toggle-div" id="imagingDiv5" style="display: none;">
+                                            <div style="width: 100%">
+                                                <div class="title-header">
+                                                    <span>
+                                                        WAS ANY TREATMENT PERFORMED?
+                                                    </span>
+                                                </div>
+                                                <div class="div-button-form" id="radioTreatmentPerformed" style="border-radius: unset;">
+                                                    <label>
+                                                        <input type="radio" name="radioTreatmentPerformed" value="yes" id="radioTreatmentPerformedYes" />
+                                                        <span>YES</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="radioTreatmentPerformed" value="no" id="radioTreatmentPerformedNo" />
+                                                        <span>No</span>
+                                                    </label>
+                                                </div>
+                                                <div class="div-button-form" id="checkBoxTreatmentPerformed" style="display: none;">
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxTreatmentPerformed" id="checkBoxTreatmentPerformedAnticoagulation" />
+                                                        <span class="checkbox">Anticoagulation</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxTreatmentPerformed" id="checkBoxTreatmentPerformedThrombectomy" />
+                                                        <span class="checkbox">Endovascular intervention - thrombectomy</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxTreatmentPerformed" id="checkBoxTreatmentPerformedThrombolysis" />
+                                                        <span class="checkbox">Endovascular intervention - local thrombolysis</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxTreatmentPerformed" id="checkBoxTreatmentPerformedNeurosurgical" />
+                                                        <span class="checkbox">Neurosurgical treatment (decompressive craniectomy)</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="toggle-div" id="imagingDiv6" style="display: none;">
+                                            <div class="form-row">
+                                                <div class="item">
+                                                    <div class="title-header" style="height: 45px">
+                                                        <span>
+                                                            WAS THE PATIENT TREATED WITH IV THROMBOLYSIS IN YOUR HOSPITAL?
+                                                        </span>
+                                                    </div>
+                                                    <div class="div-button-form div-button-form-switch">
+                                                        <label>
+                                                            <input type="radio" name="radioThrombolysisMimic" id="thrombolysisMimicCheck"/>
+                                                            <span class="switch-button">YES</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="radioThrombolysisMimic" id="thrombolysisMimicUnCheck" checked/>
+                                                            <span class="switch-button-2">NO</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="toggle-div" id="strokeMimicDiv" style="display: none">
+                                                <div class="form-row">
+                                                    <div class="item">
+                                                        <div>
+                                                            <div class="title-header">
+                                                            <span>
+                                                                DRUG USED
+                                                            </span>
+                                                            </div>
+                                                            <div class="select">
+                                                                <select class="selection" required id="drugUsedThrombolysis">
+                                                                    <option value="" disabled selected hidden>Select an option</option>
+                                                                    <option value="1">Alteplase</option>
+                                                                    <option value="2">Tenecteplase</option>
+                                                                    <option value="3">Streptokinase</option>
+                                                                    <option value="4">Staphylokinase</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="title-header">
+                                                            <span>
+                                                                ANTIDOTE TO ANTICOAGULANT GIVEN
+                                                            </span>
+                                                        </div>
+                                                        <div class="div-button-form div-button-form-switch">
+                                                            <label>
+                                                                <input type="radio" name="radioAnticoagulantMimics" id="radioAnticoagulantMimicsYes" />
+                                                                <span class="switch-button">YES</span>
+                                                            </label>
+                                                            <label>
+                                                                <input type="radio" name="radioAnticoagulantMimics" id="radioAnticoagulantMimicsNo" checked/>
+                                                                <span class="switch-button-2">NO</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="input-item item">
+                                                        <input class="form-input" type="number" name="treatmentDoseMimics" id="treatmentDoseMimics" pattern="\w{1,}" required />
+                                                        <label class="input-label" for="treatmentDoseMimics">TREATMENT DOSE (IN MG)</label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="input-item">
+                                                            <input class="form-input" type="date" name="bolusMimicDate" id="bolusMimicDate" pattern="\w{1,}" required />
+                                                            <label class="input-label" for="bolusMimicDate">BOLUS TIME</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="item">
+                                                    <div>
+                                                        <div class="title-header">
+                                                            <span>
+                                                                FINAL DIAGNOSIS
+                                                            </span>
+                                                        </div>
+                                                        <div class="select">
+                                                            <select class="selection" required id="finalDiagnosis">
+                                                                <option value="" disabled selected hidden>Select an option</option>
+                                                                <option value="1">Migraine (ICD-10: G43)</option>
+                                                                <option value="2">Seizure (ICD-10: G40)</option>
+                                                                <option value="3">Delirium (ICD-10: F05)</option>
+                                                                <option value="4">Electrolyte or metabolic imbalance (ICD-10: E70-E90)</option>
+                                                                <option value="5">Functional disorder (ICD-10: various)</option>
+                                                                <option value="6">Other</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="imagingDiv7" style="display: none;"></div>
+                                        <div class="form-row" id="perfusionDeficitDiv" style="display: none">
+                                            <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        CT/MR PERFUSION DEFICIT
+                                                    </span>
+                                                </div>
+                                                <div class="select">
+                                                    <select class="selection" onchange="perfusionDeficitToggle(this.value)" required id="ctmrPerfusion">
+                                                        <option value="" disabled selected hidden>Select an option</option>
+                                                        <option value="1">Medial Anterior</option>
+                                                        <option value="2">Posterior</option>
+                                                        <option value="3">Carotid</option>
+                                                        <option value="4">No, analysis not reliable due to bilateral stenosis</option>
+                                                        <option value="5">No deficit</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+
+                                            </div>
+                                        </div>
+                                        <div id="perfusionDeficit" class="form-row" style="display: none">
+                                            <div class="input-item item">
+                                                <input class="form-input" type="number" name="coreVolume" id="coreVolume" pattern="\w{1,}" required />
+                                                <label class="input-label" for="coreVolume">CT/MR PERFUSION DEFICIT CORE VOLUME (IN ML)</label>
+                                            </div>
+                                            <div class="input-item item">
+                                                <input class="form-input" type="number" name="hypoperfusionVolume" id="hypoperfusionVolume" pattern="\w{1,}" required />
+                                                <label class="input-label" for="hypoperfusionVolume">CT/MR PERFUSION DEFICIT HYPOPERFUSION VOLUME (IN ML)</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="title">
+                                            <span>
+                                                Discharge data
+                                            </span>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        DISCHARGE DESTINATION
+                                                    </span>
+                                                </div>
+                                                <div class="select">
+                                                    <select class="selection" onchange="dischargeDestinationToggle(this.value)" required id="dischargeDestination">
+                                                        <option value="" disabled selected hidden>Select an option</option>
+                                                        <option value="1">Home</option>
+                                                        <option value="2">Transferred within the same center</option>
+                                                        <option value="3">Transferred to another center</option>
+                                                        <option value="4">Social care facility</option>
+                                                        <option value="5">Patient died</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div id="withinTransferred" style="display: none">
+                                                    <div class="title-header">
+                                                        <span>
+                                                            DISCHARGE DESTINATION WITHIN THE SAME FACILITY
+                                                        </span>
+                                                    </div>
+                                                    <div class="select">
+                                                        <select class="selection" required id="dischargeDestinationFacility">
+                                                            <option value="" disabled selected hidden>Select an option</option>
+                                                            <option value="1">Acute rehabilitation</option>
+                                                            <option value="2">Post-care bed</option>
+                                                            <option value="3">Another department</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div id="centerTransferred" style="display: none">
+                                                    <div class="title-header">
+                                                        <span>
+                                                            DISCHARGED TO ANOTHER FACILITY:
+                                                        </span>
+                                                    </div>
+                                                    <div class="select">
+                                                        <select class="selection" required id="dischargeFacility">
+                                                            <option value="" disabled selected hidden>Select an option</option>
+                                                            <option value="1">Primary stroke centre</option>
+                                                            <option value="2">Comprehensive stroke centre</option>
+                                                            <option value="3">Another standard hospital</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="input-item item">
+                                                <input class="form-input" type="date" name="dischargeDate" id="dischargeDate" pattern="\w{1,}" required />
+                                                <label class="input-label" for="dischargeDate">DATE OF DISCHARGE</label>
+                                            </div>
+                                            <div class="item">
+
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="input-item item">
+                                                <input class="form-input" type="number" name="mrsScore" id="mrsScore" pattern="\w{1,}" required />
+                                                <label class="input-label" for="mrsScore">MODIFIED RANKIN SCALE (MRS) SCORE ON DISCHARGE</label>
+                                            </div>
+                                            <div class="input-item item">
+                                                <input class="form-input" type="number" name="discharge" id="discharge" pattern="\w{1,}" required />
+                                                <label class="input-label" for="discharge">NIHSS SCORE ON DISCHARGE</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div style="width: 100%">
+                                                <div class="title-header">
+                                                    <span>
+                                                        WAS ANY TREATMENT PRESCRIBED ON DISCHARGE?
+                                                    </span>
+                                                </div>
+                                                <div class="div-button-form" id="radioTreatmentPrescribed" style="border-radius: unset;">
+                                                    <label>
+                                                        <input type="radio" name="radioTreatmentPrescribed" id="radioTreatmentPrescribedYes" value="yes"/>
+                                                        <span>YES</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="radioTreatmentPrescribed" id="radioTreatmentPrescribedNo" value="no"/>
+                                                        <span>No</span>
+                                                    </label>
+                                                </div>
+                                                <div class="div-button-form" id="checkBoxTreatmentPrescribed" style="display: none;">
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxTreatmentPrescribed" id="checkBoxTreatmentPrescribedAntidiabetics"/>
+                                                        <span class="checkbox">Antidiabetics (ATC: A10)</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxTreatmentPrescribed" id="checkBoxTreatmentPrescribedAntihypertensives"/>
+                                                        <span class="checkbox">Antihypertensives (ATC: C02)</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxTreatmentPrescribed" id="checkBoxTreatmentPrescribedAntiplatelets"/>
+                                                        <span class="checkbox">Antiplatelets (ATC: B01AC)</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxTreatmentPrescribed" id="checkBoxTreatmentPrescribedAnticoagulants"/>
+                                                        <span class="checkbox">Anticoagulants (ATC: B01AA, B01AB, B01AE, B01AF)</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxTreatmentPrescribed" id="checkBoxTreatmentPrescribedAnticoagulantPlanned"/>
+                                                        <span class="checkbox">Anticoagulant was not prescribed but is planned</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxTreatmentPrescribed" id="checkBoxTreatmentPrescribedStatin"/>
+                                                        <span class="checkbox">Statin (ATC: C10AA)</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkBoxTreatmentPrescribed" id="checkBoxTreatmentPrescribedOther"/>
+                                                        <span class="checkbox">Other</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="item">
+                                                <div class="title-header" style="height: 45px">
+                                                    <span>
+                                                        FOLLOW UP APPOINTMENT SCHEDULED IN YOUR HOSPITAL FOR STROKE MANAGEMENT
+                                                    </span>
+                                                </div>
+                                                <div class="select">
+                                                    <select class="selection" required id="appointmentScheduled">
+                                                        <option value="" disabled selected hidden>Select an option</option>
+                                                        <option value="1">Yes</option>
+                                                        <option value="2">No, but recommended to schedule</option>
+                                                        <option value="3">No</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="title-header" style="height: 45px">
+                                                    <span>
+                                                        WAS A SMOKING CESSATION PROGRAM RECOMMENDED?
+                                                    </span>
+                                                </div>
+                                                <div class="select">
+                                                    <select class="selection" required id="smokingCessation">
+                                                        <option value="" disabled selected hidden>Select an option</option>
+                                                        <option value="1">Yes</option>
+                                                        <option value="2">No</option>
+                                                        <option value="3">Not a smoker</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </form>
+
+                                    <button class="btn" onclick="changeColor()">change color</button>
+                                    <button class="btn" onclick="resetColor()">reset color</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
