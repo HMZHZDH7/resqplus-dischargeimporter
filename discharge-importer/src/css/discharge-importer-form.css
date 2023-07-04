@@ -431,7 +431,7 @@ input:invalid + label {
     left: 0;
     top: 0;
     bottom: 0;
-    width: 30px; /* Ajustez en fonction de la taille de votre icône */
+    width: 30px;
     border: none;
     background: none;
     cursor: pointer;
