@@ -37,10 +37,31 @@
                                         </div>
 
                                         <div class="form-row">
-                                            <div class="input-item item">
-                                                <input class="form-input" type="number" name="age-at-admission" id="age" pattern="\w{1,}" required />
-                                                <label class="input-label" for="age">AGE AT ADMISSION</label>
+                                            <div class="item">
+                                                <div class="input-item">
+                                                    <input class="form-input" type="number" name="age-at-admission" id="age" pattern="\w{1,}" required/>
+                                                    <label class="input-label" for="age">AGE AT ADMISSION</label>
+                                                </div>
+                                                <div class="input-verification">
+                                                    <div class="input-trust">
+                                                        <span id="agePercentage"></span>
+                                                        <span id="ageEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button id="verify-age" onclick="toggleVerification('age')">
+                                                            <span>
+                                                                Verify
+                                                            </span>
+                                                        </button>
+                                                        <button style="display: none" id="edit-age" onclick="toggleEdit('age')">
+                                                            <span>
+                                                                Edit
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                </div>
                                             </div>
+
 
                                             <div class="item">
                                                 <div class="title-header">
@@ -54,6 +75,24 @@
                                                         <option value="1">Female</option>
                                                         <option value="2">Male</option>
                                                     </select>
+                                                </div>
+                                                <div class="input-verification" id="sexVerification">
+                                                    <div class="input-trust">
+                                                        <span id="sexPercentage"></span>
+                                                        <span id="sexEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button id="verify-sex" onclick="toggleVerification('sex')">
+                                                            <span>
+                                                                Verify
+                                                            </span>
+                                                        </button>
+                                                        <button style="display: none" id="edit-sex" onclick="toggleEdit('sex')">
+                                                            <span>
+                                                                Edit
+                                                            </span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -78,8 +117,26 @@
                                             </div>
                                             <div class="item">
                                                 <div class="input-item" id="wakeUpDiv" style="display: none">
-                                                    <input class="form-input" type="time" name="wakeUpDate" id="wakeUpDate" pattern="\w{1,}" required />
+                                                    <input class="form-input" type="time" name="wakeUpDate" id="wakeUpDate" pattern="\w{1,}" required/>
                                                     <label class="input-label" for="wakeUpDate">TIME WHEN PATIENT WENT TO BED</label>
+                                                </div>
+                                                <div class="input-verification" id="wakeUpDateVerification" style="display: none">
+                                                    <div class="input-trust">
+                                                        <span id="wakeUpDatePercentage"></span>
+                                                        <span id="wakeUpDateEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button id="verify-wakeUpDate" onclick="toggleVerification('wakeUpDate')">
+                                                            <span>
+                                                                Verify
+                                                            </span>
+                                                        </button>
+                                                        <button style="display: none" id="edit-wakeUpDate" onclick="toggleEdit('wakeUpDate')">
+                                                            <span>
+                                                                Edit
+                                                            </span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -124,11 +181,11 @@
 
                                         <div class="form-row">
                                             <div class="input-item item">
-                                                <input class="form-input" type="date" name="arrivalDate" id="arrivalDate" pattern="\w{1,}" required />
+                                                <input class="form-input" type="date" name="arrivalDate" id="arrivalDate" pattern="\w{1,}" required/>
                                                 <label class="input-label" for="arrivalDate">ARRIVAL DATE TO HOSPITAL</label>
                                             </div>
                                             <div class="input-item item">
-                                                <input class="form-input" type="time" name="arrivalTime" id="arrivalTime" pattern="\w{1,}" required />
+                                                <input class="form-input" type="time" name="arrivalTime" id="arrivalTime" pattern="\w{1,}" required/>
                                                 <label class="input-label" for="arrivalTime">ARRIVAL TIME TO HOSPITAL</label>
                                             </div>
                                         </div>
@@ -621,7 +678,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="item">
-                                                    
+
                                                 </div>
                                             </div>
                                             <div class="toggle-div" id="thrombolysisCheckDiv" style="display: none">
