@@ -114,6 +114,24 @@
                                                         <span class="switch-button-2">NO</span>
                                                     </label>
                                                 </div>
+                                                <div class="input-verification">
+                                                    <div class="input-trust">
+                                                        <span id="wakeUpStrokePercentage"></span>
+                                                        <span id="wakeUpStrokeEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button id="verify-wakeUpStroke" onclick="toggleVerification('wakeUpStroke', ['wakeUpStrokeCheck', 'wakeUpStrokeUnCheck'])">
+                                                            <span>
+                                                                Verify
+                                                            </span>
+                                                        </button>
+                                                        <button style="display: none" id="edit-wakeUpStroke" onclick="toggleEdit('wakeUpStroke', ['wakeUpStrokeCheck', 'wakeUpStrokeUnCheck'])">
+                                                            <span>
+                                                                Edit
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="item">
                                                 <div class="input-item" id="wakeUpDiv" style="display: none">
@@ -158,6 +176,24 @@
                                                         <span class="switch-button-2">NO</span>
                                                     </label>
                                                 </div>
+                                                <div class="input-verification">
+                                                    <div class="input-trust">
+                                                        <span id="strokePercentage"></span>
+                                                        <span id="strokeEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button id="verify-stroke" onclick="toggleVerification('stroke', ['strokeCheck', 'strokeUnCheck'])">
+                                                            <span>
+                                                                Verify
+                                                            </span>
+                                                        </button>
+                                                        <button style="display: none" id="edit-stroke" onclick="toggleEdit('stroke', ['strokeCheck', 'strokeUnCheck'])">
+                                                            <span>
+                                                                Edit
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="item">
                                                 <div style="display: none" id="strokeDiv">
@@ -174,6 +210,24 @@
                                                             <option value="3">Outpatient clinic/facility</option>
                                                             <option value="4">Other department</option>
                                                         </select>
+                                                    </div>
+                                                    <div class="input-verification" id="firstAttentedVerification">
+                                                        <div class="input-trust">
+                                                            <span id="firstAttentedPercentage"></span>
+                                                            <span id="firstAttentedEdited" style="display: none">EDITED</span>
+                                                        </div>
+                                                        <div class="input-state">
+                                                            <button id="verify-firstAttented" onclick="toggleVerification('firstAttented')">
+                                                                <span>
+                                                                    Verify
+                                                                </span>
+                                                            </button>
+                                                            <button style="display: none" id="edit-firstAttented" onclick="toggleEdit('firstAttented')">
+                                                                <span>
+                                                                    Edit
+                                                                </span>
+                                                            </button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -263,61 +317,94 @@
                                                     <label>
                                                         <input type="radio" name="radioMedicalHistory" id="radioMedicalHistoryYes"/>
                                                         <span>YES</span>
+                                                        <b id="radioMedicalHistoryYesPercentage"></b>
                                                     </label>
                                                     <label>
                                                         <input type="radio" name="radioMedicalHistory" id="radioMedicalHistoryNone"/>
                                                         <span>None of below</span>
+                                                        <b id="radioMedicalHistoryNonePercentage"></b>
                                                     </label>
                                                     <label>
                                                         <input type="radio" name="radioMedicalHistory" checked id="radioMedicalHistoryUnknown"/>
                                                         <span>Unknown</span>
+                                                        <b id="radioMedicalHistoryUnknownPercentage"></b>
                                                     </label>
                                                 </div>
+
                                                 <div class="div-button-form" id="checkBoxMedicalHistory" style="display: none;">
                                                     <label>
                                                         <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryHypertension"/>
                                                         <span class="checkbox">Hypertension (ICD-10: I10-I15)</span>
+                                                        <b id="checkBoxMedicalHistoryHypertensionPercentage">90%</b>
                                                     </label>
                                                     <label>
                                                         <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryDiabetes"/>
                                                         <span class="checkbox">Diabetes (ICD-10: E10-E14)</span>
+                                                        <b id="checkBoxMedicalHistoryDiabetesPercentage"></b>
                                                     </label>
                                                     <label>
                                                         <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryHyperlipidemia"/>
                                                         <span class="checkbox">Hyperlypidemia (ICD-10: E78)</span>
+                                                        <b id="checkBoxMedicalHistoryHyperlipidemiaPercentage"></b>
                                                     </label>
                                                     <label>
                                                         <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryActiveSmoker"/>
                                                         <span class="checkbox">Active smoker in last 10 years (ICD-10: Z72.0)</span>
+                                                        <b id="checkBoxMedicalHistoryActiveSmokerPercentage"></b>
                                                     </label>
                                                     <label>
                                                         <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryPreviousIschemic"/>
                                                         <span class="checkbox">Previous ischemic stroke/TIA leading to hospitalization (ICD-10: I63, G45)</span>
+                                                        <b id="checkBoxMedicalHistoryPreviousIschemicPercentage">100 %</b>
                                                     </label>
                                                     <label>
                                                         <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryPreviousHemorrhage"/>
                                                         <span class="checkbox">Previous hemorrhage stroke leading to hospitalization (ICD-10: I60, I61)</span>
+                                                        <b id="checkBoxMedicalHistoryPreviousHemorrhagePercentage"></b>
                                                     </label>
                                                     <label>
                                                         <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryAtrialFibrillation"/>
                                                         <span class="checkbox">Atrial fibrillation or flutter (paroxysmal/persistent/permanent) (ICD-10: I48)</span>
+                                                        <b id="checkBoxMedicalHistoryAtrialFibrillationPercentage"></b>
                                                     </label>
                                                     <label>
                                                         <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryCoronaryArtery"/>
                                                         <span class="checkbox">Coronary artery disease/previous myocardial infarction (ICD-10: I21, I25)</span>
+                                                        <b id="checkBoxMedicalHistoryCoronaryArteryPercentage"></b>
                                                     </label>
                                                     <label>
                                                         <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryCongestiveHeartFailure"/>
                                                         <span class="checkbox">Congestive heart failure (ICD-10: I50.0)</span>
+                                                        <b id="checkBoxMedicalHistoryCongestiveHeartFailurePercentage"></b>
                                                     </label>
                                                     <label>
                                                         <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryHIV"/>
                                                         <span class="checkbox">HIV (ICD-10: B20-B24)</span>
+                                                        <b id="checkBoxMedicalHistoryHIVPercentage"></b>
                                                     </label>
                                                     <label>
                                                         <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryCOVIDPositive"/>
                                                         <span class="checkbox">COVID positive in last 6 months (ICD-10: U07.1, U08, U09)</span>
+                                                        <b id="checkBoxMedicalHistoryCOVIDPositivePercentage"></b>
                                                     </label>
+                                                </div>
+                                                <div class="input-verification">
+                                                    <div class="input-trust">
+                                                        <span id="radioMedicalHistoryPercentage"></span>
+                                                        <span id="radioMedicalHistoryEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button id="verify-radioMedicalHistory" onclick="toggleVerification('radioMedicalHistory', ['radioMedicalHistoryYes', 'radioMedicalHistoryNone', 'radioMedicalHistoryUnknown'], ['checkBoxMedicalHistoryHypertension', 'checkBoxMedicalHistoryDiabetes', 'checkBoxMedicalHistoryHyperlipidemia', 'checkBoxMedicalHistoryActiveSmoker', 'checkBoxMedicalHistoryPreviousIschemic', 'checkBoxMedicalHistoryPreviousHemorrhage', 'checkBoxMedicalHistoryAtrialFibrillation', 'checkBoxMedicalHistoryCoronaryArtery', 'checkBoxMedicalHistoryCongestiveHeartFailure', 'checkBoxMedicalHistoryHIV', 'checkBoxMedicalHistoryCOVIDPositive'])">
+                                                            <span>
+                                                                Verify
+                                                            </span>
+                                                        </button>
+                                                        <button style="display: none" id="edit-radioMedicalHistory" onclick="toggleEdit('radioMedicalHistory', ['radioMedicalHistoryYes', 'radioMedicalHistoryNone', 'radioMedicalHistoryUnknown'], ['checkBoxMedicalHistoryHypertension', 'checkBoxMedicalHistoryDiabetes', 'checkBoxMedicalHistoryHyperlipidemia', 'checkBoxMedicalHistoryActiveSmoker', 'checkBoxMedicalHistoryPreviousIschemic', 'checkBoxMedicalHistoryPreviousHemorrhage', 'checkBoxMedicalHistoryAtrialFibrillation', 'checkBoxMedicalHistoryCoronaryArtery', 'checkBoxMedicalHistoryCongestiveHeartFailure', 'checkBoxMedicalHistoryHIV', 'checkBoxMedicalHistoryCOVIDPositive'])">
+                                                            <span>
+                                                                Edit
+                                                            </span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="item">
@@ -328,41 +415,41 @@
                                                 </div>
                                                 <div class="div-button-form" id="radioTreatment" style="border-radius: unset;">
                                                     <label>
-                                                        <input type="radio" name="radioTreatment" id="radioTreatmentYes"/>
+                                                        <input type="radio" name="radioTreatment" id="radioTreatmentEventYes"/>
                                                         <span>YES</span>
                                                     </label>
                                                     <label>
-                                                        <input type="radio" name="radioTreatment" id="radioTreatmentNone"/>
+                                                        <input type="radio" name="radioTreatment" id="radioTreatmentEventNone"/>
                                                         <span>None of below</span>
                                                     </label>
                                                     <label>
-                                                        <input type="radio" name="radioTreatment" checked id="radioTreatmentUnknown"/>
+                                                        <input type="radio" name="radioTreatment" checked id="radioTreatmentEventUnknown"/>
                                                         <span>Unknown</span>
                                                     </label>
                                                 </div>
                                                 <div class="div-button-form" id="checkBoxTreatment" style="display: none;">
                                                     <label>
-                                                        <input type="checkbox" name="checkBoxTreatment" id="checkBoxTreatmentAntidiabetics"/>
+                                                        <input type="checkbox" name="checkBoxTreatment" id="checkBoxTreatmentEventAntidiabetics"/>
                                                         <span class="checkbox">Antidiabetics (ATC: A10)</span>
                                                     </label>
                                                     <label>
-                                                        <input type="checkbox" name="checkBoxTreatment" id="checkBoxTreatmentAntihypertensives"/>
+                                                        <input type="checkbox" name="checkBoxTreatment" id="checkBoxTreatmentEventAntihypertensives"/>
                                                         <span class="checkbox">Antihypertensives (ATC: C02)</span>
                                                     </label>
                                                     <label>
-                                                        <input type="checkbox" name="checkBoxTreatment" id="checkBoxTreatmentAntiplatelets"/>
+                                                        <input type="checkbox" name="checkBoxTreatment" id="checkBoxTreatmentEventAntiplatelets"/>
                                                         <span class="checkbox">Antiplatelets (ATC: B01AC)</span>
                                                     </label>
                                                     <label>
-                                                        <input type="checkbox" name="checkBoxTreatment" id="checkBoxTreatmentAnticoagulants"/>
+                                                        <input type="checkbox" name="checkBoxTreatment" id="checkBoxTreatmentEventAnticoagulants"/>
                                                         <span class="checkbox">Anticoagulants (ATC: B01AA, B01AB, B01AE, B01AF)</span>
                                                     </label>
                                                     <label>
-                                                        <input type="checkbox" name="checkBoxTreatment" id="checkBoxTreatmentHormonalContraception"/>
+                                                        <input type="checkbox" name="checkBoxTreatment" id="checkBoxTreatmentEventHormonalContraception"/>
                                                         <span class="checkbox">Hormonal contraception (ATC: G03A)</span>
                                                     </label>
                                                     <label>
-                                                        <input type="checkbox" name="checkBoxTreatment" id="checkBoxTreatmentStatin"/>
+                                                        <input type="checkbox" name="checkBoxTreatment" id="checkBoxTreatmentEventStatin"/>
                                                         <span class="checkbox">Statin (ATC: C10AA)</span>
                                                     </label>
                                                 </div>
@@ -475,11 +562,11 @@
                                             </div>
                                             <div class="div-button-form" id="radioInfarcts" style="border-radius: unset;">
                                                 <label>
-                                                    <input type="radio" name="radioInfarcts" id="infarctsYes"/>
+                                                    <input type="radio" name="radioInfarcts" id="radioInfarctsYes"/>
                                                     <span>YES</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="radioInfarcts" id="infarctsNo" checked/>
+                                                    <input type="radio" name="radioInfarcts" id="radioInfarctsNo" checked/>
                                                     <span>No</span>
                                                 </label>
                                             </div>
@@ -851,11 +938,11 @@
                                                     </div>
                                                     <div class="div-button-form" id="radioComplicationThrombectomy" style="border-radius: unset;">
                                                         <label>
-                                                            <input type="radio" name="radioComplicationThrombectomy" id="radioComplicationThrombectomyYes" />
+                                                            <input type="radio" name="radioComplicationThrombectomy" id="radioThrombectomyYes" />
                                                             <span>YES</span>
                                                         </label>
                                                         <label>
-                                                            <input type="radio" name="radioComplicationThrombectomy" checked id="radioComplicationThrombectomyNo" />
+                                                            <input type="radio" name="radioComplicationThrombectomy" checked id="radioThrombectomyNo" />
                                                             <span>No</span>
                                                         </label>
                                                     </div>

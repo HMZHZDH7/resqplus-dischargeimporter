@@ -26,15 +26,15 @@ var formFields = [
     { TextId: "", FieldId: "checkBoxMedicalHistoryCongestiveHeartFailure", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
     { TextId: "", FieldId: "checkBoxMedicalHistoryHIV", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
     { TextId: "", FieldId: "checkBoxMedicalHistoryCOVIDPositive", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
-    { TextId: "", FieldId: "radioTreatmentYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
-    { TextId: "", FieldId: "radioTreatmentNone", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
-    { TextId: "", FieldId: "radioTreatmentUnknown", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
-    { TextId: "", FieldId: "checkBoxTreatmentAntidiabetics", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
-    { TextId: "", FieldId: "checkBoxTreatmentAntihypertensives", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
-    { TextId: "", FieldId: "checkBoxTreatmentAntiplatelets", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
-    { TextId: "", FieldId: "checkBoxTreatmentAnticoagulants", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
-    { TextId: "", FieldId: "checkBoxTreatmentHormonalContraception", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
-    { TextId: "", FieldId: "checkBoxTreatmentStatin", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
+    { TextId: "", FieldId: "radioTreatmentEventYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
+    { TextId: "", FieldId: "radioTreatmentEventNone", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
+    { TextId: "", FieldId: "radioTreatmentEventUnknown", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
+    { TextId: "", FieldId: "checkBoxTreatmentEventAntidiabetics", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
+    { TextId: "", FieldId: "checkBoxTreatmentEventAntihypertensives", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
+    { TextId: "", FieldId: "checkBoxTreatmentEventAntiplatelets", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
+    { TextId: "", FieldId: "checkBoxTreatmentEventAnticoagulants", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
+    { TextId: "", FieldId: "checkBoxTreatmentEventHormonalContraception", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
+    { TextId: "", FieldId: "checkBoxTreatmentEventStatin", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
     { TextId: "", FieldId: "glucose", TrustCount: NaN, Verified: false, Value: "", Edited: false },
     { TextId: "", FieldId: "cholesterol", TrustCount: NaN, Verified: false, Value: "", Edited: false },
     { TextId: "", FieldId: "systolic", TrustCount: NaN, Verified: false, Value: "", Edited: false },
@@ -45,8 +45,8 @@ var formFields = [
     { TextId: "", FieldId: "coma", TrustCount: NaN, Verified: false, Value: "", Edited: false },
     { TextId: "", FieldId: "brainImaging", TrustCount: NaN, Verified: false, Value: "", Edited: false },
     { TextId: "", FieldId: "imagingDate", TrustCount: NaN, Verified: false, Value: "", Edited: false },
-    { TextId: "", FieldId: "infarctsYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
-    { TextId: "", FieldId: "infarctsNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
+    { TextId: "", FieldId: "radioInfarctsYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
+    { TextId: "", FieldId: "radioInfarctsNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
     { TextId: "", FieldId: "checkBoxInfarctsCortical", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
     { TextId: "", FieldId: "checkBoxInfarctsSubCortical", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
     { TextId: "", FieldId: "checkBoxBrainstem", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
@@ -89,8 +89,8 @@ var formFields = [
     { TextId: "", FieldId: "groinDate", TrustCount: NaN, Verified: false, Value: "", Edited: false },
     { TextId: "", FieldId: "mTICIScore", TrustCount: NaN, Verified: false, Value: "", Edited: false },
     { TextId: "", FieldId: "reperfusionDate", TrustCount: NaN, Verified: false, Value: "", Edited: false },
-    { TextId: "", FieldId: "radioComplicationThrombectomyYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
-    { TextId: "", FieldId: "radioComplicationThrombectomyNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
+    { TextId: "", FieldId: "radioThrombectomyYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
+    { TextId: "", FieldId: "radioThrombectomyNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
     { TextId: "", FieldId: "checkBoxThrombectomyVesselPerforation", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
     { TextId: "", FieldId: "checkBoxThrombectomyDissection", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
     { TextId: "", FieldId: "checkBoxThrombectomyEmbolization", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
@@ -166,6 +166,7 @@ var formFields = [
     { TextId: "", FieldId: "smokingCessation", TrustCount: NaN, Verified: false, Value: "", Edited: false },
 ];
 document.addEventListener('DOMContentLoaded', function () {
+    var _a, _b;
     var textarea = document.getElementById('note-editor-textarea');
     formFields.forEach(function (field) {
         var formFieldElement = document.getElementById(field.FieldId);
@@ -236,16 +237,19 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
     var divStroke = document.getElementById("strokeDiv");
+    var radioFirstAttentedVerification = document.getElementById("firstAttentedVerification");
     var radioStrokeChecked = document.getElementById("strokeCheck");
     radioStrokeChecked.addEventListener("change", function () {
         if (this.checked) {
             divStroke.style.display = "grid";
+            radioFirstAttentedVerification.style.display = 'flex';
         }
     });
     var radioStrokeUnChecked = document.getElementById("strokeUnCheck");
     radioStrokeUnChecked.addEventListener("change", function () {
         if (this.checked) {
             divStroke.style.display = "none";
+            radioFirstAttentedVerification.style.display = 'none';
         }
     });
     var radioButtonsMedicalHistory = document.querySelectorAll('input[name="radioMedicalHistory"]');
@@ -475,27 +479,54 @@ document.addEventListener('DOMContentLoaded', function () {
                removeInvalidStyle(selectElement);
            }
        });*/
-    var inputs = document.querySelectorAll('input');
+    var inputs = document.querySelectorAll('input, select');
     inputs.forEach(function (input) {
         input.addEventListener('input', function () {
-            var editedSpan = document.getElementById(input.id + 'Edited');
-            var percentageSpan = document.getElementById(input.id + 'Percentage');
+            var editedSpan = document.getElementById(input.id.replace(/(Check|UnCheck|Yes|None|Unknown|No)$/, '') + 'Edited');
+            var percentageSpan = document.getElementById(input.id.replace(/(Check|UnCheck|Yes|None|Unknown|No)$/, '') + 'Percentage');
             editedSpan.style.display = 'inline';
             percentageSpan.style.display = 'none';
         });
     });
-    var selects = document.querySelectorAll('select');
-    selects.forEach(function (select) {
-        select.addEventListener('change', function () {
-            var editedSpan = document.getElementById(select.id + 'Edited');
-            var percentageSpan = document.getElementById(select.id + 'Percentage');
-            editedSpan.style.display = 'inline';
-            percentageSpan.style.display = 'none';
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    var checkboxNames = ['Arterial', 'MedicalHistory', 'TreatmentEvent', 'Infarcts', 'Thrombectomy', 'BleedingReason', 'Neurosurgery', 'Intervention', 'TreatmentPerformed', 'TreatmentPrescribed'];
+    checkboxes.forEach(function (checkbox) {
+        checkbox.addEventListener('input', function () {
+            checkboxNames.forEach(function (name) {
+                if (checkbox.id.includes(name)) {
+                    var editedSpan = document.getElementById('radio' + name + 'Edited');
+                    var percentageSpan = document.getElementById('radio' + name + 'Percentage');
+                    editedSpan.style.display = 'inline';
+                    percentageSpan.style.display = 'none';
+                    document.getElementById(checkbox.id + 'Percentage').innerText = '';
+                    document.getElementById('radio' + name + 'Yes' + 'Percentage').innerText = '';
+                    document.getElementById('radio' + name + 'No' + 'Percentage') != null ? document.getElementById('radio' + name + 'No' + 'Percentage').innerText = '' : null;
+                    document.getElementById('radio' + name + 'None' + 'Percentage') != null ? document.getElementById('radio' + name + 'None' + 'Percentage').innerText = '' : null;
+                    document.getElementById('radio' + name + 'Unknown' + 'Percentage') != null ? document.getElementById('radio' + name + 'Unknown' + 'Percentage').innerText = '' : null;
+                }
+            });
         });
     });
     document.getElementById("agePercentage").innerText = formFields.find(function (o) { return o.FieldId == 'age'; }).TrustCount.toString() + " %";
     document.getElementById("sexPercentage").innerText = formFields.find(function (o) { return o.FieldId == 'sex'; }).TrustCount.toString() + " %";
     document.getElementById("wakeUpDatePercentage").innerText = formFields.find(function (o) { return o.FieldId == 'wakeUpDate'; }).TrustCount.toString() + " %";
+    document.getElementById("strokePercentage").innerText = ((_a = [formFields.find(function (o) { return o.FieldId === 'strokeCheck'; }).TrustCount, formFields.find(function (o) { return o.FieldId === 'strokeUnCheck'; }).TrustCount].filter(function (tc) { return !isNaN(tc); }).sort(function (a, b) { return b - a; })[0]) === null || _a === void 0 ? void 0 : _a.toString()) || "";
+    document.getElementById("wakeUpStrokePercentage").innerText = ((_b = [formFields.find(function (o) { return o.FieldId === 'wakeUpStrokeCheck'; }).TrustCount, formFields.find(function (o) { return o.FieldId === 'wakeUpStrokeUnCheck'; }).TrustCount].filter(function (tc) { return !isNaN(tc); }).sort(function (a, b) { return b - a; })[0]) === null || _b === void 0 ? void 0 : _b.toString()) || "";
+    document.getElementById("firstAttentedPercentage").innerText = formFields.find(function (o) { return o.FieldId == 'firstAttented'; }).TrustCount.toString() + " %";
+    document.getElementById("radioMedicalHistoryYesPercentage").innerText = formFields.find(function (o) { return o.FieldId === 'radioMedicalHistoryYes'; }).TrustCount.toString() + " %";
+    document.getElementById("radioMedicalHistoryNonePercentage").innerText = formFields.find(function (o) { return o.FieldId === 'radioMedicalHistoryNone'; }).TrustCount.toString() + " %";
+    document.getElementById("radioMedicalHistoryUnknownPercentage").innerText = formFields.find(function (o) { return o.FieldId === 'radioMedicalHistoryUnknown'; }).TrustCount.toString() + " %";
+    document.getElementById("checkBoxMedicalHistoryHypertensionPercentage").innerText = formFields.find(function (o) { return o.FieldId === 'checkBoxMedicalHistoryHypertension'; }).TrustCount.toString() + " %";
+    document.getElementById("checkBoxMedicalHistoryDiabetesPercentage").innerText = formFields.find(function (o) { return o.FieldId === 'checkBoxMedicalHistoryDiabetes'; }).TrustCount.toString() + " %";
+    document.getElementById("checkBoxMedicalHistoryHyperlipidemiaPercentage").innerText = formFields.find(function (o) { return o.FieldId === 'checkBoxMedicalHistoryHyperlipidemia'; }).TrustCount.toString() + " %";
+    document.getElementById("checkBoxMedicalHistoryActiveSmokerPercentage").innerText = formFields.find(function (o) { return o.FieldId === 'checkBoxMedicalHistoryActiveSmoker'; }).TrustCount.toString() + " %";
+    document.getElementById("checkBoxMedicalHistoryPreviousIschemicPercentage").innerText = formFields.find(function (o) { return o.FieldId === 'checkBoxMedicalHistoryPreviousIschemic'; }).TrustCount.toString() + " %";
+    document.getElementById("checkBoxMedicalHistoryPreviousHemorrhagePercentage").innerText = formFields.find(function (o) { return o.FieldId === 'checkBoxMedicalHistoryPreviousHemorrhage'; }).TrustCount.toString() + " %";
+    document.getElementById("checkBoxMedicalHistoryAtrialFibrillationPercentage").innerText = formFields.find(function (o) { return o.FieldId === 'checkBoxMedicalHistoryAtrialFibrillation'; }).TrustCount.toString() + " %";
+    document.getElementById("checkBoxMedicalHistoryCoronaryArteryPercentage").innerText = formFields.find(function (o) { return o.FieldId === 'checkBoxMedicalHistoryCoronaryArtery'; }).TrustCount.toString() + " %";
+    document.getElementById("checkBoxMedicalHistoryCongestiveHeartFailurePercentage").innerText = formFields.find(function (o) { return o.FieldId === 'checkBoxMedicalHistoryCongestiveHeartFailure'; }).TrustCount.toString() + " %";
+    document.getElementById("checkBoxMedicalHistoryHIVPercentage").innerText = formFields.find(function (o) { return o.FieldId === 'checkBoxMedicalHistoryHIV'; }).TrustCount.toString() + " %";
+    document.getElementById("checkBoxMedicalHistoryCOVIDPositivePercentage").innerText = formFields.find(function (o) { return o.FieldId === 'checkBoxMedicalHistoryCOVIDPositive'; }).TrustCount.toString() + " %";
     var allFormFields = document.querySelectorAll('input, select');
     allFormFields.forEach(function (field) {
         triggerChangeEvent(field);
@@ -612,14 +643,46 @@ function triggerChangeEvent(element) {
     var event = new Event('change', { bubbles: true });
     element.dispatchEvent(event);
 }
-function toggleVerification(id) {
+function toggleVerification(id, ids, checkBoxIds) {
+    if (ids === void 0) { ids = []; }
+    if (checkBoxIds === void 0) { checkBoxIds = []; }
     document.getElementById("verify-" + id).style.display = "none";
     document.getElementById("edit-" + id).style.display = "inline";
-    document.getElementById(id).disabled = true;
+    if (ids && ids.length > 0) {
+        for (var _i = 0, ids_1 = ids; _i < ids_1.length; _i++) {
+            var id_1 = ids_1[_i];
+            document.getElementById(id_1).disabled = true;
+        }
+        if (checkBoxIds && checkBoxIds.length > 0) {
+            for (var _a = 0, checkBoxIds_1 = checkBoxIds; _a < checkBoxIds_1.length; _a++) {
+                var checkBoxId = checkBoxIds_1[_a];
+                document.getElementById(checkBoxId).disabled = true;
+            }
+        }
+    }
+    else {
+        document.getElementById(id).disabled = true;
+    }
 }
-function toggleEdit(id) {
+function toggleEdit(id, ids, checkBoxIds) {
+    if (ids === void 0) { ids = []; }
+    if (checkBoxIds === void 0) { checkBoxIds = []; }
     document.getElementById("verify-" + id).style.display = "inline";
     document.getElementById("edit-" + id).style.display = "none";
-    document.getElementById(id).disabled = false;
+    if (ids && ids.length > 0) {
+        for (var _i = 0, ids_2 = ids; _i < ids_2.length; _i++) {
+            var id_2 = ids_2[_i];
+            document.getElementById(id_2).disabled = false;
+        }
+        if (checkBoxIds && checkBoxIds.length > 0) {
+            for (var _a = 0, checkBoxIds_2 = checkBoxIds; _a < checkBoxIds_2.length; _a++) {
+                var checkBoxId = checkBoxIds_2[_a];
+                document.getElementById(checkBoxId).disabled = false;
+            }
+        }
+    }
+    else {
+        document.getElementById(id).disabled = false;
+    }
 }
 //# sourceMappingURL=discharge-importer-form.js.map

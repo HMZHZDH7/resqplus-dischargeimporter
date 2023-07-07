@@ -378,7 +378,6 @@ select::-ms-expand {
     flex-wrap: wrap;
     flex-direction: column;
     background-color: var(--grey-700);
-    border-radius: 0 0 var(--size-200) var(--size-200);
     padding: 5px;
     row-gap: 0.375em;
     border: 2px solid var(--cool-blue);
@@ -413,6 +412,8 @@ select::-ms-expand {
     font-weight: 500;
     position: relative;
     overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .div-button-form label span {
@@ -421,6 +422,10 @@ select::-ms-expand {
     padding: 0.375em 0.75em 0.375em 0.375em;
     border-radius: 99em;
     transition: 0.25s ease;
+}
+
+.div-button-form label b {
+    min-width: 42px;
 }
 
 .div-button-form label span:hover {
