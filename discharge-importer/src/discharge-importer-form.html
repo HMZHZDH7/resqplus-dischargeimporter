@@ -194,9 +194,12 @@
                                                         </button>
                                                     </div>
                                                 </div>
+
+
+
                                             </div>
                                             <div class="item">
-                                                <div style="display: none" id="strokeDiv">
+                                                <div id="strokeDiv">
                                                     <div class="title-header">
                                                         <span>
                                                             WHERE WAS THE PATIENT FIRST ATTENDED TO AT YOUR HOSPITAL?
@@ -230,6 +233,17 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="input-item item">
+                                                <input class="form-input" type="date" name="onsetDate" id="onsetDate" pattern="\w{1,}" required/>
+                                                <label class="input-label" for="onsetDate">Date of onset of stroke symptom</label>
+                                            </div>
+                                            <div class="input-item item">
+                                                <input class="form-input" type="time" name="onsetTime" id="onsetTime" pattern="\w{1,}" required/>
+                                                <label class="input-label" for="onsetTime">Time of onset of stroke symptom</label>
                                             </div>
                                         </div>
 
@@ -321,7 +335,7 @@
                                                     </label>
                                                     <label>
                                                         <input type="radio" name="radioMedicalHistory" id="radioMedicalHistoryNone"/>
-                                                        <span>None of below</span>
+                                                        <span>No</span>
                                                         <b id="radioMedicalHistoryNonePercentage"></b>
                                                     </label>
                                                     <label>
@@ -420,7 +434,7 @@
                                                     </label>
                                                     <label>
                                                         <input type="radio" name="radioTreatment" id="radioTreatmentEventNone"/>
-                                                        <span>None of below</span>
+                                                        <span>No</span>
                                                     </label>
                                                     <label>
                                                         <input type="radio" name="radioTreatment" checked id="radioTreatmentEventUnknown"/>
@@ -489,13 +503,30 @@
                                                     <img src="../assets/cancel.svg" alt="Set to null"/>
                                                 </button>
                                             </div>
-                                            <div class="input-item item">
-                                                <input style="padding-left: 40px" class="form-input" type="number" name="mrs" id="mrs" pattern="\w{1,}" />
-                                                <label style="padding-left: 30px" class="input-label" for="mrs">MODIFIED RANKING SCALE (MRS) BEFORE STROKE</label>
-                                                <button class="input-button" id="nullButtonMrs">
-                                                    <img src="../assets/cancel.svg" alt="Set to null"/>
-                                                </button>
+
+
+                                            <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        Modified Rankin Scale (mRS) before stroke
+                                                    </span>
+                                                </div>
+                                                <div class="select" id="mrsDiv">
+                                                    <select id="mrs" class="selection" required>
+                                                        <option value="" disabled selected hidden>Select option</option>
+                                                        <option value="1">0</option>
+                                                        <option value="2">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="2">3</option>
+                                                        <option value="2">4</option>
+                                                        <option value="2">5</option>
+                                                        <option value="2">unknown</option>
+                                                    </select>
+                                                </div>
+
                                             </div>
+
+
                                         </div>
                                         <div class="form-row">
                                             <div class="item">
@@ -510,6 +541,8 @@
                                                         <option value="1">Yes with point of care device</option>
                                                         <option value="2">Yes sample sent to lab</option>
                                                         <option value="3">Not done</option>
+                                                        <option value="3">Unknown</option>
+
                                                     </select>
                                                 </div>
                                             </div>
@@ -546,13 +579,25 @@
                                                     </select>
                                                 </div>
                                             </div>
+
+                                        </div>
+
+                                        <div class="form-row">
                                             <div class="item">
                                                 <div class="input-item" id="imagingDiv">
                                                     <input class="form-input" type="date" name="imagingDate" id="imagingDate" pattern="\w{1,}" required />
-                                                    <label class="input-label" for="imagingDate">IMAGING DONE AT WHAT TIME?</label>
+                                                    <label class="input-label" for="imagingDate">IMAGING DONE AT WHAT DATE?</label>
                                                 </div>
                                             </div>
+
+<!--                                            <div class="item">
+                                                <div class="input-item" id="imagingTimeDiv">
+                                                    <input class="form-input" type="time" name="imagingTime" id="imagingTime" pattern="\w{1,}" required />
+                                                    <label class="input-label" for="imagingTime">IMAGING DONE AT WHAT TIME?</label>
+                                                </div>
+                                            </div>-->
                                         </div>
+
 
                                         <div id="infarctsDiv">
                                             <div class="title-header">
@@ -1424,6 +1469,180 @@
                                             <div class="input-item item">
                                                 <input class="form-input" type="number" name="hypoperfusionVolume" id="hypoperfusionVolume" pattern="\w{1,}" required />
                                                 <label class="input-label" for="hypoperfusionVolume">CT/MR PERFUSION DEFICIT HYPOPERFUSION VOLUME (IN ML)</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="title">
+                                            <span>
+                                                Post-acute care
+                                            </span>
+                                        </div>
+
+                                        <div class="item">
+                                            <div class="title-header">
+                                                    <span>
+                                                        Patient hospitalised for more than 24 hours
+                                                    </span>
+                                            </div>
+                                            <div class="select" id="hospDiv">
+                                                <select id="hospitalised24Hour" class="selection" required>
+                                                    <option value="" disabled selected hidden>Select option</option>
+                                                    <option value="1">Yes</option>
+                                                    <option value="2">No, patient died</option>
+                                                    <option value="2">No, patient was transferred</option>
+                                                    <option value="2">No, patient was discharged</option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        Patient ventilated
+                                                    </span>
+                                                </div>
+                                                <div class="div-button-form" id="radioVentilated" style="border-radius: unset;">
+                                                    <label>
+                                                        <input type="radio" name="radioTreatment" id="radioVentilatedEventYes"/>
+                                                        <span>Yes</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="radioTreatment" id="radioVentilatedEventNo"/>
+                                                        <span>No</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        Decompressive craniectomy performed
+                                                    </span>
+                                                </div>
+                                                <div class="div-button-form" id="radioCraniectomy" style="border-radius: unset;">
+                                                    <label>
+                                                        <input type="radio" name="radioCraniectomy" id="radioCraniectomyEventYes"/>
+                                                        <span>Yes</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="radioCraniectomy" id="radioCraniectomyEventNo"/>
+                                                        <span>No</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div style="width: 100%">
+                                                <div class="title-header">
+                                                            <span>
+                                                                Was any thromboembolism intervention done?
+                                                            </span>
+                                                </div>
+                                                <div class="div-button-form" id="radiothromboembolism" style="border-radius: unset;">
+                                                    <label>
+                                                        <input type="radio" name="radiothromboembolism" id="radiothromboembolismYes" />
+                                                        <span>Yes</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="radiothromboembolism" id="radiothromboembolismNo" />
+                                                        <span>No</span>
+                                                    </label>
+                                                </div>
+                                                <div class="div-button-form" id="checkradiothromboembolism" style="display: none;">
+                                                    <label>
+                                                        <input type="checkbox" name="checkradiothromboembolism" id="checkradiothromboembolismUFH" />
+                                                        <span class="checkbox">Low dose unfractionated heparin (UFH)</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkradiothromboembolism" id="checkradiothromboembolismLMWH" />
+                                                        <span class="checkbox">Low molecular weight heparin (LMWH)</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkradiothromboembolism" id="checkradiothromboembolismIPC" />
+                                                        <span class="checkbox">Intermitent pneumatic compression devices (IPC)</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkradiothromboembolism" id="checkradiothromboembolismGCS" />
+                                                        <span class="checkbox">Graduated compression stockings (GCS)</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkradiothromboembolism" id="checkradiothromboembolismVTE" />
+                                                        <span class="checkbox">Warfarin prescribed for VTE only</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkradiothromboembolism" id="checkradiothromboembolismVFP" />
+                                                        <span class="checkbox">Venous foot pumps (VFP)</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkradiothromboembolism" id="checkradiothromboembolismXaVTE" />
+                                                        <span class="checkbox">Oral factor Xa inhibitor prescribed for VTE only</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkradiothromboembolism" id="checkradiothromboembolismOther" />
+                                                        <span class="checkbox">Other</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div style="width: 100%">
+                                                <div class="title-header">
+                                                            <span>
+                                                                Any post-stroke complications?
+                                                            </span>
+                                                </div>
+                                                <div class="div-button-form" id="radioStrokeComp" style="border-radius: unset;">
+                                                    <label>
+                                                        <input type="radio" name="radioStrokeComp" id="radioStrokeCompYes" />
+                                                        <span>Yes</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="radioStrokeComp" id="radioStrokeCompNo" />
+                                                        <span>No</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="radioStrokeComp" id="radioStrokeCompUnknown" />
+                                                        <span>Other</span>
+                                                    </label>
+                                                </div>
+                                                <div class="div-button-form" id="checkRadioStrokeComp" style="display: none;">
+                                                    <label>
+                                                        <input type="checkbox" name="checkRadioStrokeComp" id="checkRadioStrokeCompPneumonia" />
+                                                        <span class="checkbox">Pneumonia</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkRadioStrokeComp" id="checkRadioStrokeCompDVT" />
+                                                        <span class="checkbox">Deep vein thrombosis (DVT)</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkRadioStrokeComp" id="checkRadioStrokeCompPulmonary" />
+                                                        <span class="checkbox">Pulmonary embolism</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkRadioStrokeComp" id="checkRadioStrokeCompUrinary" />
+                                                        <span class="checkbox">Urinary tract infection</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkRadioStrokeComp" id="checkRadioStrokeCompSores" />
+                                                        <span class="checkbox">Pressure sores</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkRadioStrokeComp" id="checkRadioStrokeCompSepsis" />
+                                                        <span class="checkbox">Drip site sepsis</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkRadioStrokeComp" id="checkRadioStrokeCompReccurence" />
+                                                        <span class="checkbox">Reccurence/Extension of stroke</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="checkRadioStrokeComp" id="checkRadioStrokeCompOther" />
+                                                        <span class="checkbox">Other</span>
+                                                    </label>
+                                                </div>
                                             </div>
                                         </div>
 

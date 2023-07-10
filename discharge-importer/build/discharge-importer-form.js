@@ -9,6 +9,8 @@ var formFields = [
     { TextId: "", FieldId: "firstAttented", TrustCount: NaN, Verified: false, Value: "", Edited: false },
     { TextId: "", FieldId: "arrivalDate", TrustCount: NaN, Verified: false, Value: "", Edited: false },
     { TextId: "", FieldId: "arrivalTime", TrustCount: NaN, Verified: false, Value: "", Edited: false },
+    { TextId: "", FieldId: "onsetDate", TrustCount: NaN, Verified: false, Value: "", Edited: false },
+    { TextId: "", FieldId: "onsetTime", TrustCount: NaN, Verified: false, Value: "", Edited: false },
     { TextId: "", FieldId: "arrivedFrom", TrustCount: NaN, Verified: false, Value: "", Edited: false },
     { TextId: "", FieldId: "hospitalizedIn", TrustCount: NaN, Verified: false, Value: "2", Edited: false },
     { TextId: "", FieldId: "department", TrustCount: NaN, Verified: false, Value: "", Edited: false },
@@ -45,6 +47,7 @@ var formFields = [
     { TextId: "", FieldId: "coma", TrustCount: NaN, Verified: false, Value: "", Edited: false },
     { TextId: "", FieldId: "brainImaging", TrustCount: NaN, Verified: false, Value: "", Edited: false },
     { TextId: "", FieldId: "imagingDate", TrustCount: NaN, Verified: false, Value: "", Edited: false },
+    { TextId: "", FieldId: "imagingTime", TrustCount: NaN, Verified: false, Value: "", Edited: false },
     { TextId: "", FieldId: "radioInfarctsYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
     { TextId: "", FieldId: "radioInfarctsNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
     { TextId: "", FieldId: "checkBoxInfarctsCortical", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
@@ -164,6 +167,34 @@ var formFields = [
     { TextId: "", FieldId: "checkBoxTreatmentPrescribedOther", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
     { TextId: "", FieldId: "appointmentScheduled", TrustCount: NaN, Verified: false, Value: "", Edited: false },
     { TextId: "", FieldId: "smokingCessation", TrustCount: NaN, Verified: false, Value: "", Edited: false },
+    { TextId: "", FieldId: "hospitalised24Hour", TrustCount: NaN, Verified: false, Value: "", Edited: false },
+    { TextId: "", FieldId: "radioVentilated", TrustCount: NaN, Verified: false, Value: "", Edited: false },
+    { TextId: "", FieldId: "radioVentilatedEventYes", TrustCount: NaN, Verified: false, Value: "", Edited: false },
+    { TextId: "", FieldId: "radioVentilatedEventNo", TrustCount: NaN, Verified: false, Value: "", Edited: false },
+    { TextId: "", FieldId: "radioCraniectomy", TrustCount: NaN, Verified: false, Value: "", Edited: false },
+    { TextId: "", FieldId: "radioCraniectomyEventYes", TrustCount: NaN, Verified: false, Value: "", Edited: false },
+    { TextId: "", FieldId: "radioCraniectomyEventNo", TrustCount: NaN, Verified: false, Value: "", Edited: false },
+    { TextId: "", FieldId: "radiothromboembolismYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
+    { TextId: "", FieldId: "radiothromboembolismNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
+    { TextId: "", FieldId: "checkradiothromboembolismUFH", TrustCount: NaN, Verified: false, Value: "", Edited: false },
+    { TextId: "", FieldId: "checkradiothromboembolismLMWH", TrustCount: NaN, Verified: false, Value: "", Edited: false },
+    { TextId: "", FieldId: "checkradiothromboembolismIPC", TrustCount: NaN, Verified: false, Value: "", Edited: false },
+    { TextId: "", FieldId: "checkradiothromboembolismGCS", TrustCount: NaN, Verified: false, Value: "", Edited: false },
+    { TextId: "", FieldId: "checkradiothromboembolismVTE", TrustCount: NaN, Verified: false, Value: "", Edited: false },
+    { TextId: "", FieldId: "checkradiothromboembolismVFP", TrustCount: NaN, Verified: false, Value: "", Edited: false },
+    { TextId: "", FieldId: "checkradiothromboembolismXaVTE", TrustCount: NaN, Verified: false, Value: "", Edited: false },
+    { TextId: "", FieldId: "checkradiothromboembolismOther", TrustCount: NaN, Verified: false, Value: "", Edited: false },
+    { TextId: "", FieldId: "radioStrokeCompYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
+    { TextId: "", FieldId: "radioStrokeCompNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
+    { TextId: "", FieldId: "radioStrokeCompUnknown", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
+    { TextId: "", FieldId: "checkRadioStrokeCompPneumonia", TrustCount: NaN, Verified: false, Value: "", Edited: false },
+    { TextId: "", FieldId: "checkRadioStrokeCompDVT", TrustCount: NaN, Verified: false, Value: "", Edited: false },
+    { TextId: "", FieldId: "checkRadioStrokeCompPulmonary", TrustCount: NaN, Verified: false, Value: "", Edited: false },
+    { TextId: "", FieldId: "checkRadioStrokeCompUrinary", TrustCount: NaN, Verified: false, Value: "", Edited: false },
+    { TextId: "", FieldId: "checkRadioStrokeCompSores", TrustCount: NaN, Verified: false, Value: "", Edited: false },
+    { TextId: "", FieldId: "checkRadioStrokeCompSepsis", TrustCount: NaN, Verified: false, Value: "", Edited: false },
+    { TextId: "", FieldId: "checkRadioStrokeCompReccurence", TrustCount: NaN, Verified: false, Value: "", Edited: false },
+    { TextId: "", FieldId: "checkRadioStrokeCompOther", TrustCount: NaN, Verified: false, Value: "", Edited: false },
 ];
 document.addEventListener('DOMContentLoaded', function () {
     var _a, _b;
@@ -237,21 +268,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
     var divStroke = document.getElementById("strokeDiv");
-    var radioFirstAttentedVerification = document.getElementById("firstAttentedVerification");
-    var radioStrokeChecked = document.getElementById("strokeCheck");
-    radioStrokeChecked.addEventListener("change", function () {
-        if (this.checked) {
-            divStroke.style.display = "grid";
-            radioFirstAttentedVerification.style.display = 'flex';
-        }
-    });
-    var radioStrokeUnChecked = document.getElementById("strokeUnCheck");
-    radioStrokeUnChecked.addEventListener("change", function () {
-        if (this.checked) {
-            divStroke.style.display = "none";
-            radioFirstAttentedVerification.style.display = 'none';
-        }
-    });
     var radioButtonsMedicalHistory = document.querySelectorAll('input[name="radioMedicalHistory"]');
     var divMedicalHistory = document.getElementById('checkBoxMedicalHistory');
     radioButtonsMedicalHistory.forEach(function (radioButton) {
@@ -268,7 +284,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var divTreatment = document.getElementById('checkBoxTreatment');
     radioButtonsTreatment.forEach(function (radioButton) {
         radioButton.addEventListener("change", function () {
-            if ((this.id === 'radioTreatmentNone' || this.id === 'radioTreatmentUnknown') && this.value === 'true') {
+            if ((this.id === 'radioTreatmentEventNone' || this.id === 'radioTreatmentEventUnknown') && this.value === 'true') {
                 divTreatment.style.display = 'none';
             }
             else if (this.value === 'true') {
@@ -296,13 +312,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     var mrsInput = document.getElementById('mrs');
     var nullButtonholeMrs = document.getElementById('nullButtonMrs');
-    nullButtonholeMrs.addEventListener('click', function () {
-        mrsInput.value = '';
-        var fieldToUpdate = formFields.find(function (field) { return field.FieldId === mrsInput.id; });
-        if (fieldToUpdate) {
-            fieldToUpdate.Value = '';
-        }
-    });
     var nihssInput = document.getElementById('nihss');
     var nullButtonholeNihss = document.getElementById('nullButtonNihss');
     nullButtonholeNihss.addEventListener('click', function () {
@@ -456,6 +465,30 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             else if (this.value === 'true') {
                 divTreatmentPrescribed.style.display = 'flex';
+            }
+        });
+    });
+    var radioButtonsThromboemolism = document.querySelectorAll('input[name="radiothromboembolism"]');
+    var divThromboemolism = document.getElementById('checkradiothromboembolism');
+    radioButtonsThromboemolism.forEach(function (radioButton) {
+        radioButton.addEventListener("change", function () {
+            if ((this.id === 'radiothromboembolismNo') && this.value === 'true') {
+                divThromboemolism.style.display = 'none';
+            }
+            else if (this.value === 'true') {
+                divThromboemolism.style.display = 'flex';
+            }
+        });
+    });
+    var radioButtonsComplications = document.querySelectorAll('input[name="radioStrokeComp"]');
+    var divComplications = document.getElementById('checkRadioStrokeComp');
+    radioButtonsComplications.forEach(function (radioButton) {
+        radioButton.addEventListener("change", function () {
+            if ((this.id === 'radioStrokeCompNo' || this.id === 'radioStrokeCompUnknown') && this.value === 'true') {
+                divComplications.style.display = 'none';
+            }
+            else if (this.value === 'true') {
+                divComplications.style.display = 'flex';
             }
         });
     });
