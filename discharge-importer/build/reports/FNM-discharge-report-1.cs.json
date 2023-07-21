@@ -1,0 +1,1502 @@
+{
+    "_version": 1,
+    "_uuid": "af88b259-8439-4450-b26f-63c31159277c",
+    "_createdAt": "2023-05-25T09:07:00.575Z",
+    "_updatedAt": "2023-06-08T06:43:59.991Z",
+    "_formId": "ResQPlus Alpha 1.0",
+    "_formData": {
+        "admission_arrival_mode": "ems",
+        "admission_ems_prenotification": true,
+        "admission_first_contact_place": "outpatient_clinic",
+        "admission_admission_timestamp": "2021-02-09T13:50:00+01:00",
+        "admission_hospitalized_in": "icu",
+        "admission_admission_department": "neurology",
+        "admission_medical_examination_glucose": 5.55,
+        "admission_medical_examination_cholesterol": 2.85,
+        "admission_medical_examination_systolic_pressure": 155,
+        "admission_medical_examination_diastolic_pressure": 99,
+        "admission_medical_examination_nihss": 3,
+        "admission_medical_examination_inr_mode": "lab",
+        "diagnosis_imaging_old_infarcts_any_infarct": false,
+        "diagnosis_imaging_old_infarcts_cortical": false,
+        "diagnosis_imaging_old_infarcts_subcortical": false,
+        "diagnosis_imaging_old_infarcts_brainstem": false,
+        "diagnosis_imaging_occlusion_any_occlusion": false,
+        "diagnosis_imaging_occlusion_pca_p2_right": true,
+        "diagnosis_imaging_perfusion": {},
+        "diagnosis_imaging_type": "cta",
+        "diagnosis_imaging_timestamp": "2021-02-02T13:47:00+01:00",
+        "diagnosis_stroke_type": "is",
+        "treatment_thrombolysis_thrombolysis_treatment": true,
+        "treatment_thrombolysis_drug": "alteplase",
+        "treatment_thrombolysis_antidote_given": false,
+        "treatment_thrombolysis_drug_dose": 80,
+        "treatment_thrombolysis_bolus_timestamp": "2021-02-09T14:02:00+01:00",
+        "treatment_ischemic_stroke_mt_complications": {},
+        "treatment_intracerebral_hemorrhage_treatment": {},
+        "treatment_subarachnoid_hemorrhage_treatment": {},
+        "treatment_cerebral_venous_thrombosis_treatment": {},
+        "treatment_stroke_mimics": {},
+        "treatment_transient_ischemic_stroke": {},
+        "post_acute_care_atrial_fibrillation_or_flutter": "no_AF",
+        "post_acute_care_stroke_etiology_any_stroke_etiology": true,
+        "post_acute_care_stroke_etiology_la_atherosclerosis": false,
+        "post_acute_care_stroke_etiology_cardioembolism": true,
+        "post_acute_care_stroke_etiology_cryptogenic_stroke": false,
+        "post_acute_care_stroke_etiology_lacunar": false,
+        "post_acute_care_stroke_etiology_other": false,
+        "post_acute_care_vte_uhf": false,
+        "post_acute_care_vte_lmwh": false,
+        "post_acute_care_vte_ipc": false,
+        "post_acute_care_vte_gcs": false,
+        "post_acute_care_vte_warfarin": false,
+        "post_acute_care_vte_vfp": false,
+        "post_acute_care_vte_xa_inhibitor": false,
+        "post_acute_care_vte_other": false,
+        "post_acute_care_post_stroke_complications_any_post_stroke_complication": false,
+        "post_acute_care_post_stroke_complications_pneumonia": false,
+        "post_acute_care_post_stroke_complications_dvt": false,
+        "post_acute_care_post_stroke_complications_pulmonary_embolism": false,
+        "post_acute_care_post_stroke_complications_urinary_infection": false,
+        "post_acute_care_post_stroke_complications_pressure_sores": false,
+        "post_acute_care_post_stroke_complications_drip_site_sepsis": false,
+        "post_acute_care_post_stroke_complications_recurrence_or_extension": false,
+        "post_acute_care_post_stroke_complications_other": false,
+        "post_acute_care_hyperglycemia_hyperglycemia_diagnosed": false,
+        "post_acute_care_swallow": {},
+        "post_acute_care_rehabilitation": {},
+        "post_acute_care_carotid_arteries_carotid_arteries_imaging": true,
+        "post_acute_care_carotid_arteries_carotid_stenosis": "no",
+        "post_acute_care_post_recanalization_imaging_imaging_type": "mr",
+        "post_acute_care_post_recanalization_imaging_brain_infarct": true,
+        "post_acute_care_post_recanalization_imaging_no_bleeding": false,
+        "post_acute_care_post_recanalization_imaging_remote": false,
+        "post_acute_care_post_recanalization_imaging_bleeding_hi_1": false,
+        "post_acute_care_post_recanalization_imaging_bleeding_hi_2": false,
+        "post_acute_care_post_recanalization_imaging_bleeding_ph_1": false,
+        "post_acute_care_post_recanalization_imaging_bleeding_ph_2": false,
+        "post_acute_care_fever_fever_diagnosed": null,
+        "discharge_destination_discharge_destination": "home",
+        "discharge_medication_antidiabetics": false,
+        "discharge_medication_antihypertensives": false,
+        "discharge_medication_antiplatelets": false,
+        "discharge_medication_antiplatelet_substances_asa": false,
+        "discharge_medication_antiplatelet_substances_cilostazol": false,
+        "discharge_medication_antiplatelet_substances_clopidogrel": false,
+        "discharge_medication_antiplatelet_substances_ticagrelor": false,
+        "discharge_medication_antiplatelet_substances_ticlopidine": false,
+        "discharge_medication_antiplatelet_substances_prasugrel": false,
+        "discharge_medication_antiplatelet_substances_dipyridamole": false,
+        "discharge_medication_anticoagulants": true,
+        "discharge_medication_anticoagulant_substances_warfarin": false,
+        "discharge_medication_anticoagulant_substances_heparin": false,
+        "discharge_medication_anticoagulant_substances_dabigatran": true,
+        "discharge_medication_anticoagulant_substances_rivaroxaban": false,
+        "discharge_medication_anticoagulant_substances_apixaban": false,
+        "discharge_medication_anticoagulant_substances_edoxaban": false,
+        "discharge_medication_anticoagulant_recommended": false,
+        "discharge_medication_statin": true,
+        "discharge_medication_other": false,
+        "discharge_mrs_score": 0,
+        "discharge_nihss": 0,
+        "discharge_stroke_management_appointment": "recommended",
+        "discharge_smoking_cessation_recommended": "not_smoker",
+        "post_discharge_3_month_follow_up": {},
+        "anamnesis_age": 50,
+        "anamnesis_sex": "male",
+        "anamnesis_risk_factors_hypertension": true,
+        "anamnesis_risk_factors_diabetes": false,
+        "anamnesis_risk_factors_hyperlypidemia": false,
+        "anamnesis_risk_factors_active_smoker": false,
+        "anamnesis_risk_factors_ischemic_stroke": false,
+        "anamnesis_risk_factors_hermorrhage_stroke": false,
+        "anamnesis_risk_factors_atrial_fibrillation": false,
+        "anamnesis_risk_factors_coronary_artery": false,
+        "anamnesis_risk_factors_heart_failure": false,
+        "anamnesis_risk_factors_hiv": false,
+        "anamnesis_risk_factors_covid_positive": false,
+        "anamnesis_medication_any_medication": true,
+        "anamnesis_medication_antidiabetics": false,
+        "anamnesis_medication_antihypertensives": true,
+        "anamnesis_medication_antiplatelets": false,
+        "anamnesis_medication_antiplatelet_substances_asa": false,
+        "anamnesis_medication_antiplatelet_substances_cilostazol": false,
+        "anamnesis_medication_antiplatelet_substances_clopidogrel": false,
+        "anamnesis_medication_antiplatelet_substances_ticagrelor": false,
+        "anamnesis_medication_antiplatelet_substances_ticlopidine": false,
+        "anamnesis_medication_antiplatelet_substances_prasugrel": false,
+        "anamnesis_medication_antiplatelet_substances_dipyridamole": false,
+        "anamnesis_medication_anticoagulants": false,
+        "anamnesis_medication_anticoagulant_substances_warfarin": false,
+        "anamnesis_medication_anticoagulant_substances_heparin": false,
+        "anamnesis_medication_anticoagulant_substances_dabigatran": false,
+        "anamnesis_medication_anticoagulant_substances_rivaroxaban": false,
+        "anamnesis_medication_anticoagulant_substances_apixaban": false,
+        "anamnesis_medication_anticoagulant_substances_edoxaban": false,
+        "anamnesis_medication_hormonal_contraception": false,
+        "anamnesis_medication_statin": false,
+        "anamnesis_medication_prestroke_mrs": 0,
+        "onset_wakeup_stroke": false,
+        "onset_inhospital_stroke": false,
+        "onset_onset_timestamp": "2021-02-09T13:00:00+01:00"
+    },
+    "_reportDelta": {
+        "ops": [
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "Vážená paní doktorko, vážený pane doktore,"
+            },
+            {
+                "insert": " \n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "podáváme Vám zprávu o pacientovi hospitalizovaném na naší klinice od do "
+            },
+            {
+                "insert": "\n \n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "ANAMNÉZA:"
+            },
+            {
+                "insert": "\n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "RA"
+            },
+            {
+                "insert": ": otec +74let iCMP, matka žijící - sledována na neurologii pro třes rukou\n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "SPA"
+            },
+            {
+                "insert": ": bagrista, "
+            },
+            {
+                "attributes": {
+                    "highlighted@anamnesis.prestroke_mrs": true
+                },
+                "insert": "nyní kací stromy"
+            },
+            {
+                "insert": " podél trati, žije s rodinou\n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "TA"
+            },
+            {
+                "insert": ": "
+            },
+            {
+                "attributes": {
+                    "highlighted@discharge.smoking_cessation_recommended": true
+                },
+                "insert": "nekouří,"
+            },
+            {
+                "insert": " alkohol (poslední měsíce 2-3panáky denně, občas 1-2piva denně)\n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "AA"
+            },
+            {
+                "insert": ": sine\n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "EA"
+            },
+            {
+                "insert": ": ztráta čichu 9-10/2020, následně v rodině u všech členů potvrzená pozitivita, pacient byl negativní\n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "OA"
+            },
+            {
+                "insert": ": "
+            },
+            {
+                "attributes": {
+                    "highlighted@anamnesis.risk_factors.hypertension": true
+                },
+                "insert": "arteriální hypertenze"
+            },
+            {
+                "insert": " na medikaci, jinak se s ničím neléčí, operace 0\n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "FA"
+            },
+            {
+                "insert": ": "
+            },
+            {
+                "attributes": {
+                    "highlighted@anamnesis.medication.antihypertensives": true
+                },
+                "insert": "Triplixam"
+            },
+            {
+                "insert": " 10/2,5/5 1-0-0\n \n"
+            },
+            {
+                "attributes": {
+                    "highlighted@anamnesis.sex": true,
+                    "highlighted@admission.arrival_mode": true,
+                    "highlighted@admission.ems_prenotification": true
+                },
+                "insert": "Přivezen"
+            },
+            {
+                "attributes": {
+                    "highlighted@admission.arrival_mode": true,
+                    "highlighted@admission.ems_prenotification": true
+                },
+                "insert": " RZ"
+            },
+            {
+                "attributes": {
+                    "highlighted@admission.ems_prenotification": true
+                },
+                "insert": " jako avízo"
+            },
+            {
+                "insert": " CMP 9.2.2021 pro dnes cca v 13:00 vzniklou symptomatiku: "
+            },
+            {
+                "attributes": {
+                    "highlighted@onset.wakeup_stroke": true,
+                    "highlighted@onset.inhospital_stroke": true
+                },
+                "insert": "při řeči s kolegou v klidu vsedě vznik lehkého rotačního vertiga"
+            },
+            {
+                "insert": " a současně diplopie s vertikální disparací obrazu, které se akcentuje při pohledu doprava. Bez výraznější nausey, nezvracel, ale při chůzi se cítí nestabilní. Další obtíže vč. senzomotorického deficitu na končetinách, poruchy polykání, bolestí, dušnosti, palpitací neguje. "
+            },
+            {
+                "attributes": {
+                    "highlighted@diagnosis.imaging.occlusion.any_occlusion": true
+                },
+                "insert": "Na CT Ag bez akutní patologie,"
+            },
+            {
+                "insert": " při absenci kontraindikací podáno 80mg Actilyse, "
+            },
+            {
+                "attributes": {
+                    "highlighted@admission.hospitalized_in": true,
+                    "highlighted@admission.admission_department": true
+                },
+                "insert": "přijat na NEUJIP."
+            },
+            {
+                "insert": "\n \n"
+            },
+            {
+                "attributes": {
+                    "highlighted@onset.onset_timestamp": true
+                },
+                "insert": "Čas vzniku příznaků: 13:00"
+            },
+            {
+                "insert": "\n Pokud neznámý čas, kdy naposled bez příznaků: 12:59\n Čas příjezdu do první nemocnice mimo FN Motol: NA\n "
+            },
+            {
+                "attributes": {
+                    "highlighted@admission.admission_timestamp": true
+                },
+                "insert": "Čas vstupu do FN Motol: 13:50"
+            },
+            {
+                "insert": "\n Čas CT – první axiální řez: 14:02\n "
+            },
+            {
+                "attributes": {
+                    "highlighted@treatment.thrombolysis.bolus_timestamp": true
+                },
+                "insert": "Čas zahájení IVT: 14:02"
+            },
+            {
+                "insert": "\n Čas vpichu do třísla: NA\n Čas rekanalizace: NA\n Důvod zdržení DNT nad 20 minut: NA\n \n \n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "STAV PŘI PŘIJETÍ:"
+            },
+            {
+                "insert": "\n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "Interní vyšetření při přijetí"
+            },
+            {
+                "insert": ":\n "
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "Výška"
+            },
+            {
+                "insert": ": 180cm "
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "    Hmotnost"
+            },
+            {
+                "insert": ": 103kg "
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "  P"
+            },
+            {
+                "insert": ": 95/min "
+            },
+            {
+                "attributes": {
+                    "highlighted@admission.medical_examination.systolic_pressure": true,
+                    "highlighted@admission.medical_examination.diastolic_pressure": true,
+                    "bold": true
+                },
+                "insert": "   TK"
+            },
+            {
+                "attributes": {
+                    "highlighted@admission.medical_examination.systolic_pressure": true,
+                    "highlighted@admission.medical_examination.diastolic_pressure": true
+                },
+                "insert": ": 155/99mmhg"
+            },
+            {
+                "insert": " "
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": " DF"
+            },
+            {
+                "insert": ": "
+            },
+            {
+                "attributes": {
+                    "highlighted@post_acute_care.fever.fever_diagnosed": true
+                },
+                "insert": "eupnoe"
+            },
+            {
+                "attributes": {
+                    "highlighted@post_acute_care.fever.fever_diagnosed": true,
+                    "bold": true
+                },
+                "insert": " t"
+            },
+            {
+                "attributes": {
+                    "highlighted@post_acute_care.fever.fever_diagnosed": true
+                },
+                "insert": ":afebrilní "
+            },
+            {
+                "attributes": {
+                    "highlighted@post_acute_care.fever.fever_diagnosed": true,
+                    "bold": true
+                },
+                "insert": "Bolest"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": " - škála"
+            },
+            {
+                "insert": ": 0/10 VAS\n\n hydratace v normě, výživa v normě, bez ikteru či cyanózy, hrdlo klidné, jazyk bez povlaku, dýchání čisté, sklípkové, bez vedlejších dechových fenoménů, AS pravidelná, 2 ohraničené ozvy, bez slyšitelného šelestu, břicho v niveau, měkké, nebolestivé, prohmatné, peristaltika v normě, DK bez otoků, bez varixů, bez známek TEN, pulzace na periferii hmatné, akra teplá.\n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": " "
+            },
+            {
+                "insert": "\n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "Objektivní neurologický nález při přijetí"
+            },
+            {
+                "insert": ": při vědomí, "
+            },
+            {
+                "attributes": {
+                    "highlighted@anamnesis.sex": true
+                },
+                "insert": "orientován,"
+            },
+            {
+                "insert": " spolupracuje, PM tempo přiměřené, bez fatické poruchy či dysartrie. "
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "MN:"
+            },
+            {
+                "insert": " perimetr orientačně v normě, oční štěrbiny sym., zornice izokorické, fotoreakce +/+ přímá i nepřímá, bulby primárně v divergenci, levý bulbus deviován nahoru, levý bulbus nedotahuje nasálně, při pohybu nasálně se akcentuje pohyb nahoru, bez nystagmu, diplopie s vertikální disparací obrazu s maximem vpravo a dole, čití orientačně v normě, inervace n. VII v normě v klidu i při mimice, PSS v normě, jazyk plazí středem. "
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "Krk:"
+            },
+            {
+                "insert": " šíje volná do AF "
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "HK:"
+            },
+            {
+                "insert": " tonus přim., síla orientačně sym., rr. C5-8 prevalují vpravo, čití orientačně v normě, v Ming instabilita a pokles do 10cm/30s, Dufour + l.dx., FR + l.dx., taxe vpravo paretická, vlevo přesná "
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "trup:"
+            },
+            {
+                "insert": " bez hranice čití "
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "DK:"
+            },
+            {
+                "insert": " tonus přim., síla orientačně sym., rr. L2-S2, prevalují vpravo, vpravo pseudoklonus, čití orientačně v normě, v Ming bez poklesu, Babinski + vpravo, taxe vpravo paretická, vlevo přesná, Lassegue volně, "
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "meningeální jevy:"
+            },
+            {
+                "insert": " negativní, "
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "stoj a chůze: "
+            },
+            {
+                "insert": "stoj nestabilní, o široké bázi, schopen jen několika kroků o široké bázi s oporou "
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "čití:"
+            },
+            {
+                "insert": " taktilní čití orientačně intaktní. "
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "ré: okohybná porucha (susp. paréza n. IV l.sin.), lehká centrální pravostranná hemiparéza, nelze vyloučit paleocerebellární syndrom, "
+            },
+            {
+                "attributes": {
+                    "highlighted@admission.medical_examination.nihss": true,
+                    "bold": true
+                },
+                "insert": "NIHSS 3b"
+            },
+            {
+                "insert": "\n\n "
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "PROVEDENÁ VYŠETŘENÍ A VÝKONY"
+            },
+            {
+                "insert": ": \n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "KO 09.02.2021-13:57: "
+            },
+            {
+                "insert": "  WBC: 7.0 x10^9/l RBC: 5.46 x10^12/l HGB: 163 g/l HCT: 0.458 l/l MCV: 83.9 fl MCH: 29.9 pg MCHC: 355.9 g/l RDW: 12.3 % PLT: 263 x10^9/l MPV: 10.8 fl PCT: 0.280 % PDW-SD: 13.1 fl NRBC-A: 0.0 % NRBC#-A: 0.000 x10^9/l P-LCR: 31.3 %"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": " 10.02.2021-05:42: "
+            },
+            {
+                "insert": "  WBC: 5.6 x10^9/l RBC: 4.99 x10^12/l HGB: 148 g/l HCT: 0.427 l/l MCV: 85.6 fl MCH: 29.7 pg MCHC: 346.6 g/l RDW: 12.3 % PLT: 226 x10^9/l MPV: 11.0 fl PCT: 0.250 % PDW-SD: 13.3 fl NRBC-A: 0.0 % NRBC#-A: 0.000 x10^9/l LYMFO: 0.348 -- MONO: 0.101 -- NEU: 0.527 -- Eo: 0.018 -- BA: 0.004 -- IG: 0.002 -- LY#: 1.960 x10^9/l MO#: 0.570 x10^9/l NEU#: 2.980 x10^9/l EO#: 0.100 x10^9/l BA#: 0.020 x10^9/l IG#: 0.010 x10^9/l P-LCR: 33.3 %"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": " 11.02.2021-07:09: "
+            },
+            {
+                "insert": "  WBC: 6.8 x10^9/l RBC: 5.13 x10^12/l HGB: 151 g/l HCT: 0.437 l/l MCV: 85.2 fl MCH: 29.4 pg MCHC: 345.5 g/l RDW: 12.4 % PLT: 214 x10^9/l MPV:    11.2 fl PCT: 0.240 % PDW-SD: 13.3 fl NRBC-A: 0.0 % NRBC#-A: 0.000 x10^9/l P-LCR: 34.3 %\n"
+            },
+            {
+                "attributes": {
+                    "highlighted@admission.medical_examination.inr_mode": true,
+                    "bold": true
+                },
+                "insert": "KOAG 09.02.2021-13:57: "
+            },
+            {
+                "attributes": {
+                    "highlighted@admission.medical_examination.inr_mode": true
+                },
+                "insert": "  APTT: 31.90 s APTTN: 25.90 s APTT-R:    1.23 -- PT: 17.00 s PTN: 12.20 s PT-INR: 1.39 -- PT-R:    1.39 -- D-Di: 172 µg/l"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": " 09.02.2021-17:45: "
+            },
+            {
+                "insert": "  APTT: 31.50 s APTTN: 25.90 s APTT-R:    1.22 -- PT: 16.70 s PTN: 12.20 s PT-INR: 1.36 -- PT-R:    1.37 -- TT-R: 1.09  Fbg: 1.97 g/l AT: 100 % D-Di:    759 µg/l"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": " 10.02.2021-05:41: "
+            },
+            {
+                "insert": "  APTT: 30.90 s APTTN: 25.90 s APTT-R: 1.19 -- PT: 17.50 s PTN: 12.20 s PT-INR: 1.43 -- PT-R:    1.43 -- TT-R: 1.08  Fbg: 2.03 g/l AT: 92 % D-Di: 213 µg/l\n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": " 11.02.2021-07:09: "
+            },
+            {
+                "insert": "  APTT: 40.30 s APTTN: 25.90 s APTT-R:   1.56 -- PT: 16.90 s PTN: 12.20 s PT-INR: 1.38 -- PT-R:    1.39 -- TT-R:   2.54  Fbg: 2.04 g/l AT: 93 % D-Di: 94 µg/l \nKOAG: FVIII: bude provedeno  PC: bude provedeno  PS free: bude provedeno  APC R: bude provedeno \n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "Imuno 11.02.2021-00:00: "
+            },
+            {
+                "insert": "  S-IgG: 10.20 g/l S-IgA: 2.52 g/l S-IgM:   0.34 g/l S-C3: 0.90 g/l S-C4: 0.14 g/l\n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "BIO 09.02.2021-13:57: "
+            },
+            {
+                "insert": "  ALT:   0,84 ukat/l GGT: 0,46 ukat/l  BIL-CELK: 14,4 umol/l KREA: 80 umol/l eGFR(CKD): 1,65 ml/s/1,73 m2 CB: 73,9 g/l CRP-HS: <0,5 mg/l Separace S: 1x \n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "BIO 10.02.2021-05:41: "
+            },
+            {
+                "insert": "  Na: 145 mmol/l K: 4,8 mmol/l Cl: 106 mmol/l Ca-Celk: 2,32 mmol/l P: 1,40 mmol/l OSM: nepovolená indikace mmol/kg ALP: 0,80 ukat/l AST: 0,56 ukat/l ALT: 0,67 ukat/l GGT: 0,31 ukat/l BIL-CELK: 14,2 umol/l KM: 373 umol/l UREA: 4,5 mmol/l KREA: 81 umol/l eGFR(CKD): 1,62 ml/s/1,73 m2   hs TnI: <2,0 ng/l cut-off AIM: M: 342; Ž: 156 AD hs TnI: nelze spočítat ng/l RD hs TnI: nelze spočítat % Myoglob: 56,3 ug/l   ALB: 44,3 g/l CB:   62,1 g/l CRP-HS: <0,5 mg/l "
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": " 10.02.2021-05:41: "
+            },
+            {
+                "attributes": {
+                    "highlighted@post_acute_care.hyperglycemia.hyperglycemia_diagnosed": true
+                },
+                "insert": "  P-GLUK: 5,8 mmol/l Separace"
+            },
+            {
+                "insert": " S: 1x "
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": " 10.02.2021-05:42: "
+            },
+            {
+                "insert": "  "
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": " 11.02.2021-07:05: "
+            },
+            {
+                "insert": "  Na: 145 mmol/l K: 4,5 mmol/l Cl: 108 mmol/l AST: 0,50 ukat/l ALT: 0,66 ukat/l GGT: 0,39 ukat/l UREA: 5,0 mmol/l KREA: 75 umol/l eGFR(CKD): 1,69 ml/s/1,73 m2 CRP-HS: <0,5 mg/l \n \n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "Metabolický screening:"
+            },
+            {
+                "insert": " GHBC A1c: 37,00 mmol/mol eAG: 6,2 mmol/l TRIGL: 0,80 mmol/l CHOL: 4,1 mmol/l HDL-CHOL: 0,91 mmol/l non-HDL CH: 3,19 "
+            },
+            {
+                "attributes": {
+                    "highlighted@admission.medical_examination.cholesterol": true
+                },
+                "insert": "mmol/l LDL-CHOL: 2,85 mmol/l"
+            },
+            {
+                "insert": " TSH: 2,864 mIU/l FT4: 15,62 pmol/l NT-proBNP2: 54,9 ng/l\n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "BIO 10.02.2021-08:22: "
+            },
+            {
+                "insert": "  SPEC.HMOTN: 1,022 kg/l pH: 5,5  LEUKOCYTY: -  NITRITY: -  BILKOVINA: -  GLUKOSA: -  KETOLATKY: -  UROBILINOG: negativní  BILIRUBIN: -  BARVA: žlutá  ZÁKAL: průhledná  KREV: -  Erytrocyty: 0 částic/ul Leukocyty: 0 částic/ul Dlazdic.ep: 0 částic/ul Hlen: četně částic/ul\n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": " "
+            },
+            {
+                "insert": "\n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "POCT 09.02.2021-13:52: "
+            },
+            {
+                "insert": "pH: 7,400  satur.HbO2:   69,2 % Hb: 154,0 g/l Hct: 47 % Na: 140 mmol/l K:    3,6 mmol/l Cl: 107 "
+            },
+            {
+                "attributes": {
+                    "highlighted@admission.medical_examination.glucose": true,
+                    "highlighted@post_acute_care.hyperglycemia.hyperglycemia_diagnosed": true
+                },
+                "insert": "mmol/l GLUK: 5,55 mmol/l FIO2:"
+            },
+            {
+                "insert": " 20,90 % UREA: 4,5 mmol/l TROPI OUPD: <0,010 ug/l cut-off pro AIM 0.039 CRP OUPD: < 5,0 mg/l\n \n"
+            },
+            {
+                "attributes": {
+                    "highlighted@diagnosis.imaging.imaging_type": true,
+                    "bold": true
+                },
+                "insert": "CT MOZKU + "
+            },
+            {
+                "attributes": {
+                    "highlighted@diagnosis.imaging.imaging_type": true,
+                    "highlighted@post_acute_care.carotid_arteries.carotid_arteries_imaging": true,
+                    "bold": true
+                },
+                "insert": "CTA KAROTID"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": " "
+            },
+            {
+                "attributes": {
+                    "highlighted@diagnosis.imaging.imaging_timestamp": true,
+                    "bold": true
+                },
+                "insert": "02.02.2021-13:47:"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": " "
+            },
+            {
+                "insert": "\nSusp. uzávěr ACP l.dx. v P3 seg. Jemný v.s. hypoplastický úsek A1 seg. ACA l.dx. v rámci variací, "
+            },
+            {
+                "attributes": {
+                    "underline": true
+                },
+                "insert": "ostatní hlavní kmeny mozkových tepen i "
+            },
+            {
+                "attributes": {
+                    "highlighted@post_acute_care.carotid_arteries.carotid_stenosis": true,
+                    "underline": true
+                },
+                "insert": "karotidy a vertebrální tepny na krku jsou průchodné, bez známek významné stenózy"
+            },
+            {
+                "attributes": {
+                    "highlighted@post_acute_care.carotid_arteries.carotid_stenosis": true
+                },
+                "insert": "."
+            },
+            {
+                "insert": " Převaha levé vertebrální tepny (pravá š. cca 2-3mm, levá 5mm). Klínovité hypodenzní ložisko v pravém okcipitálním laloku. Infra- ani supratentoriálně nejsou v mozku jiné ložiskové změny denzity. Komorový systém i subarachnoidální prostory jsou přiměřené šíře. Středočárové struktury bez přesunu.Kalcifikace v epifýze a chorioidálních plexech. VDN, orbity, vnitřní zvukovody s normálním obrazem. Skelet neporušen.\nZávěr: rozvinutá "
+            },
+            {
+                "attributes": {
+                    "highlighted@diagnosis.stroke_type": true
+                },
+                "insert": "(sub)akutní ischemie"
+            },
+            {
+                "insert": " v povodí ACP l.dx.\n"
+            },
+            {
+                "attributes": {
+                    "highlighted@post_acute_care.post_recanalization_imaging.imaging_type": true,
+                    "bold": true
+                },
+                "insert": "MR mozku"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": " 03.02.2021-09:20: "
+            },
+            {
+                "insert": "Lozisko ischemie v oblasti"
+            },
+            {
+                "attributes": {
+                    "underline": true
+                },
+                "insert": " occipitálního laloku vpravo o velikosti 44x43x25mm /FDxLLxCC"
+            },
+            {
+                "insert": "/ chovající se lehce expansivně s restrikcí na DW a s odpovědí na ADC mapě , v centru ložiska jsou patrn á"
+            },
+            {
+                "attributes": {
+                    "underline": true
+                },
+                "insert": " depozita hemosiderinu v rozsahu 20x20mm"
+            },
+            {
+                "insert": " .\nJinak normální nález na MR mozku , přim. komorový systém, bez přesunu středních struktur, bez jiných ložiskových změn. Normální nález v oblasti orbit , paranazálních dutin i selly. Normální nález v oblasti pyramid.\nZ: ložisko subakutní ischemie v povodí a. cerebri posterior dx se známkami pertechiálního prokrvácení a depozitem hemosiderinu v centru ložiska .\n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "Dopplerovský UZ žil DKK 05.02.2021-09:09: "
+            },
+            {
+                "insert": "Od třísel po kotníky jsou hluboké žíly normálnlího průběhu a průsvitu, plně komprimovatelné, s tokem dobře reagujícím na Valsalvův i augmentační manévr.\nVelká saféna je bilat. suficientní. Povrchové žíly gracilní.\nZ.: Dobře průchodný žilní systém DKK, bez známek trombozy či významné chlopenní nedostatečnosti.\n \n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "TTE 03.02.2021-13:24 "
+            },
+            {
+                "insert": "\nSrdeční oddíly nedilatovány, LK lehká koncentrická hypertrofie , dobrá systolická funkce LK, porucha relaxace , EF LK v normě, bez  významné lokalizované poruchy kinetiky. Dobrá systolická funkce PK. Chlopně bez významné funkční vady . Bez echokardiografických známek významné plicní hypertenze . Perikard bez separace \n \n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "TEE: 08.02.2021-10:46"
+            },
+            {
+                "insert": " \nTEE zkrat síněmi kontrastem ihned po aplikaci masivní , pro špatnou toleranci do LS již před ukončení VM sprcha kontrastu PFO kanálem , naznačeným i nativně ouško LS volné, aorta bez prominujících plátů\nke katetrizačn okluzi lze "
+            },
+            {
+                "attributes": {
+                    "anonymized": "contactInformation"
+                },
+                "insert": "l 4914"
+            },
+            {
+                "insert": "\n \n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "TCD:"
+            },
+            {
+                "insert": " Res. V KVB mírný stupeň AS bez hemodynamicky závažných stenos, bez jiných abnormit. \nTranskraniálně normální nález - ACP dx lze detekovat distálně, nejspíše rekanalizace tepny. \nTEST PLZ: High-grade zkrat již spontánně, po VM\n \n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "PRŮBĚH HOSPITALIZACE"
+            },
+            {
+                "insert": ": "
+            },
+            {
+                "attributes": {
+                    "highlighted@anamnesis.age": true
+                },
+                "insert": "49letý"
+            },
+            {
+                "insert": " "
+            },
+            {
+                "attributes": {
+                    "highlighted@anamnesis.sex": true
+                },
+                "insert": "pacient"
+            },
+            {
+                "insert": " bez interních komorbidit přijat 9.2. 2021 pro v den příjmu náhle vzniklou diplopii spojenou s vertigem a nauseou. Obj. vstupně okohybná porucha v.s. paréza n. IV l.sin., lehká centrální pravostranná hemiparéza, susp. paleocerebellární syndrom. Na CT bez známek hemoragie či vykreslené ischemie, na CT Ag "
+            },
+            {
+                "attributes": {
+                    "highlighted@diagnosis.imaging.occlusion.any_occlusion": true
+                },
+                "insert": "bez stenóz či uzávěrů."
+            },
+            {
+                "insert": " V lab. spontánně INR 1,4, mimo to bpn. Při absenci kontraindikací "
+            },
+            {
+                "attributes": {
+                    "highlighted@treatment.thrombolysis.thrombolysis_treatment": true
+                },
+                "insert": "podáno v čase +121 min "
+            },
+            {
+                "attributes": {
+                    "highlighted@treatment.thrombolysis.thrombolysis_treatment": true,
+                    "highlighted@treatment.thrombolysis.drug_dose": true
+                },
+                "insert": "80mg"
+            },
+            {
+                "attributes": {
+                    "highlighted@treatment.thrombolysis.thrombolysis_treatment": true
+                },
+                "insert": " "
+            },
+            {
+                "attributes": {
+                    "highlighted@treatment.thrombolysis.thrombolysis_treatment": true,
+                    "highlighted@treatment.thrombolysis.drug": true
+                },
+                "insert": "Actilyse,"
+            },
+            {
+                "insert": " DNT 11 min.\nV odpoledních hodinách již zcela upraven. Do druhého dne nadále bez obtíží. "
+            },
+            {
+                "attributes": {
+                    "highlighted@post_acute_care.post_recanalization_imaging.imaging_type": true
+                },
+                "insert": "Na MRI "
+            },
+            {
+                "attributes": {
+                    "highlighted@post_acute_care.post_recanalization_imaging.imaging_type": true,
+                    "highlighted@post_acute_care.post_recanalization_imaging.brain_infarct": true
+                },
+                "insert": "mozku Obraz"
+            },
+            {
+                "attributes": {
+                    "highlighted@post_acute_care.post_recanalization_imaging.brain_infarct": true
+                },
+                "insert": " akutní ischemie"
+            },
+            {
+                "insert": " v povodí levostranné perforující větve P1 úseku a. cerebri posterior.. Na TCD zjištěn nativně low grade PL zkrat intrakardiálně při valsalvově manévru pak medium až high grade. "
+            },
+            {
+                "attributes": {
+                    "highlighted@discharge.medication.anticoagulant_substances.dabigatran": true
+                },
+                "insert": "Do medikace pro předpokládanou kardioembolizační etiologie "
+            },
+            {
+                "attributes": {
+                    "highlighted@discharge.medication.anticoagulant_substances.dabigatran": true,
+                    "bold": true
+                },
+                "insert": "dabigatran"
+            },
+            {
+                "attributes": {
+                    "highlighted@discharge.medication.anticoagulant_substances.dabigatran": true
+                },
+                "insert": "."
+            },
+            {
+                "insert": " "
+            },
+            {
+                "attributes": {
+                    "highlighted@post_acute_care.hyperglycemia.hyperglycemia_diagnosed": true
+                },
+                "insert": "Laboratorně bez pozoruhodnosti."
+            },
+            {
+                "insert": " "
+            },
+            {
+                "attributes": {
+                    "highlighted@post_acute_care.atrial_fibrillation_or_flutter": true
+                },
+                "insert": "Poruchy rytmu nezachycena."
+            },
+            {
+                "insert": " Odeslána genetika trombofilních mutací a imunologie - výsledek není v době dimise k dispozici. "
+            },
+            {
+                "attributes": {
+                    "highlighted@discharge.destination.discharge_destination": true
+                },
+                "insert": "Další péče vzhledem k dobrému klinickému stavu naplánována ambulantně."
+            },
+            {
+                "insert": " Při dimisi KP a neurologicky stabilizován. \n \n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "STAV PACIENTA PŘI PROPUŠTĚNÍ"
+            },
+            {
+                "insert": ": frustní paréza PHK (pozitivní Dufour) jinak nihil topicum, bez poruchy vizu\n \n \n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "ZÁVĚR"
+            },
+            {
+                "insert": ": \nDiagnózy: \nI638 "
+            },
+            {
+                "attributes": {
+                    "highlighted@diagnosis.stroke_type": true
+                },
+                "insert": "Akutní iCMP"
+            },
+            {
+                "insert": " ve VB., "
+            },
+            {
+                "attributes": {
+                    "highlighted@post_acute_care.stroke_etiology.cardioembolism": true
+                },
+                "insert": "etiologicky susp kardioembolizační"
+            },
+            {
+                "insert": " při PFO. Vstupní NIHSS 3, "
+            },
+            {
+                "attributes": {
+                    "highlighted@discharge.medication.anticoagulant_substances.dabigatran": true
+                },
+                "insert": "nasazena antikoagulace dabigatranem"
+            },
+            {
+                "insert": "\n"
+            },
+            {
+                "attributes": {
+                    "highlighted@treatment.thrombolysis.thrombolysis_treatment": true
+                },
+                "insert": " st.p. IVT"
+            },
+            {
+                "insert": " v čase T 121+ min (80mg rt-PA), "
+            },
+            {
+                "attributes": {
+                    "highlighted@discharge.nihss": true
+                },
+                "insert": "NIHSS při propuštění 0,"
+            },
+            {
+                "insert": " "
+            },
+            {
+                "attributes": {
+                    "highlighted@discharge.mrs_score": true
+                },
+                "insert": "mRS 0"
+            },
+            {
+                "insert": "\nQ211 Defekt síňového septa dle TCD\n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": " "
+            },
+            {
+                "insert": "\n \n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": " "
+            },
+            {
+                "insert": "\n"
+            },
+            {
+                "attributes": {
+                    "bold": true
+                },
+                "insert": "DOPORUČENÍ"
+            },
+            {
+                "insert": ": \nMedikace nově\n"
+            },
+            {
+                "attributes": {
+                    "highlighted@discharge.medication.anticoagulant_substances.dabigatran": true
+                },
+                "insert": "Pradaxa 150mg"
+            },
+            {
+                "insert": " tbl po 12 hodinách v 8 a 20 - rp vydán\n"
+            },
+            {
+                "attributes": {
+                    "highlighted@discharge.medication.statin": true
+                },
+                "insert": "Atorvastatin 80mg"
+            },
+            {
+                "insert": " tbl na večer                      - rp vydán\n \n0/ vhodný klidový režim bez výraznější psychické a fyzické na týden, nově nasazená medikace zvyšuje riziko krvácení - vhodné tedy se vyvarovat aktivitám kterém zvyšují riziko úrazů, zejména úrazu hlavy\n1/ Cestou praktického lékaře prosíme o kontrolu jaterních testů a svalových enzymů 3-6 týdnů po nasazazení statinu.,\n2/ Pravidelné kontroly TK v domácím prostředí nebo cestou PL.\n3/ Pacient objednán na vyšetření TEE, "
+            },
+            {
+                "attributes": {
+                    "anonymized": "contactInformation"
+                },
+                "insert": "4 patro uzel A , 17.2.2021, 13:00"
+            },
+            {
+                "insert": " nutné nalačno\n4/ Pacient bude telefonicky vyzván k doplnění 3 týdenního holter EKG monitorování k zachycení případné poruchy rytmu\n5/ "
+            },
+            {
+                "attributes": {
+                    "highlighted@discharge.stroke_management_appointment": true
+                },
+                "insert": "kontrola po provedení TEE a Holter EKG (či za 3-6 měsíců) po objednání v cévní poradně na tel Kontrola v cévní poradně za 3 měsíce"
+            },
+            {
+                "insert": " tel "
+            },
+            {
+                "attributes": {
+                    "anonymized": "contactInformation"
+                },
+                "insert": "702 001 916 nebo 22443 6874"
+            },
+            {
+                "insert": " volat 10-11, prosíme o kontrolu rozšířené koagulace, genetiky trombofilních mutací a imunologie\n \n"
+            },
+            {
+                "attributes": {
+                    "highlighted@discharge.destination.discharge_destination": true
+                },
+                "insert": "Další péče a kontrola u lékaře: PL a cévní poradna"
+            },
+            {
+                "insert": "\n \nPN nevyžaduje.\n \nPacient poučen o diagnóze, prognóze, terapii /zdůvodnění, užívání, nežádoucích účincích léčiv/ a o následných kontrolách.\n \n"
+            }
+        ]
+    },
+    "_reportText": "Vážená paní doktorko, vážený pane doktore, \npodáváme Vám zprávu o pacientovi hospitalizovaném na naší klinice od do \n \nANAMNÉZA:\nRA: otec +74let iCMP, matka žijící - sledována na neurologii pro třes rukou\nSPA: bagrista, nyní kací stromy podél trati, žije s rodinou\nTA: nekouří, alkohol (poslední měsíce 2-3panáky denně, občas 1-2piva denně)\nAA: sine\nEA: ztráta čichu 9-10/2020, následně v rodině u všech členů potvrzená pozitivita, pacient byl negativní\nOA: arteriální hypertenze na medikaci, jinak se s ničím neléčí, operace 0\nFA: Triplixam 10/2,5/5 1-0-0\n \nPřivezen RZ jako avízo CMP 9.2.2021 pro dnes cca v 13:00 vzniklou symptomatiku: při řeči s kolegou v klidu vsedě vznik lehkého rotačního vertiga a současně diplopie s vertikální disparací obrazu, které se akcentuje při pohledu doprava. Bez výraznější nausey, nezvracel, ale při chůzi se cítí nestabilní. Další obtíže vč. senzomotorického deficitu na končetinách, poruchy polykání, bolestí, dušnosti, palpitací neguje. Na CT Ag bez akutní patologie, při absenci kontraindikací podáno 80mg Actilyse, přijat na NEUJIP.\n \nČas vzniku příznaků: 13:00\n Pokud neznámý čas, kdy naposled bez příznaků: 12:59\n Čas příjezdu do první nemocnice mimo FN Motol: NA\n Čas vstupu do FN Motol: 13:50\n Čas CT – první axiální řez: 14:02\n Čas zahájení IVT: 14:02\n Čas vpichu do třísla: NA\n Čas rekanalizace: NA\n Důvod zdržení DNT nad 20 minut: NA\n \n \nSTAV PŘI PŘIJETÍ:\nInterní vyšetření při přijetí:\n Výška: 180cm     Hmotnost: 103kg   P: 95/min    TK: 155/99mmhg  DF: eupnoe t:afebrilní Bolest - škála: 0/10 VAS\n\n hydratace v normě, výživa v normě, bez ikteru či cyanózy, hrdlo klidné, jazyk bez povlaku, dýchání čisté, sklípkové, bez vedlejších dechových fenoménů, AS pravidelná, 2 ohraničené ozvy, bez slyšitelného šelestu, břicho v niveau, měkké, nebolestivé, prohmatné, peristaltika v normě, DK bez otoků, bez varixů, bez známek TEN, pulzace na periferii hmatné, akra teplá.\n \nObjektivní neurologický nález při přijetí: při vědomí, orientován, spolupracuje, PM tempo přiměřené, bez fatické poruchy či dysartrie. MN: perimetr orientačně v normě, oční štěrbiny sym., zornice izokorické, fotoreakce +/+ přímá i nepřímá, bulby primárně v divergenci, levý bulbus deviován nahoru, levý bulbus nedotahuje nasálně, při pohybu nasálně se akcentuje pohyb nahoru, bez nystagmu, diplopie s vertikální disparací obrazu s maximem vpravo a dole, čití orientačně v normě, inervace n. VII v normě v klidu i při mimice, PSS v normě, jazyk plazí středem. Krk: šíje volná do AF HK: tonus přim., síla orientačně sym., rr. C5-8 prevalují vpravo, čití orientačně v normě, v Ming instabilita a pokles do 10cm/30s, Dufour + l.dx., FR + l.dx., taxe vpravo paretická, vlevo přesná trup: bez hranice čití DK: tonus přim., síla orientačně sym., rr. L2-S2, prevalují vpravo, vpravo pseudoklonus, čití orientačně v normě, v Ming bez poklesu, Babinski + vpravo, taxe vpravo paretická, vlevo přesná, Lassegue volně, meningeální jevy: negativní, stoj a chůze: stoj nestabilní, o široké bázi, schopen jen několika kroků o široké bázi s oporou čití: taktilní čití orientačně intaktní. ré: okohybná porucha (susp. paréza n. IV l.sin.), lehká centrální pravostranná hemiparéza, nelze vyloučit paleocerebellární syndrom, NIHSS 3b\n\n PROVEDENÁ VYŠETŘENÍ A VÝKONY: \nKO 09.02.2021-13:57:   WBC: 7.0 x10^9/l RBC: 5.46 x10^12/l HGB: 163 g/l HCT: 0.458 l/l MCV: 83.9 fl MCH: 29.9 pg MCHC: 355.9 g/l RDW: 12.3 % PLT: 263 x10^9/l MPV: 10.8 fl PCT: 0.280 % PDW-SD: 13.1 fl NRBC-A: 0.0 % NRBC#-A: 0.000 x10^9/l P-LCR: 31.3 % 10.02.2021-05:42:   WBC: 5.6 x10^9/l RBC: 4.99 x10^12/l HGB: 148 g/l HCT: 0.427 l/l MCV: 85.6 fl MCH: 29.7 pg MCHC: 346.6 g/l RDW: 12.3 % PLT: 226 x10^9/l MPV: 11.0 fl PCT: 0.250 % PDW-SD: 13.3 fl NRBC-A: 0.0 % NRBC#-A: 0.000 x10^9/l LYMFO: 0.348 -- MONO: 0.101 -- NEU: 0.527 -- Eo: 0.018 -- BA: 0.004 -- IG: 0.002 -- LY#: 1.960 x10^9/l MO#: 0.570 x10^9/l NEU#: 2.980 x10^9/l EO#: 0.100 x10^9/l BA#: 0.020 x10^9/l IG#: 0.010 x10^9/l P-LCR: 33.3 % 11.02.2021-07:09:   WBC: 6.8 x10^9/l RBC: 5.13 x10^12/l HGB: 151 g/l HCT: 0.437 l/l MCV: 85.2 fl MCH: 29.4 pg MCHC: 345.5 g/l RDW: 12.4 % PLT: 214 x10^9/l MPV:    11.2 fl PCT: 0.240 % PDW-SD: 13.3 fl NRBC-A: 0.0 % NRBC#-A: 0.000 x10^9/l P-LCR: 34.3 %\nKOAG 09.02.2021-13:57:   APTT: 31.90 s APTTN: 25.90 s APTT-R:    1.23 -- PT: 17.00 s PTN: 12.20 s PT-INR: 1.39 -- PT-R:    1.39 -- D-Di: 172 µg/l 09.02.2021-17:45:   APTT: 31.50 s APTTN: 25.90 s APTT-R:    1.22 -- PT: 16.70 s PTN: 12.20 s PT-INR: 1.36 -- PT-R:    1.37 -- TT-R: 1.09  Fbg: 1.97 g/l AT: 100 % D-Di:    759 µg/l 10.02.2021-05:41:   APTT: 30.90 s APTTN: 25.90 s APTT-R: 1.19 -- PT: 17.50 s PTN: 12.20 s PT-INR: 1.43 -- PT-R:    1.43 -- TT-R: 1.08  Fbg: 2.03 g/l AT: 92 % D-Di: 213 µg/l\n 11.02.2021-07:09:   APTT: 40.30 s APTTN: 25.90 s APTT-R:   1.56 -- PT: 16.90 s PTN: 12.20 s PT-INR: 1.38 -- PT-R:    1.39 -- TT-R:   2.54  Fbg: 2.04 g/l AT: 93 % D-Di: 94 µg/l \nKOAG: FVIII: bude provedeno  PC: bude provedeno  PS free: bude provedeno  APC R: bude provedeno \nImuno 11.02.2021-00:00:   S-IgG: 10.20 g/l S-IgA: 2.52 g/l S-IgM:   0.34 g/l S-C3: 0.90 g/l S-C4: 0.14 g/l\nBIO 09.02.2021-13:57:   ALT:   0,84 ukat/l GGT: 0,46 ukat/l  BIL-CELK: 14,4 umol/l KREA: 80 umol/l eGFR(CKD): 1,65 ml/s/1,73 m2 CB: 73,9 g/l CRP-HS: <0,5 mg/l Separace S: 1x \nBIO 10.02.2021-05:41:   Na: 145 mmol/l K: 4,8 mmol/l Cl: 106 mmol/l Ca-Celk: 2,32 mmol/l P: 1,40 mmol/l OSM: nepovolená indikace mmol/kg ALP: 0,80 ukat/l AST: 0,56 ukat/l ALT: 0,67 ukat/l GGT: 0,31 ukat/l BIL-CELK: 14,2 umol/l KM: 373 umol/l UREA: 4,5 mmol/l KREA: 81 umol/l eGFR(CKD): 1,62 ml/s/1,73 m2   hs TnI: <2,0 ng/l cut-off AIM: M: 342; Ž: 156 AD hs TnI: nelze spočítat ng/l RD hs TnI: nelze spočítat % Myoglob: 56,3 ug/l   ALB: 44,3 g/l CB:   62,1 g/l CRP-HS: <0,5 mg/l  10.02.2021-05:41:   P-GLUK: 5,8 mmol/l Separace S: 1x  10.02.2021-05:42:    11.02.2021-07:05:   Na: 145 mmol/l K: 4,5 mmol/l Cl: 108 mmol/l AST: 0,50 ukat/l ALT: 0,66 ukat/l GGT: 0,39 ukat/l UREA: 5,0 mmol/l KREA: 75 umol/l eGFR(CKD): 1,69 ml/s/1,73 m2 CRP-HS: <0,5 mg/l \n \nMetabolický screening: GHBC A1c: 37,00 mmol/mol eAG: 6,2 mmol/l TRIGL: 0,80 mmol/l CHOL: 4,1 mmol/l HDL-CHOL: 0,91 mmol/l non-HDL CH: 3,19 mmol/l LDL-CHOL: 2,85 mmol/l TSH: 2,864 mIU/l FT4: 15,62 pmol/l NT-proBNP2: 54,9 ng/l\nBIO 10.02.2021-08:22:   SPEC.HMOTN: 1,022 kg/l pH: 5,5  LEUKOCYTY: -  NITRITY: -  BILKOVINA: -  GLUKOSA: -  KETOLATKY: -  UROBILINOG: negativní  BILIRUBIN: -  BARVA: žlutá  ZÁKAL: průhledná  KREV: -  Erytrocyty: 0 částic/ul Leukocyty: 0 částic/ul Dlazdic.ep: 0 částic/ul Hlen: četně částic/ul\n \nPOCT 09.02.2021-13:52: pH: 7,400  satur.HbO2:   69,2 % Hb: 154,0 g/l Hct: 47 % Na: 140 mmol/l K:    3,6 mmol/l Cl: 107 mmol/l GLUK: 5,55 mmol/l FIO2: 20,90 % UREA: 4,5 mmol/l TROPI OUPD: <0,010 ug/l cut-off pro AIM 0.039 CRP OUPD: < 5,0 mg/l\n \nCT MOZKU + CTA KAROTID 02.02.2021-13:47: \nSusp. uzávěr ACP l.dx. v P3 seg. Jemný v.s. hypoplastický úsek A1 seg. ACA l.dx. v rámci variací, ostatní hlavní kmeny mozkových tepen i karotidy a vertebrální tepny na krku jsou průchodné, bez známek významné stenózy. Převaha levé vertebrální tepny (pravá š. cca 2-3mm, levá 5mm). Klínovité hypodenzní ložisko v pravém okcipitálním laloku. Infra- ani supratentoriálně nejsou v mozku jiné ložiskové změny denzity. Komorový systém i subarachnoidální prostory jsou přiměřené šíře. Středočárové struktury bez přesunu.Kalcifikace v epifýze a chorioidálních plexech. VDN, orbity, vnitřní zvukovody s normálním obrazem. Skelet neporušen.\nZávěr: rozvinutá (sub)akutní ischemie v povodí ACP l.dx.\nMR mozku 03.02.2021-09:20: Lozisko ischemie v oblasti occipitálního laloku vpravo o velikosti 44x43x25mm /FDxLLxCC/ chovající se lehce expansivně s restrikcí na DW a s odpovědí na ADC mapě , v centru ložiska jsou patrn á depozita hemosiderinu v rozsahu 20x20mm .\nJinak normální nález na MR mozku , přim. komorový systém, bez přesunu středních struktur, bez jiných ložiskových změn. Normální nález v oblasti orbit , paranazálních dutin i selly. Normální nález v oblasti pyramid.\nZ: ložisko subakutní ischemie v povodí a. cerebri posterior dx se známkami pertechiálního prokrvácení a depozitem hemosiderinu v centru ložiska .\nDopplerovský UZ žil DKK 05.02.2021-09:09: Od třísel po kotníky jsou hluboké žíly normálnlího průběhu a průsvitu, plně komprimovatelné, s tokem dobře reagujícím na Valsalvův i augmentační manévr.\nVelká saféna je bilat. suficientní. Povrchové žíly gracilní.\nZ.: Dobře průchodný žilní systém DKK, bez známek trombozy či významné chlopenní nedostatečnosti.\n \nTTE 03.02.2021-13:24 \nSrdeční oddíly nedilatovány, LK lehká koncentrická hypertrofie , dobrá systolická funkce LK, porucha relaxace , EF LK v normě, bez  významné lokalizované poruchy kinetiky. Dobrá systolická funkce PK. Chlopně bez významné funkční vady . Bez echokardiografických známek významné plicní hypertenze . Perikard bez separace \n \nTEE: 08.02.2021-10:46 \nTEE zkrat síněmi kontrastem ihned po aplikaci masivní , pro špatnou toleranci do LS již před ukončení VM sprcha kontrastu PFO kanálem , naznačeným i nativně ouško LS volné, aorta bez prominujících plátů\nke katetrizačn okluzi lze l 4914\n \nTCD: Res. V KVB mírný stupeň AS bez hemodynamicky závažných stenos, bez jiných abnormit. \nTranskraniálně normální nález - ACP dx lze detekovat distálně, nejspíše rekanalizace tepny. \nTEST PLZ: High-grade zkrat již spontánně, po VM\n \nPRŮBĚH HOSPITALIZACE: 49letý pacient bez interních komorbidit přijat 9.2. 2021 pro v den příjmu náhle vzniklou diplopii spojenou s vertigem a nauseou. Obj. vstupně okohybná porucha v.s. paréza n. IV l.sin., lehká centrální pravostranná hemiparéza, susp. paleocerebellární syndrom. Na CT bez známek hemoragie či vykreslené ischemie, na CT Ag bez stenóz či uzávěrů. V lab. spontánně INR 1,4, mimo to bpn. Při absenci kontraindikací podáno v čase +121 min 80mg Actilyse, DNT 11 min.\nV odpoledních hodinách již zcela upraven. Do druhého dne nadále bez obtíží. Na MRI mozku Obraz akutní ischemie v povodí levostranné perforující větve P1 úseku a. cerebri posterior.. Na TCD zjištěn nativně low grade PL zkrat intrakardiálně při valsalvově manévru pak medium až high grade. Do medikace pro předpokládanou kardioembolizační etiologie dabigatran. Laboratorně bez pozoruhodnosti. Poruchy rytmu nezachycena. Odeslána genetika trombofilních mutací a imunologie - výsledek není v době dimise k dispozici. Další péče vzhledem k dobrému klinickému stavu naplánována ambulantně. Při dimisi KP a neurologicky stabilizován. \n \nSTAV PACIENTA PŘI PROPUŠTĚNÍ: frustní paréza PHK (pozitivní Dufour) jinak nihil topicum, bez poruchy vizu\n \n \nZÁVĚR: \nDiagnózy: \nI638 Akutní iCMP ve VB., etiologicky susp kardioembolizační při PFO. Vstupní NIHSS 3, nasazena antikoagulace dabigatranem\n st.p. IVT v čase T 121+ min (80mg rt-PA), NIHSS při propuštění 0, mRS 0\nQ211 Defekt síňového septa dle TCD\n \n \n \nDOPORUČENÍ: \nMedikace nově\nPradaxa 150mg tbl po 12 hodinách v 8 a 20 - rp vydán\nAtorvastatin 80mg tbl na večer                      - rp vydán\n \n0/ vhodný klidový režim bez výraznější psychické a fyzické na týden, nově nasazená medikace zvyšuje riziko krvácení - vhodné tedy se vyvarovat aktivitám kterém zvyšují riziko úrazů, zejména úrazu hlavy\n1/ Cestou praktického lékaře prosíme o kontrolu jaterních testů a svalových enzymů 3-6 týdnů po nasazazení statinu.,\n2/ Pravidelné kontroly TK v domácím prostředí nebo cestou PL.\n3/ Pacient objednán na vyšetření TEE, 4 patro uzel A , 17.2.2021, 13:00 nutné nalačno\n4/ Pacient bude telefonicky vyzván k doplnění 3 týdenního holter EKG monitorování k zachycení případné poruchy rytmu\n5/ kontrola po provedení TEE a Holter EKG (či za 3-6 měsíců) po objednání v cévní poradně na tel Kontrola v cévní poradně za 3 měsíce tel 702 001 916 nebo 22443 6874 volat 10-11, prosíme o kontrolu rozšířené koagulace, genetiky trombofilních mutací a imunologie\n \nDalší péče a kontrola u lékaře: PL a cévní poradna\n \nPN nevyžaduje.\n \nPacient poučen o diagnóze, prognóze, terapii /zdůvodnění, užívání, nežádoucích účincích léčiv/ a o následných kontrolách.\n \n",
+    "_highlights": {
+        "anamnesis.prestroke_mrs": [
+            {
+                "index": 220,
+                "length": 16
+            }
+        ],
+        "discharge.smoking_cessation_recommended": [
+            {
+                "index": 269,
+                "length": 8
+            }
+        ],
+        "anamnesis.risk_factors.hypertension": [
+            {
+                "index": 458,
+                "length": 21
+            }
+        ],
+        "anamnesis.medication.antihypertensives": [
+            {
+                "index": 532,
+                "length": 9
+            }
+        ],
+        "anamnesis.sex": [
+            {
+                "index": 559,
+                "length": 8
+            },
+            {
+                "index": 1973,
+                "length": 11
+            },
+            {
+                "index": 9365,
+                "length": 7
+            }
+        ],
+        "admission.arrival_mode": [
+            {
+                "index": 559,
+                "length": 11
+            }
+        ],
+        "admission.ems_prenotification": [
+            {
+                "index": 559,
+                "length": 22
+            }
+        ],
+        "onset.wakeup_stroke": [
+            {
+                "index": 639,
+                "length": 64
+            }
+        ],
+        "onset.inhospital_stroke": [
+            {
+                "index": 639,
+                "length": 64
+            }
+        ],
+        "diagnosis.imaging.occlusion.any_occlusion": [
+            {
+                "index": 977,
+                "length": 30
+            },
+            {
+                "index": 9677,
+                "length": 22
+            }
+        ],
+        "admission.hospitalized_in": [
+            {
+                "index": 1057,
+                "length": 17
+            }
+        ],
+        "admission.admission_department": [
+            {
+                "index": 1057,
+                "length": 17
+            }
+        ],
+        "onset.onset_timestamp": [
+            {
+                "index": 1077,
+                "length": 26
+            }
+        ],
+        "admission.admission_timestamp": [
+            {
+                "index": 1209,
+                "length": 29
+            }
+        ],
+        "treatment.thrombolysis.bolus_timestamp": [
+            {
+                "index": 1275,
+                "length": 23
+            }
+        ],
+        "admission.medical_examination.systolic_pressure": [
+            {
+                "index": 1482,
+                "length": 17
+            }
+        ],
+        "admission.medical_examination.diastolic_pressure": [
+            {
+                "index": 1482,
+                "length": 17
+            }
+        ],
+        "post_acute_care.fever.fever_diagnosed": [
+            {
+                "index": 1505,
+                "length": 25
+            }
+        ],
+        "admission.medical_examination.nihss": [
+            {
+                "index": 3223,
+                "length": 8
+            }
+        ],
+        "admission.medical_examination.inr_mode": [
+            {
+                "index": 4214,
+                "length": 145
+            }
+        ],
+        "post_acute_care.hyperglycemia.hyperglycemia_diagnosed": [
+            {
+                "index": 5768,
+                "length": 29
+            },
+            {
+                "index": 6663,
+                "length": 30
+            },
+            {
+                "index": 10175,
+                "length": 31
+            }
+        ],
+        "admission.medical_examination.cholesterol": [
+            {
+                "index": 6163,
+                "length": 28
+            }
+        ],
+        "admission.medical_examination.glucose": [
+            {
+                "index": 6663,
+                "length": 30
+            }
+        ],
+        "diagnosis.imaging.imaging_type": [
+            {
+                "index": 6788,
+                "length": 22
+            }
+        ],
+        "post_acute_care.carotid_arteries.carotid_arteries_imaging": [
+            {
+                "index": 6799,
+                "length": 11
+            }
+        ],
+        "diagnosis.imaging.imaging_timestamp": [
+            {
+                "index": 6811,
+                "length": 17
+            }
+        ],
+        "post_acute_care.carotid_arteries.carotid_stenosis": [
+            {
+                "index": 6967,
+                "length": 81
+            }
+        ],
+        "diagnosis.stroke_type": [
+            {
+                "index": 7479,
+                "length": 20
+            },
+            {
+                "index": 10580,
+                "length": 11
+            }
+        ],
+        "post_acute_care.post_recanalization_imaging.imaging_type": [
+            {
+                "index": 7519,
+                "length": 8
+            },
+            {
+                "index": 9892,
+                "length": 18
+            }
+        ],
+        "anamnesis.age": [
+            {
+                "index": 9358,
+                "length": 6
+            }
+        ],
+        "treatment.thrombolysis.thrombolysis_treatment": [
+            {
+                "index": 9766,
+                "length": 37
+            },
+            {
+                "index": 10697,
+                "length": 10
+            }
+        ],
+        "treatment.thrombolysis.drug_dose": [
+            {
+                "index": 9789,
+                "length": 4
+            }
+        ],
+        "treatment.thrombolysis.drug": [
+            {
+                "index": 9794,
+                "length": 9
+            }
+        ],
+        "post_acute_care.post_recanalization_imaging.brain_infarct": [
+            {
+                "index": 9899,
+                "length": 27
+            }
+        ],
+        "discharge.medication.anticoagulant_substances.dabigatran": [
+            {
+                "index": 10104,
+                "length": 70
+            },
+            {
+                "index": 10661,
+                "length": 35
+            },
+            {
+                "index": 10838,
+                "length": 13
+            }
+        ],
+        "post_acute_care.atrial_fibrillation_or_flutter": [
+            {
+                "index": 10207,
+                "length": 26
+            }
+        ],
+        "discharge.destination.discharge_destination": [
+            {
+                "index": 10329,
+                "length": 70
+            },
+            {
+                "index": 11804,
+                "length": 50
+            }
+        ],
+        "post_acute_care.stroke_etiology.cardioembolism": [
+            {
+                "index": 10600,
+                "length": 34
+            }
+        ],
+        "discharge.nihss": [
+            {
+                "index": 10740,
+                "length": 23
+            }
+        ],
+        "discharge.mrs_score": [
+            {
+                "index": 10764,
+                "length": 5
+            }
+        ],
+        "discharge.medication.statin": [
+            {
+                "index": 10891,
+                "length": 17
+            }
+        ],
+        "discharge.stroke_management_appointment": [
+            {
+                "index": 11543,
+                "length": 130
+            }
+        ]
+    },
+    "patientId": "FNM-discharge-report-1.cs"
+}
