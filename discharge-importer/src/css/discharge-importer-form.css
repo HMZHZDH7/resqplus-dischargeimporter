@@ -15,11 +15,13 @@
 
     --warning: #E82C0C;
     --green: #7CCC43;
+    --yellow: #FFEF48;
     --blue: #5868CC;
 
     --ft-fam-primary: "Roboto", sans-serif;
     --ft-wt-500: 500;
     --ft-se-400: 0.9rem;
+    --size-100: 0.4em;
     --size-200: 0.5em;
     --size-300: 0.8em;
     --size-400: 1.5em;
@@ -262,6 +264,7 @@ input {
     align-items: center;
     flex: 50%;
     border-right: 2px solid var(--cool-blue);
+    border-radius: 0 0 0 var(--size-100);
     height: 100%;
 }
 
@@ -427,6 +430,8 @@ select::-ms-expand {
 
 .div-button-form label b {
     min-width: 42px;
+    min-height: 1.5em;
+    border-radius: 1em;
 }
 
 .div-button-form label span:hover {
