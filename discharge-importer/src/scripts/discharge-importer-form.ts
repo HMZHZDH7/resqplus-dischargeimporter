@@ -1,3 +1,6 @@
+import {mapper} from "./Mapper.js";
+import jsonData from './reports/FNM-discharge-report-1.cs.json' assert {type: 'json'};
+
 interface formField {
     TextId: string;
     FieldId: string;
@@ -8,7 +11,7 @@ interface formField {
 }
 
 let formFields: formField[] = [
-    { TextId: "", FieldId: "age", TrustCount: 10, Verified: false, Value: "10", Edited: false},
+    { TextId: "", FieldId: "age", TrustCount: 100, Verified: false, Value: "20", Edited: false},
     { TextId: "", FieldId: "sex", TrustCount: NaN, Verified: false, Value: "", Edited: false},
     { TextId: "", FieldId: "wakeUpStrokeCheck", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
     { TextId: "", FieldId: "wakeUpStrokeUnCheck", TrustCount: NaN, Verified: false, Value: "true", Edited: false},
@@ -18,10 +21,8 @@ let formFields: formField[] = [
     { TextId: "", FieldId: "firstAttented", TrustCount: NaN, Verified: false, Value: "", Edited: false},
     { TextId: "", FieldId: "arrivalDate", TrustCount: NaN, Verified: false, Value: "", Edited: false},
     { TextId: "", FieldId: "arrivalTime", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-
     { TextId: "", FieldId: "onsetDate", TrustCount: NaN, Verified: false, Value: "", Edited: false},
     { TextId: "", FieldId: "onsetTime", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-
     { TextId: "", FieldId: "arrivedFrom", TrustCount: NaN, Verified: false, Value: "", Edited: false},
     { TextId: "", FieldId: "hospitalizedIn", TrustCount: NaN, Verified: false, Value: "2", Edited: false},
     { TextId: "", FieldId: "department", TrustCount: NaN, Verified: false, Value: "", Edited: false},
@@ -59,7 +60,6 @@ let formFields: formField[] = [
     { TextId: "", FieldId: "brainImaging", TrustCount: NaN, Verified: false, Value: "", Edited: false},
     { TextId: "", FieldId: "imagingDate", TrustCount: NaN, Verified: false, Value: "", Edited: false},
     { TextId: "", FieldId: "imagingTime", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-
     { TextId: "", FieldId: "radioInfarctsYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
     { TextId: "", FieldId: "radioInfarctsNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
     { TextId: "", FieldId: "checkBoxInfarctsCortical", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
@@ -211,6 +211,31 @@ let formFields: formField[] = [
     { TextId: "", FieldId: "checkBoxStrokeCompRecurrence", TrustCount: NaN, Verified: false, Value: "", Edited: false},
     { TextId: "", FieldId: "checkBoxStrokeCompOther", TrustCount: NaN, Verified: false, Value: "", Edited: false},
 ];
+
+const updateListValuesFromJson = () => {
+    // Iterate over the listData
+    for (const item of formFields) {
+        // Find the corresponding JSON name from the mapper list
+        const mappedItem = mapper.find((mapItem) => mapItem.FormId === item.FieldId);
+        if (mappedItem) {
+            const { docMarkerId } = mappedItem;
+            // Check if the _formData property exists in the JSON data
+            if (jsonData.hasOwnProperty('_formData')) {
+                // Access the nested property within _formData
+                const formData = jsonData['_formData'];
+                // Check if the object with the mapped name exists in the nested JSON data
+                if (formData.hasOwnProperty(docMarkerId)) {
+                    // Update the value in the list with the value from the nested JSON data
+                    item.Value = formData[docMarkerId];
+                }
+            }
+        }
+    }
+};
+
+// Call the function to update the list values from JSON
+updateListValuesFromJson();
+
 
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
-    "module": "none",
+    "module": "esnext",
     "target": "es5",
+    "moduleResolution": "node",
     "sourceMap": true,
     "outDir": "./build",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "lib": [
       "dom",
       "es2015",

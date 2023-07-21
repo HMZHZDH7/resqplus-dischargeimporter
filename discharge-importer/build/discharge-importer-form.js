@@ -1,5 +1,7 @@
+import { mapper } from "./Mapper.js";
+import jsonData from './reports/FNM-discharge-report-1.cs.json' assert { type: 'json' };
 var formFields = [
-    { TextId: "", FieldId: "age", TrustCount: 10, Verified: false, Value: "10", Edited: false },
+    { TextId: "", FieldId: "age", TrustCount: 100, Verified: false, Value: "20", Edited: false },
     { TextId: "", FieldId: "sex", TrustCount: NaN, Verified: false, Value: "", Edited: false },
     { TextId: "", FieldId: "wakeUpStrokeCheck", TrustCount: NaN, Verified: false, Value: "false", Edited: false },
     { TextId: "", FieldId: "wakeUpStrokeUnCheck", TrustCount: NaN, Verified: false, Value: "true", Edited: false },
@@ -196,6 +198,32 @@ var formFields = [
     { TextId: "", FieldId: "checkBoxStrokeCompRecurrence", TrustCount: NaN, Verified: false, Value: "", Edited: false },
     { TextId: "", FieldId: "checkBoxStrokeCompOther", TrustCount: NaN, Verified: false, Value: "", Edited: false },
 ];
+var updateListValuesFromJson = function () {
+    var _loop_1 = function (item) {
+        // Find the corresponding JSON name from the mapper list
+        var mappedItem = mapper.find(function (mapItem) { return mapItem.FormId === item.FieldId; });
+        if (mappedItem) {
+            var docMarkerId = mappedItem.docMarkerId;
+            // Check if the _formData property exists in the JSON data
+            if (jsonData.hasOwnProperty('_formData')) {
+                // Access the nested property within _formData
+                var formData = jsonData['_formData'];
+                // Check if the object with the mapped name exists in the nested JSON data
+                if (formData.hasOwnProperty(docMarkerId)) {
+                    // Update the value in the list with the value from the nested JSON data
+                    item.Value = formData[docMarkerId];
+                }
+            }
+        }
+    };
+    // Iterate over the listData
+    for (var _i = 0, formFields_1 = formFields; _i < formFields_1.length; _i++) {
+        var item = formFields_1[_i];
+        _loop_1(item);
+    }
+};
+// Call the function to update the list values from JSON
+updateListValuesFromJson();
 document.addEventListener('DOMContentLoaded', function () {
     var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m;
     var textarea = document.getElementById('note-editor-textarea');
