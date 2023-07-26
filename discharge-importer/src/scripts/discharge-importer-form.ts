@@ -232,10 +232,15 @@ const updateListValuesFromJson = () => {
         }
     }
 };
-
 // Call the function to update the list values from JSON
 updateListValuesFromJson();
 
+const displayReportText = () => {
+    const reportText = jsonData._reportText;
+    const textAreaElement = document.getElementById('note-editor-textarea') as HTMLTextAreaElement;
+    textAreaElement.value = reportText;
+}
+displayReportText();
 
 
 document.addEventListener('DOMContentLoaded', () => {

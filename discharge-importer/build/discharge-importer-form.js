@@ -224,6 +224,12 @@ var updateListValuesFromJson = function () {
 };
 // Call the function to update the list values from JSON
 updateListValuesFromJson();
+var displayReportText = function () {
+    var reportText = jsonData._reportText;
+    var textAreaElement = document.getElementById('note-editor-textarea');
+    textAreaElement.value = reportText;
+};
+displayReportText();
 document.addEventListener('DOMContentLoaded', function () {
     var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m;
     var textarea = document.getElementById('note-editor-textarea');

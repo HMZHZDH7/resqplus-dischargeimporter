@@ -1,5 +1,0 @@
-TobiiStream v2.0.3
-
-SUCCESS: The connection to the GazeTrack Processing library has been correctly set up!
-
-TobiiState NotPresent
