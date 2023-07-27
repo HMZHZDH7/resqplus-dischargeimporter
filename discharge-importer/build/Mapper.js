@@ -1,4 +1,4 @@
-export var mapper = [
+export const mapper = [
     { FormId: "age", docMarkerId: "anamnesis_age" },
     { FormId: "sex", docMarkerId: "anamnesis_sex" },
     //Same field
@@ -9,17 +9,17 @@ export var mapper = [
     { FormId: "strokeCheck", docMarkerId: "onset_inhospital_stroke" },
     { FormId: "strokeUnCheck", docMarkerId: "onset_inhospital_stroke" },
     { FormId: "firstAttented", docMarkerId: "admission_first_contact_place" },
-    { FormId: "arrivaldate", docMarkerId: "admission_admission_timestamp" },
+    { FormId: "arrivalDate", docMarkerId: "admission_admission_timestamp" },
     { FormId: "arrivalTime", docMarkerId: "admission_admission_timestamp" },
-    { FormId: "onsetdate", docMarkerId: "onset_onset_timestamp" },
+    { FormId: "onsetDate", docMarkerId: "onset_onset_timestamp" },
     { FormId: "onsetTime", docMarkerId: "onset_onset_timestamp" },
     { FormId: "arrivedFrom", docMarkerId: "admission_arrival_mode" },
     { FormId: "hospitalizedIn", docMarkerId: "admission_hospitalized_in" },
     { FormId: "department", docMarkerId: "admission_admission_department" },
     //Not in docmarker
-    { FormId: "radioMedicalHistoryYes", docMarkerId: "" },
-    { FormId: "radioMedicalHistoryNone", docMarkerId: "" },
-    { FormId: "radioMedicalHistoryUnknown", docMarkerId: "" },
+    { FormId: "radioMedicalHistoryYes", docMarkerId: "anamnesis_risk_factors" },
+    { FormId: "radioMedicalHistoryNone", docMarkerId: "anamnesis_risk_factors" },
+    { FormId: "radioMedicalHistoryUnknown", docMarkerId: "anamnesis_risk_factors" },
     { FormId: "checkBoxMedicalHistoryHypertension", docMarkerId: "anamnesis_risk_factors_hypertension" },
     { FormId: "checkBoxMedicalHistorydiabetes", docMarkerId: "anamnesis_risk_factors_diabetes" },
     { FormId: "checkBoxMedicalHistoryHyperlipidemia", docMarkerId: "anamnesis_risk_factors_hyperlypidemia" },
@@ -46,7 +46,7 @@ export var mapper = [
     { FormId: "systolic", docMarkerId: "admission_medical_examination_systolic_pressure" },
     { FormId: "diastolic", docMarkerId: "admission_medical_examination_diastolic_pressure" },
     { FormId: "nihss", docMarkerId: "admission_medical_examination_nihss" },
-    { FormId: "mrs", docMarkerId: "anamnesis_prestroke_mrs" },
+    { FormId: "mrs", docMarkerId: "anamnesis_medication_prestroke_mrs" },
     { FormId: "firstInrTesting", docMarkerId: "admission_medical_examination_inr_mode" },
     { FormId: "coma", docMarkerId: "" },
     { FormId: "brainImaging", docMarkerId: "diagnosis_imaging_type" },

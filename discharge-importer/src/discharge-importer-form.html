@@ -73,8 +73,8 @@
                                                 <div class="select" id="sexDiv">
                                                     <select id="sex" class="selection" required>
                                                         <option value="" disabled selected hidden>Select the Sex of the patient</option>
-                                                        <option value="1">Female</option>
-                                                        <option value="2">Male</option>
+                                                        <option value="female">Female</option>
+                                                        <option value="male">Male</option>
                                                     </select>
                                                 </div>
                                                 <div class="input-verification" id="sexVerification">
@@ -209,13 +209,14 @@
                                                     <div class="select">
                                                         <select class="selection" required id="firstAttented">
                                                             <option value="" disabled selected hidden>Select an option</option>
-                                                            <option value="1">Direct to CT/MR imaging suite</option>
-                                                            <option value="2">Emergency department/Casualty</option>
-                                                            <option value="3">Outpatient clinic/facility</option>
-                                                            <option value="4">Other department</option>
+                                                            <option value="direct_CT/MR">Direct to CT/MR imaging suite</option>
+                                                            <option value="emergency">Emergency department/Casualty</option>
+                                                            <option value="outpatient_clinic">Outpatient clinic/facility</option>
+                                                            <option value="other_department">Other department</option>
                                                         </select>
                                                     </div>
-                                                    <div class="input-verification" id="firstAttentedVerification">
+                                                    <div class="input-verification" id="firstAtten
+                                                    tedVerification">
                                                         <div class="input-trust">
                                                             <span id="firstAttentedPercentage"></span>
                                                             <span id="firstAttentedEdited" style="display: none">EDITED</span>
@@ -352,9 +353,9 @@
                                                 <div class="select">
                                                     <select class="selection" required id="arrivedFrom">
                                                         <option value="" disabled selected hidden>Select an option</option>
-                                                        <option value="1">From home/scene by EMS/ambulance</option>
-                                                        <option value="2">From home/scene by private transportation</option>
-                                                        <option value="3">From another hospital</option>
+                                                        <option value="ems">From home/scene by EMS/ambulance</option>
+                                                        <option value="private">From home/scene by private transportation</option>
+                                                        <option value="hospital">From another hospital</option>
                                                     </select>
                                                 </div>
                                                 <div class="input-verification" id="arrivedFromVerification">
@@ -391,9 +392,9 @@
                                                 <div class="select">
                                                     <select class="selection" required id="hospitalizedIn">
                                                         <option value="" disabled selected hidden>Select an option</option>
-                                                        <option value="1">ICU / Stroke unit</option>
-                                                        <option value="2">Other monitored bed with telemetry</option>
-                                                        <option value="3">Standard bed</option>
+                                                        <option value="icu">ICU / Stroke unit</option>
+                                                        <option value="telemetry_bed">Other monitored bed with telemetry</option>
+                                                        <option value="standard_bed">Standard bed</option>
                                                     </select>
                                                 </div>
                                                 <div class="input-verification" id="hospitalizedInVerification">
@@ -424,11 +425,11 @@
                                                 <div class="select">
                                                     <select class="selection" required id="department">
                                                         <option value="" disabled selected hidden>Select an option</option>
-                                                        <option value="1">Neurology</option>
-                                                        <option value="2">Neurosurgery</option>
-                                                        <option value="3">Critical care</option>
-                                                        <option value="4">Internal medicine</option>
-                                                        <option value="5">Other</option>
+                                                        <option value="neurology">Neurology</option>
+                                                        <option value="neurosurgery">Neurosurgery</option>
+                                                        <option value="critical_care">Critical care</option>
+                                                        <option value="internal_medicine">Internal medicine</option>
+                                                        <option value="other">Other</option>
                                                     </select>
                                                 </div>
                                                 <div class="input-verification" id="departmentVerification">
@@ -468,7 +469,7 @@
                                                 <div class="div-button-form" id="radioMedicalHistory" style="border-radius: unset;">
                                                     <label>
                                                         <input type="radio" name="radioMedicalHistory" id="radioMedicalHistoryYes"/>
-                                                        <span>YES</span>
+                                                        <span>Yes</span>
                                                         <b id="radioMedicalHistoryYesPercentage"></b>
                                                     </label>
                                                     <label>
@@ -567,7 +568,7 @@
                                                 <div class="div-button-form" id="radioTreatmentEvent" style="border-radius: unset;">
                                                     <label>
                                                         <input type="radio" name="radioTreatmentEvent" id="radioTreatmentEventYes"/>
-                                                        <span>YES</span>
+                                                        <span>Yes</span>
                                                         <b id="radioTreatmentEventYesPercentage"></b>
                                                     </label>
                                                     <label>
@@ -776,13 +777,13 @@
                                                 <div class="select" id="mrsDiv">
                                                     <select id="mrs" class="selection" required>
                                                         <option value="" disabled selected hidden>Select option</option>
-                                                        <option value="1">0</option>
-                                                        <option value="2">1</option>
+                                                        <option value="0">0</option>
+                                                        <option value="1">1</option>
                                                         <option value="2">2</option>
-                                                        <option value="2">3</option>
-                                                        <option value="2">4</option>
-                                                        <option value="2">5</option>
-                                                        <option value="2">unknown</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="Unknown">unknown</option>
                                                     </select>
                                                 </div>
                                                 <div class="input-verification" id="mrsVerification">
@@ -815,10 +816,10 @@
                                                 <div class="select">
                                                     <select class="selection" required id="firstInrTesting">
                                                         <option value="" disabled selected hidden>Select an option</option>
-                                                        <option value="1">Yes with point of care device</option>
-                                                        <option value="2">Yes sample sent to lab</option>
-                                                        <option value="3">Not done</option>
-                                                        <option value="3">Unknown</option>
+                                                        <option value="device">Yes with point of care device</option>
+                                                        <option value="lab">Yes sample sent to lab</option>
+                                                        <option value="not_done">Not done</option>
+                                                        <option value="Unknown">Unknown</option>
 
                                                     </select>
                                                 </div>
@@ -883,14 +884,14 @@
                                                 <div class="select">
                                                     <select class="selection" required style="width: 80%" onchange="toggleSubDiv(this.value)" id="brainImaging">
                                                         <option value="" disabled selected hidden>Select an option</option>
-                                                        <option value="1">Non-contrast CT (SCTID: 396205005)</option>
-                                                        <option value="2">Non-contrast CT (SCTID: 396205005) + CT angiography (SCTID: 418272005)</option>
-                                                        <option value="3">Non-contrast CT (SCTID: 396205005) + CT angiography (SCTID: 418272005) + CT perfusion (SCTID: 433111008)</option>
-                                                        <option value="4">MR DWI/FLAIR</option>
-                                                        <option value="5">MR DWI/FLAIR + MR angiography</option>
-                                                        <option value="6">MR DWI/FLAIR + angiography + MR perfusion</option>
-                                                        <option value="7">Imaging done in another hospital</option>
-                                                        <option value="8">Imaging not done</option>
+                                                        <option value="ct">Non-contrast CT (SCTID: 396205005)</option>
+                                                        <option value="cta">Non-contrast CT (SCTID: 396205005) + CT angiography (SCTID: 418272005)</option>
+                                                        <option value="cta_perf">Non-contrast CT (SCTID: 396205005) + CT angiography (SCTID: 418272005) + CT perfusion (SCTID: 433111008)</option>
+                                                        <option value="mr">MR DWI/FLAIR</option>
+                                                        <option value="mra">MR DWI/FLAIR + MR angiography</option>
+                                                        <option value="mra_perf">MR DWI/FLAIR + angiography + MR perfusion</option>
+                                                        <option value="elsewhere">Imaging done in another hospital</option>
+                                                        <option value="not_done">Imaging not done</option>
                                                     </select>
                                                 </div>
                                                 <div class="input-verification" id="brainImagingVerification">
@@ -1007,13 +1008,13 @@
                                                 <div class="select">
                                                     <select class="selection" required onchange="toggleDivImaging(this.value)" id="strokeType">
                                                         <option value="" disabled selected hidden>Select an option</option>
-                                                        <option value="1">Ischemic stroke (ICD-10: 163 except 163.6)</option>
-                                                        <option value="2">Intracerebral hemorrhage (ICD-10: 161)</option>
-                                                        <option value="3">Transient Ischemic Attack (ICD-10: G45)</option>
-                                                        <option value="4">Subarachnoid hemorrhage (ICD-10: 160)</option>
-                                                        <option value="5">Cerebral venous thrombosis (ICD-10: 163.6)</option>
-                                                        <option value="6">Stroke mimics</option>
-                                                        <option value="7">Undetermined</option>
+                                                        <option value="is">Ischemic stroke (ICD-10: 163 except 163.6)</option>
+                                                        <option value="ich">Intracerebral hemorrhage (ICD-10: 161)</option>
+                                                        <option value="tia">Transient Ischemic Attack (ICD-10: G45)</option>
+                                                        <option value="sah">Subarachnoid hemorrhage (ICD-10: 160)</option>
+                                                        <option value="cvt">Cerebral venous thrombosis (ICD-10: 163.6)</option>
+                                                        <option value="mimics">Stroke mimics</option>
+                                                        <option value="undetermined">Undetermined</option>
                                                     </select>
                                                 </div>
                                                 <div class="input-verification" id="strokeTypeVerification">
@@ -1249,15 +1250,15 @@
                                                         <div class="select">
                                                             <select class="selection" onchange="thrombolysisTimeToggle(this.value)" required id="thrombolysisReason">
                                                                 <option value="" disabled selected hidden>Select an option</option>
-                                                                <option value="1">Already received IVT in another hospital</option>
-                                                                <option value="2">Out of time window</option>
-                                                                <option value="3">Mild deficit</option>
-                                                                <option value="4">Consent not given</option>
-                                                                <option value="5">Cost of treatment</option>
-                                                                <option value="6">Transferred to another hospital for IVT</option>
-                                                                <option value="7">Only mechanical thrombectomy preferred</option>
-                                                                <option value="8">Thrombolysis drug not available</option>
-                                                                <option value="9">Other</option>
+                                                                <option value="already_done_elsewhere">Already received IVT in another hospital</option>
+                                                                <option value="time_window">Out of time window</option>
+                                                                <option value="mild_deficit">Mild deficit</option>
+                                                                <option value="consent">Consent not given</option>
+                                                                <option value="cost">Cost of treatment</option>
+                                                                <option value="transferred">Transferred to another hospital for IVT</option>
+                                                                <option value="only_mt">Only mechanical thrombectomy preferred</option>
+                                                                <option value="no_drug">Thrombolysis drug not available</option>
+                                                                <option value="other">Other</option>
                                                             </select>
                                                         </div>
                                                         <div class="input-verification" id="thrombolysisReasonVerification">
@@ -1322,10 +1323,10 @@
                                                             <div class="select">
                                                                 <select class="selection" required id="drugUsed">
                                                                     <option value="" disabled selected hidden>Select an option</option>
-                                                                    <option value="1">Alteplase</option>
-                                                                    <option value="2">Tenecteplase</option>
-                                                                    <option value="3">Streptokinase</option>
-                                                                    <option value="4">Staphylokinase</option>
+                                                                    <option value="alteplase">Alteplase</option>
+                                                                    <option value="tenecteplase">Tenecteplase</option>
+                                                                    <option value="streptokinase">Streptokinase</option>
+                                                                    <option value="staphylokinase">Staphylokinase</option>
                                                                 </select>
                                                             </div>
                                                             <div class="input-verification" id="drugUsedVerification">
@@ -1445,10 +1446,10 @@
                                                         <div class="select">
                                                             <select class="selection" required id="thrombolysisGiven">
                                                                 <option value="" disabled selected hidden>Select an option</option>
-                                                                <option value="1">CT/MRI room</option>
-                                                                <option value="2">Stroke unit or ICU</option>
-                                                                <option value="3">Emergency room</option>
-                                                                <option value="4">Other</option>
+                                                                <option value="radiology">CT/MRI room</option>
+                                                                <option value="icu">Stroke unit or ICU</option>
+                                                                <option value="emergency">Emergency room</option>
+                                                                <option value="other">Other</option>
                                                             </select>
                                                         </div>
                                                         <div class="input-verification">
@@ -1518,17 +1519,17 @@
                                                         <div class="select">
                                                             <select class="selection" onchange="thrombectomyTimeToggle(this.value)" required id="thrombectomyReason">
                                                                 <option value="" disabled selected hidden>Select an option</option>
-                                                                <option value="1">Already received MT in another hospital</option>
-                                                                <option value="2">Out of time window</option>
-                                                                <option value="3">Mild deficit</option>
-                                                                <option value="4">No large vessel occlusion</option>
-                                                                <option value="5">Premorbid disability</option>
-                                                                <option value="6">Consent not given</option>
-                                                                <option value="7">Cost of treatment</option>
-                                                                <option value="8">Transferred to another hospital for MT</option>
-                                                                <option value="9">MT facility not available</option>
-                                                                <option value="10">Technically not possible</option>
-                                                                <option value="11">Other</option>
+                                                                <option value="already_done_elsewhere">Already received MT in another hospital</option>
+                                                                <option value="time_window">Out of time window</option>
+                                                                <option value="mild_deficit">Mild deficit</option>
+                                                                <option value="no_lvo">No large vessel occlusion</option>
+                                                                <option value="disability">Premorbid disability</option>
+                                                                <option value="consent">Consent not given</option>
+                                                                <option value="cost">Cost of treatment</option>
+                                                                <option value="transferred">Transferred to another hospital for MT</option>
+                                                                <option value="no_mt_facility">MT facility not available</option>
+                                                                <option value="not_possible">Technically not possible</option>
+                                                                <option value="other">Other</option>
                                                             </select>
                                                         </div>
                                                         <div class="input-verification">
@@ -1617,11 +1618,12 @@
                                                             <select class="selection" required onchange="mticiToggle(this.value)" id="mTICIScore">
                                                                 <option value="" disabled selected hidden>Select an option</option>
                                                                 <option value="0">0 (no occlusion)</option>
-                                                                <option value="1">2A (ICA/M1 occlusion)</option>
-                                                                <option value="2">2B (M2/3 occlusion)</option>
-                                                                <option value="3">2C (ICA occlusion)</option>
-                                                                <option value="4">3 (MCA/PCA/BA occlusion)</option>
-                                                                <option value="5">Occlusion was not confirmed</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2A">2A (ICA/M1 occlusion)</option>
+                                                                <option value="2B">2B (M2/3 occlusion)</option>
+                                                                <option value="2C">2C (ICA occlusion)</option>
+                                                                <option value="3">3 (MCA/PCA/BA occlusion)</option>
+                                                                <option value="not_confirmed">Occlusion was not confirmed</option>
                                                             </select>
                                                         </div>
                                                         <div class="input-verification">
@@ -1953,12 +1955,12 @@
                                                     <div class="select">
                                                         <select class="selection" required id="antidoteAnticoagulants">
                                                             <option value="" disabled selected hidden>Select an option</option>
-                                                            <option value="1">Andexanete</option>
-                                                            <option value="2">Idarucizumab</option>
-                                                            <option value="3">Fresh frozen plasma</option>
-                                                            <option value="4">Prothrombin complex concentrate</option>
-                                                            <option value="5">Other</option>
-                                                            <option value="6">None</option>
+                                                            <option value="andexanete">Andexanete</option>
+                                                            <option value="idarucizumab">Idarucizumab</option>
+                                                            <option value="plasma">Fresh frozen plasma</option>
+                                                            <option value="prothrombin">Prothrombin complex concentrate</option>
+                                                            <option value="other">Other</option>
+                                                            <option value="none">None</option>
                                                         </select>
                                                     </div>
                                                     <div class="input-verification" id="antidoteAnticoagulantsVerification">
@@ -2049,9 +2051,9 @@
                                                     <div class="select">
                                                         <select class="selection" required id="clinicalSymptoms">
                                                             <option value="" disabled selected hidden>Select an option</option>
-                                                            <option value="1">Unilateral weakness</option>
-                                                            <option value="2">Speech disturbance without weakness</option>
-                                                            <option value="3">Other symptoms</option>
+                                                            <option value="weakness">Unilateral weakness</option>
+                                                            <option value="speech_disturbance">Speech disturbance without weakness</option>
+                                                            <option value="other">Other symptoms</option>
                                                         </select>
                                                     </div>
                                                     <div class="input-verification" id="clinicalSymptomsVerification">
@@ -2082,9 +2084,9 @@
                                                     <div class="select">
                                                         <select class="selection" required id="symptomsDuration">
                                                             <option value="" disabled selected hidden>Select an option</option>
-                                                            <option value="1">&lt;10 minutes</option>
-                                                            <option value="2">10-59 minutes</option>
-                                                            <option value="3">&ge; 60 minutes</option>
+                                                            <option value="0to10">&lt;10 minutes</option>
+                                                            <option value="10to59">10-59 minutes</option>
+                                                            <option value="over60">&ge; 60 minutes</option>
                                                         </select>
                                                     </div>
                                                     <div class="input-verification" id="symptomsDurationVerification">
@@ -2158,12 +2160,12 @@
                                                 <div class="select">
                                                     <select class="selection" required id="huntHess">
                                                         <option value="" disabled selected hidden>Select an option</option>
-                                                        <option value="1">1 (lucid; mild headache; slight neck stiffness)</option>
-                                                        <option value="2">2 (moderate to severe headache; neck stiffness; no neurologic deficit except cranial nerve palsy)</option>
-                                                        <option value="3">3 (drowsy; minimal neurologic deficit)</option>
-                                                        <option value="4">4 (stuporous; moderate to severe hemiparesis; possibly early decerebrate rigidity and vegetative disturbances)</option>
-                                                        <option value="5">5 (deep coma; severe neurological deficit)</option>
-                                                        <option value="6">None</option>
+                                                        <option value="1 (lucid; mild headache; slight neck stiffness)">1 (lucid; mild headache; slight neck stiffness)</option>
+                                                        <option value="2 (moderate to severe headache; neck stiffness; no neurologic deficit except cranial nerve palsy)">2 (moderate to severe headache; neck stiffness; no neurologic deficit except cranial nerve palsy)</option>
+                                                        <option value="3 (drowsy; minimal neurologic deficit)">3 (drowsy; minimal neurologic deficit)</option>
+                                                        <option value="4 (stuporous; moderate to severe hemiparesis; possibly early decerebrate rigidity and vegetative disturbances)">4 (stuporous; moderate to severe hemiparesis; possibly early decerebrate rigidity and vegetative disturbances)</option>
+                                                        <option value="5 (deep coma; severe neurological deficit)">5 (deep coma; severe neurological deficit)</option>
+                                                        <option value="none">None</option>
                                                     </select>
                                                 </div>
                                                 <div class="input-verification" id="huntHessVerification">
@@ -2258,9 +2260,9 @@
                                                 <div class="select">
                                                     <select class="selection" required id="nimodipineTreatment">
                                                         <option value="" disabled selected hidden>Select an option</option>
-                                                        <option value="1">Yes, within the first 24h of admission</option>
-                                                        <option value="2">Yes, later than 24h after admission</option>
-                                                        <option value="3">Not administered</option>
+                                                        <option value="in_24h">Yes, within the first 24h of admission</option>
+                                                        <option value="after_24h">Yes, later than 24h after admission</option>
+                                                        <option value="not_administered">Not administered</option>
                                                     </select>
                                                 </div>
                                                 <div class="input-verification" id="nimodipineTreatmentVerification">
@@ -2394,10 +2396,10 @@
                                                             <div class="select">
                                                                 <select class="selection" required id="drugUsedThrombolysis">
                                                                     <option value="" disabled selected hidden>Select an option</option>
-                                                                    <option value="1">Alteplase</option>
-                                                                    <option value="2">Tenecteplase</option>
-                                                                    <option value="3">Streptokinase</option>
-                                                                    <option value="4">Staphylokinase</option>
+                                                                    <option value="alteplase">Alteplase</option>
+                                                                    <option value="tenecteplase">Tenecteplase</option>
+                                                                    <option value="streptokinase">Streptokinase</option>
+                                                                    <option value="staphylokinase">Staphylokinase</option>
                                                                 </select>
                                                             </div>
                                                             <div class="input-verification" id="drugUsedThrombolysisVerification">
@@ -2518,12 +2520,12 @@
                                                         <div class="select">
                                                             <select class="selection" required id="finalDiagnosis">
                                                                 <option value="" disabled selected hidden>Select an option</option>
-                                                                <option value="1">Migraine (ICD-10: G43)</option>
-                                                                <option value="2">Seizure (ICD-10: G40)</option>
-                                                                <option value="3">Delirium (ICD-10: F05)</option>
-                                                                <option value="4">Electrolyte or metabolic imbalance (ICD-10: E70-E90)</option>
-                                                                <option value="5">Functional disorder (ICD-10: various)</option>
-                                                                <option value="6">Other</option>
+                                                                <option value="migraine">Migraine (ICD-10: G43)</option>
+                                                                <option value="seizure">Seizure (ICD-10: G40)</option>
+                                                                <option value="delirium">Delirium (ICD-10: F05)</option>
+                                                                <option value="imbalance">Electrolyte or metabolic imbalance (ICD-10: E70-E90)</option>
+                                                                <option value="disorder">Functional disorder (ICD-10: various)</option>
+                                                                <option value="other">Other</option>
                                                             </select>
                                                         </div>
                                                         <div class="input-verification" id="finalDiagnosisVerification">
@@ -2561,11 +2563,12 @@
                                                 <div class="select">
                                                     <select class="selection" onchange="perfusionDeficitToggle(this.value)" required id="ctmrPerfusion">
                                                         <option value="" disabled selected hidden>Select an option</option>
-                                                        <option value="1">Medial Anterior</option>
-                                                        <option value="2">Posterior</option>
-                                                        <option value="3">Carotid</option>
-                                                        <option value="4">No, analysis not reliable due to bilateral stenosis</option>
-                                                        <option value="5">No deficit</option>
+                                                        <option value="medial">Medial</option>
+                                                        <option value="anterior">Anterior</option>
+                                                        <option value="posterior">Posterior</option>
+                                                        <option value="carotid">Carotid</option>
+                                                        <option value="bilateral_stenosis">No, analysis not reliable due to bilateral stenosis</option>
+                                                        <option value="no_deficit">No deficit</option>
                                                     </select>
                                                 </div>
                                                 <div class="input-verification" id="ctmrPerfusionVerification">
@@ -2660,10 +2663,10 @@
                                                 <div class="select">
                                                     <select id="hospitalised24Hour" class="selection" required>
                                                         <option value="" disabled selected hidden>Select option</option>
-                                                        <option value="1">Yes</option>
-                                                        <option value="2">No, patient died</option>
-                                                        <option value="2">No, patient was transferred</option>
-                                                        <option value="2">No, patient was discharged</option>
+                                                        <option value="yes">Yes</option>
+                                                        <option value="died">No, patient died</option>
+                                                        <option value="transferred">No, patient was transferred</option>
+                                                        <option value="discharged">No, patient was discharged</option>
                                                     </select>
                                                 </div>
                                                 <div class="input-verification" id="hospitalised24HourVerification">
@@ -2949,11 +2952,11 @@
                                                 <div class="select">
                                                     <select class="selection" onchange="dischargeDestinationToggle(this.value)" required id="dischargeDestination">
                                                         <option value="" disabled selected hidden>Select an option</option>
-                                                        <option value="1">Home</option>
-                                                        <option value="2">Transferred within the same center</option>
-                                                        <option value="3">Transferred to another center</option>
-                                                        <option value="4">Social care facility</option>
-                                                        <option value="5">Patient died</option>
+                                                        <option value="home">Home</option>
+                                                        <option value="same_center">Transferred within the same center</option>
+                                                        <option value="another_center">Transferred to another center</option>
+                                                        <option value="social_care">Social care facility</option>
+                                                        <option value="dead">Patient died</option>
                                                     </select>
                                                 </div>
                                                 <div class="input-verification" id="dischargeDestinationVerification">
@@ -2985,9 +2988,9 @@
                                                     <div class="select">
                                                         <select class="selection" required id="dischargeDestinationFacility">
                                                             <option value="" disabled selected hidden>Select an option</option>
-                                                            <option value="1">Acute rehabilitation</option>
-                                                            <option value="2">Post-care bed</option>
-                                                            <option value="3">Another department</option>
+                                                            <option value="rehab">Acute rehabilitation</option>
+                                                            <option value="post_care">Post-care bed</option>
+                                                            <option value="another_department">Another department</option>
                                                         </select>
                                                     </div>
                                                     <div class="input-verification" id="dischargeDestinationFacilityVerification">
@@ -3018,9 +3021,9 @@
                                                     <div class="select">
                                                         <select class="selection" required id="dischargeFacility">
                                                             <option value="" disabled selected hidden>Select an option</option>
-                                                            <option value="1">Primary stroke centre</option>
-                                                            <option value="2">Comprehensive stroke centre</option>
-                                                            <option value="3">Another standard hospital</option>
+                                                            <option value="primary_center">Primary stroke centre</option>
+                                                            <option value="comprehensive_center">Comprehensive stroke centre</option>
+                                                            <option value="standard_hospital">Another standard hospital</option>
                                                         </select>
                                                     </div>
                                                     <div class="input-verification" id="dischargeFacilityVerification">
@@ -3213,9 +3216,9 @@
                                                 <div class="select">
                                                     <select class="selection" required id="appointmentScheduled">
                                                         <option value="" disabled selected hidden>Select an option</option>
-                                                        <option value="1">Yes</option>
-                                                        <option value="2">No, but recommended to schedule</option>
-                                                        <option value="3">No</option>
+                                                        <option value="yes">Yes</option>
+                                                        <option value="recommended">No, but recommended to schedule</option>
+                                                        <option value="no">No</option>
                                                     </select>
                                                 </div>
                                                 <div class="input-verification" id="appointmentScheduledVerification">
@@ -3246,9 +3249,9 @@
                                                 <div class="select">
                                                     <select class="selection" required id="smokingCessation">
                                                         <option value="" disabled selected hidden>Select an option</option>
-                                                        <option value="1">Yes</option>
-                                                        <option value="2">No</option>
-                                                        <option value="3">Not a smoker</option>
+                                                        <option value="yes">Yes</option>
+                                                        <option value="no">No</option>
+                                                        <option value="not_smoker">Not a smoker</option>
                                                     </select>
                                                 </div>
                                                 <div class="input-verification" id="smokingCessationVerification">

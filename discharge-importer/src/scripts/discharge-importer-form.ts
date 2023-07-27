@@ -10,7 +10,24 @@ interface formField {
     Edited: boolean;
 }
 
+const allFormFields = document.querySelectorAll<HTMLInputElement | HTMLSelectElement>('input, select');
+
 let switchForm: boolean = true;
+
+(window as any).changeColor = changeColor;
+(window as any).resetColor  = resetColor ;
+(window as any).applyWarningStyle  = applyWarningStyle ;
+(window as any).removeWarningStyle  = removeWarningStyle ;
+(window as any).toggleDivImaging  = toggleDivImaging ;
+(window as any).toggleSubDiv  = toggleSubDiv ;
+(window as any).thrombolysisTimeToggle  = thrombolysisTimeToggle ;
+(window as any).thrombectomyTimeToggle  = thrombectomyTimeToggle ;
+(window as any).perfusionDeficitToggle  = perfusionDeficitToggle ;
+(window as any).dischargeDestinationToggle  = dischargeDestinationToggle ;
+(window as any).triggerChangeEvent  = triggerChangeEvent ;
+(window as any).toggleVerification  = toggleVerification ;
+(window as any).toggleEdit  = toggleEdit ;
+(window as any).mticiToggle  = mticiToggle ;
 
 let formFields: formField[] = [
     { TextId: "", FieldId: "age", TrustCount: 100, Verified: false, Value: "20", Edited: false},
@@ -225,7 +242,7 @@ const updateListValuesFromJson = () => {
                 // Check if the object with the mapped name exists in the nested JSON data
                 if (formData.hasOwnProperty(docMarkerId)) {
                     // Update the value in the list with the value from the nested JSON data
-                    item.Value = formData[docMarkerId];
+                    item.Value = formData[docMarkerId].toString();
                 }
             }
         }
@@ -242,16 +259,35 @@ document.addEventListener('DOMContentLoaded', () => {
     formFields.forEach(field => {
         let formFieldElement = document.getElementById(field.FieldId) as HTMLInputElement | HTMLSelectElement;
         if (formFieldElement) {
-            formFieldElement.value = field.Value;
-
-            if (formFieldElement.type === 'radio') {
-                if ("checked" in formFieldElement) {
-                    formFieldElement.checked = field.Value === 'true';
+            const regex: RegExp = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}/;
+            if (regex.test(field.Value)) {
+                if (formFieldElement.type == "date" ) {
+                    formFieldElement.value = field.Value.split('T')[0];
+                } else {
+                    const timeArray = field.Value.split('T')[1].split(':'); // will return ['HH', 'MM', 'SS']
+                    formFieldElement.value = `${timeArray[0]}:${timeArray[1]}`;
                 }
-            }
-            if (formFieldElement.type === 'checkbox') {
-                if ("checked" in formFieldElement) {
-                    formFieldElement.checked = field.Value === 'true';
+            } else {
+                if (formFieldElement.type === 'radio') {
+                    if ("checked" in formFieldElement) {
+                        if (field.FieldId.endsWith('UnCheck')) {
+                            formFieldElement.checked = field.Value == "false";
+                        } else if (field.FieldId.endsWith('No')) {
+                            formFieldElement.checked = field.Value == "false";
+                        } else if (field.FieldId.endsWith('None')) {
+                            formFieldElement.checked = field.Value == "false";
+                        } else if (field.FieldId.endsWith('Unknown')) {
+                            formFieldElement.checked = field.Value != "false" && field.Value != "true";
+                        } else {
+                            formFieldElement.checked = field.Value === "true";
+                        }                    }
+                }
+                else if (formFieldElement.type === 'checkbox') {
+                    if ("checked" in formFieldElement) {
+                        formFieldElement.checked = field.Value === 'true';
+                    }
+                } else {
+                    formFieldElement.value = field.Value;
                 }
             }
         }
@@ -389,7 +425,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     radioButtonsInfarcts.forEach((radioButton) => {
         radioButton.addEventListener("change", function() {
-            if ((this.id === 'infarctsNo') && this.value === 'true') {
+            if ((this.id === 'radioInfarctsNo') && this.value === 'true') {
                 divInfarcts.style.display = 'none';
             } else if (this.value === 'true') {
                 divInfarcts.style.display = 'flex';
@@ -570,26 +606,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
- /*
-    inputElement.addEventListener("invalid", () => {
-        applyInvalidStyle(inputElement);
-    });
-
-    inputElement.addEventListener("input", () => {
-        if (inputElement.checkValidity()) {
-            removeInvalidStyle(inputElement);
-        }
-    });
-
-    selectElement.addEventListener("invalid", () => {
-        applyInvalidStyle(selectElement);
-    });
-
-    selectElement.addEventListener("change", () => {
-        if (selectElement.checkValidity()) {
-            removeInvalidStyle(selectElement);
-        }
-    });*/
 
     const inputs = document.querySelectorAll('input:not([type="checkbox"]), select');
 
@@ -623,8 +639,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
-
-
 
     const allFormFields = document.querySelectorAll<HTMLInputElement | HTMLSelectElement>('input, select');
     allFormFields.forEach((field) => {
@@ -682,16 +696,16 @@ function toggleSubDiv(value: string) {
     }
 
     const selectedDiv = document.getElementById("imagingSubDiv");
-    if (value == "1" || value == "4" || value == "7" || value == "8") {
+    if (value == "ct" || value == "mr" || value == "elsewhere" || value == "not_done") {
         selectedDiv.style.display = "none";
     }
-    if (value == "8") {
+    if (value == "not_done") {
         imagingDiv.style.display = "none";
         imagingDateVerification.style.display = "none";
         infarctsDiv.style.display = "none";
     }
 
-    if (value == "3" || value == "6") {
+    if (value == "cta_perf" || value == "mra_perf") {
         perfusionDeficitDiv.style.display = "flex";
     }
 }
@@ -717,7 +731,7 @@ function thrombolysisTimeToggle(value: string) {
     }
 
     const selectedDiv = document.getElementById("thrombolysisDiv");
-    if (value == "6") {
+    if (value == "transferred") {
         selectedDiv.style.display = "block";
     }
 }
@@ -730,7 +744,7 @@ function thrombectomyTimeToggle(value: string) {
     }
 
     const selectedDiv = document.getElementById("thrombectomyTimeDiv");
-    if (value == "8") {
+    if (value == "transferred") {
         selectedDiv.style.display = "block";
     }
 }
@@ -743,7 +757,7 @@ function perfusionDeficitToggle(value: string) {
     }
 
     const selectedDiv = document.getElementById("perfusionDeficit");
-    if (value == "4" || value == "5") {
+    if (value == "bilateral_stenosis" || value == "no_deficit") {
         selectedDiv.style.display = "none";
     }
 }
@@ -755,10 +769,10 @@ function dischargeDestinationToggle(value: string) {
     transferredDiv.style.display = "none";
 
 
-    if (value == "2") {
+    if (value == "same_center") {
         withinDiv.style.display = "block";
     }
-    if (value == "3") {
+    if (value == "another_center") {
         transferredDiv.style.display = "block";
     }
 }
@@ -864,7 +878,4 @@ function formSwitch() {
         document.getElementById("radioVentilatedPercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'radioVentilatedYes').TrustCount, formFields.find(o => o.FieldId === 'radioVentilatedNo').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || 0);
         document.getElementById("radioCraniectomyPercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'radioCraniectomyYes').TrustCount, formFields.find(o => o.FieldId === 'radioCraniectomyNo').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || 0);
     }
-
-
-
 }
