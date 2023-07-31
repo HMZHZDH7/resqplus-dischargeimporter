@@ -109,7 +109,7 @@ export const mapper: map[] = [
 
     //Not in Docmarker
     { FormId: "thrombolysisReason", docMarkerId:""},
-    { FormId: "thrombolysisdate", docMarkerId:""},
+    { FormId: "thrombolysisDate", docMarkerId:""},
 
     { FormId: "drugUsed", docMarkerId:"treatment_thrombolysis_drug"},
 
@@ -117,8 +117,8 @@ export const mapper: map[] = [
     { FormId: "radioAnticoagulantYes",  docMarkerId:"treatment_thrombolysis_antidote_given"},
     { FormId: "radioAnticoagulantNo",  docMarkerId:"treatment_thrombolysis_antidote_given"},
 
-    { FormId: "treatmentdose", docMarkerId:"treatment_thrombolysis_drug_dos"},
-    { FormId: "bolusdate", docMarkerId:"treatment_thrombolysis_bolus_timestamp"},
+    { FormId: "treatmentDose", docMarkerId:"treatment_thrombolysis_drug_dos"},
+    { FormId: "bolusDate", docMarkerId:"treatment_thrombolysis_bolus_timestamp"},
 
     //same field
     { FormId: "thrombolysisGiven", docMarkerId:"treatment_ischemic_stroke_thrombectomy_treatment"},
@@ -127,18 +127,18 @@ export const mapper: map[] = [
 
     //Not found
     { FormId: "thrombectomyReason", docMarkerId:""},
-    { FormId: "thrombectomydate", docMarkerId:""},
+    { FormId: "thrombectomyDate", docMarkerId:""},
 
-    { FormId: "groindate", docMarkerId:"treatment_ischemic_stroke_puncture_timestamp"},
+    { FormId: "groinDate", docMarkerId:"treatment_ischemic_stroke_puncture_timestamp"},
     { FormId: "mTICIScore", docMarkerId:"treatment_ischemic_stroke_mtici_score"},
-    { FormId: "reperfusiondate", docMarkerId:"treatment_ischemic_stroke_reperfusion_timestamp"},
+    { FormId: "reperfusionDate", docMarkerId:"treatment_ischemic_stroke_reperfusion_timestamp"},
 
     //Same field
     { FormId: "radioThrombectomyYes",  docMarkerId:"treatment_ischemic_stroke_mt_complications_any_thrombectomy_complication"},
     { FormId: "radioThrombectomyNo",  docMarkerId:"treatment_ischemic_stroke_mt_complications_any_thrombectomy_complication"},
 
     { FormId: "checkBoxThrombectomyVesselPerforation",  docMarkerId:"treatment_ischemic_stroke_mt_complications_perforation"},
-    { FormId: "checkBoxThrombectomydissection",  docMarkerId:"treatment_ischemic_stroke_mt_complications_dissection"},
+    { FormId: "checkBoxThrombectomyDissection",  docMarkerId:"treatment_ischemic_stroke_mt_complications_dissection"},
     { FormId: "checkBoxThrombectomyEmbolization",  docMarkerId:"treatment_ischemic_stroke_mt_complications_embolization"},
     { FormId: "checkBoxThrombectomyHematoma",  docMarkerId:"treatment_ischemic_stroke_mt_complications_hematoma"},
     { FormId: "checkBoxThrombectomyOther",  docMarkerId:"treatment_ischemic_stroke_mt_complications_other"},
@@ -178,13 +178,14 @@ export const mapper: map[] = [
     { FormId: "bleedingSubarachnoidCheck",  docMarkerId:"treatment_subarachnoid_hemorrhage_treatment"},
     { FormId: "bleedingSubarachnoidUnCheck", docMarkerId:"treatment_subarachnoid_hemorrhage_treatment"},
 
+    //Don't have this fields in our JSON
     { FormId: "huntHess", docMarkerId:""},
     { FormId: "radioInterventionYes",  docMarkerId:""},
     { FormId: "radioInterventionNo",  docMarkerId:""},
     { FormId: "checkBoxInterventionEndovascular",  docMarkerId:""},
     { FormId: "checkBoxInterventionNeurosurgical",  docMarkerId:""},
-    { FormId: "checkBoxInterventionVentriculardrainage",  docMarkerId:""},
-    { FormId: "checkBoxInterventiondecompressiveCraniectomy",  docMarkerId:""},
+    { FormId: "checkBoxInterventionVentricularDrainage",  docMarkerId:""},
+    { FormId: "checkBoxInterventionDecompressiveCraniectomy",  docMarkerId:""},
     { FormId: "checkBoxInterventionOther",  docMarkerId:""},
     { FormId: "nimodipineTreatment", docMarkerId:""},
     { FormId: "radioTreatmentPerformedYes",  docMarkerId:""},
@@ -193,31 +194,35 @@ export const mapper: map[] = [
     { FormId: "checkBoxTreatmentPerformedThrombectomy",  docMarkerId:""},
     { FormId: "checkBoxTreatmentPerformedThrombolysis",  docMarkerId:""},
     { FormId: "checkBoxTreatmentPerformedNeurosurgical",  docMarkerId:""},
-    { FormId: "radioThrombolysisMimicCheck",  docMarkerId:""},
-    { FormId: "radioThrombolysisMimicUnCheck", docMarkerId:""},
-    { FormId: "drugUsedThrombolysis", docMarkerId:""},
-    { FormId: "radioAnticoagulantMimicsYes",  docMarkerId:""},
-    { FormId: "radioAnticoagulantMimicsNo",  docMarkerId:""},
-    { FormId: "treatmentdoseMimics", docMarkerId:""},
-    { FormId: "bolusMimicdate", docMarkerId:""},
-    { FormId: "finaldiagnosis", docMarkerId:""},
-    { FormId: "ctmrPerfusion", docMarkerId:""},
+
+    { FormId: "radioThrombolysisMimicCheck",  docMarkerId:"treatment_thrombolysis_thrombolysis_treatment"},
+    { FormId: "radioThrombolysisMimicUnCheck", docMarkerId:"treatment_thrombolysis_thrombolysis_treatment"},
+
+    { FormId: "drugUsedThrombolysis", docMarkerId:"treatment_thrombolysis_drug"},
+    { FormId: "radioAnticoagulantMimicsYes",  docMarkerId:"treatment_thrombolysis_antidote_given"},
+    { FormId: "radioAnticoagulantMimicsNo",  docMarkerId:"treatment_thrombolysis_antidote_given"},
+    { FormId: "treatmentDoseMimics", docMarkerId:"treatment_thrombolysis_drug_dos"},
+    { FormId: "bolusMimicDate", docMarkerId:"treatment_thrombolysis_bolus_timestamp"},
+
+    { FormId: "finalDiagnosis", docMarkerId:""},
+
+    { FormId: "ctmrPerfusion", docMarkerId:"diagnosis_imaging_perfusion_perfusion_deficit"},
     { FormId: "coreVolume", docMarkerId:""},
     { FormId: "hypoperfusionVolume", docMarkerId:""},
 
-    { FormId: "dischargedestination", docMarkerId:"discharge_destination"},
+    { FormId: "dischargeDestination", docMarkerId:"discharge_destination_discharge_destination"},
 
     //not found
-    { FormId: "dischargedestinationFacility", docMarkerId:""},
+    { FormId: "dischargeDestinationFacility", docMarkerId:""},
     { FormId: "dischargeFacility", docMarkerId:""},
 
-    { FormId: "dischargedate", docMarkerId:"discharge_discharge_date"},
+    { FormId: "dischargeDate", docMarkerId:"discharge_discharge_date"},
     { FormId: "mrsScore", docMarkerId:"discharge_mrs_score"},
 
     //not found
     { FormId: "discharge", docMarkerId:""},
-    { FormId: "radioTreatmentPrescribedYes",  docMarkerId:""},
-    { FormId: "radioTreatmentPrescribedNo",  docMarkerId:""},
+    { FormId: "radioTreatmentPrescribedYes",  docMarkerId:"discharge_any_treatment_prescribed"},
+    { FormId: "radioTreatmentPrescribedNo",  docMarkerId:"discharge_any_treatment_prescribed"},
 
     { FormId: "checkBoxTreatmentPrescribedAntidiabetics",  docMarkerId:"discharge_medication_antidiabetics"},
     { FormId: "checkBoxTreatmentPrescribedAntihypertensives",  docMarkerId:"discharge_medication_antihypertensives"},

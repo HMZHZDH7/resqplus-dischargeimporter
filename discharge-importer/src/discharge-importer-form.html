@@ -37,6 +37,7 @@
                                             <span>
                                                 Admission data
                                             </span>
+                                            <button class="btn" onclick="formSwitch()">Switch</button>
                                         </div>
 
                                         <div class="form-row">
@@ -639,7 +640,7 @@
                                         <div class="form-row">
                                             <div class="item">
                                                 <div class="input-item">
-                                                    <input style="padding-left: 40px" class="form-input" type="number" name="glucose" id="glucose" pattern="\w{1,}" />
+                                                    <input style="padding-left: 40px" class="form-input" type="number" name="glucose" id="glucose" step="0.01"/>
                                                     <label style="padding-left: 30px" class="input-label" for="glucose">GLUCOSE (FIRST MEASUREMENT IN HOSP.)</label>
                                                     <button class="input-button" id="nullButtonGlucose">
                                                         <img src="../assets/cancel.svg" alt="Set to null"/>
@@ -666,7 +667,7 @@
                                             </div>
                                             <div class="item">
                                                 <div class="input-item">
-                                                    <input style="padding-left: 40px" class="form-input" type="number" name="cholesterol" id="cholesterol" pattern="\w{1,}" />
+                                                    <input style="padding-left: 40px" class="form-input" type="number" name="cholesterol" id="cholesterol" step="0.01"/>
                                                     <label style="padding-left: 30px" class="input-label" for="cholesterol">LDL CHOLESTEROL (FIRST MEASUREMENT IN HOSP.)</label>
                                                     <button class="input-button" id="nullButtonCholesterol">
                                                         <img src="../assets/cancel.svg" alt="Set to null"/>
@@ -695,7 +696,7 @@
                                         <div class="form-row">
                                             <div class="item">
                                                 <div class="input-item">
-                                                    <input class="form-input" type="number" name="systolic" id="systolic" pattern="\w{1,}" required />
+                                                    <input class="form-input" type="number" name="systolic" id="systolic" pattern="\w{1,}" />
                                                     <label class="input-label" for="systolic">SYSTOLIC BLOOD PRESSURE (FIRST MEASUREMENT IN HOSP. IN MMHG)</label>
                                                 </div>
                                                 <div class="input-verification" id="systolicVerification">
@@ -1008,7 +1009,7 @@
                                                     </span>
                                                 </div>
                                                 <div class="select">
-                                                    <select class="selection" required onchange="toggleDivImaging(this.value)" id="strokeType">
+                                                    <select class="selection" required onchange="toggleDivImaging(this.selectedIndex)" id="strokeType">
                                                         <option value="" disabled selected hidden>Select an option</option>
                                                         <option value="is">Ischemic stroke (ICD-10: 163 except 163.6)</option>
                                                         <option value="ich">Intracerebral hemorrhage (ICD-10: 161)</option>
@@ -3279,13 +3280,11 @@
 
 
                                     </form>
-
-                                    <button class="btn" onclick="formSwitch()">change color</button>
-                                    <button class="btn" onclick="resetColor()">reset color</button>
-
-                                    <input type="button" onclick="stock_event='';stock_continuous_measurement='';stock_frequence='';stock_meta=''" value="Clear">
-                                    <input type="button" id="btn" onclick="stock_event+= logging_ended+','; Meta();Btn(stock_event,link_event,head_fields1);Btn(stock_frequence,link_continuous_measurment,head_fields2);Btn(stock_meta,link_meta,head_fields3)" value="download csv">
-
+                                    <div style="margin-top: 30px">
+                                        <input class="btn" type="button" onclick="stock_event='';stock_continuous_measurement='';stock_frequence='';stock_meta=''" value="Clear">
+                                        <button class="btn" onclick="exportData()">Submit</button>
+                                        <input class="btn" type="button" id="btn" onclick="stock_event+= logging_ended+','; Meta();Btn(stock_event,link_event,head_fields1);Btn(stock_frequence,link_continuous_measurment,head_fields2);Btn(stock_meta,link_meta,head_fields3)" value="download csv">
+                                    </div>
                                 </div>
                             </div>
                         </div>
