@@ -237,7 +237,7 @@ let formFields: formField[] = [
 
 declare var Quill: any;
 
-class HighlightBlot extends Quill.import('blots/inline') {
+class HighlightBlot<T> extends Quill.import('blots/inline')<T> {
     static blotName = 'highlight';
     static tagName = 'span';
     static className = 'highlight';
