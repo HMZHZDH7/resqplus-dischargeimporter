@@ -2,12 +2,17 @@ import {mapper} from "./Mapper.js";
 import jsonData from './reports/FNM-discharge-report-1.cs.json' assert {type: 'json'};
 
 interface formField {
-    TextId: string;
+    highLights: highLight[];
     FieldId: string;
     TrustCount: number;
     Verified: boolean;
     Value: string;
     Edited: boolean;
+}
+
+interface highLight {
+    Index: number,
+    Length: number
 }
 
 const allFormFields = document.querySelectorAll<HTMLInputElement | HTMLSelectElement>('input, select');
@@ -32,203 +37,221 @@ let switchForm: boolean = true;
 (window as any).exportData  = exportData ;
 
 let formFields: formField[] = [
-    { TextId: "", FieldId: "age", TrustCount: 100, Verified: false, Value: "20", Edited: false},
-    { TextId: "", FieldId: "sex", TrustCount: 50, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "wakeUpStrokeCheck", TrustCount: 80, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "wakeUpStrokeUnCheck", TrustCount: NaN, Verified: false, Value: "true", Edited: false},
-    { TextId: "", FieldId: "wakeUpDate", TrustCount: 80, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "strokeCheck", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "strokeUnCheck", TrustCount: NaN, Verified: false, Value: "true", Edited: false},
-    { TextId: "", FieldId: "firstAttented", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "arrivalDate", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "arrivalTime", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "onsetDate", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "onsetTime", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "arrivedFrom", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "hospitalizedIn", TrustCount: NaN, Verified: false, Value: "2", Edited: false},
-    { TextId: "", FieldId: "department", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "radioMedicalHistoryYes", TrustCount: NaN, Verified: false, Value: "true", Edited: false},
-    { TextId: "", FieldId: "radioMedicalHistoryNone", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "radioMedicalHistoryUnknown", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxMedicalHistoryHypertension", TrustCount: NaN, Verified: false, Value: "true", Edited: false},
-    { TextId: "", FieldId: "checkBoxMedicalHistoryDiabetes", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxMedicalHistoryHyperlipidemia", TrustCount: 78, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxMedicalHistoryActiveSmoker", TrustCount: 45, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxMedicalHistoryPreviousIschemic", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxMedicalHistoryPreviousHemorrhage", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxMedicalHistoryAtrialFibrillation", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxMedicalHistoryCoronaryArtery", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxMedicalHistoryCongestiveHeartFailure", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxMedicalHistoryHIV", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxMedicalHistoryCOVIDPositive", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "radioTreatmentEventYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "radioTreatmentEventNone", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "radioTreatmentEventUnknown", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxTreatmentEventAntidiabetics", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxTreatmentEventAntihypertensives", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxTreatmentEventAntiplatelets", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxTreatmentEventAnticoagulants", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxTreatmentEventHormonalContraception", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxTreatmentEventStatin", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "glucose", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "cholesterol", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "systolic", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "diastolic", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "nihss", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "mrs", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "firstInrTesting", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "coma", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "brainImaging", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "imagingDate", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "imagingTime", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "radioInfarctsYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "radioInfarctsNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxInfarctsCortical", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxInfarctsSubCortical", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxBrainstem", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "strokeType", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "aspectScore", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "radioArterialYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "radioArterialNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxArterialMCA1Left", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxArterialMCA2Left", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxArterialMCA3Left", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxArterialACA", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxArterialPCA1Left", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxArterialPCA2Left", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxArterialCEALeft", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxArterialCIALeft", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxArterialVertebral", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxArterialMCA1Right", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxArterialMCA2Right", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxArterialMCA3Right", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxArterialACARight", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxArterialPCA1Right", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxArterialPCA2Right", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxArterialCEARight", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxArterialCIARight", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxArterialBasilar", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "radioThrombolysisCheck", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "radioThrombolysisUnCheck", TrustCount: NaN, Verified: false, Value: "true", Edited: false},
-    { TextId: "", FieldId: "thrombolysisReason", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "thrombolysisDate", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "drugUsed", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "radioAnticoagulantYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "radioAnticoagulantNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "treatmentDose", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "bolusDate", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "thrombolysisGiven", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "thrombectomyCheck", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "thrombectomyUnCheck", TrustCount: NaN, Verified: false, Value: "true", Edited: false},
-    { TextId: "", FieldId: "thrombectomyReason", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "thrombectomyDate", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "groinDate", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "mTICIScore", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "reperfusionDate", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "radioThrombectomyYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "radioThrombectomyNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxThrombectomyVesselPerforation", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxThrombectomyDissection", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxThrombectomyEmbolization", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxThrombectomyHematoma", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxThrombectomyOther", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "bleedingVolume", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "infratentorialCheck", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "infratentorialUnCheck", TrustCount: NaN, Verified: false, Value: "true", Edited: false},
-    { TextId: "", FieldId: "bleedingCheck", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "bleedingUnCheck", TrustCount: NaN, Verified: false, Value: "true", Edited: false},
-    { TextId: "", FieldId: "intraventricularCheck", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "intraventricularUnCheck", TrustCount: NaN, Verified: false, Value: "true", Edited: false},
-    { TextId: "", FieldId: "radioBleedingReasonYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "radioBleedingReasonNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxBleedingReasonArterialHypertension", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxBleedingReasonAneurysm", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxBleedingReasonArteriovenousMalformation", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxBleedingReasonAnticoagulationTherapy", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxBleedingReasonAmyloidAngiopathy", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxBleedingReasonOther", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "antidoteAnticoagulants", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "radioNeurosurgeryYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "radioNeurosurgeryNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxNeurosurgeryIntracranialHematomaEvacuation", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxNeurosurgeryExternalVentricularDrainage", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxNeurosurgeryDecompresiveCraniectomy", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "clinicalSymptoms", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "symptomsDuration", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "bleedingSubarachnoidCheck", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "bleedingSubarachnoidUnCheck", TrustCount: NaN, Verified: false, Value: "true", Edited: false},
-    { TextId: "", FieldId: "huntHess", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "radioInterventionYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "radioInterventionNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxInterventionEndovascular", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxInterventionNeurosurgical", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxInterventionVentricularDrainage", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxInterventionDecompressiveCraniectomy", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxInterventionOther", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "nimodipineTreatment", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "radioTreatmentPerformedYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "radioTreatmentPerformedNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxTreatmentPerformedAnticoagulation", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxTreatmentPerformedThrombectomy", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxTreatmentPerformedThrombolysis", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxTreatmentPerformedNeurosurgical", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "radioThrombolysisMimicCheck", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "radioThrombolysisMimicUnCheck", TrustCount: NaN, Verified: false, Value: "true", Edited: false},
-    { TextId: "", FieldId: "drugUsedThrombolysis", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "radioAnticoagulantMimicsYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "radioAnticoagulantMimicsNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "treatmentDoseMimics", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "bolusMimicDate", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "finalDiagnosis", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "ctmrPerfusion", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "coreVolume", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "hypoperfusionVolume", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "dischargeDestination", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "dischargeDestinationFacility", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "dischargeFacility", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "dischargeDate", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "mrsScore", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "discharge", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "radioTreatmentPrescribedYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "radioTreatmentPrescribedNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxTreatmentPrescribedAntidiabetics", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxTreatmentPrescribedAntihypertensives", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxTreatmentPrescribedAntiplatelets", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxTreatmentPrescribedAnticoagulants", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxTreatmentPrescribedAnticoagulantPlanned", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxTreatmentPrescribedStatin", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxTreatmentPrescribedOther", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "appointmentScheduled", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "smokingCessation", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "hospitalised24Hour", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "radioVentilated", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "radioVentilatedYes", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "radioVentilatedNo", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "radioCraniectomy", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "radioCraniectomyYes", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "radioCraniectomyNo", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "radioThromboembolismYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "radioThromboembolismNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxThromboembolismUFH", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "checkBoxThromboembolismLMWH", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "checkBoxThromboembolismIPC", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "checkBoxThromboembolismGCS", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "checkBoxThromboembolismVTE", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "checkBoxThromboembolismVFP", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "checkBoxThromboembolismXaVTE", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "checkBoxThromboembolismOther", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "radioStrokeCompYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "radioStrokeCompNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "radioStrokeCompUnknown", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { TextId: "", FieldId: "checkBoxStrokeCompPneumonia", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "checkBoxStrokeCompDVT", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "checkBoxStrokeCompPulmonary", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "checkBoxStrokeCompUrinary", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "checkBoxStrokeCompSores", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "checkBoxStrokeCompSepsis", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "checkBoxStrokeCompRecurrence", TrustCount: NaN, Verified: false, Value: "", Edited: false},
-    { TextId: "", FieldId: "checkBoxStrokeCompOther", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [{Index: 4000, Length: 100},{Index: 25, Length: 10}], FieldId: "age", TrustCount: 100, Verified: false, Value: "20", Edited: false},
+    { highLights: [], FieldId: "sex", TrustCount: 50, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "wakeUpStrokeCheck", TrustCount: 80, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "wakeUpStrokeUnCheck", TrustCount: NaN, Verified: false, Value: "true", Edited: false},
+    { highLights: [], FieldId: "wakeUpDate", TrustCount: 80, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "strokeCheck", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "strokeUnCheck", TrustCount: NaN, Verified: false, Value: "true", Edited: false},
+    { highLights: [], FieldId: "firstAttented", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "arrivalDate", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "arrivalTime", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "onsetDate", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "onsetTime", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "arrivedFrom", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "hospitalizedIn", TrustCount: NaN, Verified: false, Value: "2", Edited: false},
+    { highLights: [], FieldId: "department", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "radioMedicalHistoryYes", TrustCount: NaN, Verified: false, Value: "true", Edited: false},
+    { highLights: [], FieldId: "radioMedicalHistoryNone", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "radioMedicalHistoryUnknown", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxMedicalHistoryHypertension", TrustCount: NaN, Verified: false, Value: "true", Edited: false},
+    { highLights: [], FieldId: "checkBoxMedicalHistoryDiabetes", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxMedicalHistoryHyperlipidemia", TrustCount: 78, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxMedicalHistoryActiveSmoker", TrustCount: 45, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxMedicalHistoryPreviousIschemic", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxMedicalHistoryPreviousHemorrhage", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxMedicalHistoryAtrialFibrillation", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxMedicalHistoryCoronaryArtery", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxMedicalHistoryCongestiveHeartFailure", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxMedicalHistoryHIV", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxMedicalHistoryCOVIDPositive", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "radioTreatmentEventYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "radioTreatmentEventNone", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "radioTreatmentEventUnknown", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxTreatmentEventAntidiabetics", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxTreatmentEventAntihypertensives", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxTreatmentEventAntiplatelets", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxTreatmentEventAnticoagulants", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxTreatmentEventHormonalContraception", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxTreatmentEventStatin", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "glucose", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "cholesterol", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "systolic", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "diastolic", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "nihss", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "mrs", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "firstInrTesting", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "coma", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "brainImaging", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "imagingDate", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "imagingTime", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "radioInfarctsYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "radioInfarctsNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxInfarctsCortical", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxInfarctsSubCortical", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxBrainstem", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "strokeType", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "aspectScore", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "radioArterialYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "radioArterialNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxArterialMCA1Left", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxArterialMCA2Left", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxArterialMCA3Left", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxArterialACA", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxArterialPCA1Left", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxArterialPCA2Left", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxArterialCEALeft", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxArterialCIALeft", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxArterialVertebral", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxArterialMCA1Right", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxArterialMCA2Right", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxArterialMCA3Right", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxArterialACARight", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxArterialPCA1Right", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxArterialPCA2Right", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxArterialCEARight", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxArterialCIARight", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxArterialBasilar", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "radioThrombolysisCheck", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "radioThrombolysisUnCheck", TrustCount: NaN, Verified: false, Value: "true", Edited: false},
+    { highLights: [], FieldId: "thrombolysisReason", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "thrombolysisDate", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "drugUsed", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "radioAnticoagulantYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "radioAnticoagulantNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "treatmentDose", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "bolusDate", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "thrombolysisGiven", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "thrombectomyCheck", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "thrombectomyUnCheck", TrustCount: NaN, Verified: false, Value: "true", Edited: false},
+    { highLights: [], FieldId: "thrombectomyReason", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "thrombectomyDate", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "groinDate", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "mTICIScore", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "reperfusionDate", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "radioThrombectomyYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "radioThrombectomyNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxThrombectomyVesselPerforation", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxThrombectomyDissection", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxThrombectomyEmbolization", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxThrombectomyHematoma", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxThrombectomyOther", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "bleedingVolume", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "infratentorialCheck", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "infratentorialUnCheck", TrustCount: NaN, Verified: false, Value: "true", Edited: false},
+    { highLights: [], FieldId: "bleedingCheck", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "bleedingUnCheck", TrustCount: NaN, Verified: false, Value: "true", Edited: false},
+    { highLights: [], FieldId: "intraventricularCheck", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "intraventricularUnCheck", TrustCount: NaN, Verified: false, Value: "true", Edited: false},
+    { highLights: [], FieldId: "radioBleedingReasonYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "radioBleedingReasonNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxBleedingReasonArterialHypertension", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxBleedingReasonAneurysm", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxBleedingReasonArteriovenousMalformation", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxBleedingReasonAnticoagulationTherapy", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxBleedingReasonAmyloidAngiopathy", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxBleedingReasonOther", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "antidoteAnticoagulants", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "radioNeurosurgeryYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "radioNeurosurgeryNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxNeurosurgeryIntracranialHematomaEvacuation", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxNeurosurgeryExternalVentricularDrainage", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxNeurosurgeryDecompresiveCraniectomy", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "clinicalSymptoms", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "symptomsDuration", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "bleedingSubarachnoidCheck", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "bleedingSubarachnoidUnCheck", TrustCount: NaN, Verified: false, Value: "true", Edited: false},
+    { highLights: [], FieldId: "huntHess", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "radioInterventionYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "radioInterventionNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxInterventionEndovascular", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxInterventionNeurosurgical", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxInterventionVentricularDrainage", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxInterventionDecompressiveCraniectomy", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxInterventionOther", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "nimodipineTreatment", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "radioTreatmentPerformedYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "radioTreatmentPerformedNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxTreatmentPerformedAnticoagulation", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxTreatmentPerformedThrombectomy", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxTreatmentPerformedThrombolysis", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxTreatmentPerformedNeurosurgical", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "radioThrombolysisMimicCheck", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "radioThrombolysisMimicUnCheck", TrustCount: NaN, Verified: false, Value: "true", Edited: false},
+    { highLights: [], FieldId: "drugUsedThrombolysis", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "radioAnticoagulantMimicsYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "radioAnticoagulantMimicsNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "treatmentDoseMimics", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "bolusMimicDate", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "finalDiagnosis", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "ctmrPerfusion", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "coreVolume", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "hypoperfusionVolume", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "dischargeDestination", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "dischargeDestinationFacility", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "dischargeFacility", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "dischargeDate", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "mrsScore", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "discharge", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "radioTreatmentPrescribedYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "radioTreatmentPrescribedNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxTreatmentPrescribedAntidiabetics", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxTreatmentPrescribedAntihypertensives", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxTreatmentPrescribedAntiplatelets", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxTreatmentPrescribedAnticoagulants", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxTreatmentPrescribedAnticoagulantPlanned", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxTreatmentPrescribedStatin", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxTreatmentPrescribedOther", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "appointmentScheduled", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "smokingCessation", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "hospitalised24Hour", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "radioVentilated", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "radioVentilatedYes", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "radioVentilatedNo", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "radioCraniectomy", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "radioCraniectomyYes", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "radioCraniectomyNo", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "radioThromboembolismYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "radioThromboembolismNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxThromboembolismUFH", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "checkBoxThromboembolismLMWH", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "checkBoxThromboembolismIPC", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "checkBoxThromboembolismGCS", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "checkBoxThromboembolismVTE", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "checkBoxThromboembolismVFP", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "checkBoxThromboembolismXaVTE", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "checkBoxThromboembolismOther", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "radioStrokeCompYes", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "radioStrokeCompNo", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "radioStrokeCompUnknown", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "checkBoxStrokeCompPneumonia", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "checkBoxStrokeCompDVT", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "checkBoxStrokeCompPulmonary", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "checkBoxStrokeCompUrinary", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "checkBoxStrokeCompSores", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "checkBoxStrokeCompSepsis", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "checkBoxStrokeCompRecurrence", TrustCount: NaN, Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "checkBoxStrokeCompOther", TrustCount: NaN, Verified: false, Value: "", Edited: false},
 ];
+
+declare var Quill: any;
+
+class HighlightBlot extends Quill.import('blots/inline') {
+    static blotName = 'highlight';
+    static tagName = 'span';
+    static className = 'highlight';
+}
+
+Quill.register(HighlightBlot.blotName);
+
+let quill = new Quill('#note-editor-textarea', {
+    modules: {
+        syntax: true,
+        toolbar: false
+    },
+    theme: 'snow'
+});
 
 const updateListValuesFromJson = () => {
     // Iterate over the listData
@@ -255,13 +278,20 @@ updateListValuesFromJson();
 
 const displayReportText = () => {
     const reportText = jsonData._reportText;
-    const textAreaElement = document.getElementById('note-editor-textarea') as HTMLTextAreaElement;
-    textAreaElement.value = reportText;
+    const textAreaElement = document.getElementById('note-editor-textarea');
+    quill.setContents([
+        { insert: reportText }
+    ]);
+
+    //textAreaElement.innerText = reportText;
 }
+
 displayReportText();
+let index: number = 0;
+let fieldId: string = '';
 
 document.addEventListener('DOMContentLoaded', () => {
-    const textarea = document.getElementById('note-editor-textarea') as HTMLTextAreaElement;
+    const textarea = document.getElementById('note-editor-textarea');
 
     formFields.forEach(field => {
         let formFieldElement = document.getElementById(field.FieldId) as HTMLInputElement | HTMLSelectElement;
@@ -336,13 +366,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     formSwitch();
-    function updateTextareaHeight() {
+    /*function updateTextareaHeight() {
         textarea.style.height = 'auto';
         textarea.style.height = `${textarea.scrollHeight}px`;
     }
 
     textarea.addEventListener('input', updateTextareaHeight);
-    window.addEventListener('load', updateTextareaHeight);
+    window.addEventListener('load', updateTextareaHeight);*/
 
     const divWakeUp = document.getElementById("wakeUpDiv");
 
@@ -622,6 +652,25 @@ document.addEventListener('DOMContentLoaded', () => {
             const percentageSpan = document.getElementById(input.id.replace(/(Check|UnCheck|Yes|None|Unknown|No)$/, '') + 'Percentage');
             editedSpan.style.display = 'inline';
             percentageSpan.style.display = 'none';
+        });
+    });
+
+    inputs.forEach(input => {
+        input.addEventListener('click', () => {
+            const highLights = formFields.find(o => o.FieldId == input.id).highLights;
+            if (highLights.length != 0) {
+                if (fieldId == input.id) {
+                    index++
+                    if (index >= highLights.length) {
+                        index = 0
+                    }
+                } else {
+                    index = 0;
+                    fieldId = input.id;
+                }
+
+                highlightText(highLights[index].Index, highLights[index].Length);
+            }
         });
     });
 
@@ -946,4 +995,16 @@ function exportData() {
 function objectToCsvRow(obj: formField): string {
     const values = Object.keys(obj).map(key => obj[key]);
     return values.join(',') + '\n';
+}
+
+function highlightText(start: number, length: number) {
+    quill.setSelection(start, length);
+    quill.format('highlight', true);
+
+    const selection = quill.getSelection();
+    selection.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
 }
