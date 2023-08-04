@@ -36,6 +36,16 @@
                                 <div class="form-field">
                                     <form class="form">
 
+                                        <div class="data-summary">
+                                            <div>
+                                                <h3>Auto-complete summary</h3>
+                                                <p>Total Fields: <span id="totalFieldsValue"></span></p>
+                                                <p>Fields with Data: <span id="fieldsWithDataValue"></span></p>
+                                                <p>Missing Fields: <span id="missingFieldsValue"></span></p>
+                                                <p>Percentage of Filled Data: <span id="filledPercentageValue"></span></p>
+                                            </div>
+                                        </div>
+
                                         <div class="title">
                                             <span>
                                                 Admission data
@@ -43,11 +53,19 @@
                                             <button class="btn" onclick="formSwitch()">Switch</button>
                                         </div>
 
+
+
+
+
                                         <div class="form-row">
                                             <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        Age
+                                                    </span>
+                                                </div>
                                                 <div class="input-item">
                                                     <input class="form-input" type="number" name="age-at-admission" id="age" pattern="\w{1,}" required/>
-                                                    <label class="input-label" for="age">AGE AT ADMISSION</label>
                                                 </div>
                                                 <div class="input-verification">
                                                     <div class="input-trust">
@@ -73,7 +91,7 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        SEX
+                                                        Sex
                                                     </span>
                                                 </div>
                                                 <div class="select" id="sexDiv">
@@ -106,9 +124,9 @@
 
                                         <div class="form-row">
                                             <div class="item">
-                                                <div class="title-header">                                                    <span>
-
-                                                        WAKEUP STROKE
+                                                <div class="title-header">
+                                                    <span>
+                                                        Wakeup stroke
                                                     </span>
                                                 </div>
                                                 <div class="div-button-form div-button-form-switch">
@@ -142,8 +160,13 @@
                                             </div>
                                             <div class="item">
                                                 <div class="input-item" id="wakeUpDiv" style="display: none">
+                                                    <div class="title-header">
+                                                    <span>
+                                                        Time when patient went to bed
+                                                    </span>
+                                                    </div>
                                                     <input class="form-input" type="time" name="wakeUpDate" id="wakeUpDate" pattern="\w{1,}" required/>
-                                                    <label class="input-label" for="wakeUpDate">TIME WHEN PATIENT WENT TO BED</label>
+
                                                 </div>
                                                 <div class="input-verification" id="wakeUpDateVerification" style="display: none">
                                                     <div class="input-trust">
@@ -170,7 +193,7 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        STROKE WHILE ALREADY HOSPITALIZED
+                                                        Stroke while already hospitalised
                                                     </span>
                                                 </div>
                                                 <div class="div-button-form div-button-form-switch">
@@ -209,7 +232,7 @@
                                                 <div id="strokeDiv">
                                                     <div class="title-header">
                                                         <span>
-                                                            WHERE WAS THE PATIENT FIRST ATTENDED TO AT YOUR HOSPITAL?
+                                                            Where was the patient first attended to at your hospital?
                                                         </span>
                                                     </div>
                                                     <div class="select">
@@ -246,9 +269,14 @@
 
                                         <div class="form-row">
                                             <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        Date on onset of stroke symptoms
+                                                    </span>
+                                                </div>
                                                 <div class="input-item">
                                                     <input class="form-input" type="date" name="onsetDate" id="onsetDate" pattern="\w{1,}" required/>
-                                                    <label class="input-label" for="onsetDate">Date of onset of stroke symptom</label>
+
                                                 </div>
                                                 <div class="input-verification" id="onsetDateVerification">
                                                     <div class="input-trust">
@@ -269,10 +297,15 @@
                                                     </div>
                                                 </div>
                                             </div>
+
                                             <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        Date on onset of stroke symptoms
+                                                    </span>
+                                                </div>
                                                 <div class="input-item">
                                                     <input class="form-input" type="time" name="onsetTime" id="onsetTime" pattern="\w{1,}" required/>
-                                                    <label class="input-label" for="onsetTime">Time of onset of stroke symptom</label>
                                                 </div>
                                                 <div class="input-verification" id="arrivalonsetTime">
                                                     <div class="input-trust">
@@ -298,9 +331,13 @@
 
                                         <div class="form-row">
                                         	<div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        Arrival date to hospital
+                                                    </span>
+                                                </div>
                                             	<div class="input-item">
                                                     <input class="form-input" type="date" name="arrivalDate" id="arrivalDate" pattern="\w{1,}" required/>
-                                                    <label class="input-label" for="arrivalDate">ARRIVAL DATE TO HOSPITAL</label>
                                                 </div>
                                                 <div class="input-verification" id="arrivalDateVerification">
                                                     <div class="input-trust">
@@ -321,10 +358,15 @@
                                                     </div>
                                                 </div>
                                             </div>
+
                                             <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        Arrival time to hospital
+                                                    </span>
+                                                </div>
                                                 <div class="input-item">
                                                     <input class="form-input" type="time" name="arrivalTime" id="arrivalTime" pattern="\w{1,}" required/>
-                                                    <label class="input-label" for="arrivalTime">ARRIVAL TIME TO HOSPITAL</label>
                                                 </div>
                                                 <div class="input-verification" id="arrivalTimeVerification">
                                                     <div class="input-trust">
@@ -353,7 +395,7 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        PATIENT ARRIVED TO YOUR HOSPITAL FROM?
+                                                        Patient arrived to your hospital from?
                                                     </span>
                                                 </div>
                                                 <div class="select">
@@ -392,7 +434,7 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        THE PATIENT HOSPITALIZED IN (DAY 1)
+                                                        The patient hospitalised in (Day 1)
                                                     </span>
                                                 </div>
                                                 <div class="select">
@@ -425,7 +467,7 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        PATIENT ADMITTED UNDER WHICH DEPARTMENT?
+                                                        Patient admitted under which department?
                                                     </span>
                                                 </div>
                                                 <div class="select">
@@ -469,7 +511,7 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        IS PATIENT'S PREVIOUS MEDICAL HISTORY KNOWN?
+                                                        Is patient's previous medical history known?
                                                     </span>
                                                 </div>
                                                 <div class="div-button-form" id="radioMedicalHistory" style="border-radius: unset;">
@@ -568,7 +610,7 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        ANY KNOWN TREATMENT BEFORE ADMISSION/EVENT?
+                                                        Any known treatment before admission/event?
                                                     </span>
                                                 </div>
                                                 <div class="div-button-form" id="radioTreatmentEvent" style="border-radius: unset;">
@@ -640,11 +682,16 @@
                                                 </div>
                                             </div>
                                         </div>
+
                                         <div class="form-row">
                                             <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        Glucose (first measurement in hosp.)
+                                                    </span>
+                                                </div>
                                                 <div class="input-item">
                                                     <input style="padding-left: 40px" class="form-input" type="number" name="glucose" id="glucose" step="0.01"/>
-                                                    <label style="padding-left: 30px" class="input-label" for="glucose">GLUCOSE (FIRST MEASUREMENT IN HOSP.)</label>
                                                     <button class="input-button" id="nullButtonGlucose">
                                                         <img src="../assets/cancel.svg" alt="Set to null"/>
                                                     </button>
@@ -668,10 +715,15 @@
                                                     </div>
                                                 </div>
                                             </div>
+
                                             <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        LDL cholesterol (first measurement in hosp.)
+                                                    </span>
+                                                </div>
                                                 <div class="input-item">
                                                     <input style="padding-left: 40px" class="form-input" type="number" name="cholesterol" id="cholesterol" step="0.01"/>
-                                                    <label style="padding-left: 30px" class="input-label" for="cholesterol">LDL CHOLESTEROL (FIRST MEASUREMENT IN HOSP.)</label>
                                                     <button class="input-button" id="nullButtonCholesterol">
                                                         <img src="../assets/cancel.svg" alt="Set to null"/>
                                                     </button>
@@ -696,11 +748,16 @@
                                                 </div>
                                             </div>
                                         </div>
+
                                         <div class="form-row">
                                             <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        Systolic blood pressure (first measurement in hosp. in MMHG)
+                                                    </span>
+                                                </div>
                                                 <div class="input-item">
                                                     <input class="form-input" type="number" name="systolic" id="systolic" pattern="\w{1,}" />
-                                                    <label class="input-label" for="systolic">SYSTOLIC BLOOD PRESSURE (FIRST MEASUREMENT IN HOSP. IN MMHG)</label>
                                                 </div>
                                                 <div class="input-verification" id="systolicVerification">
                                                     <div class="input-trust">
@@ -721,10 +778,16 @@
                                                     </div>
                                                 </div>
                                             </div>
+
+
                                             <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        Diastolic blood pressure (first measurement in hosp. in MMHG)
+                                                    </span>
+                                                </div>
                                                 <div class="input-item">
                                                     <input class="form-input" type="number" name="diastolic" id="diastolic" pattern="\w{1,}" required />
-                                                    <label class="input-label" for="diastolic">DIASTOLIC BLOOD PRESSURE (FIRST MEASUREMENT IN HOSP. IN MMHG)</label>
                                                 </div>
                                                 <div class="input-verification" id="diastolicVerification">
                                                     <div class="input-trust">
@@ -746,11 +809,16 @@
                                                 </div>
                                             </div>
                                         </div>
+
                                         <div class="form-row">
                                             <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        NIHSS score
+                                                    </span>
+                                                </div>
                                                 <div class="input-item">
                                                     <input style="padding-left: 40px" class="form-input" type="number" name="nihss" id="nihss" pattern="\w{1,}" />
-                                                    <label style="padding-left: 30px" class="input-label" for="nihss">NIHSS SCORE</label>
                                                     <button class="input-button" id="nullButtonNihss">
                                                         <img src="../assets/cancel.svg" alt="Set to null"/>
                                                     </button>
@@ -816,7 +884,7 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        FIRST INR TESTING DONE?
+                                                        First INR testing done?
                                                     </span>
                                                 </div>
                                                 <div class="select">
@@ -849,9 +917,13 @@
                                                 </div>
                                             </div>
                                             <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        Glasgow coma scale (GCS)
+                                                    </span>
+                                                </div>
                                                 <div class="input-item">
                                                     <input class="form-input" type="number" name="coma" id="coma" pattern="\w{1,}" required />
-                                                    <label class="input-label" for="coma">GLASGOW COMA SCALE (GCS)</label>
                                                 </div>
                                                 <div class="input-verification" id="comaVerification">
                                                     <div class="input-trust">
@@ -884,7 +956,7 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        BRAIN IMAGING
+                                                        Brain imaging
                                                     </span>
                                                 </div>
                                                 <div class="select">
@@ -923,9 +995,13 @@
 
                                         <div class="form-row">
                                             <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        Imaging done at what date?
+                                                    </span>
+                                                </div>
                                                 <div class="input-item" id="imagingDateDone">
                                                     <input class="form-input" type="date" name="imagingDate" id="imagingDate" pattern="\w{1,}" required />
-                                                    <label class="input-label" for="imagingDate">IMAGING DONE AT WHAT DATE?</label>
                                                 </div>
                                                 <div class="input-verification" id="imagingDateVerification">
                                                     <div class="input-trust">
@@ -952,7 +1028,7 @@
                                         <div id="infarctsDiv">
                                             <div class="title-header">
                                                 <span>
-                                                    OLD INFARCTS SEEN ON THE IMAGING?
+                                                    Old infarcts seen on the imaging?
                                                 </span>
                                             </div>
                                             <div class="div-button-form" id="radioInfarcts" style="border-radius: unset;">
@@ -1008,7 +1084,7 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        STROKE TYPE
+                                                        Stroke type
                                                     </span>
                                                 </div>
                                                 <div class="select">
@@ -1082,7 +1158,7 @@
                                                 <div id="imagingSubDiv" style="width: 100%">
                                                     <div class="title-header">
                                                         <span>
-                                                            WAS ARTERIAL OCCLUSION DETECTED ON CTA/MRA?
+                                                            Was arterial occlusion detected on CTA/MRA?
                                                         </span>
                                                     </div>
                                                     <div class="div-button-form" id="radioArterial" style="border-radius: unset;">
@@ -1214,7 +1290,7 @@
                                                 <div class="item">
                                                     <div class="title-header" style="height: 45px">
                                                         <span>
-                                                            WAS THE PATIENT TREATED WITH IV THROMBOLYSIS IN YOUR HOSPITAL?
+                                                            Was the patient treated with IV thrombolysis in your hospital?
                                                         </span>
                                                     </div>
                                                     <div class="div-button-form div-button-form-switch">
@@ -1250,7 +1326,7 @@
                                                     <div id="thrombolysisSelectDiv">
                                                         <div class="title-header">
                                                             <span>
-                                                                PLEASE SELECT MAIN REASON FOR NOT DOING THROMBOLYSIS
+                                                                Select the main reason for not doing thrombolysis
                                                             </span>
                                                         </div>
                                                         <div class="select">
@@ -1290,9 +1366,13 @@
                                             </div>
                                             <div class="form-row">
                                                 <div id="thrombolysisDiv" class="item" style="display: none;">
+                                                    <div class="title-header">
+                                                    <span>
+                                                        Transfer time (door-out)
+                                                    </span>
+                                                    </div>
                                                     <div class="input-item">
                                                         <input class="form-input" type="date" name="thrombolysisDate" id="thrombolysisDate" pattern="\w{1,}" required />
-                                                        <label class="input-label" for="thrombolysisDate">TRANSFER TIME (DOOR-OUT)</label>
                                                     </div>
                                                     <div class="input-verification" id="thrombolysisDateVerification">
                                                         <div class="input-trust">
@@ -1323,7 +1403,7 @@
                                                         <div>
                                                             <div class="title-header">
                                                                 <span>
-                                                                    DRUG USED
+                                                                    Drug used
                                                                 </span>
                                                             </div>
                                                             <div class="select">
@@ -1358,7 +1438,7 @@
                                                     <div class="item">
                                                         <div class="title-header">
                                                             <span>
-                                                                ANTIDOTE TO ANTICOAGULANT GIVEN
+                                                                Antidote to anticoagulent given
                                                             </span>
                                                         </div>
                                                         <div class="div-button-form div-button-form-switch">
@@ -1393,9 +1473,13 @@
                                                 </div>
                                                 <div class="form-row">
                                                     <div class="item">
+                                                        <div class="title-header">
+                                                    <span>
+                                                        Treatment dose (in MG)
+                                                    </span>
+                                                        </div>
                                                         <div class="input-item">
                                                             <input class="form-input" type="number" name="treatmentDose" id="treatmentDose" pattern="\w{1,}" required />
-                                                            <label class="input-label" for="treatmentDose">TREATMENT DOSE (IN MG)</label>
                                                         </div>
                                                         <div class="input-verification">
                                                             <div class="input-trust">
@@ -1418,9 +1502,13 @@
                                                     </div>
 
                                                     <div class="item">
+                                                        <div class="title-header">
+                                                    <span>
+                                                        Bolus time
+                                                    </span>
+                                                        </div>
                                                         <div class="input-item" id="bolusDiv">
                                                             <input class="form-input" type="date" name="bolusDate" id="bolusDate" pattern="\w{1,}" required />
-                                                            <label class="input-label" for="bolusDate">BOLUS TIME</label>
                                                         </div>
                                                         <div class="input-verification">
                                                             <div class="input-trust">
@@ -1446,7 +1534,7 @@
                                                     <div style="width: 100%">
                                                         <div class="title-header">
                                                             <span>
-                                                                IV THROMBOLYSIS GIVEN IN
+                                                                IV Thrombolysis given in
                                                             </span>
                                                         </div>
                                                         <div class="select">
@@ -1483,7 +1571,7 @@
                                                 <div class="item">
                                                     <div class="title-header" style="height: 45px">
                                                         <span>
-                                                            WAS THE PATIENT TREATED WITH THROMBECTOMY IN YOUR HOSPITAL?
+                                                            Was the patient treated with thrombectomy in your hospital?
                                                         </span>
                                                     </div>
                                                     <div class="div-button-form div-button-form-switch">
@@ -1519,7 +1607,7 @@
                                                     <div id="thrombectomyDiv">
                                                         <div class="title-header">
                                                             <span>
-                                                                PLEASE SELECT MAIN REASON FOR NOT DOING THROMBECTOMY
+                                                                Please select the main reason for not doing thrombectomy
                                                             </span>
                                                         </div>
                                                         <div class="select">
@@ -1591,9 +1679,13 @@
                                             <div class="toggle-div" id="thrombectomyCheckDiv" style="display: none">
                                                 <div class="form-row">
                                                     <div class="item">
+                                                        <div class="title-header">
+                                                    <span>
+                                                        Groin puncture time
+                                                    </span>
+                                                        </div>
                                                         <div class="input-item" id="groinDiv">
                                                             <input class="form-input" type="date" name="groinDate" id="groinDate" pattern="\w{1,}" required />
-                                                            <label class="input-label" for="groinDate">GROIN PUNCTURE TIME</label>
                                                         </div>
                                                         <div class="input-verification">
                                                             <div class="input-trust">
@@ -1617,7 +1709,7 @@
                                                     <div class="item">
                                                         <div class="title-header">
                                                             <span>
-                                                                mTICI SCORE
+                                                                mTICI score
                                                             </span>
                                                         </div>
                                                         <div class="select">
@@ -1654,9 +1746,13 @@
                                                 </div>
                                                 <div class="form-row">
                                                     <div class="item">
+                                                        <div class="title-header">
+                                                    <span>
+                                                        Reperfusion time
+                                                    </span>
+                                                        </div>
                                                         <div class="input-item" id="mticiDiv" style="display: none;">
                                                             <input class="form-input" type="date" name="reperfusionDate" id="reperfusionDate" pattern="\w{1,}" required />
-                                                            <label class="input-label" for="reperfusionDate">REPERFUSION TIME</label>
                                                         </div>
                                                         <div class="input-verification" id="reperfusionDateVerification">
                                                             <div class="input-trust">
@@ -1684,7 +1780,7 @@
                                                 <div>
                                                     <div class="title-header">
                                                         <span>
-                                                            PROCEDURE COMPLICATIONS IN THROMBECTOMY
+                                                            Procedure complications in thrombectomy
                                                         </span>
                                                     </div>
                                                     <div class="div-button-form" id="radioThrombectomy" style="border-radius: unset;">
@@ -1750,9 +1846,13 @@
                                         <div id="imagingDiv2" class="toggle-div" style="display: none;">
                                             <div class="form-row">
                                                 <div class="item">
+                                                    <div class="title-header">
+                                                    <span>
+                                                        Bleeding volume (in ML)
+                                                    </span>
+                                                    </div>
                                                     <div class="input-item">
                                                         <input class="form-input" type="number" name="bleedingVolume" id="bleedingVolume" pattern="\w{1,}" required />
-                                                        <label class="input-label" for="bleedingVolume">BLEEDING VOLUME (IN ML)</label>
                                                     </div>
                                                     <div class="input-verification" id="bleedingVolumeVerification">
                                                         <div class="input-trust">
@@ -1777,7 +1877,7 @@
                                                 <div class="item">
                                                     <div class="title-header">
                                                         <span>
-                                                            INFRATENTORIAL SOURCE OF BLEEDING
+                                                            Infratentorial source of bleeding
                                                         </span>
                                                     </div>
                                                     <div class="div-button-form div-button-form-switch">
@@ -1814,7 +1914,7 @@
                                                 <div class="item">
                                                     <div class="title-header">
                                                         <span>
-                                                            SOURCE OF BLEEDING FOUND
+                                                            Source of bleeding found
                                                         </span>
                                                     </div>
                                                     <div class="div-button-form div-button-form-switch">
@@ -1849,7 +1949,7 @@
                                                 <div class="item">
                                                     <div class="title-header">
                                                         <span>
-                                                            INTRAVENTRICULAR HEMORRHAGE (IVH)
+                                                            Intraventricular hemorrhage (IVH)
                                                         </span>
                                                     </div>
                                                     <div class="div-button-form div-button-form-switch">
@@ -1886,7 +1986,7 @@
                                                 <div class="item">
                                                     <div class="title-header">
                                                         <span>
-                                                            WAS REASON FOR BLEEDING FOUND?
+                                                            Was the reason for bleeding found?
                                                         </span>
                                                     </div>
                                                     <div class="div-button-form" id="radioBleedingReason" style="border-radius: unset;">
@@ -1955,7 +2055,7 @@
                                                 <div class="item">
                                                     <div class="title-header">
                                                         <span>
-                                                            WHAT ANTIDOTE TO ANTICOAGULANTS WAS USED?
+                                                            What antidote to anticoagulants was used?
                                                         </span>
                                                     </div>
                                                     <div class="select">
@@ -1993,7 +2093,7 @@
                                                 <div style="width: 100%">
                                                     <div class="title-header">
                                                         <span>
-                                                            WAS ANY NEUROSURGERY PERFORMED?
+                                                            Was any neurosurgery performed?
                                                         </span>
                                                     </div>
                                                     <div class="div-button-form" id="radioNeurosurgery" style="border-radius: unset;">
@@ -2051,7 +2151,7 @@
                                                 <div class="item">
                                                     <div class="title-header">
                                                         <span>
-                                                            CLINICAL SYMPTOMS OF THE TIA
+                                                            Clinical symptoms of the TIA
                                                         </span>
                                                     </div>
                                                     <div class="select">
@@ -2084,7 +2184,7 @@
                                                 <div class="item">
                                                     <div class="title-header">
                                                         <span>
-                                                            DURATION OF SYMPTOMS
+                                                            Duration of symptoms
                                                         </span>
                                                     </div>
                                                     <div class="select">
@@ -2121,7 +2221,7 @@
                                                 <div class="item">
                                                     <div class="title-header">
                                                         <span>
-                                                            SOURCE OF BLEEDING FOUND
+                                                            Source of bleeding found
                                                         </span>
                                                     </div>
                                                     <div class="div-button-form div-button-form-switch">
@@ -2160,7 +2260,7 @@
                                             <div style="width: 100%">
                                                 <div class="title-header">
                                                     <span>
-                                                        HUNT HESS SCORE
+                                                        Hunt Hess score
                                                     </span>
                                                 </div>
                                                 <div class="select">
@@ -2196,7 +2296,7 @@
                                             <div style="width: 100%">
                                                 <div class="title-header">
                                                     <span>
-                                                        WAS ANY INTERVENTION PERFORMED?
+                                                        Was any intervention performed?
                                                     </span>
                                                 </div>
                                                 <div class="div-button-form" id="radioIntervention" style="border-radius: unset;">
@@ -2260,7 +2360,7 @@
                                             <div style="width: 100%">
                                                 <div class="title-header">
                                                     <span>
-                                                        NIMODIPINE TREATMENT ADMINISTERED?
+                                                        Nimodipine treatment administered?
                                                     </span>
                                                 </div>
                                                 <div class="select">
@@ -2295,7 +2395,7 @@
                                             <div style="width: 100%">
                                                 <div class="title-header">
                                                     <span>
-                                                        WAS ANY TREATMENT PERFORMED?
+                                                        Was any treatment performed?
                                                     </span>
                                                 </div>
                                                 <div class="div-button-form" id="radioTreatmentPerformed" style="border-radius: unset;">
@@ -2357,7 +2457,7 @@
                                                 <div class="item">
                                                     <div class="title-header" style="height: 45px">
                                                         <span>
-                                                            WAS THE PATIENT TREATED WITH IV THROMBOLYSIS IN YOUR HOSPITAL?
+                                                            Was the patient treated with IV thrombolysis in your hospital?
                                                         </span>
                                                     </div>
                                                     <div class="div-button-form div-button-form-switch">
@@ -2396,7 +2496,7 @@
                                                         <div>
                                                             <div class="title-header">
                                                             <span>
-                                                                DRUG USED
+                                                                Drug used
                                                             </span>
                                                             </div>
                                                             <div class="select">
@@ -2431,7 +2531,7 @@
                                                     <div class="item">
                                                         <div class="title-header">
                                                             <span>
-                                                                ANTIDOTE TO ANTICOAGULANT GIVEN
+                                                                Antidote to anticoagulant given
                                                             </span>
                                                         </div>
                                                         <div class="div-button-form div-button-form-switch">
@@ -2466,9 +2566,13 @@
                                                 </div>
                                                 <div class="form-row">
                                                     <div class="item">
+                                                        <div class="title-header">
+                                                    <span>
+                                                        Treatment dose (in MG)
+                                                    </span>
+                                                        </div>
                                                         <div class="input-item ">
                                                             <input class="form-input" type="number" name="treatmentDoseMimics" id="treatmentDoseMimics" pattern="\w{1,}" required />
-                                                            <label class="input-label" for="treatmentDoseMimics">TREATMENT DOSE (IN MG)</label>
                                                         </div>
                                                         <div class="input-verification" id="treatmentDoseMimicsVerification">
                                                             <div class="input-trust">
@@ -2490,9 +2594,13 @@
                                                         </div>
                                                     </div>
                                                     <div class="item">
+                                                        <div class="title-header">
+                                                    <span>
+                                                        Bolus time
+                                                    </span>
+                                                        </div>
                                                         <div class="input-item">
                                                             <input class="form-input" type="date" name="bolusMimicDate" id="bolusMimicDate" pattern="\w{1,}" required />
-                                                            <label class="input-label" for="bolusMimicDate">BOLUS TIME</label>
                                                         </div>
                                                         <div class="input-verification" id="bolusMimicDateVerification">
                                                             <div class="input-trust">
@@ -2520,7 +2628,7 @@
                                                     <div>
                                                         <div class="title-header">
                                                             <span>
-                                                                FINAL DIAGNOSIS
+                                                                Final diagnosis
                                                             </span>
                                                         </div>
                                                         <div class="select">
@@ -2563,7 +2671,7 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        CT/MR PERFUSION DEFICIT
+                                                        CT/MR perfusion deficit
                                                     </span>
                                                 </div>
                                                 <div class="select">
@@ -2602,9 +2710,13 @@
                                         </div>
                                         <div id="perfusionDeficit" class="form-row" style="display: none">
                                             <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        CT/MR perfusion deficit core volume (in ML)
+                                                    </span>
+                                                </div>
                                                 <div class="input-item">
                                                     <input class="form-input" type="number" name="coreVolume" id="coreVolume" pattern="\w{1,}" required />
-                                                    <label class="input-label" for="coreVolume">CT/MR PERFUSION DEFICIT CORE VOLUME (IN ML)</label>
                                                 </div>
                                                 <div class="input-verification" id="coreVolumeVerification">
                                                     <div class="input-trust">
@@ -2626,9 +2738,13 @@
                                                 </div>
                                             </div>
                                             <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        CT/MR perfusion deficit hypoperfusion volume (in ML)
+                                                    </span>
+                                                </div>
                                                 <div class="input-item">
                                                     <input class="form-input" type="number" name="hypoperfusionVolume" id="hypoperfusionVolume" pattern="\w{1,}" required />
-                                                    <label class="input-label" for="hypoperfusionVolume">CT/MR PERFUSION DEFICIT HYPOPERFUSION VOLUME (IN ML)</label>
                                                 </div>
                                                 <div class="input-verification" id="hypoperfusionVolumeVerification">
                                                     <div class="input-trust">
@@ -2952,7 +3068,7 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        DISCHARGE DESTINATION
+                                                        Discharge destination
                                                     </span>
                                                 </div>
                                                 <div class="select">
@@ -2988,7 +3104,7 @@
                                                 <div id="withinTransferred" style="display: none">
                                                     <div class="title-header">
                                                         <span>
-                                                            DISCHARGE DESTINATION WITHIN THE SAME FACILITY
+                                                            Discharge destination within the same facility
                                                         </span>
                                                     </div>
                                                     <div class="select">
@@ -3021,7 +3137,7 @@
                                                 <div id="centerTransferred" style="display: none">
                                                     <div class="title-header">
                                                         <span>
-                                                            DISCHARGED TO ANOTHER FACILITY:
+                                                            Discharged to another facility:
                                                         </span>
                                                     </div>
                                                     <div class="select">
@@ -3056,9 +3172,13 @@
 
                                         <div class="form-row">
                                             <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        Date of discharge
+                                                    </span>
+                                                </div>
                                                 <div class="input-item">
                                                     <input class="form-input" type="date" name="dischargeDate" id="dischargeDate" pattern="\w{1,}" required />
-                                                    <label class="input-label" for="dischargeDate">DATE OF DISCHARGE</label>
                                                 </div>
                                                 <div class="input-verification" id="dischargeDateVerification">
                                                     <div class="input-trust">
@@ -3086,9 +3206,13 @@
 
                                         <div class="form-row">
                                             <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        Modified Rankin Scale (MRs) score on discharge
+                                                    </span>
+                                                </div>
                                                 <div class="input-item">
                                                     <input class="form-input" type="number" name="mrsScore" id="mrsScore" pattern="\w{1,}" required />
-                                                    <label class="input-label" for="mrsScore">MODIFIED RANKIN SCALE (MRS) SCORE ON DISCHARGE</label>
                                                 </div>
                                                 <div class="input-verification" id="mrsScoreVerification">
                                                     <div class="input-trust">
@@ -3110,9 +3234,13 @@
                                                 </div>
                                             </div>
                                             <div class="item">
+                                                <div class="title-header">
+                                                    <span>
+                                                        NIHSS score on discharge
+                                                    </span>
+                                                </div>
                                                 <div class="input-item">
                                                     <input class="form-input" type="number" name="discharge" id="discharge" pattern="\w{1,}" required />
-                                                    <label class="input-label" for="discharge">NIHSS SCORE ON DISCHARGE</label>
                                                 </div>
                                                 <div class="input-verification" id="dischargeVerification">
                                                     <div class="input-trust">
@@ -3139,7 +3267,7 @@
                                             <div style="width: 100%">
                                                 <div class="title-header">
                                                     <span>
-                                                        WAS ANY TREATMENT PRESCRIBED ON DISCHARGE?
+                                                        Was any treatment prescribed on discharge?
                                                     </span>
                                                 </div>
                                                 <div class="div-button-form" id="radioTreatmentPrescribed" style="border-radius: unset;">
@@ -3216,7 +3344,7 @@
                                             <div class="item">
                                                 <div class="title-header" style="height: 45px">
                                                     <span>
-                                                        FOLLOW UP APPOINTMENT SCHEDULED IN YOUR HOSPITAL FOR STROKE MANAGEMENT
+                                                        Follow up appointment scheduled in your hospital for stroke management
                                                     </span>
                                                 </div>
                                                 <div class="select">
@@ -3249,7 +3377,7 @@
                                             <div class="item">
                                                 <div class="title-header" style="height: 45px">
                                                     <span>
-                                                        WAS A SMOKING CESSATION PROGRAM RECOMMENDED?
+                                                        Was a smoking cessation program recommended?
                                                     </span>
                                                 </div>
                                                 <div class="select">
@@ -3283,10 +3411,11 @@
 
 
                                     </form>
-                                    <div style="margin-top: 30px">
-                                        <input class="btn" type="button" onclick="stock_event='';stock_continuous_measurement='';stock_frequence='';stock_meta=''" value="Clear">
-                                        <button class="btn" onclick="exportData()">Submit</button>
-                                        <input class="btn" type="button" id="btn" onclick="stock_event+= logging_ended+','; Meta();Btn(stock_event,link_event,head_fields1);Btn(stock_frequence,link_continuous_measurment,head_fields2);Btn(stock_meta,link_meta,head_fields3)" value="download csv">
+                                    <div style="display: flex; justify-content: center; align-items: center; height: 10vh";>
+<!--                                        <input class="btn" type="button" onclick="stock_event='';stock_continuous_measurement='';stock_frequence='';stock_meta=''" value="Clear">-->
+<!--                                        <button class="btn" onclick="exportData()">Submit</button>-->
+<!--                                        <input class="btn" type="button" id="btn" onclick="stock_event+= logging_ended+','; Meta();Btn(stock_event,link_event,head_fields1);Btn(stock_frequence,link_continuous_measurment,head_fields2);Btn(stock_meta,link_meta,head_fields3)" value="download csv">-->
+                                        <button class="btn" style="width: 400px; height:50px" onclick="exportData(); stock_event += logging_ended + ','; Meta(); Btn(stock_event, link_event, head_fields1); Btn(stock_frequence, link_continuous_measurment, head_fields2); Btn(stock_meta, link_meta, head_fields3)">Submit form</button>
                                     </div>
                                 </div>
                             </div>

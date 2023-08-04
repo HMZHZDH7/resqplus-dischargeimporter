@@ -1,11 +1,9 @@
 export const mapper = [
     { FormId: "age", docMarkerId: "anamnesis_age" },
     { FormId: "sex", docMarkerId: "anamnesis_sex" },
-    //Same field
     { FormId: "wakeUpStrokeCheck", docMarkerId: "onset_wakeup_stroke" },
     { FormId: "wakeUpStrokeUnCheck", docMarkerId: "onset_wakeup_stroke" },
     { FormId: "wakeUpdate", docMarkerId: "onset_sleep_timestamp" },
-    //Same field
     { FormId: "strokeCheck", docMarkerId: "onset_inhospital_stroke" },
     { FormId: "strokeUnCheck", docMarkerId: "onset_inhospital_stroke" },
     { FormId: "firstAttented", docMarkerId: "admission_first_contact_place" },
@@ -16,7 +14,6 @@ export const mapper = [
     { FormId: "arrivedFrom", docMarkerId: "admission_arrival_mode" },
     { FormId: "hospitalizedIn", docMarkerId: "admission_hospitalized_in" },
     { FormId: "department", docMarkerId: "admission_admission_department" },
-    //Not in docmarker
     { FormId: "radioMedicalHistoryYes", docMarkerId: "anamnesis_risk_factors" },
     { FormId: "radioMedicalHistoryNone", docMarkerId: "anamnesis_risk_factors" },
     { FormId: "radioMedicalHistoryUnknown", docMarkerId: "anamnesis_risk_factors" },
@@ -31,7 +28,6 @@ export const mapper = [
     { FormId: "checkBoxMedicalHistoryCongestiveHeartFailure", docMarkerId: "anamnesis_risk_factors_heart_failure" },
     { FormId: "checkBoxMedicalHistoryHIV", docMarkerId: "anamnesis_risk_factors_hiv" },
     { FormId: "checkBoxMedicalHistoryCOVIdPositive", docMarkerId: "anamnesis_risk_factors_covid_positive" },
-    //These rely on the same field
     { FormId: "radioTreatmentEventYes", docMarkerId: "anamnesis_medication_any_medication" },
     { FormId: "radioTreatmentEventNone", docMarkerId: "anamnesis_medication_any_medication" },
     { FormId: "radioTreatmentEventUnknown", docMarkerId: "anamnesis_medication_any_medication" },
@@ -52,7 +48,6 @@ export const mapper = [
     { FormId: "brainImaging", docMarkerId: "diagnosis_imaging_type" },
     { FormId: "imagingdate", docMarkerId: "diagnosis_imaging_timestamp" },
     { FormId: "imagingTime", docMarkerId: "diagnosis_imaging_timestamp" },
-    //These use the same field!
     { FormId: "radioInfarctsYes", docMarkerId: "diagnosis_imaging_old_infarcts_any_infarct" },
     { FormId: "radioInfarctsNo", docMarkerId: "diagnosis_imaging_old_infarcts_any_infarct" },
     { FormId: "checkBoxInfarctsCortical", docMarkerId: "diagnosis_imaging_old_infarcts_cortical" },
@@ -80,7 +75,6 @@ export const mapper = [
     { FormId: "checkBoxArterialCEARight", docMarkerId: "diagnosis_imaging_occlusion_artery_extracranial_right" },
     { FormId: "checkBoxArterialCIARight", docMarkerId: "diagnosis_imaging_occlusion_artery_intracranial_right" },
     { FormId: "checkBoxArterialBasilar", docMarkerId: "diagnosis_imaging_occlusion_basilar_artery" },
-    //These use the same field!!!!
     { FormId: "radioThrombolysisCheck", docMarkerId: "treatment_thrombolysis_thrombolysis_treatment" },
     { FormId: "radioThrombolysisUnCheck", docMarkerId: "treatment_thrombolysis_thrombolysis_treatment" },
     //Not in Docmarker

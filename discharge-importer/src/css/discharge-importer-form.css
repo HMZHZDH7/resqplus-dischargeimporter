@@ -194,7 +194,6 @@ input {
     padding: var(--size-300);
     width: 100%;
     border: 2px solid var(--cool-blue);
-    border-radius: var(--size-200) var(--size-200) 0 0;
     font-weight: var(--ft-wt-500);
 }
 
