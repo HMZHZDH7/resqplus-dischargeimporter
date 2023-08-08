@@ -237,7 +237,14 @@ let formFields: formField[] = [
 
 declare var Quill: any;
 
-class HighlightBlot<T> extends Quill.import('blots/inline')<T> {
+// Intermediate base class to handle generics
+class InlineBlotBase<T> extends Quill.import('blots/inline') {
+    constructor(scroll: any, domNode: any) {
+        super(scroll, domNode);
+    }
+}
+
+class HighlightBlot<T> extends InlineBlotBase<T> {
     static blotName = 'highlight';
     static tagName = 'span';
     static className = 'highlight';
