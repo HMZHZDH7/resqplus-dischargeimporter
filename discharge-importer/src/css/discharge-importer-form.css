@@ -266,10 +266,14 @@ input {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 50%;
+    flex: 33%;
+    height: 100%;
     border-right: 2px solid var(--cool-blue);
     border-radius: 0 0 0 var(--size-100);
-    height: 100%;
+}
+
+.input-trust span:nth-child(1) {
+    color: var(--grey-800);
 }
 
 .input-state {
@@ -277,7 +281,7 @@ input {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 50%;
+    flex: 33%;
     height: 100%;
 }
 
@@ -296,9 +300,23 @@ input {
     border-radius: 0 0 0.3rem 0;
 }
 
+.input-verification div:nth-child(3) button {
+    box-shadow: inset 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.highLight-iterator {
+    background-color: initial !important;
+    color: var(--grey-300) !important;
+}
+
+.highLight-iterator:hover {
+    color: var(--grey-50) !important;
+}
+
 .input-state button:hover {
     background-color: #8CFFFA;
     color: var(--grey-300);
+    box-shadow: inset 0px 10px 20px 2px rgba(0, 0, 0, 0.2);
 }
 
 .input-state button:nth-child(2) {
@@ -436,6 +454,10 @@ select::-ms-expand {
     min-width: 42px;
     min-height: 1.5em;
     border-radius: 1em;
+    display: flex;
+    justify-content: center; /* Centrage horizontal */
+    align-items: center;
+    color: var(--grey-800);
 }
 
 .div-button-form label span:hover {
