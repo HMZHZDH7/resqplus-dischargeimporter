@@ -181,11 +181,9 @@ export const mapper = [
     { FormId: "smokingCessation", docMarkerId: "discharge_smoking_cessation_recommended", HighLightId: "discharge.smoking_cessation_recommended" },
     { FormId: "hospitalised24Hour", docMarkerId: "discharge_24_hour_hospitalized_time", HighLightId: "" },
     //These use the same field
-    { FormId: "radioVentilated", docMarkerId: "post_acute_care_patient_ventilated", HighLightId: "" },
     { FormId: "radioVentilatedYes", docMarkerId: "post_acute_care_patient_ventilated", HighLightId: "" },
     { FormId: "radioVentilatedNo", docMarkerId: "post_acute_care_patient_ventilated", HighLightId: "" },
     //These use the same field
-    { FormId: "radioCraniectomy", docMarkerId: "post_acute_care_craniectomy", HighLightId: "" },
     { FormId: "radioCraniectomyYes", docMarkerId: "post_acute_care_craniectomy", HighLightId: "" },
     { FormId: "radioCraniectomyNo", docMarkerId: "post_acute_care_craniectomy", HighLightId: "" },
     //These use the same field
