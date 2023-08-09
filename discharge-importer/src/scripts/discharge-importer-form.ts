@@ -238,7 +238,7 @@ let formFields: formField[] = [
 
 declare var Quill: any;
 
-class HighlightBlot extends Quill.import('blots/inline') {
+class HighlightBlot<T> extends Quill.import('blots/inline')<T> {
     static blotName = 'highlight';
     static tagName = 'span';
     static className = 'highlight';
@@ -301,6 +301,43 @@ const displayReportText = () => {
 displayReportText();
 let index: number = 0;
 let fieldId: string = '';
+
+
+const countFieldsAndMissing = (data: any): { fieldsWithData: number; missingFields: number } => {
+    let fieldsWithData = 0;
+    let missingFields = 0;
+
+    for (const key in data) {
+        const value = data[key];
+        if (value !== null && value !== "" && !(Array.isArray(value) && value.length === 0) && !(typeof value === 'object' && Object.keys(value).length === 0)) {
+            fieldsWithData++;
+        } else {
+            missingFields++;
+        }
+    }
+
+    return { fieldsWithData, missingFields };
+};
+const calculateFilledPercentage = (data: any): number => {
+    const totalFields = Object.keys(data).length;
+    const { fieldsWithData } = countFieldsAndMissing(data);
+    return (fieldsWithData / totalFields) * 100;
+};
+const updateDataSummary = (formData: any) => {
+    const totalFieldsElement = document.getElementById("totalFieldsValue");
+    const fieldsWithDataElement = document.getElementById("fieldsWithDataValue");
+    const missingFieldsElement = document.getElementById("missingFieldsValue");
+    const filledPercentageElement = document.getElementById("filledPercentageValue");
+    const totalFields = Object.keys(formData).length;
+    const { fieldsWithData, missingFields } = countFieldsAndMissing(formData);
+    const filledPercentage = calculateFilledPercentage(formData).toFixed(2) + "%";
+    if (totalFieldsElement) totalFieldsElement.textContent = totalFields.toString();
+    if (fieldsWithDataElement) fieldsWithDataElement.textContent = fieldsWithData.toString();
+    if (missingFieldsElement) missingFieldsElement.textContent = missingFields.toString();
+    if (filledPercentageElement) filledPercentageElement.textContent = filledPercentage;
+};
+// Assuming you have the jsonData in a variable named formData
+updateDataSummary(jsonData["_formData"]);
 
 document.addEventListener('DOMContentLoaded', () => {
     const textarea = document.getElementById('note-editor-textarea');

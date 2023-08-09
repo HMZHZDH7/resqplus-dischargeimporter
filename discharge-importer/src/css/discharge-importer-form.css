@@ -12,11 +12,13 @@
     --grey-900: #1F2933;
     --cool-blue: #01DBC4;
     --cool-yellow: #FDB063;
+    --background-grey: #e4e5f1;
 
-    --warning: #E82C0C;
-    --green: #7CCC43;
-    --yellow: #FFEF48;
+    --warning: #f7abc7;
+    --green: #c5ea8b;
+    --yellow: #fde780;
     --blue: #5868CC;
+    --calm-blue: #86e1e0;
 
     --ft-fam-primary: "Roboto", sans-serif;
     --ft-wt-500: 500;
@@ -53,7 +55,7 @@
     box-sizing: border-box;
     flex: 50%;
     overflow: hidden;
-    border-right: var(--grey-50) solid 2px;
+    border-right: var(--background-grey) solid 2px;
 }
 
 .note-body {
@@ -69,7 +71,7 @@
 .note-template {
     max-width: 1200px;
     margin: 0 auto;
-    color: var(--grey-50);
+    color: var(--background-grey);
     transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     box-shadow: none;
 }
@@ -98,13 +100,13 @@
     overflow: hidden;
     border: none;
     outline: none;
-    background-color: var(--grey-500);
-    color: var(--grey-50);
+    background-color: white;
+    color: black;
     border-radius: 10px;
 }
 
 .note-editor p::placeholder {
-    color: var(--grey-50);
+    color: white;
 }
 
 .form-element {
@@ -119,6 +121,7 @@
     height: 100%;
     box-sizing: border-box;
     overflow: auto;
+
 }
 
 .form-body-padding {
@@ -126,7 +129,7 @@
 }
 
 body {
-    background: var(--grey-900);
+    background: var(--background-grey);
     margin: 0;
 }
 
@@ -159,8 +162,8 @@ input {
 }
 
 .form {
-    color: var(--grey-50);
-    background: var(--grey-900);
+    color: black;
+    background: var(--background-grey);
     display: flex;
     gap: var(--size-400);
     width: 100%;
@@ -177,24 +180,25 @@ input {
 }
 
 .input-item {
-    color: var(--grey-300);
+    color: black;
     display: grid;
     position: relative;
     height: 3em;
     width: 100%;
+    background-color: white;
 }
 
 .item {
     width: 50%;
+    background-color: var(--background-grey); /*THIS CHANGES THE COL OF THE CONFIDENCE BOX*/
 }
 
 .form-input {
-    color: var(--grey-50);
+    color: black;
     background: inherit;
     padding: var(--size-300);
     width: 100%;
     border: 2px solid var(--cool-blue);
-    border-radius: var(--size-200) var(--size-200) 0 0;
     font-weight: var(--ft-wt-500);
 }
 
@@ -221,7 +225,7 @@ input {
 
 .input-label {
     transition: top var(--tn-1), font-size var(--tn-1);
-    background: var(--grey-900);
+    background: black;
     position: absolute;
     left: 0.9em;
     top: 50%;
@@ -286,14 +290,18 @@ input {
     font-size: 16px;
     text-transform: uppercase;
     font-weight: 500;
-    color: var(--grey-700);
-    background-color: var(--green);
+    color: black;
+    background-color: var(--calm-blue);
     transition: all 0.3s ease 0s;
     height: 100%;
     width: 100%;
     cursor: pointer;
     border: none;
     border-radius: 0 0 0.3rem 0;
+}
+
+.input-verification div:nth-child(3) button {
+    box-shadow: inset 0 5px 10px 0 rgba(0, 0, 0, 0.3);
 }
 
 .highLight-iterator {
@@ -306,17 +314,18 @@ input {
 }
 
 .input-state button:hover {
-    background-color: #4E802A;
-    color: var(--grey-50);
+    background-color: #8CFFFA;
+    color: var(--grey-300);
+    box-shadow: inset 0px 10px 20px 2px rgba(0, 0, 0, 0.2);
 }
 
 .input-state button:nth-child(2) {
-    background-color: var(--blue);
-    color: var(--grey-300);
+    background-color: var(--grey-300);
+    color: var(--white);
 }
 
 .input-state button:nth-child(2):hover {
-    background-color: #424D99;
+    background-color:  var(--grey-200);
     color: var(--grey-50);
 }
 
@@ -331,8 +340,8 @@ select {
     box-shadow: none;
     flex: 1;
     padding: 0 1em;
-    color: var(--grey-50);
-    background-color: var(--grey-800);
+    color: black;
+    background-color: white;  /*THIS CHANGES THE COLOUR OF THE BACKGROUND OF SELECT FIELDS*/
     background-image: none;
     cursor: pointer;
     font-family: var(--page_font);
@@ -357,7 +366,7 @@ select::-ms-expand {
     top: 0;
     right: 0;
     padding: 1em;
-    background-color: var(--grey-700);
+    background-color: var(--greyLight-2);  /*THIS CHANGES THE COLOUR OF THE DROP DOWN ARROW IN THE SELECT FIELDS*/
     transition: .25s all ease;
     pointer-events: none;
 }
@@ -375,7 +384,7 @@ select::-ms-expand {
     letter-spacing: 2.5px;
     font-weight: 500;
     color: var(--grey-900);
-    background-color: var(--grey-50);
+    background-color: white;
     border: none;
     border-radius: 45px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
@@ -394,7 +403,7 @@ select::-ms-expand {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    background-color: var(--grey-700);
+    background-color: white;  /*THIS CHANGES THE BACKGROUND COLOUR OF RADIO BUTTON FIELDS*/
     padding: 5px;
     row-gap: 0.375em;
     border: 2px solid var(--cool-blue);
@@ -452,14 +461,14 @@ select::-ms-expand {
 }
 
 .div-button-form label span:hover {
-    background-color: var(--grey-400);
+    background-color: var(--greyLight-2);
 }
 
 .div-button-form label span:before {
     display: flex;
     flex-shrink: 0;
     content: "";
-    background-color: var(--grey-50);
+    background-color: white;
     width: 1.5em;
     height: 1.5em;
     border-radius: 50%;
@@ -474,7 +483,7 @@ select::-ms-expand {
 }
 
 .div-button-form label input:checked + span {
-    background-color: var(--grey-400);
+    background-color: var(--greyLight-3);
 }
 
 .div-button-form label input:checked + span:before {
@@ -490,7 +499,7 @@ select::-ms-expand {
 }
 
 .title-header {
-    background-color: var(--grey-400);
+    background-color: white;  /*THIS CHANGES THE COLOR OF THE FIELD HEADERS*/
     min-height: 25px;
     border-radius: var(--size-200) var(--size-200) 0 0;
     border: 2px solid var(--cool-blue);
@@ -521,6 +530,7 @@ select::-ms-expand {
     filter: invert();
     padding-left: 5px;
     padding-top: 5px;
+
 }
 
 .toggle-div {

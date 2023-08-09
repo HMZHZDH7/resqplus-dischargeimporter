@@ -7,17 +7,11 @@ interface map {
 export const mapper: map[] = [
     { FormId: "age",  docMarkerId:"anamnesis_age", HighLightId: "anamnesis.age"},
     { FormId: "sex", docMarkerId:"anamnesis_sex", HighLightId: "anamnesis.sex"},
-
-    //Same field
     { FormId: "wakeUpStrokeCheck",  docMarkerId:"onset_wakeup_stroke", HighLightId: "onset.wakeup_stroke"},
     { FormId: "wakeUpStrokeUnCheck", docMarkerId:"onset_wakeup_stroke", HighLightId: "onset.wakeup_stroke"},
-
     { FormId: "wakeUpdate", docMarkerId:"onset_sleep_timestamp", HighLightId: ""},
-
-    //Same field
     { FormId: "strokeCheck",  docMarkerId:"onset_inhospital_stroke", HighLightId: "onset.inhospital_stroke"},
     { FormId: "strokeUnCheck", docMarkerId:"onset_inhospital_stroke", HighLightId: "onset.inhospital_stroke"},
-
     { FormId: "firstAttented", docMarkerId:"admission_first_contact_place", HighLightId: ""},
     { FormId: "arrivalDate", docMarkerId:"admission_admission_timestamp", HighLightId: "admission.admission_timestamp"},
     { FormId: "arrivalTime", docMarkerId:"admission_admission_timestamp", HighLightId: "admission.admission_timestamp"},
@@ -26,12 +20,9 @@ export const mapper: map[] = [
     { FormId: "arrivedFrom", docMarkerId:"admission_arrival_mode", HighLightId: "admission.arrival_mode"},
     { FormId: "hospitalizedIn",  docMarkerId:"admission_hospitalized_in", HighLightId: "admission.hospitalized_in"},
     { FormId: "department", docMarkerId:"admission_admission_department", HighLightId: "admission.admission_department"},
-
-    //Not in docmarker
     { FormId: "radioMedicalHistoryYes", docMarkerId:"anamnesis_risk_factors", HighLightId: ""},
     { FormId: "radioMedicalHistoryNone",  docMarkerId:"anamnesis_risk_factors", HighLightId: ""},
     { FormId: "radioMedicalHistoryUnknown",  docMarkerId:"anamnesis_risk_factors", HighLightId: ""},
-
     { FormId: "checkBoxMedicalHistoryHypertension", docMarkerId:"anamnesis_risk_factors_hypertension", HighLightId: "anamnesis.risk_factors.hypertension"},
     { FormId: "checkBoxMedicalHistorydiabetes",  docMarkerId:"anamnesis_risk_factors_diabetes", HighLightId: ""},
     { FormId: "checkBoxMedicalHistoryHyperlipidemia",  docMarkerId:"anamnesis_risk_factors_hyperlypidemia", HighLightId: ""},
@@ -43,18 +34,14 @@ export const mapper: map[] = [
     { FormId: "checkBoxMedicalHistoryCongestiveHeartFailure",  docMarkerId:"anamnesis_risk_factors_heart_failure", HighLightId: ""},
     { FormId: "checkBoxMedicalHistoryHIV",  docMarkerId:"anamnesis_risk_factors_hiv", HighLightId: ""},
     { FormId: "checkBoxMedicalHistoryCOVIdPositive",  docMarkerId:"anamnesis_risk_factors_covid_positive", HighLightId: ""},
-
-    //These rely on the same field
     { FormId: "radioTreatmentEventYes",  docMarkerId:"anamnesis_medication_any_medication", HighLightId: ""},
     { FormId: "radioTreatmentEventNone",  docMarkerId:"anamnesis_medication_any_medication", HighLightId: ""},
     { FormId: "radioTreatmentEventUnknown",  docMarkerId:"anamnesis_medication_any_medication", HighLightId: ""},
-
     { FormId: "checkBoxTreatmentEventAntidiabetics",  docMarkerId:"anamnesis_medication_antidiabetics", HighLightId: ""},
     { FormId: "checkBoxTreatmentEventAntihypertensives",  docMarkerId:"anamnesis_medication_antihypertensives", HighLightId: "anamnesis.medication.antihypertensives"},
-
-    { FormId: "checkBoxTreatmentEventAntiplatelets",  docMarkerId:"anamnesis_medication_antiplatelets", HighLightId: ""}, //More fields needed
-    { FormId: "checkBoxTreatmentEventAnticoagulants",  docMarkerId:"anamnesis_medication_anticoagulants", HighLightId: ""}, // more fields needed
-
+    { FormId: "checkBoxTreatmentEventAntiplatelets",  docMarkerId:"anamnesis_medication_antiplatelets", HighLightId: ""},
+    { FormId: "checkBoxTreatmentEventAntiplatelets",  docMarkerId:"anamnesis_medication_antiplatelets", HighLightId: ""},
+    { FormId: "checkBoxTreatmentEventAnticoagulants",  docMarkerId:"anamnesis_medication_anticoagulants", HighLightId: ""},
     { FormId: "checkBoxTreatmentEventHormonalContraception",  docMarkerId:"anamnesis_medication_hormonal_contraception", HighLightId: ""},
     { FormId: "checkBoxTreatmentEventStatin",  docMarkerId:"anamnesis_medication_statin", HighLightId: ""},
     { FormId: "glucose", docMarkerId:"admission_medical_examination_glucose", HighLightId: "admission.medical_examination.glucose"},
@@ -62,7 +49,6 @@ export const mapper: map[] = [
     { FormId: "systolic", docMarkerId:"admission_medical_examination_systolic_pressure", HighLightId: "admission.medical_examination.systolic_pressure"},
     { FormId: "diastolic", docMarkerId:"admission_medical_examination_diastolic_pressure", HighLightId: "admission.medical_examination.diastolic_pressure"},
     { FormId: "nihss", docMarkerId:"admission_medical_examination_nihss", HighLightId: "admission.medical_examination.nihss"},
-
     { FormId: "mrs", docMarkerId:"anamnesis_medication_prestroke_mrs", HighLightId: "anamnesis.prestroke_mrs"},
     { FormId: "firstInrTesting", docMarkerId:"admission_medical_examination_inr_mode", HighLightId: "admission.medical_examination.inr_mode"},
 
@@ -71,11 +57,8 @@ export const mapper: map[] = [
     { FormId: "brainImaging", docMarkerId:"diagnosis_imaging_type", HighLightId: "diagnosis.imaging.imaging_type"},
     { FormId: "imagingdate", docMarkerId:"diagnosis_imaging_timestamp", HighLightId: "diagnosis.imaging.imaging_timestamp"},
     { FormId: "imagingTime", docMarkerId:"diagnosis_imaging_timestamp", HighLightId: "diagnosis.imaging.imaging_timestamp"},
-
-    //These use the same field!
     { FormId: "radioInfarctsYes",  docMarkerId:"diagnosis_imaging_old_infarcts_any_infarct", HighLightId: ""},
     { FormId: "radioInfarctsNo",  docMarkerId:"diagnosis_imaging_old_infarcts_any_infarct", HighLightId: ""},
-
     { FormId: "checkBoxInfarctsCortical",  docMarkerId:"diagnosis_imaging_old_infarcts_cortical", HighLightId: ""},
     { FormId: "checkBoxInfarctsSubCortical",  docMarkerId:"diagnosis_imaging_old_infarcts_subcortical", HighLightId: ""},
     { FormId: "checkBoxBrainstem",  docMarkerId:"diagnosis_imaging_old_infarcts_brainstem", HighLightId: ""},
@@ -103,8 +86,6 @@ export const mapper: map[] = [
     { FormId: "checkBoxArterialCEARight",  docMarkerId:"diagnosis_imaging_occlusion_artery_extracranial_right", HighLightId: ""},
     { FormId: "checkBoxArterialCIARight",  docMarkerId:"diagnosis_imaging_occlusion_artery_intracranial_right", HighLightId: ""},
     { FormId: "checkBoxArterialBasilar",  docMarkerId:"diagnosis_imaging_occlusion_basilar_artery", HighLightId: ""},
-
-    //These use the same field!!!!
     { FormId: "radioThrombolysisCheck",  docMarkerId:"treatment_thrombolysis_thrombolysis_treatment", HighLightId: "treatment.thrombolysis.thrombolysis_treatment"},
     { FormId: "radioThrombolysisUnCheck", docMarkerId:"treatment_thrombolysis_thrombolysis_treatment", HighLightId: "treatment.thrombolysis.thrombolysis_treatment"},
 
