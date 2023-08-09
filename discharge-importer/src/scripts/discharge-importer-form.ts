@@ -11,8 +11,8 @@ interface formField {
 }
 
 interface highLight {
-    Index: number,
-    Length: number
+    index: number,
+    length: number
 }
 
 const allFormFields = document.querySelectorAll<HTMLInputElement | HTMLSelectElement>('input, select');
@@ -20,30 +20,31 @@ const allFormFields = document.querySelectorAll<HTMLInputElement | HTMLSelectEle
 let switchForm: boolean = true;
 
 (window as any).changeColor = changeColor;
-(window as any).resetColor  = resetColor ;
-(window as any).applyWarningStyle  = applyWarningStyle ;
-(window as any).removeWarningStyle  = removeWarningStyle ;
-(window as any).toggleDivImaging  = toggleDivImaging ;
-(window as any).toggleSubDiv  = toggleSubDiv ;
-(window as any).thrombolysisTimeToggle  = thrombolysisTimeToggle ;
-(window as any).thrombectomyTimeToggle  = thrombectomyTimeToggle ;
-(window as any).perfusionDeficitToggle  = perfusionDeficitToggle ;
-(window as any).dischargeDestinationToggle  = dischargeDestinationToggle ;
-(window as any).triggerChangeEvent  = triggerChangeEvent ;
-(window as any).toggleVerification  = toggleVerification ;
-(window as any).toggleEdit  = toggleEdit ;
-(window as any).mticiToggle  = mticiToggle ;
-(window as any).formSwitch  = formSwitch ;
-(window as any).exportData  = exportData ;
+(window as any).resetColor  = resetColor;
+(window as any).applyWarningStyle  = applyWarningStyle;
+(window as any).removeWarningStyle  = removeWarningStyle;
+(window as any).toggleDivImaging  = toggleDivImaging;
+(window as any).toggleSubDiv  = toggleSubDiv;
+(window as any).thrombolysisTimeToggle  = thrombolysisTimeToggle;
+(window as any).thrombectomyTimeToggle  = thrombectomyTimeToggle;
+(window as any).perfusionDeficitToggle  = perfusionDeficitToggle;
+(window as any).dischargeDestinationToggle  = dischargeDestinationToggle;
+(window as any).triggerChangeEvent  = triggerChangeEvent;
+(window as any).toggleVerification  = toggleVerification;
+(window as any).toggleEdit  = toggleEdit;
+(window as any).mticiToggle  = mticiToggle;
+(window as any).formSwitch  = formSwitch;
+(window as any).exportData  = exportData;
+(window as any).highLight  = highLight;
 
 let formFields: formField[] = [
-    { highLights: [{Index: 4000, Length: 100},{Index: 25, Length: 10}], FieldId: "age", TrustCount: 100, Verified: false, Value: "20", Edited: false},
+    { highLights: [], FieldId: "age", TrustCount: 100, Verified: false, Value: "20", Edited: false},
     { highLights: [], FieldId: "sex", TrustCount: 50, Verified: false, Value: "", Edited: false},
     { highLights: [], FieldId: "wakeUpStrokeCheck", TrustCount: 80, Verified: false, Value: "false", Edited: false},
     { highLights: [], FieldId: "wakeUpStrokeUnCheck", TrustCount: NaN, Verified: false, Value: "true", Edited: false},
     { highLights: [], FieldId: "wakeUpDate", TrustCount: 80, Verified: false, Value: "", Edited: false},
-    { highLights: [], FieldId: "strokeCheck", TrustCount: NaN, Verified: false, Value: "false", Edited: false},
-    { highLights: [], FieldId: "strokeUnCheck", TrustCount: NaN, Verified: false, Value: "true", Edited: false},
+    { highLights: [], FieldId: "strokeCheck", TrustCount: 10, Verified: false, Value: "false", Edited: false},
+    { highLights: [], FieldId: "strokeUnCheck", TrustCount: 75, Verified: false, Value: "true", Edited: false},
     { highLights: [], FieldId: "firstAttented", TrustCount: NaN, Verified: false, Value: "", Edited: false},
     { highLights: [], FieldId: "arrivalDate", TrustCount: NaN, Verified: false, Value: "", Edited: false},
     { highLights: [], FieldId: "arrivalTime", TrustCount: NaN, Verified: false, Value: "", Edited: false},
@@ -270,6 +271,17 @@ const updateListValuesFromJson = () => {
                     item.Value = formData[docMarkerId].toString();
                 }
             }
+
+            const { HighLightId } = mappedItem;
+            if (jsonData.hasOwnProperty('_highlights')) {
+                // Access the nested property within _formData
+                const formData = jsonData['_highlights'];
+                // Check if the object with the mapped name exists in the nested JSON data
+                if (formData.hasOwnProperty(HighLightId)) {
+                    // Update the value in the list with the value from the nested JSON data
+                    item.highLights = formData[HighLightId] as highLight[];
+                }
+            }
         }
     }
 };
@@ -366,6 +378,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     formSwitch();
+    highLightIterators();
     /*function updateTextareaHeight() {
         textarea.style.height = 'auto';
         textarea.style.height = `${textarea.scrollHeight}px`;
@@ -652,25 +665,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const percentageSpan = document.getElementById(input.id.replace(/(Check|UnCheck|Yes|None|Unknown|No)$/, '') + 'Percentage');
             editedSpan.style.display = 'inline';
             percentageSpan.style.display = 'none';
-        });
-    });
-
-    inputs.forEach(input => {
-        input.addEventListener('click', () => {
-            const highLights = formFields.find(o => o.FieldId == input.id).highLights;
-            if (highLights.length != 0) {
-                if (fieldId == input.id) {
-                    index++
-                    if (index >= highLights.length) {
-                        index = 0
-                    }
-                } else {
-                    index = 0;
-                    fieldId = input.id;
-                }
-
-                highlightText(highLights[index].Index, highLights[index].Length);
-            }
+            editedSpan.parentElement.style.backgroundColor = '';
         });
     });
 
@@ -685,7 +680,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     const percentageSpan = document.getElementById('radio' + name + 'Percentage');
                     editedSpan.style.display = 'inline';
                     percentageSpan.style.display = 'none';
+                    editedSpan.style.backgroundColor = '';
                     document.getElementById(checkbox.id + 'Percentage').innerText = '';
+                    document.getElementById(checkbox.id + 'Percentage').style.backgroundColor = '';
                     document.getElementById('radio' + name + 'Yes' + 'Percentage').innerText = '';
 
                     document.getElementById('radio' + name + 'No' + 'Percentage') != null ? document.getElementById('radio' + name + 'No' + 'Percentage').innerText = '' : null;
@@ -879,7 +876,10 @@ function toggleEdit(id: string, ids: string[] = [], checkBoxIds: string [] = [])
 }
 
 function colorPercentage(percentage: number): string {
-    if (percentage >= 75) {
+    if (percentage == null) {
+        return '';
+    }
+    else if (percentage >= 75) {
         return 'var(--green)';
     } else if (percentage >= 25) {
         return  'var(--yellow)';
@@ -893,68 +893,53 @@ function formSwitch() {
     formFields.forEach(o => {
         const element = document.getElementById(o.FieldId + 'Percentage');
         if (element) {
+            if (element.id.includes('checkBox') || element.id.includes('radio')) {
+                element.style.backgroundColor = colorPercentage(o.TrustCount || null);
+            } else {
+                element.parentElement.style.backgroundColor = colorPercentage(o.TrustCount || null);
+            }
             if (!switchForm) {
-                element.innerText = o.TrustCount.toString() + " %";
-                if (element.id.includes('checkBox') || element.id.includes('radio')) {
-                    element.style.backgroundColor = "";
-                } else {
-                    element.parentElement.style.backgroundColor = "";
-                }
+                element.innerText = o.TrustCount ? (o.TrustCount.toString() + " %") : '';
             } else {
                 element.innerText = "";
-                if (element.id.includes('checkBox') || element.id.includes('radio')) {
-                    element.style.backgroundColor = colorPercentage(o.TrustCount);
-                } else {
-                    element.parentElement.style.backgroundColor = colorPercentage(o.TrustCount);
-                }
             }
         }
     });
 
+    document.getElementById("strokePercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'strokeCheck').TrustCount, formFields.find(o => o.FieldId === 'strokeUnCheck').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || null);
+    document.getElementById("wakeUpStrokePercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'wakeUpStrokeCheck').TrustCount, formFields.find(o => o.FieldId === 'wakeUpStrokeUnCheck').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || null);
+    document.getElementById("bleedingSubarachnoidPercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'bleedingSubarachnoidCheck').TrustCount, formFields.find(o => o.FieldId === 'bleedingSubarachnoidUnCheck').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || null);
+    document.getElementById("radioThrombolysisMimicPercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'radioThrombolysisMimicCheck').TrustCount, formFields.find(o => o.FieldId === 'radioThrombolysisMimicUnCheck').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || null);
+    document.getElementById("radioThrombolysisPercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'radioThrombolysisCheck').TrustCount, formFields.find(o => o.FieldId === 'radioThrombolysisUnCheck').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || null);
+    document.getElementById("radioAnticoagulantPercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'radioAnticoagulantYes').TrustCount, formFields.find(o => o.FieldId === 'radioAnticoagulantNo').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || null);
+    document.getElementById("thrombectomyPercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'thrombectomyCheck').TrustCount, formFields.find(o => o.FieldId === 'thrombectomyUnCheck').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || null);
+    document.getElementById("infratentorialPercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'infratentorialCheck').TrustCount, formFields.find(o => o.FieldId === 'infratentorialUnCheck').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || null);
+    document.getElementById("bleedingPercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'bleedingCheck').TrustCount, formFields.find(o => o.FieldId === 'bleedingUnCheck').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || null);
+    document.getElementById("intraventricularPercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'intraventricularCheck').TrustCount, formFields.find(o => o.FieldId === 'intraventricularUnCheck').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || null);
+    document.getElementById("bleedingSubarachnoidPercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'radioAnticoagulantMimicsNo').TrustCount, formFields.find(o => o.FieldId === 'radioAnticoagulantMimicsYes').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || null);
+    document.getElementById("radioVentilatedPercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'radioVentilatedYes').TrustCount, formFields.find(o => o.FieldId === 'radioVentilatedNo').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || null);
+    document.getElementById("radioCraniectomyPercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'radioCraniectomyYes').TrustCount, formFields.find(o => o.FieldId === 'radioCraniectomyNo').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || null);
+
     if (!switchForm) {
-        document.getElementById("strokePercentage").innerText = [formFields.find(o => o.FieldId === 'strokeCheck').TrustCount, formFields.find(o => o.FieldId === 'strokeUnCheck').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0]?.toString() + '%' || "";
-        document.getElementById("wakeUpStrokePercentage").innerText = [formFields.find(o => o.FieldId === 'wakeUpStrokeCheck').TrustCount, formFields.find(o => o.FieldId === 'wakeUpStrokeUnCheck').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0]?.toString() + '%' || "";
-        document.getElementById("bleedingSubarachnoidPercentage").innerText = [formFields.find(o => o.FieldId === 'bleedingSubarachnoidCheck').TrustCount, formFields.find(o => o.FieldId === 'bleedingSubarachnoidUnCheck').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0]?.toString() + '%' || "";
-        document.getElementById("radioThrombolysisMimicPercentage").innerText = [formFields.find(o => o.FieldId === 'radioThrombolysisMimicCheck').TrustCount, formFields.find(o => o.FieldId === 'radioThrombolysisMimicUnCheck').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0]?.toString() + '%' || "";
-        document.getElementById("radioThrombolysisPercentage").innerText = [formFields.find(o => o.FieldId === 'radioThrombolysisCheck').TrustCount, formFields.find(o => o.FieldId === 'radioThrombolysisUnCheck').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0]?.toString() + '%' || "";
-        document.getElementById("radioAnticoagulantPercentage").innerText = [formFields.find(o => o.FieldId === 'radioAnticoagulantYes').TrustCount, formFields.find(o => o.FieldId === 'radioAnticoagulantNo').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0]?.toString() + '%' || "";
-        document.getElementById("thrombectomyPercentage").innerText = [formFields.find(o => o.FieldId === 'thrombectomyCheck').TrustCount, formFields.find(o => o.FieldId === 'thrombectomyUnCheck').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0]?.toString() + '%' || "";
-        document.getElementById("infratentorialPercentage").innerText = [formFields.find(o => o.FieldId === 'infratentorialCheck').TrustCount, formFields.find(o => o.FieldId === 'infratentorialUnCheck').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0]?.toString() + '%' || "";
-        document.getElementById("bleedingPercentage").innerText = [formFields.find(o => o.FieldId === 'bleedingCheck').TrustCount, formFields.find(o => o.FieldId === 'bleedingUnCheck').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0]?.toString() + '%' || "";
-        document.getElementById("intraventricularPercentage").innerText = [formFields.find(o => o.FieldId === 'intraventricularCheck').TrustCount, formFields.find(o => o.FieldId === 'intraventricularUnCheck').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0]?.toString() + '%' || "";
-        document.getElementById("bleedingSubarachnoidPercentage").innerText = [formFields.find(o => o.FieldId === 'radioAnticoagulantMimicsNo').TrustCount, formFields.find(o => o.FieldId === 'radioAnticoagulantMimicsYes').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0]?.toString() + '%' || "";
-        document.getElementById("radioVentilatedPercentage").innerText = [formFields.find(o => o.FieldId === 'radioVentilatedYes').TrustCount, formFields.find(o => o.FieldId === 'radioVentilatedNo').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0]?.toString() + '%' || "";
-        document.getElementById("radioCraniectomyPercentage").innerText = [formFields.find(o => o.FieldId === 'radioCraniectomyYes').TrustCount, formFields.find(o => o.FieldId === 'radioCraniectomyNo').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0]?.toString() + '%' || "";
+        const getValueText = (fieldId1, fieldId2) => {
+            const value = [formFields.find(o => o.FieldId === fieldId1).TrustCount, formFields.find(o => o.FieldId === fieldId2).TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0];
+            return (value !== undefined && value !== null) ? (value.toString() + ' %') : '';
+        };
 
-        document.getElementById("strokePercentage").parentElement.style.backgroundColor = "";
-        document.getElementById("wakeUpStrokePercentage").parentElement.style.backgroundColor = "";
-        document.getElementById("bleedingSubarachnoidPercentage").parentElement.style.backgroundColor = "";
-        document.getElementById("radioThrombolysisMimicPercentage").parentElement.style.backgroundColor = "";
-        document.getElementById("radioThrombolysisPercentage").parentElement.style.backgroundColor = "";
-        document.getElementById("radioAnticoagulantPercentage").parentElement.style.backgroundColor = "";
-        document.getElementById("thrombectomyPercentage").parentElement.style.backgroundColor = "";
-        document.getElementById("infratentorialPercentage").parentElement.style.backgroundColor = "";
-        document.getElementById("bleedingPercentage").parentElement.style.backgroundColor = "";
-        document.getElementById("intraventricularPercentage").parentElement.style.backgroundColor = "";
-        document.getElementById("bleedingSubarachnoidPercentage").parentElement.style.backgroundColor = "";
-        document.getElementById("radioVentilatedPercentage").parentElement.style.backgroundColor = "";
-        document.getElementById("radioCraniectomyPercentage").parentElement.style.backgroundColor = "";
-
+        document.getElementById("strokePercentage").innerText = getValueText('strokeCheck', 'strokeUnCheck');
+        document.getElementById("wakeUpStrokePercentage").innerText = getValueText('wakeUpStrokeCheck', 'wakeUpStrokeUnCheck');
+        document.getElementById("bleedingSubarachnoidPercentage").innerText = getValueText('bleedingSubarachnoidCheck', 'bleedingSubarachnoidUnCheck');
+        document.getElementById("radioThrombolysisMimicPercentage").innerText = getValueText('radioThrombolysisMimicCheck', 'radioThrombolysisMimicUnCheck');
+        document.getElementById("radioThrombolysisPercentage").innerText = getValueText('radioThrombolysisCheck', 'radioThrombolysisUnCheck');
+        document.getElementById("radioAnticoagulantPercentage").innerText = getValueText('radioAnticoagulantYes', 'radioAnticoagulantNo');
+        document.getElementById("thrombectomyPercentage").innerText = getValueText('thrombectomyCheck', 'thrombectomyUnCheck');
+        document.getElementById("infratentorialPercentage").innerText = getValueText('infratentorialCheck', 'infratentorialUnCheck');
+        document.getElementById("bleedingPercentage").innerText = getValueText('bleedingCheck', 'bleedingUnCheck');
+        document.getElementById("intraventricularPercentage").innerText = getValueText('intraventricularCheck', 'intraventricularUnCheck');
+        document.getElementById("bleedingSubarachnoidPercentage").innerText = getValueText('radioAnticoagulantMimicsNo', 'radioAnticoagulantMimicsYes');
+        document.getElementById("radioVentilatedPercentage").innerText = getValueText('radioVentilatedYes', 'radioVentilatedNo');
+        document.getElementById("radioCraniectomyPercentage").innerText = getValueText('radioCraniectomyYes', 'radioCraniectomyNo');
     } else {
-        document.getElementById("strokePercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'strokeCheck').TrustCount, formFields.find(o => o.FieldId === 'strokeUnCheck').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || 0);
-        document.getElementById("wakeUpStrokePercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'wakeUpStrokeCheck').TrustCount, formFields.find(o => o.FieldId === 'wakeUpStrokeUnCheck').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || 0);
-        document.getElementById("bleedingSubarachnoidPercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'bleedingSubarachnoidCheck').TrustCount, formFields.find(o => o.FieldId === 'bleedingSubarachnoidUnCheck').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || 0);
-        document.getElementById("radioThrombolysisMimicPercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'radioThrombolysisMimicCheck').TrustCount, formFields.find(o => o.FieldId === 'radioThrombolysisMimicUnCheck').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || 0);
-        document.getElementById("radioThrombolysisPercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'radioThrombolysisCheck').TrustCount, formFields.find(o => o.FieldId === 'radioThrombolysisUnCheck').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || 0);
-        document.getElementById("radioAnticoagulantPercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'radioAnticoagulantYes').TrustCount, formFields.find(o => o.FieldId === 'radioAnticoagulantNo').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || 0);
-        document.getElementById("thrombectomyPercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'thrombectomyCheck').TrustCount, formFields.find(o => o.FieldId === 'thrombectomyUnCheck').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || 0);
-        document.getElementById("infratentorialPercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'infratentorialCheck').TrustCount, formFields.find(o => o.FieldId === 'infratentorialUnCheck').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || 0);
-        document.getElementById("bleedingPercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'bleedingCheck').TrustCount, formFields.find(o => o.FieldId === 'bleedingUnCheck').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || 0);
-        document.getElementById("intraventricularPercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'intraventricularCheck').TrustCount, formFields.find(o => o.FieldId === 'intraventricularUnCheck').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || 0);
-        document.getElementById("bleedingSubarachnoidPercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'radioAnticoagulantMimicsNo').TrustCount, formFields.find(o => o.FieldId === 'radioAnticoagulantMimicsYes').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || 0);
-        document.getElementById("radioVentilatedPercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'radioVentilatedYes').TrustCount, formFields.find(o => o.FieldId === 'radioVentilatedNo').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || 0);
-        document.getElementById("radioCraniectomyPercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'radioCraniectomyYes').TrustCount, formFields.find(o => o.FieldId === 'radioCraniectomyNo').TrustCount].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || 0);
-
         document.getElementById("strokePercentage").innerText = "";
         document.getElementById("wakeUpStrokePercentage").innerText = "";
         document.getElementById("bleedingSubarachnoidPercentage").innerText = "";
@@ -999,12 +984,54 @@ function objectToCsvRow(obj: formField): string {
 
 function highlightText(start: number, length: number) {
     quill.setSelection(start, length);
-    quill.format('highlight', true);
+}
 
-    const selection = quill.getSelection();
-    selection.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
+function highLight(id: string) {
+    const highLights = formFields.find(o => o.FieldId == id).highLights;
+    if (highLights.length != 0) {
+        if (fieldId == id) {
+            index++
+            if (index >= highLights.length) {
+                index = 0
+            }
+        } else {
+            index = 0;
+            fieldId = id;
+        }
+        const focusedElement = document.activeElement;
+        highlightText(highLights[index].index, highLights[index].length);
+
+        if (highLights.length == 1) {
+            highLightIterator(index, id);
+        } else if (highLights.length <= index + 1) {
+            highLightIterator(0, id);
+        } else {
+            highLightIterator(index + 1, id);
+        }
+    }
+}
+
+function highLightIterators(index: number = 0) {
+    formFields.forEach(o => {
+        const element = document.getElementById(o.FieldId + 'Iterator');
+        try {
+            if (o.highLights.length != 0) {
+                element.innerText = (index + 1).toString() + '/' + o.highLights.length.toString();
+            }
+
+        } catch {
+        }
     });
+}
 
+function highLightIterator(index: number = 0, id: string) {
+    const highLights = formFields.find(o => o.FieldId == id).highLights;
+    const element = document.getElementById(id + 'Iterator');
+    try {
+        if (highLights.length != 0) {
+            element.innerText = (index + 1).toString() + '/' + highLights.length.toString();
+        }
+
+    } catch {
+    }
 }

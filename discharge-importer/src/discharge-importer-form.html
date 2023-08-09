@@ -34,7 +34,7 @@
                         <div class="form-body">
                             <div class="form-body-padding">
                                 <div class="form-field">
-                                    <form class="form">
+                                    <form class="form" action="javascript:void(0);">
 
                                         <div class="title">
                                             <span>
@@ -46,13 +46,18 @@
                                         <div class="form-row">
                                             <div class="item">
                                                 <div class="input-item">
-                                                    <input class="form-input" type="number" name="age-at-admission" id="age" pattern="\w{1,}" required/>
+                                                    <input class="form-input" type="number" name="age-at-admission" id="age" pattern="\w{1,}"/>
                                                     <label class="input-label" for="age">AGE AT ADMISSION</label>
                                                 </div>
                                                 <div class="input-verification">
                                                     <div class="input-trust">
                                                         <span id="agePercentage"></span>
                                                         <span id="ageEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="ageIterator" onclick="highLight('age')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-age" onclick="toggleVerification('age')">
@@ -77,7 +82,7 @@
                                                     </span>
                                                 </div>
                                                 <div class="select" id="sexDiv">
-                                                    <select id="sex" class="selection" required>
+                                                    <select id="sex" class="selection">
                                                         <option value="" disabled selected hidden>Select the Sex of the patient</option>
                                                         <option value="female">Female</option>
                                                         <option value="male">Male</option>
@@ -87,6 +92,11 @@
                                                     <div class="input-trust">
                                                         <span id="sexPercentage"></span>
                                                         <span id="sexEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="sexIterator" onclick="highLight('sex')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-sex" onclick="toggleVerification('sex')">
@@ -127,6 +137,11 @@
                                                         <span id="wakeUpStrokeEdited" style="display: none">EDITED</span>
                                                     </div>
                                                     <div class="input-state">
+                                                        <button class="highLight-iterator" id="wakeUpStrokeCheckIterator" onclick="highLight('wakeUpStrokeCheck')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                         <button id="verify-wakeUpStroke" onclick="toggleVerification('wakeUpStroke', ['wakeUpStrokeCheck', 'wakeUpStrokeUnCheck'])">
                                                             <span>
                                                                 Verify
@@ -142,13 +157,18 @@
                                             </div>
                                             <div class="item">
                                                 <div class="input-item" id="wakeUpDiv" style="display: none">
-                                                    <input class="form-input" type="time" name="wakeUpDate" id="wakeUpDate" pattern="\w{1,}" required/>
+                                                    <input class="form-input" type="time" name="wakeUpDate" id="wakeUpDate" pattern="\w{1,}"/>
                                                     <label class="input-label" for="wakeUpDate">TIME WHEN PATIENT WENT TO BED</label>
                                                 </div>
                                                 <div class="input-verification" id="wakeUpDateVerification" style="display: none">
                                                     <div class="input-trust">
                                                         <span id="wakeUpDatePercentage"></span>
                                                         <span id="wakeUpDateEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="wakeUpDateIterator" onclick="highLight('wakeUpDate')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-wakeUpDate" onclick="toggleVerification('wakeUpDate')">
@@ -189,6 +209,11 @@
                                                         <span id="strokeEdited" style="display: none">EDITED</span>
                                                     </div>
                                                     <div class="input-state">
+                                                        <button class="highLight-iterator" id="strokeCheckIterator" onclick="highLight('strokeCheck')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                         <button id="verify-stroke" onclick="toggleVerification('stroke', ['strokeCheck', 'strokeUnCheck'])">
                                                             <span>
                                                                 Verify
@@ -201,10 +226,8 @@
                                                         </button>
                                                     </div>
                                                 </div>
-
-
-
                                             </div>
+                                            
                                             <div class="item">
                                                 <div id="strokeDiv">
                                                     <div class="title-header">
@@ -213,7 +236,7 @@
                                                         </span>
                                                     </div>
                                                     <div class="select">
-                                                        <select class="selection" required id="firstAttented">
+                                                        <select class="selection" id="firstAttented">
                                                             <option value="" disabled selected hidden>Select an option</option>
                                                             <option value="direct_CT/MR">Direct to CT/MR imaging suite</option>
                                                             <option value="emergency">Emergency department/Casualty</option>
@@ -221,11 +244,15 @@
                                                             <option value="other_department">Other department</option>
                                                         </select>
                                                     </div>
-                                                    <div class="input-verification" id="firstAtten
-                                                    tedVerification">
+                                                    <div class="input-verification" id="firstAttentedVerification">
                                                         <div class="input-trust">
                                                             <span id="firstAttentedPercentage"></span>
                                                             <span id="firstAttentedEdited" style="display: none">EDITED</span>
+                                                        </div>
+                                                        <div class="input-state">
+                                                            <button class="highLight-iterator" id="firstAttentedIterator" onclick="highLight('firstAttented')">
+
+                                                            </button>
                                                         </div>
                                                         <div class="input-state">
                                                             <button id="verify-firstAttented" onclick="toggleVerification('firstAttented')">
@@ -247,13 +274,18 @@
                                         <div class="form-row">
                                             <div class="item">
                                                 <div class="input-item">
-                                                    <input class="form-input" type="date" name="onsetDate" id="onsetDate" pattern="\w{1,}" required/>
+                                                    <input class="form-input" type="date" name="onsetDate" id="onsetDate" pattern="\w{1,}"/>
                                                     <label class="input-label" for="onsetDate">Date of onset of stroke symptom</label>
                                                 </div>
                                                 <div class="input-verification" id="onsetDateVerification">
                                                     <div class="input-trust">
                                                         <span id="onsetDatePercentage"></span>
                                                         <span id="onsetDateEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="onsetDateIterator" onclick="highLight('onsetDate')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-onsetDate" onclick="toggleVerification('onsetDate')">
@@ -271,13 +303,18 @@
                                             </div>
                                             <div class="item">
                                                 <div class="input-item">
-                                                    <input class="form-input" type="time" name="onsetTime" id="onsetTime" pattern="\w{1,}" required/>
+                                                    <input class="form-input" type="time" name="onsetTime" id="onsetTime" pattern="\w{1,}"/>
                                                     <label class="input-label" for="onsetTime">Time of onset of stroke symptom</label>
                                                 </div>
                                                 <div class="input-verification" id="arrivalonsetTime">
                                                     <div class="input-trust">
                                                         <span id="onsetTimePercentage"></span>
                                                         <span id="onsetTimeEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="onsetTimeIterator" onclick="highLight('onsetTime')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-onsetTime" onclick="toggleVerification('onsetTime')">
@@ -299,13 +336,18 @@
                                         <div class="form-row">
                                         	<div class="item">
                                             	<div class="input-item">
-                                                    <input class="form-input" type="date" name="arrivalDate" id="arrivalDate" pattern="\w{1,}" required/>
+                                                    <input class="form-input" type="date" name="arrivalDate" id="arrivalDate" pattern="\w{1,}"/>
                                                     <label class="input-label" for="arrivalDate">ARRIVAL DATE TO HOSPITAL</label>
                                                 </div>
                                                 <div class="input-verification" id="arrivalDateVerification">
                                                     <div class="input-trust">
                                                         <span id="arrivalDatePercentage"></span>
                                                         <span id="arrivalDateEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="arrivalDateIterator" onclick="highLight('arrivalDate')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-arrivalDate" onclick="toggleVerification('arrivalDate')">
@@ -323,13 +365,18 @@
                                             </div>
                                             <div class="item">
                                                 <div class="input-item">
-                                                    <input class="form-input" type="time" name="arrivalTime" id="arrivalTime" pattern="\w{1,}" required/>
+                                                    <input class="form-input" type="time" name="arrivalTime" id="arrivalTime" pattern="\w{1,}"/>
                                                     <label class="input-label" for="arrivalTime">ARRIVAL TIME TO HOSPITAL</label>
                                                 </div>
                                                 <div class="input-verification" id="arrivalTimeVerification">
                                                     <div class="input-trust">
                                                         <span id="arrivalTimePercentage"></span>
                                                         <span id="arrivalTimeEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="arrivalTimeIterator" onclick="highLight('arrivalTime')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-arrivalTime" onclick="toggleVerification('arrivalTime')">
@@ -357,7 +404,7 @@
                                                     </span>
                                                 </div>
                                                 <div class="select">
-                                                    <select class="selection" required id="arrivedFrom">
+                                                    <select class="selection" id="arrivedFrom">
                                                         <option value="" disabled selected hidden>Select an option</option>
                                                         <option value="ems">From home/scene by EMS/ambulance</option>
                                                         <option value="private">From home/scene by private transportation</option>
@@ -368,6 +415,11 @@
                                                     <div class="input-trust">
                                                         <span id="arrivedFromPercentage"></span>
                                                         <span id="arrivedFromEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="arrivedFromIterator" onclick="highLight('arrivedFrom')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-arrivedFrom" onclick="toggleVerification('arrivedFrom')">
@@ -396,7 +448,7 @@
                                                     </span>
                                                 </div>
                                                 <div class="select">
-                                                    <select class="selection" required id="hospitalizedIn">
+                                                    <select class="selection" id="hospitalizedIn">
                                                         <option value="" disabled selected hidden>Select an option</option>
                                                         <option value="icu">ICU / Stroke unit</option>
                                                         <option value="telemetry_bed">Other monitored bed with telemetry</option>
@@ -407,6 +459,11 @@
                                                     <div class="input-trust">
                                                         <span id="hospitalizedInPercentage"></span>
                                                         <span id="hospitalizedInEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="hospitalizedInIterator" onclick="highLight('hospitalizedIn')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-hospitalizedIn" onclick="toggleVerification('hospitalizedIn')">
@@ -429,7 +486,7 @@
                                                     </span>
                                                 </div>
                                                 <div class="select">
-                                                    <select class="selection" required id="department">
+                                                    <select class="selection" id="department">
                                                         <option value="" disabled selected hidden>Select an option</option>
                                                         <option value="neurology">Neurology</option>
                                                         <option value="neurosurgery">Neurosurgery</option>
@@ -442,6 +499,11 @@
                                                     <div class="input-trust">
                                                         <span id="departmentPercentage"></span>
                                                         <span id="departmentEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="departmentIterator" onclick="highLight('department')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-department" onclick="toggleVerification('department')">
@@ -552,6 +614,11 @@
                                                         <span id="radioMedicalHistoryEdited" style="display: none">EDITED</span>
                                                     </div>
                                                     <div class="input-state">
+                                                        <button class="highLight-iterator" id="radioMedicalHistoryYesIterator" onclick="highLight('radioMedicalHistoryYes')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                         <button id="verify-radioMedicalHistory" onclick="toggleVerification('radioMedicalHistory', ['radioMedicalHistoryYes', 'radioMedicalHistoryNone', 'radioMedicalHistoryUnknown'], ['checkBoxMedicalHistoryHypertension', 'checkBoxMedicalHistoryDiabetes', 'checkBoxMedicalHistoryHyperlipidemia', 'checkBoxMedicalHistoryActiveSmoker', 'checkBoxMedicalHistoryPreviousIschemic', 'checkBoxMedicalHistoryPreviousHemorrhage', 'checkBoxMedicalHistoryAtrialFibrillation', 'checkBoxMedicalHistoryCoronaryArtery', 'checkBoxMedicalHistoryCongestiveHeartFailure', 'checkBoxMedicalHistoryHIV', 'checkBoxMedicalHistoryCOVIDPositive'])">
                                                             <span>
                                                                 Verify
@@ -626,6 +693,11 @@
                                                         <span id="radioTreatmentEventEdited" style="display: none">EDITED</span>
                                                     </div>
                                                     <div class="input-state">
+                                                        <button class="highLight-iterator" id="radioTreatmentEventYesIterator" onclick="highLight('radioTreatmentEventYes')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                         <button id="verify-radioTreatmentEvent" onclick="toggleVerification('radioTreatmentEvent', ['radioTreatmentEventYes', 'radioTreatmentEventNone', 'radioTreatmentEventUnknown'], ['checkBoxTreatmentEventAntidiabetics', 'checkBoxTreatmentEventAntihypertensives', 'checkBoxTreatmentEventAntiplatelets', 'checkBoxTreatmentEventAnticoagulants', 'checkBoxTreatmentEventHormonalContraception', 'checkBoxTreatmentEventStatin'])">
                                                             <span>
                                                                 Verify
@@ -655,6 +727,11 @@
                                                         <span id="glucoseEdited" style="display: none">EDITED</span>
                                                     </div>
                                                     <div class="input-state">
+                                                        <button class="highLight-iterator" id="glucoseIterator" onclick="highLight('glucose')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                         <button id="verify-glucose" onclick="toggleVerification('glucose')">
                                                             <span>
                                                                 Verify
@@ -680,6 +757,11 @@
                                                     <div class="input-trust">
                                                         <span id="cholesterolPercentage"></span>
                                                         <span id="cholesterolEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="cholesterolIterator" onclick="highLight('cholesterol')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-cholesterol" onclick="toggleVerification('cholesterol')">
@@ -708,6 +790,11 @@
                                                         <span id="systolicEdited" style="display: none">EDITED</span>
                                                     </div>
                                                     <div class="input-state">
+                                                        <button class="highLight-iterator" id="systolicIterator" onclick="highLight('systolic')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                         <button id="verify-systolic" onclick="toggleVerification('systolic')">
                                                             <span>
                                                                 Verify
@@ -723,13 +810,18 @@
                                             </div>
                                             <div class="item">
                                                 <div class="input-item">
-                                                    <input class="form-input" type="number" name="diastolic" id="diastolic" pattern="\w{1,}" required />
+                                                    <input class="form-input" type="number" name="diastolic" id="diastolic" pattern="\w{1,}"/>
                                                     <label class="input-label" for="diastolic">DIASTOLIC BLOOD PRESSURE (FIRST MEASUREMENT IN HOSP. IN MMHG)</label>
                                                 </div>
                                                 <div class="input-verification" id="diastolicVerification">
                                                     <div class="input-trust">
                                                         <span id="diastolicPercentage"></span>
                                                         <span id="diastolicEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="diastolicIterator" onclick="highLight('diastolic')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-diastolic" onclick="toggleVerification('diastolic')">
@@ -761,6 +853,11 @@
                                                         <span id="nihssEdited" style="display: none">EDITED</span>
                                                     </div>
                                                     <div class="input-state">
+                                                        <button class="highLight-iterator" id="nihssIterator" onclick="highLight('nihss')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                         <button id="verify-nihss" onclick="toggleVerification('nihss')">
                                                             <span>
                                                                 Verify
@@ -781,7 +878,7 @@
                                                     </span>
                                                 </div>
                                                 <div class="select" id="mrsDiv">
-                                                    <select id="mrs" class="selection" required>
+                                                    <select id="mrs" class="selection">
                                                         <option value="" disabled selected hidden>Select option</option>
                                                         <option value="0">0</option>
                                                         <option value="1">1</option>
@@ -796,6 +893,11 @@
                                                     <div class="input-trust">
                                                         <span id="mrsPercentage"></span>
                                                         <span id="mrsEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="mrsIterator" onclick="highLight('mrs')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-mrs" onclick="toggleVerification('mrs')">
@@ -820,7 +922,7 @@
                                                     </span>
                                                 </div>
                                                 <div class="select">
-                                                    <select class="selection" required id="firstInrTesting">
+                                                    <select class="selection" id="firstInrTesting">
                                                         <option value="" disabled selected hidden>Select an option</option>
                                                         <option value="device">Yes with point of care device</option>
                                                         <option value="lab">Yes sample sent to lab</option>
@@ -833,6 +935,11 @@
                                                     <div class="input-trust">
                                                         <span id="firstInrTestingPercentage"></span>
                                                         <span id="firstInrTestingEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="firstInrTestingIterator" onclick="highLight('firstInrTesting')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-firstInrTesting" onclick="toggleVerification('firstInrTesting')">
@@ -850,13 +957,18 @@
                                             </div>
                                             <div class="item">
                                                 <div class="input-item">
-                                                    <input class="form-input" type="number" name="coma" id="coma" pattern="\w{1,}" required />
+                                                    <input class="form-input" type="number" name="coma" id="coma" pattern="\w{1,}"/>
                                                     <label class="input-label" for="coma">GLASGOW COMA SCALE (GCS)</label>
                                                 </div>
                                                 <div class="input-verification" id="comaVerification">
                                                     <div class="input-trust">
                                                         <span id="comaPercentage"></span>
                                                         <span id="comaEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="comaIterator" onclick="highLight('coma')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-coma" onclick="toggleVerification('coma')">
@@ -888,7 +1000,7 @@
                                                     </span>
                                                 </div>
                                                 <div class="select">
-                                                    <select class="selection" required style="width: 80%" onchange="toggleSubDiv(this.value)" id="brainImaging">
+                                                    <select class="selection" style="width: 80%" onchange="toggleSubDiv(this.value)" id="brainImaging">
                                                         <option value="" disabled selected hidden>Select an option</option>
                                                         <option value="ct">Non-contrast CT (SCTID: 396205005)</option>
                                                         <option value="cta">Non-contrast CT (SCTID: 396205005) + CT angiography (SCTID: 418272005)</option>
@@ -904,6 +1016,11 @@
                                                     <div class="input-trust">
                                                         <span id="brainImagingPercentage"></span>
                                                         <span id="brainImagingEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="brainImagingIterator" onclick="highLight('brainImaging')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-brainImaging" onclick="toggleVerification('brainImaging')">
@@ -924,13 +1041,18 @@
                                         <div class="form-row">
                                             <div class="item">
                                                 <div class="input-item" id="imagingDateDone">
-                                                    <input class="form-input" type="date" name="imagingDate" id="imagingDate" pattern="\w{1,}" required />
+                                                    <input class="form-input" type="date" name="imagingDate" id="imagingDate" pattern="\w{1,}"/>
                                                     <label class="input-label" for="imagingDate">IMAGING DONE AT WHAT DATE?</label>
                                                 </div>
                                                 <div class="input-verification" id="imagingDateVerification">
                                                     <div class="input-trust">
                                                         <span id="imagingDatePercentage"></span>
                                                         <span id="imagingDateEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="imagingDateIterator" onclick="highLight('imagingDate')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-imagingDate" onclick="toggleVerification('imagingDate')">
@@ -990,6 +1112,11 @@
                                                     <span id="radioInfarctsEdited" style="display: none">EDITED</span>
                                                 </div>
                                                 <div class="input-state">
+                                                        <button class="highLight-iterator" id="radioInfarctsYesIterator" onclick="highLight('radioInfarctsYes')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                     <button id="verify-radioInfarcts" onclick="toggleVerification('radioInfarcts', ['radioInfarctsYes', 'radioInfarctsNo'], ['checkBoxInfarctsCortical', 'checkBoxInfarctsSubCortical', 'checkBoxBrainstem'])">
                                                         <span>
                                                             Verify
@@ -1012,7 +1139,7 @@
                                                     </span>
                                                 </div>
                                                 <div class="select">
-                                                    <select class="selection" required onchange="toggleDivImaging(this.selectedIndex)" id="strokeType">
+                                                    <select class="selection" onchange="toggleDivImaging(this.selectedIndex)" id="strokeType">
                                                         <option value="" disabled selected hidden>Select an option</option>
                                                         <option value="is">Ischemic stroke (ICD-10: 163 except 163.6)</option>
                                                         <option value="ich">Intracerebral hemorrhage (ICD-10: 161)</option>
@@ -1027,6 +1154,11 @@
                                                     <div class="input-trust">
                                                         <span id="strokeTypePercentage"></span>
                                                         <span id="strokeTypeEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="strokeTypeIterator" onclick="highLight('strokeType')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-strokeType" onclick="toggleVerification('strokeType')">
@@ -1051,7 +1183,7 @@
                                             <div class="form-row">
                                                 <div class="item">
                                                     <div class="input-item">
-                                                        <input class="form-input" type="number" name="aspectScore" id="aspectScore" pattern="\w{1,}" required />
+                                                        <input class="form-input" type="number" name="aspectScore" id="aspectScore" pattern="\w{1,}"/>
                                                         <label class="input-label" for="aspectScore">Aspects Score</label>
                                                     </div>
                                                     <div class="input-verification" id="aspectScoreVerification">
@@ -1060,6 +1192,11 @@
                                                             <span id="aspectScoreEdited" style="display: none">EDITED</span>
                                                         </div>
                                                         <div class="input-state">
+                                                        <button class="highLight-iterator" id="aspectScoreIterator" onclick="highLight('aspectScore')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                             <button id="verify-aspectScore" onclick="toggleVerification('aspectScore')">
                                                             <span>
                                                                 Verify
@@ -1195,6 +1332,11 @@
                                                             <span id="radioArterialEdited" style="display: none">EDITED</span>
                                                         </div>
                                                         <div class="input-state">
+                                                        <button class="highLight-iterator" id="radioArterialYesIterator" onclick="highLight('radioArterialYes')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                             <button id="verify-radioArterial" onclick="toggleVerification('radioArterial', ['radioArterialYes', 'radioArterialNo'], ['checkBoxArterialMCA1Left', 'checkBoxArterialMCA2Left', 'checkBoxArterialMCA3Left', 'checkBoxArterialACA', 'checkBoxArterialPCA1Left', 'checkBoxArterialPCA2Left', 'checkBoxArterialCEALeft', 'checkBoxArterialCIALeft', 'checkBoxArterialVertebral', 'checkBoxArterialMCA1Right', 'checkBoxArterialMCA2Right', 'checkBoxArterialMCA3Right', 'checkBoxArterialACARight', 'checkBoxArterialPCA1Right', 'checkBoxArterialPCA2Right', 'checkBoxArterialCEARight', 'checkBoxArterialCIARight', 'checkBoxArterialBasilar'])">
                                                             <span>
                                                                 Verify
@@ -1233,6 +1375,11 @@
                                                             <span id="radioThrombolysisEdited" style="display: none">EDITED</span>
                                                         </div>
                                                         <div class="input-state">
+                                                        <button class="highLight-iterator" id="radioThrombolysisCheckIterator" onclick="highLight('radioThrombolysisCheck')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                             <button id="verify-radioThrombolysis" onclick="toggleVerification('radioThrombolysis', ['radioThrombolysisCheck', 'radioThrombolysisUnCheck'])">
                                                                 <span>
                                                                     Verify
@@ -1254,7 +1401,7 @@
                                                             </span>
                                                         </div>
                                                         <div class="select">
-                                                            <select class="selection" onchange="thrombolysisTimeToggle(this.value)" required id="thrombolysisReason">
+                                                            <select class="selection" onchange="thrombolysisTimeToggle(this.value)"id="thrombolysisReason">
                                                                 <option value="" disabled selected hidden>Select an option</option>
                                                                 <option value="already_done_elsewhere">Already received IVT in another hospital</option>
                                                                 <option value="time_window">Out of time window</option>
@@ -1273,6 +1420,11 @@
                                                                 <span id="thrombolysisReasonEdited" style="display: none">EDITED</span>
                                                             </div>
                                                             <div class="input-state">
+                                                        <button class="highLight-iterator" id="thrombolysisReasonIterator" onclick="highLight('thrombolysisReason')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                                 <button id="verify-thrombolysisReason" onclick="toggleVerification('thrombolysisReason')">
                                                                     <span>
                                                                         Verify
@@ -1291,7 +1443,7 @@
                                             <div class="form-row">
                                                 <div id="thrombolysisDiv" class="item" style="display: none;">
                                                     <div class="input-item">
-                                                        <input class="form-input" type="date" name="thrombolysisDate" id="thrombolysisDate" pattern="\w{1,}" required />
+                                                        <input class="form-input" type="date" name="thrombolysisDate" id="thrombolysisDate" pattern="\w{1,}"/>
                                                         <label class="input-label" for="thrombolysisDate">TRANSFER TIME (DOOR-OUT)</label>
                                                     </div>
                                                     <div class="input-verification" id="thrombolysisDateVerification">
@@ -1300,6 +1452,11 @@
                                                             <span id="thrombolysisDateEdited" style="display: none">EDITED</span>
                                                         </div>
                                                         <div class="input-state">
+                                                        <button class="highLight-iterator" id="thrombolysisDateIterator" onclick="highLight('thrombolysisDate')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                             <button id="verify-thrombolysisDate" onclick="toggleVerification('thrombolysisDate')">
                                                                 <span>
                                                                     Verify
@@ -1327,7 +1484,7 @@
                                                                 </span>
                                                             </div>
                                                             <div class="select">
-                                                                <select class="selection" required id="drugUsed">
+                                                                <select class="selection" id="drugUsed">
                                                                     <option value="" disabled selected hidden>Select an option</option>
                                                                     <option value="alteplase">Alteplase</option>
                                                                     <option value="tenecteplase">Tenecteplase</option>
@@ -1341,6 +1498,11 @@
                                                                     <span id="drugUsedEdited" style="display: none">EDITED</span>
                                                                 </div>
                                                                 <div class="input-state">
+                                                        <button class="highLight-iterator" id="drugUsedIterator" onclick="highLight('drugUsed')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                                     <button id="verify-drugUsedDate" onclick="toggleVerification('drugUsed')">
                                                                         <span>
                                                                             Verify
@@ -1377,6 +1539,11 @@
                                                                 <span id="radioAnticoagulantEdited" style="display: none">EDITED</span>
                                                             </div>
                                                             <div class="input-state">
+                                                        <button class="highLight-iterator" id="radioAnticoagulantYesIterator" onclick="highLight('radioAnticoagulantYes')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                                 <button id="verify-radioAnticoagulant" onclick="toggleVerification('radioAnticoagulant', ['radioAnticoagulantYes', 'radioAnticoagulantNo'])">
                                                                     <span>
                                                                         Verify
@@ -1394,7 +1561,7 @@
                                                 <div class="form-row">
                                                     <div class="item">
                                                         <div class="input-item">
-                                                            <input class="form-input" type="number" name="treatmentDose" id="treatmentDose" pattern="\w{1,}" required />
+                                                            <input class="form-input" type="number" name="treatmentDose" id="treatmentDose" pattern="\w{1,}" />
                                                             <label class="input-label" for="treatmentDose">TREATMENT DOSE (IN MG)</label>
                                                         </div>
                                                         <div class="input-verification">
@@ -1403,6 +1570,11 @@
                                                                 <span id="treatmentDoseEdited" style="display: none">EDITED</span>
                                                             </div>
                                                             <div class="input-state">
+                                                        <button class="highLight-iterator" id="treatmentDoseIterator" onclick="highLight('treatmentDose')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                                 <button id="verify-treatmentDose" onclick="toggleVerification('treatmentDose')">
                                                                     <span>
                                                                         Verify
@@ -1419,7 +1591,7 @@
 
                                                     <div class="item">
                                                         <div class="input-item" id="bolusDiv">
-                                                            <input class="form-input" type="date" name="bolusDate" id="bolusDate" pattern="\w{1,}" required />
+                                                            <input class="form-input" type="date" name="bolusDate" id="bolusDate" pattern="\w{1,}"/>
                                                             <label class="input-label" for="bolusDate">BOLUS TIME</label>
                                                         </div>
                                                         <div class="input-verification">
@@ -1428,6 +1600,11 @@
                                                                 <span id="bolusDateEdited" style="display: none">EDITED</span>
                                                             </div>
                                                             <div class="input-state">
+                                                        <button class="highLight-iterator" id="bolusDateIterator" onclick="highLight('bolusDate')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                                 <button id="verify-bolusDate" onclick="toggleVerification('bolusDate')">
                                                                     <span>
                                                                         Verify
@@ -1450,7 +1627,7 @@
                                                             </span>
                                                         </div>
                                                         <div class="select">
-                                                            <select class="selection" required id="thrombolysisGiven">
+                                                            <select class="selection" id="thrombolysisGiven">
                                                                 <option value="" disabled selected hidden>Select an option</option>
                                                                 <option value="radiology">CT/MRI room</option>
                                                                 <option value="icu">Stroke unit or ICU</option>
@@ -1464,6 +1641,11 @@
                                                                 <span id="thrombolysisGivenEdited" style="display: none">EDITED</span>
                                                             </div>
                                                             <div class="input-state">
+                                                        <button class="highLight-iterator" id="thrombolysisGivenIterator" onclick="highLight('thrombolysisGiven')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                                 <button id="verify-thrombolysisGiven" onclick="toggleVerification('thrombolysisGiven')">
                                                                     <span>
                                                                         Verify
@@ -1502,6 +1684,11 @@
                                                             <span id="thrombectomyEdited" style="display: none">EDITED</span>
                                                         </div>
                                                         <div class="input-state">
+                                                        <button class="highLight-iterator" id="thrombectomyCheckIterator" onclick="highLight('thrombectomyCheck')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                             <button id="verify-thrombectomy" onclick="toggleVerification('thrombectomy', ['thrombectomyCheck','thrombectomyUnCheck'])">
                                                                 <span>
                                                                     Verify
@@ -1523,7 +1710,7 @@
                                                             </span>
                                                         </div>
                                                         <div class="select">
-                                                            <select class="selection" onchange="thrombectomyTimeToggle(this.value)" required id="thrombectomyReason">
+                                                            <select class="selection" onchange="thrombectomyTimeToggle(this.value)" id="thrombectomyReason">
                                                                 <option value="" disabled selected hidden>Select an option</option>
                                                                 <option value="already_done_elsewhere">Already received MT in another hospital</option>
                                                                 <option value="time_window">Out of time window</option>
@@ -1544,6 +1731,11 @@
                                                                 <span id="thrombectomyReasonEdited" style="display: none">EDITED</span>
                                                             </div>
                                                             <div class="input-state">
+                                                        <button class="highLight-iterator" id="thrombectomyReasonIterator" onclick="highLight('thrombectomyReason')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                                 <button id="verify-thrombectomyReason" onclick="toggleVerification('thrombectomyReason')">
                                                                     <span>
                                                                         Verify
@@ -1562,7 +1754,7 @@
                                             <div class="form-row">
                                                 <div class="item"  id="thrombectomyTimeDiv" style="display: none;">
                                                     <div class="input-item">
-                                                        <input class="form-input" type="date" name="thrombectomyDate" id="thrombectomyDate" pattern="\w{1,}" required />
+                                                        <input class="form-input" type="date" name="thrombectomyDate" id="thrombectomyDate" pattern="\w{1,}" />
                                                         <label class="input-label" for="thrombectomyDate">TRANSFER TIME (DOOR-OUT)</label>
                                                     </div>
                                                     <div class="input-verification">
@@ -1571,6 +1763,11 @@
                                                             <span id="thrombectomyDateEdited" style="display: none">EDITED</span>
                                                         </div>
                                                         <div class="input-state">
+                                                        <button class="highLight-iterator" id="thrombectomyDateIterator" onclick="highLight('thrombectomyDate')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                             <button id="verify-thrombectomyDate" onclick="toggleVerification('thrombectomyDate')">
                                                                     <span>
                                                                         Verify
@@ -1592,7 +1789,7 @@
                                                 <div class="form-row">
                                                     <div class="item">
                                                         <div class="input-item" id="groinDiv">
-                                                            <input class="form-input" type="date" name="groinDate" id="groinDate" pattern="\w{1,}" required />
+                                                            <input class="form-input" type="date" name="groinDate" id="groinDate" pattern="\w{1,}" />
                                                             <label class="input-label" for="groinDate">GROIN PUNCTURE TIME</label>
                                                         </div>
                                                         <div class="input-verification">
@@ -1601,6 +1798,11 @@
                                                                 <span id="groinDateEdited" style="display: none">EDITED</span>
                                                             </div>
                                                             <div class="input-state">
+                                                        <button class="highLight-iterator" id="groinDateIterator" onclick="highLight('groinDate')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                                 <button id="verify-groinDate" onclick="toggleVerification('groinDate')">
                                                                     <span>
                                                                         Verify
@@ -1621,7 +1823,7 @@
                                                             </span>
                                                         </div>
                                                         <div class="select">
-                                                            <select class="selection" required onchange="mticiToggle(this.value)" id="mTICIScore">
+                                                            <select class="selection" onchange="mticiToggle(this.value)" id="mTICIScore">
                                                                 <option value="" disabled selected hidden>Select an option</option>
                                                                 <option value="0">0 (no occlusion)</option>
                                                                 <option value="1">1</option>
@@ -1638,6 +1840,11 @@
                                                                 <span id="mTICIScoreEdited" style="display: none">EDITED</span>
                                                             </div>
                                                             <div class="input-state">
+                                                        <button class="highLight-iterator" id="mTICIScoreIterator" onclick="highLight('mTICIScore')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                                 <button id="verify-mTICIScore" onclick="toggleVerification('mTICIScore')">
                                                                     <span>
                                                                         Verify
@@ -1655,7 +1862,7 @@
                                                 <div class="form-row">
                                                     <div class="item">
                                                         <div class="input-item" id="mticiDiv" style="display: none;">
-                                                            <input class="form-input" type="date" name="reperfusionDate" id="reperfusionDate" pattern="\w{1,}" required />
+                                                            <input class="form-input" type="date" name="reperfusionDate" id="reperfusionDate" pattern="\w{1,}" />
                                                             <label class="input-label" for="reperfusionDate">REPERFUSION TIME</label>
                                                         </div>
                                                         <div class="input-verification" id="reperfusionDateVerification">
@@ -1664,6 +1871,11 @@
                                                                 <span id="reperfusionDateEdited" style="display: none">EDITED</span>
                                                             </div>
                                                             <div class="input-state">
+                                                        <button class="highLight-iterator" id="reperfusionDateIterator" onclick="highLight('reperfusionDate')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                                 <button id="verify-reperfusionDate" onclick="toggleVerification('reperfusionDate')">
                                                                     <span>
                                                                         Verify
@@ -1732,6 +1944,11 @@
                                                             <span id="radioThrombectomyEdited" style="display: none">EDITED</span>
                                                         </div>
                                                         <div class="input-state">
+                                                        <button class="highLight-iterator" id="radioThrombectomyYesIterator" onclick="highLight('radioThrombectomyYes')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                             <button id="verify-radioThrombectomy" onclick="toggleVerification('radioThrombectomy', ['radioThrombectomyYes', 'radioThrombectomyNo'], ['checkBoxThrombectomyVesselPerforation', 'checkBoxThrombectomyDissection', 'checkBoxThrombectomyEmbolization', 'checkBoxThrombectomyHematoma', 'checkBoxThrombectomyOther'])">
                                                                 <span>
                                                                     Verify
@@ -1751,7 +1968,7 @@
                                             <div class="form-row">
                                                 <div class="item">
                                                     <div class="input-item">
-                                                        <input class="form-input" type="number" name="bleedingVolume" id="bleedingVolume" pattern="\w{1,}" required />
+                                                        <input class="form-input" type="number" name="bleedingVolume" id="bleedingVolume" pattern="\w{1,}" />
                                                         <label class="input-label" for="bleedingVolume">BLEEDING VOLUME (IN ML)</label>
                                                     </div>
                                                     <div class="input-verification" id="bleedingVolumeVerification">
@@ -1760,6 +1977,11 @@
                                                             <span id="bleedingVolumeEdited" style="display: none">EDITED</span>
                                                         </div>
                                                         <div class="input-state">
+                                                        <button class="highLight-iterator" id="bleedingVolumeIterator" onclick="highLight('bleedingVolume')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                             <button id="verify-bleedingVolume" onclick="toggleVerification('bleedingVolume')">
                                                                 <span>
                                                                     Verify
@@ -1796,6 +2018,11 @@
                                                             <span id="infratentorialEdited" style="display: none">EDITED</span>
                                                         </div>
                                                         <div class="input-state">
+                                                        <button class="highLight-iterator" id="infratentorialCheckIterator" onclick="highLight('infratentorialCheck')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                             <button id="verify-infratentorial" onclick="toggleVerification('infratentorial', ['infratentorialCheck', 'infratentorialUnCheck'])">
                                                                     <span>
                                                                         Verify
@@ -1833,6 +2060,11 @@
                                                             <span id="bleedingEdited" style="display: none">EDITED</span>
                                                         </div>
                                                         <div class="input-state">
+                                                        <button class="highLight-iterator" id="bleedingCheckIterator" onclick="highLight('bleedingCheck')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                             <button id="verify-bleeding" onclick="toggleVerification('bleeding', ['bleedingCheck', 'bleedingUnCheck'])">
                                                                     <span>
                                                                         Verify
@@ -1868,6 +2100,11 @@
                                                             <span id="intraventricularEdited" style="display: none">EDITED</span>
                                                         </div>
                                                         <div class="input-state">
+                                                        <button class="highLight-iterator" id="intraventricularCheckIterator" onclick="highLight('intraventricularCheck')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                             <button id="verify-intraventricular" onclick="toggleVerification('intraventricular', ['intraventricularCheck', 'intraventricularUnCheck'])">
                                                                     <span>
                                                                         Verify
@@ -1939,6 +2176,11 @@
                                                             <span id="radioBleedingReasonEdited" style="display: none">EDITED</span>
                                                         </div>
                                                         <div class="input-state">
+                                                        <button class="highLight-iterator" id="radioBleedingReasonYesIterator" onclick="highLight('radioBleedingReasonYes')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                             <button id="verify-radioBleedingReason" onclick="toggleVerification('radioBleedingReason', ['radioBleedingReasonYes', 'radioBleedingReasonNo'], ['checkBoxBleedingReasonArterialHypertension', 'checkBoxBleedingReasonAneurysm', 'checkBoxBleedingReasonArteriovenousMalformation', 'checkBoxBleedingReasonAnticoagulationTherapy', 'checkBoxBleedingReasonAmyloidAngiopathy', 'checkBoxBleedingReasonOther'])">
                                                                 <span>
                                                                     Verify
@@ -1959,7 +2201,7 @@
                                                         </span>
                                                     </div>
                                                     <div class="select">
-                                                        <select class="selection" required id="antidoteAnticoagulants">
+                                                        <select class="selection" id="antidoteAnticoagulants">
                                                             <option value="" disabled selected hidden>Select an option</option>
                                                             <option value="andexanete">Andexanete</option>
                                                             <option value="idarucizumab">Idarucizumab</option>
@@ -1975,6 +2217,11 @@
                                                             <span id="antidoteAnticoagulantsEdited" style="display: none">EDITED</span>
                                                         </div>
                                                         <div class="input-state">
+                                                        <button class="highLight-iterator" id="antidoteAnticoagulantsIterator" onclick="highLight('antidoteAnticoagulants')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                             <button id="verify-antidoteAnticoagulants" onclick="toggleVerification('antidoteAnticoagulants')">
                                                                 <span>
                                                                     Verify
@@ -2031,6 +2278,11 @@
                                                             <span id="radioNeurosurgeryEdited" style="display: none">EDITED</span>
                                                         </div>
                                                         <div class="input-state">
+                                                            <button class="highLight-iterator" id="radioNeurosurgeryYesIterator" onclick="highLight('radioNeurosurgeryYes')">
+
+                                                            </button>
+                                                        </div>
+                                                        <div class="input-state">
                                                             <button id="verify-radioNeurosurgery" onclick="toggleVerification('radioNeurosurgery', ['radioNeurosurgeryYes', 'radioNeurosurgeryNo'], ['checkBoxNeurosurgeryIntracranialHematomaEvacuation', 'checkBoxNeurosurgeryExternalVentricularDrainage', 'checkBoxNeurosurgeryDecompresiveCraniectomy'])">
                                                                 <span>
                                                                     Verify
@@ -2055,7 +2307,7 @@
                                                         </span>
                                                     </div>
                                                     <div class="select">
-                                                        <select class="selection" required id="clinicalSymptoms">
+                                                        <select class="selection" id="clinicalSymptoms">
                                                             <option value="" disabled selected hidden>Select an option</option>
                                                             <option value="weakness">Unilateral weakness</option>
                                                             <option value="speech_disturbance">Speech disturbance without weakness</option>
@@ -2066,6 +2318,11 @@
                                                         <div class="input-trust">
                                                             <span id="clinicalSymptomsPercentage"></span>
                                                             <span id="clinicalSymptomsEdited" style="display: none">EDITED</span>
+                                                        </div>
+                                                        <div class="input-state">
+                                                            <button class="highLight-iterator" id="clinicalSymptomsIterator" onclick="highLight('clinicalSymptoms')">
+
+                                                            </button>
                                                         </div>
                                                         <div class="input-state">
                                                             <button id="verify-clinicalSymptoms" onclick="toggleVerification('clinicalSymptoms')">
@@ -2088,7 +2345,7 @@
                                                         </span>
                                                     </div>
                                                     <div class="select">
-                                                        <select class="selection" required id="symptomsDuration">
+                                                        <select class="selection" id="symptomsDuration">
                                                             <option value="" disabled selected hidden>Select an option</option>
                                                             <option value="0to10">&lt;10 minutes</option>
                                                             <option value="10to59">10-59 minutes</option>
@@ -2101,6 +2358,10 @@
                                                             <span id="symptomsDurationEdited" style="display: none">EDITED</span>
                                                         </div>
                                                         <div class="input-state">
+                                                        <button class="highLight-iterator" id="symptomsDurationIterator" onclick="highLight('symptomsDuration')">
+
+                                                        </button>
+                                                            <div class="input-state">
                                                             <button id="verify-symptomsDuration" onclick="toggleVerification('symptomsDuration')">
                                                                 <span>
                                                                     Verify
@@ -2111,6 +2372,7 @@
                                                                     Edit
                                                                 </span>
                                                             </button>
+                                                        </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2140,6 +2402,11 @@
                                                             <span id="bleedingSubarachnoidEdited" style="display: none">EDITED</span>
                                                         </div>
                                                         <div class="input-state">
+                                                            <button class="highLight-iterator" id="bleedingSubarachnoidCheckIterator" onclick="highLight('bleedingSubarachnoidCheck')">
+
+                                                            </button>
+                                                        </div>
+                                                        <div class="input-state">
                                                             <button id="verify-bleedingSubarachnoid" onclick="toggleVerification('bleedingSubarachnoid', ['bleedingSubarachnoidCheck', 'bleedingSubarachnoidUnCheck'])">
                                                                 <span>
                                                                     Verify
@@ -2164,7 +2431,7 @@
                                                     </span>
                                                 </div>
                                                 <div class="select">
-                                                    <select class="selection" required id="huntHess">
+                                                    <select class="selection" id="huntHess">
                                                         <option value="" disabled selected hidden>Select an option</option>
                                                         <option value="1 (lucid; mild headache; slight neck stiffness)">1 (lucid; mild headache; slight neck stiffness)</option>
                                                         <option value="2 (moderate to severe headache; neck stiffness; no neurologic deficit except cranial nerve palsy)">2 (moderate to severe headache; neck stiffness; no neurologic deficit except cranial nerve palsy)</option>
@@ -2178,6 +2445,11 @@
                                                     <div class="input-trust">
                                                         <span id="huntHessPercentage"></span>
                                                         <span id="huntHessEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="huntHessIterator" onclick="highLight('huntHess')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-huntHess" onclick="toggleVerification('huntHess')">
@@ -2244,6 +2516,11 @@
                                                         <span id="radioInterventionEdited" style="display: none">EDITED</span>
                                                     </div>
                                                     <div class="input-state">
+                                                        <button class="highLight-iterator" id="radioInterventionYesIterator" onclick="highLight('radioInterventionYes')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                         <button id="verify-radioIntervention" onclick="toggleVerification('radioIntervention', ['radioInterventionYes', 'radioInterventionNo'], ['checkBoxInterventionEndovascular', 'checkBoxInterventionNeurosurgical', 'checkBoxInterventionVentricularDrainage', 'checkBoxInterventionDecompressiveCraniectomy', 'checkBoxInterventionOther'])">
                                                             <span>
                                                                 Verify
@@ -2264,7 +2541,7 @@
                                                     </span>
                                                 </div>
                                                 <div class="select">
-                                                    <select class="selection" required id="nimodipineTreatment">
+                                                    <select class="selection" id="nimodipineTreatment">
                                                         <option value="" disabled selected hidden>Select an option</option>
                                                         <option value="in_24h">Yes, within the first 24h of admission</option>
                                                         <option value="after_24h">Yes, later than 24h after admission</option>
@@ -2275,6 +2552,11 @@
                                                     <div class="input-trust">
                                                         <span id="nimodipineTreatmentPercentage"></span>
                                                         <span id="nimodipineTreatmentEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="nimodipineTreatmentIterator" onclick="highLight('nimodipineTreatment')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-nimodipineTreatment" onclick="toggleVerification('nimodipineTreatment')">
@@ -2338,6 +2620,11 @@
                                                         <span id="radioTreatmentPerformedEdited" style="display: none">EDITED</span>
                                                     </div>
                                                     <div class="input-state">
+                                                        <button class="highLight-iterator" id="radioTreatmentPerformedYesIterator" onclick="highLight('radioTreatmentPerformedYes')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                         <button id="verify-radioTreatmentPerformed" onclick="toggleVerification('radioTreatmentPerformed', ['radioTreatmentPerformedYes','radioTreatmentPerformedNo'], ['checkBoxTreatmentPerformedAnticoagulation','checkBoxTreatmentPerformedThrombectomy','checkBoxTreatmentPerformedThrombolysis','checkBoxTreatmentPerformedNeurosurgical'])">
                                                             <span>
                                                                 Verify
@@ -2376,6 +2663,11 @@
                                                             <span id="radioThrombolysisMimicEdited" style="display: none">EDITED</span>
                                                         </div>
                                                         <div class="input-state">
+                                                        <button class="highLight-iterator" id="radioThrombolysisMimicCheckIterator" onclick="highLight('radioThrombolysisMimicCheck')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                             <button id="verify-radioThrombolysisMimic" onclick="toggleVerification('radioThrombolysisMimic', ['radioThrombolysisMimicCheck','radioThrombolysisMimicUnCheck'])">
                                                                 <span>
                                                                     Verify
@@ -2400,7 +2692,7 @@
                                                             </span>
                                                             </div>
                                                             <div class="select">
-                                                                <select class="selection" required id="drugUsedThrombolysis">
+                                                                <select class="selection" id="drugUsedThrombolysis">
                                                                     <option value="" disabled selected hidden>Select an option</option>
                                                                     <option value="alteplase">Alteplase</option>
                                                                     <option value="tenecteplase">Tenecteplase</option>
@@ -2412,6 +2704,11 @@
                                                                 <div class="input-trust">
                                                                     <span id="drugUsedThrombolysisPercentage"></span>
                                                                     <span id="drugUsedThrombolysisEdited" style="display: none">EDITED</span>
+                                                                </div>
+                                                                <div class="input-state">
+                                                                    <button class="highLight-iterator" id="drugUsedThrombolysisIterator" onclick="highLight('drugUsedThrombolysis')">
+
+                                                                    </button>
                                                                 </div>
                                                                 <div class="input-state">
                                                                     <button id="verify-drugUsedThrombolysis" onclick="toggleVerification('drugUsedThrombolysis')">
@@ -2450,6 +2747,11 @@
                                                                 <span id="radioAnticoagulantMimicsEdited" style="display: none">EDITED</span>
                                                             </div>
                                                             <div class="input-state">
+                                                                <button class="highLight-iterator" id="radioAnticoagulantMimicsYesIterator" onclick="highLight('radioAnticoagulantMimicsYes')">
+
+                                                                </button>
+                                                            </div>
+                                                            <div class="input-state">
                                                                 <button id="verify-radioAnticoagulantMimics" onclick="toggleVerification('radioAnticoagulantMimics', ['radioAnticoagulantMimicsYes','radioAnticoagulantMimicsNo'])">
                                                                     <span>
                                                                         Verify
@@ -2467,13 +2769,18 @@
                                                 <div class="form-row">
                                                     <div class="item">
                                                         <div class="input-item ">
-                                                            <input class="form-input" type="number" name="treatmentDoseMimics" id="treatmentDoseMimics" pattern="\w{1,}" required />
+                                                            <input class="form-input" type="number" name="treatmentDoseMimics" id="treatmentDoseMimics" pattern="\w{1,}" />
                                                             <label class="input-label" for="treatmentDoseMimics">TREATMENT DOSE (IN MG)</label>
                                                         </div>
                                                         <div class="input-verification" id="treatmentDoseMimicsVerification">
                                                             <div class="input-trust">
                                                                 <span id="treatmentDoseMimicsPercentage"></span>
                                                                 <span id="treatmentDoseMimicsEdited" style="display: none">EDITED</span>
+                                                            </div>
+                                                            <div class="input-state">
+                                                                <button class="highLight-iterator" id="treatmentDoseMimicsIterator" onclick="highLight('treatmentDoseMimics')">
+
+                                                                </button>
                                                             </div>
                                                             <div class="input-state">
                                                                 <button id="verify-treatmentDoseMimics" onclick="toggleVerification('treatmentDoseMimics')">
@@ -2491,13 +2798,18 @@
                                                     </div>
                                                     <div class="item">
                                                         <div class="input-item">
-                                                            <input class="form-input" type="date" name="bolusMimicDate" id="bolusMimicDate" pattern="\w{1,}" required />
+                                                            <input class="form-input" type="date" name="bolusMimicDate" id="bolusMimicDate" pattern="\w{1,}" />
                                                             <label class="input-label" for="bolusMimicDate">BOLUS TIME</label>
                                                         </div>
                                                         <div class="input-verification" id="bolusMimicDateVerification">
                                                             <div class="input-trust">
                                                                 <span id="bolusMimicDatePercentage"></span>
                                                                 <span id="bolusMimicDateEdited" style="display: none">EDITED</span>
+                                                            </div>
+                                                            <div class="input-state">
+                                                                <button class="highLight-iterator" id="bolusMimicDateIterator" onclick="highLight('bolusMimicDate')">
+
+                                                                </button>
                                                             </div>
                                                             <div class="input-state">
                                                                 <button id="verify-bolusMimicDate" onclick="toggleVerification('bolusMimicDate')">
@@ -2524,7 +2836,7 @@
                                                             </span>
                                                         </div>
                                                         <div class="select">
-                                                            <select class="selection" required id="finalDiagnosis">
+                                                            <select class="selection" id="finalDiagnosis">
                                                                 <option value="" disabled selected hidden>Select an option</option>
                                                                 <option value="migraine">Migraine (ICD-10: G43)</option>
                                                                 <option value="seizure">Seizure (ICD-10: G40)</option>
@@ -2538,6 +2850,11 @@
                                                             <div class="input-trust">
                                                                 <span id="finalDiagnosisPercentage"></span>
                                                                 <span id="finalDiagnosisEdited" style="display: none">EDITED</span>
+                                                            </div>
+                                                            <div class="input-state">
+                                                                <button class="highLight-iterator" id="finalDiagnosisIterator" onclick="highLight('finalDiagnosis')">
+
+                                                                </button>
                                                             </div>
                                                             <div class="input-state">
                                                                 <button id="verify-finalDiagnosis" onclick="toggleVerification('finalDiagnosis')">
@@ -2567,7 +2884,7 @@
                                                     </span>
                                                 </div>
                                                 <div class="select">
-                                                    <select class="selection" onchange="perfusionDeficitToggle(this.value)" required id="ctmrPerfusion">
+                                                    <select class="selection" onchange="perfusionDeficitToggle(this.value)" id="ctmrPerfusion">
                                                         <option value="" disabled selected hidden>Select an option</option>
                                                         <option value="medial">Medial</option>
                                                         <option value="anterior">Anterior</option>
@@ -2581,6 +2898,11 @@
                                                     <div class="input-trust">
                                                         <span id="ctmrPerfusionPercentage"></span>
                                                         <span id="ctmrPerfusionEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="ctmrPerfusionIterator" onclick="highLight('ctmrPerfusion')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-ctmrPerfusion" onclick="toggleVerification('ctmrPerfusion')">
@@ -2603,13 +2925,18 @@
                                         <div id="perfusionDeficit" class="form-row" style="display: none">
                                             <div class="item">
                                                 <div class="input-item">
-                                                    <input class="form-input" type="number" name="coreVolume" id="coreVolume" pattern="\w{1,}" required />
+                                                    <input class="form-input" type="number" name="coreVolume" id="coreVolume" pattern="\w{1,}" />
                                                     <label class="input-label" for="coreVolume">CT/MR PERFUSION DEFICIT CORE VOLUME (IN ML)</label>
                                                 </div>
                                                 <div class="input-verification" id="coreVolumeVerification">
                                                     <div class="input-trust">
                                                         <span id="coreVolumePercentage"></span>
                                                         <span id="coreVolumeEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="coreVolumeIterator" onclick="highLight('coreVolume')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-coreVolume" onclick="toggleVerification('coreVolume')">
@@ -2627,13 +2954,18 @@
                                             </div>
                                             <div class="item">
                                                 <div class="input-item">
-                                                    <input class="form-input" type="number" name="hypoperfusionVolume" id="hypoperfusionVolume" pattern="\w{1,}" required />
+                                                    <input class="form-input" type="number" name="hypoperfusionVolume" id="hypoperfusionVolume" pattern="\w{1,}" />
                                                     <label class="input-label" for="hypoperfusionVolume">CT/MR PERFUSION DEFICIT HYPOPERFUSION VOLUME (IN ML)</label>
                                                 </div>
                                                 <div class="input-verification" id="hypoperfusionVolumeVerification">
                                                     <div class="input-trust">
                                                         <span id="hypoperfusionVolumePercentage"></span>
                                                         <span id="hypoperfusionVolumeEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="hypoperfusionVolumeIterator" onclick="highLight('hypoperfusionVolume')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-hypoperfusionVolume" onclick="toggleVerification('hypoperfusionVolume')">
@@ -2667,7 +2999,7 @@
                                                     </span>
                                                 </div>
                                                 <div class="select">
-                                                    <select id="hospitalised24Hour" class="selection" required>
+                                                    <select id="hospitalised24Hour" class="selection">
                                                         <option value="" disabled selected hidden>Select option</option>
                                                         <option value="yes">Yes</option>
                                                         <option value="died">No, patient died</option>
@@ -2679,6 +3011,11 @@
                                                     <div class="input-trust">
                                                         <span id="hospitalised24HourPercentage"></span>
                                                         <span id="hospitalised24HourEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="hospitalised24HourIterator" onclick="highLight('hospitalised24Hour')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-hospitalised24Hour" onclick="toggleVerification('hospitalised24Hour')">
@@ -2722,6 +3059,11 @@
                                                         <span id="radioVentilatedEdited" style="display: none">EDITED</span>
                                                     </div>
                                                     <div class="input-state">
+                                                        <button class="highLight-iterator" id="radioVentilatedYesIterator" onclick="highLight('radioVentilatedYes')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                         <button id="verify-radioVentilated" onclick="toggleVerification('radioVentilated', ['radioVentilatedYes','radioVentilatedNo'])">
                                                             <span>
                                                                 Verify
@@ -2756,6 +3098,11 @@
                                                     <div class="input-trust">
                                                         <span id="radioCraniectomyPercentage"></span>
                                                         <span id="radioCraniectomyEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="radioCraniectomyYesIterator" onclick="highLight('radioCraniectomyYes')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-radioCraniectomy" onclick="toggleVerification('radioCraniectomy', ['radioCraniectomyYes','radioCraniectomyNo'])">
@@ -2838,6 +3185,11 @@
                                                     <div class="input-trust">
                                                         <span id="radioThromboembolismPercentage"></span>
                                                         <span id="radioThromboembolismEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="radioThromboembolismYesIterator" onclick="highLight('radioThromboembolismYes')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-radioThromboembolism" onclick="toggleVerification('radioThromboembolism', ['radioThromboembolismYes','radioThromboembolismNo'])">
@@ -2927,6 +3279,11 @@
                                                         <span id="radioStrokeCompEdited" style="display: none">EDITED</span>
                                                     </div>
                                                     <div class="input-state">
+                                                        <button class="highLight-iterator" id="radioStrokeCompYesIterator" onclick="highLight('radioStrokeCompYes')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                         <button id="verify-radioStrokeComp" onclick="toggleVerification('radioStrokeComp', ['radioStrokeCompYes','radioStrokeCompNo'])">
                                                             <span>
                                                                 Verify
@@ -2956,7 +3313,7 @@
                                                     </span>
                                                 </div>
                                                 <div class="select">
-                                                    <select class="selection" onchange="dischargeDestinationToggle(this.value)" required id="dischargeDestination">
+                                                    <select class="selection" onchange="dischargeDestinationToggle(this.value)" id="dischargeDestination">
                                                         <option value="" disabled selected hidden>Select an option</option>
                                                         <option value="home">Home</option>
                                                         <option value="same_center">Transferred within the same center</option>
@@ -2969,6 +3326,11 @@
                                                     <div class="input-trust">
                                                         <span id="dischargeDestinationPercentage"></span>
                                                         <span id="dischargeDestinationEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="dischargeDestinationIterator" onclick="highLight('dischargeDestination')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-dischargeDestination" onclick="toggleVerification('dischargeDestination')">
@@ -2992,7 +3354,7 @@
                                                         </span>
                                                     </div>
                                                     <div class="select">
-                                                        <select class="selection" required id="dischargeDestinationFacility">
+                                                        <select class="selection" id="dischargeDestinationFacility">
                                                             <option value="" disabled selected hidden>Select an option</option>
                                                             <option value="rehab">Acute rehabilitation</option>
                                                             <option value="post_care">Post-care bed</option>
@@ -3005,15 +3367,20 @@
                                                             <span id="dischargeDestinationFacilityEdited" style="display: none">EDITED</span>
                                                         </div>
                                                         <div class="input-state">
+                                                            <button class="highLight-iterator" id="dischargeDestinationFacilityIterator" onclick="highLight('dischargeDestinationFacility')">
+
+                                                            </button>
+                                                        </div>
+                                                        <div class="input-state">
                                                             <button id="verify-dischargeDestinationFacility" onclick="toggleVerification('dischargeDestinationFacility')">
-                                                            <span>
-                                                                Verify
-                                                            </span>
+                                                                <span>
+                                                                    Verify
+                                                                </span>
                                                             </button>
                                                             <button style="display: none" id="edit-dischargeDestinationFacility" onclick="toggleEdit('dischargeDestinationFacility')">
-                                                            <span>
-                                                                Edit
-                                                            </span>
+                                                                <span>
+                                                                    Edit
+                                                                </span>
                                                             </button>
                                                         </div>
                                                     </div>
@@ -3025,7 +3392,7 @@
                                                         </span>
                                                     </div>
                                                     <div class="select">
-                                                        <select class="selection" required id="dischargeFacility">
+                                                        <select class="selection" id="dischargeFacility">
                                                             <option value="" disabled selected hidden>Select an option</option>
                                                             <option value="primary_center">Primary stroke centre</option>
                                                             <option value="comprehensive_center">Comprehensive stroke centre</option>
@@ -3036,6 +3403,11 @@
                                                         <div class="input-trust">
                                                             <span id="dischargeFacilityPercentage"></span>
                                                             <span id="dischargeFacilityEdited" style="display: none">EDITED</span>
+                                                        </div>
+                                                        <div class="input-state">
+                                                            <button class="highLight-iterator" id="dischargeFacilityIterator" onclick="highLight('dischargeFacility')">
+
+                                                            </button>
                                                         </div>
                                                         <div class="input-state">
                                                             <button id="verify-dischargeFacility" onclick="toggleVerification('dischargeFacility')">
@@ -3057,13 +3429,18 @@
                                         <div class="form-row">
                                             <div class="item">
                                                 <div class="input-item">
-                                                    <input class="form-input" type="date" name="dischargeDate" id="dischargeDate" pattern="\w{1,}" required />
+                                                    <input class="form-input" type="date" name="dischargeDate" id="dischargeDate" pattern="\w{1,}" />
                                                     <label class="input-label" for="dischargeDate">DATE OF DISCHARGE</label>
                                                 </div>
                                                 <div class="input-verification" id="dischargeDateVerification">
                                                     <div class="input-trust">
                                                         <span id="dischargeDatePercentage"></span>
                                                         <span id="dischargeDateEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="dischargeDateIterator" onclick="highLight('dischargeDate')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-dischargeDate" onclick="toggleVerification('dischargeDate')">
@@ -3087,13 +3464,18 @@
                                         <div class="form-row">
                                             <div class="item">
                                                 <div class="input-item">
-                                                    <input class="form-input" type="number" name="mrsScore" id="mrsScore" pattern="\w{1,}" required />
+                                                    <input class="form-input" type="number" name="mrsScore" id="mrsScore" pattern="\w{1,}" />
                                                     <label class="input-label" for="mrsScore">MODIFIED RANKIN SCALE (MRS) SCORE ON DISCHARGE</label>
                                                 </div>
                                                 <div class="input-verification" id="mrsScoreVerification">
                                                     <div class="input-trust">
                                                         <span id="mrsScorePercentage"></span>
                                                         <span id="mrsScoreEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="mrsScoreIterator" onclick="highLight('mrsScore')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-mrsScore" onclick="toggleVerification('mrsScore')">
@@ -3111,13 +3493,18 @@
                                             </div>
                                             <div class="item">
                                                 <div class="input-item">
-                                                    <input class="form-input" type="number" name="discharge" id="discharge" pattern="\w{1,}" required />
+                                                    <input class="form-input" type="number" name="discharge" id="discharge" pattern="\w{1,}" />
                                                     <label class="input-label" for="discharge">NIHSS SCORE ON DISCHARGE</label>
                                                 </div>
                                                 <div class="input-verification" id="dischargeVerification">
                                                     <div class="input-trust">
                                                         <span id="dischargePercentage"></span>
                                                         <span id="dischargeEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="dischargeIterator" onclick="highLight('discharge')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-discharge" onclick="toggleVerification('discharge')">
@@ -3197,6 +3584,11 @@
                                                         <span id="radioTreatmentPrescribedEdited" style="display: none">EDITED</span>
                                                     </div>
                                                     <div class="input-state">
+                                                        <button class="highLight-iterator" id="radioTreatmentPrescribedYesIterator" onclick="highLight('radioTreatmentPrescribedYes')">
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-state">
                                                         <button id="verify-radioTreatmentPrescribed" onclick="toggleVerification('radioTreatmentPrescribed', ['radioTreatmentPrescribedYes','radioTreatmentPrescribedNo'], ['checkBoxTreatmentPrescribedAntidiabetics','checkBoxTreatmentPrescribedAntihypertensives','checkBoxTreatmentPrescribedAntiplatelets','checkBoxTreatmentPrescribedAnticoagulants','checkBoxTreatmentPrescribedAnticoagulantPlanned','checkBoxTreatmentPrescribedStatin','checkBoxTreatmentPrescribedOther'])">
                                                             <span>
                                                                 Verify
@@ -3220,7 +3612,7 @@
                                                     </span>
                                                 </div>
                                                 <div class="select">
-                                                    <select class="selection" required id="appointmentScheduled">
+                                                    <select class="selection" id="appointmentScheduled">
                                                         <option value="" disabled selected hidden>Select an option</option>
                                                         <option value="yes">Yes</option>
                                                         <option value="recommended">No, but recommended to schedule</option>
@@ -3231,6 +3623,11 @@
                                                     <div class="input-trust">
                                                         <span id="appointmentScheduledPercentage"></span>
                                                         <span id="appointmentScheduledEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="appointmentScheduledIterator" onclick="highLight('appointmentScheduled')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-appointmentScheduled" onclick="toggleVerification('appointmentScheduled')">
@@ -3253,7 +3650,7 @@
                                                     </span>
                                                 </div>
                                                 <div class="select">
-                                                    <select class="selection" required id="smokingCessation">
+                                                    <select class="selection" id="smokingCessation">
                                                         <option value="" disabled selected hidden>Select an option</option>
                                                         <option value="yes">Yes</option>
                                                         <option value="no">No</option>
@@ -3264,6 +3661,11 @@
                                                     <div class="input-trust">
                                                         <span id="smokingCessationPercentage"></span>
                                                         <span id="smokingCessationEdited" style="display: none">EDITED</span>
+                                                    </div>
+                                                    <div class="input-state">
+                                                        <button class="highLight-iterator" id="smokingCessationIterator" onclick="highLight('smokingCessation')">
+
+                                                        </button>
                                                     </div>
                                                     <div class="input-state">
                                                         <button id="verify-smokingCessation" onclick="toggleVerification('smokingCessation')">
