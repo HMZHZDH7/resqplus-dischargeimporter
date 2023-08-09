@@ -689,6 +689,12 @@ function highLightIterators(index: number = 0) {
             if (o.highLights.length != 0) {
                 element.innerText = (index + 1).toString() + '/' + o.highLights.length.toString();
             }
+            if (o.Value && o.highLights.length == 0) {
+                element.innerText = 'Not found';
+            }
+            if (!o.Value) {
+                element.innerText = 'Missing';
+            }
 
         } catch {
         }
@@ -1102,10 +1108,5 @@ function initialiseForm() {
     allFormFields.forEach((field) => {
         triggerChangeEvent(field);
     });
-            }
-            if (o.Value && o.highLights.length == 0) {
-                element.innerText = 'Not found';
-            }
-            if (!o.Value) {
-                element.innerText = 'Missing';
+
 }
