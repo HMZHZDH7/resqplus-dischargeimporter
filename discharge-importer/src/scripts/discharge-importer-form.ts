@@ -95,7 +95,7 @@ let formFields: formField[] = [
     { highLights: [], FieldId: "checkBoxInfarctsCortical", TrustCount: [89, 90, 82], Verified: false, Value: "false", Edited: false},
     { highLights: [], FieldId: "checkBoxInfarctsSubCortical", TrustCount: [67, 69, 77], Verified: false, Value: "false", Edited: false},
     { highLights: [], FieldId: "checkBoxBrainstem", TrustCount: [88, 70, 86], Verified: false, Value: "false", Edited: false},
-    { highLights: [], FieldId: "strokeType", TrustCount: [75, 69, 67], Verified: false, Value: "", Edited: false},
+    { highLights: [], FieldId: "typeStroke", TrustCount: [75, 69, 67], Verified: false, Value: "", Edited: false},
     { highLights: [], FieldId: "aspectScore", TrustCount: [83, 78, 75], Verified: false, Value: "", Edited: false},
     { highLights: [], FieldId: "radioArterialYes", TrustCount: [22, 66, 63], Verified: false, Value: "false", Edited: false},
     { highLights: [], FieldId: "radioArterialNo", TrustCount: [71, 84, 63], Verified: false, Value: "false", Edited: false},
@@ -751,7 +751,7 @@ function initialiseForm() {
         let formFieldElement = document.getElementById(field.FieldId) as HTMLInputElement | HTMLSelectElement;
         if (formFieldElement) {
             formFieldElement.addEventListener('change', (event) => {
-                let changedValue = (event.target as HTMLInputElement).value;
+                let changedValue = (event.target as HTMLInputElement | HTMLSelectElement).value;
 
                 if (formFieldElement.type === 'radio') {
                     if ("checked" in (event.target as HTMLInputElement)) {
@@ -1102,4 +1102,10 @@ function initialiseForm() {
     allFormFields.forEach((field) => {
         triggerChangeEvent(field);
     });
+            }
+            if (o.Value && o.highLights.length == 0) {
+                element.innerText = 'Not found';
+            }
+            if (!o.Value) {
+                element.innerText = 'Missing';
 }

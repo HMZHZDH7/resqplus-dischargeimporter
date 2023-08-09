@@ -54,7 +54,7 @@ export const mapper = [
     { FormId: "checkBoxInfarctsCortical", docMarkerId: "diagnosis_imaging_old_infarcts_cortical", HighLightId: "" },
     { FormId: "checkBoxInfarctsSubCortical", docMarkerId: "diagnosis_imaging_old_infarcts_subcortical", HighLightId: "" },
     { FormId: "checkBoxBrainstem", docMarkerId: "diagnosis_imaging_old_infarcts_brainstem", HighLightId: "" },
-    { FormId: "strokeType", docMarkerId: "diagnosis_stroke_type", HighLightId: "diagnosis.stroke_type" },
+    { FormId: "typeStroke", docMarkerId: "diagnosis_stroke_type", HighLightId: "diagnosis.stroke_type" },
     { FormId: "aspectScore", docMarkerId: "", HighLightId: "" },
     { FormId: "radioArterialYes", docMarkerId: "", HighLightId: "" },
     { FormId: "radioArterialNo", docMarkerId: "", HighLightId: "" },

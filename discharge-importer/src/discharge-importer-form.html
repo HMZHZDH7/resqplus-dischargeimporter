@@ -18,6 +18,28 @@
 
             </div>
             <div class="content">
+                <div class="header">
+                    <div>
+                        <img width="300px" src="../assets/resq_logo.png" alt="logo RES-Q">
+                        <span>Discharge RES-Q import</span>
+                    </div>
+                    <div>
+                        <div class="legend-list">
+                            <div class="legend">
+                                <img src="../assets/green.jpg" alt="logo RES-Q">
+                                <span>High confidence</span>
+                            </div>
+                            <div class="legend">
+                                <img src="../assets/yellow.jpg" alt="logo RES-Q">
+                                <span>Medium confidence</span>
+                            </div>
+                            <div class="legend">
+                                <img src="../assets/red.jpg" alt="logo RES-Q">
+                                <span>Low confidence</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="body">
                     <div class="note">
                         <div class="note-body">
@@ -1217,7 +1239,7 @@
                                                     </span>
                                                 </div>
                                                 <div class="select">
-                                                    <select class="selection" onchange="toggleDivImaging(this.selectedIndex)" id="strokeType">
+                                                    <select class="selection" onchange="toggleDivImaging(this.selectedIndex)" id="typeStroke">
                                                         <option value="" disabled selected hidden>Select an option</option>
                                                         <option value="is">Ischemic stroke (ICD-10: 163 except 163.6)</option>
                                                         <option value="ich">Intracerebral hemorrhage (ICD-10: 161)</option>
@@ -1228,23 +1250,23 @@
                                                         <option value="undetermined">Undetermined</option>
                                                     </select>
                                                 </div>
-                                                <div class="input-verification" id="strokeTypeVerification">
+                                                <div class="input-verification" id="typeStrokeVerification">
                                                     <div class="input-trust">
-                                                        <span id="strokeTypePercentage"></span>
-                                                        <span id="strokeTypeEdited" style="display: none">EDITED</span>
+                                                        <span id="typeStrokePercentage"></span>
+                                                        <span id="typeStrokeEdited" style="display: none">EDITED</span>
                                                     </div>
                                                     <div class="input-state">
-                                                        <button class="highLight-iterator" id="strokeTypeIterator" onclick="highLight('strokeType')">
+                                                        <button class="highLight-iterator" id="typeStrokeIterator" onclick="highLight('typeStroke')">
 
                                                         </button>
                                                     </div>
                                                     <div class="input-state">
-                                                        <button id="verify-strokeType" onclick="toggleVerification('strokeType')">
+                                                        <button id="verify-typeStroke" onclick="toggleVerification('typeStroke')">
                                                             <span>
                                                                 Verify
                                                             </span>
                                                         </button>
-                                                        <button style="display: none" id="edit-strokeType" onclick="toggleEdit('strokeType')">
+                                                        <button style="display: none" id="edit-typeStroke" onclick="toggleEdit('typeStroke')">
                                                             <span>
                                                                 Edit
                                                             </span>
@@ -1260,9 +1282,13 @@
                                         <div class="toggle-div" id="imagingDiv1" style="display: none;">
                                             <div class="form-row">
                                                 <div class="item">
-                                                    <div class="input-item">
+                                                    <div class="title-header">
+                                                        <span>
+                                                            Aspects Score
+                                                        </span>
+                                                    </div>
+                                                    <div  class="input-item">
                                                         <input class="form-input" type="number" name="aspectScore" id="aspectScore" pattern="\w{1,}"/>
-                                                        <label class="input-label" for="aspectScore">Aspects Score</label>
                                                     </div>
                                                     <div class="input-verification" id="aspectScoreVerification">
                                                         <div class="input-trust">
