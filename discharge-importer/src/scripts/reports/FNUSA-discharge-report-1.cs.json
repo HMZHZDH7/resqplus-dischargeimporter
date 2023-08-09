@@ -5,133 +5,83 @@
   "_updatedAt": "2023-06-08T06:38:58.122Z",
   "_formId": "ResQPlus Alpha 1.0",
   "_formData": {
-    "admission": {
-      "arrival_mode": "ems",
-      "first_contact_place": "outpatient_clinic",
-      "medical_examination": {
-        "glucose": 6,
-        "cholesterol": 2.48,
-        "systolic_pressure": 179,
-        "diastolic_pressure": 97,
-        "nihss": 6,
-        "inr_mode": "lab"
-      }
-    },
-    "diagnosis": {
-      "imaging": {
-        "old_infarcts": {
-          "any_infarct": true,
-          "cortical": true,
-          "subcortical": false,
-          "brainstem": false
-        },
-        "occlusion": {
-          "any_occlusion": true,
-          "mca_m1_left": false,
-          "mca_m2_left": false,
-          "mca_m3_left": false,
-          "cerebral_artery_left": false,
-          "pca_p1_left": true,
-          "pca_p2_left": false,
-          "artery_extracranial_left": false,
-          "artery_intracranial_left": false,
-          "vertebral_artery": false,
-          "mca_m1_right": false,
-          "mca_m2_right": false,
-          "mca_m3_right": false,
-          "cerebral_artery_right": false,
-          "pca_p1_right": false,
-          "pca_p2_right": false,
-          "artery_extracranial_right": false,
-          "artery_intracranial_right": false,
-          "basilar_artery": false
-        },
-        "perfusion": {},
-        "imaging_type": "cta_perf"
-      },
-      "stroke_type": "is"
-    },
-    "treatment": {
-      "thrombolysis": {
-        "thrombolysis_treatment": false
-      },
-      "ischemic_stroke": {
-        "mt_complications": {},
-        "no_thrombolysis_reasons": "time_window",
-        "thrombectomy_treatment": false,
-        "no_thrombectomy_reasons": "time_window"
-      },
-      "intracerebral_hemorrhage": {
-        "treatment": {}
-      },
-      "subarachnoid_hemorrhage": {
-        "treatment": {}
-      },
-      "cerebral_venous_thrombosis": {
-        "treatment": {}
-      },
-      "stroke_mimics": {},
-      "transient_ischemic_stroke": {}
-    },
-    "post_acute_care": {
-      "24_hour_hospitalized_time": "yes",
-      "atrial_fibrillation_or_flutter": "no_AF",
-      "stroke_etiology": {},
-      "vte": {
-        "any_vte": false,
-        "ufh": false,
-        "lmwh": false,
-        "ipc": false,
-        "gcs": false,
-        "warfarin": false,
-        "vfp": false,
-        "xa_inhibitor": false,
-        "other": false
-      },
-      "post_stroke_complications": {},
-      "hyperglycemia": {
-        "hyperglycemia_diagnosed": null
-      },
-      "swallow": {},
-      "rehabilitation": {
-        "speech_therapy": "no",
-        "physiotherapy": "yes",
-        "occup_therapy": "no"
-      },
-      "patient_ventilated": false,
-      "carotid_arteries": {
-        "carotid_arteries_imaging": true
-      },
-      "post_recanalization_imaging": {},
-      "fever": {
-        "fever_diagnosed": null
-      }
-    },
-    "discharge": {
-      "destination": {
-        "discharge_destination": "home"
-      },
-      "medication": {
-        "antiplatelet_substances": {},
-        "anticoagulant_substances": {}
-      }
-    },
-    "post-discharge": {
-      "3_month_follow_up": {}
-    },
-    "anamnesis": {
-      "sex": "male",
-      "risk_factors": {},
-      "medication": {
-        "antiplatelet_substances": {},
-        "anticoagulant_substances": {}
-      },
-      "prestroke_mrs": null
-    },
-    "onset": {
-      "wakeup_stroke": false,
-      "inhospital_stroke": false
-    }
+    "admission_arrival_mode": "ems",
+    "admission_first_contact_place": "outpatient_clinic",
+    "admission_medical_examination_glucose": 6,
+    "admission_medical_examination_cholesterol": 2.48,
+    "admission_medical_examination_systolic_pressure": 179,
+    "admission_medical_examination_diastolic_pressure": 97,
+    "admission_medical_examination_nihss": 6,
+    "admission_medical_examination_inr_mode": "lab",
+    "diagnosis_imaging_old_infarcts_any_infarct": true,
+    "diagnosis_imaging_old_infarcts_cortical": true,
+    "diagnosis_imaging_old_infarcts_subcortical": false,
+    "diagnosis_imaging_old_infarcts_brainstem": false,
+    "diagnosis_imaging_occlusion_any_occlusion": true,
+    "diagnosis_imaging_occlusion_mca_m1_left": false,
+    "diagnosis_imaging_occlusion_mca_m2_left": false,
+    "diagnosis_imaging_occlusion_mca_m3_left": false,
+    "diagnosis_imaging_occlusion_cerebral_artery_left": false,
+    "diagnosis_imaging_occlusion_pca_p1_left": true,
+    "diagnosis_imaging_occlusion_pca_p2_left": false,
+    "diagnosis_imaging_occlusion_artery_extracranial_left": false,
+    "diagnosis_imaging_occlusion_artery_intracranial_left": false,
+    "diagnosis_imaging_occlusion_vertebral_artery": false,
+    "diagnosis_imaging_occlusion_mca_m1_right": false,
+    "diagnosis_imaging_occlusion_mca_m2_right": false,
+    "diagnosis_imaging_occlusion_mca_m3_right": false,
+    "diagnosis_imaging_occlusion_cerebral_artery_right": false,
+    "diagnosis_imaging_occlusion_pca_p1_right": false,
+    "diagnosis_imaging_occlusion_pca_p2_right": false,
+    "diagnosis_imaging_occlusion_artery_extracranial_right": false,
+    "diagnosis_imaging_occlusion_artery_intracranial_right": false,
+    "diagnosis_imaging_occlusion_basilar_artery": false,
+    "diagnosis_imaging_perfusion": {},
+    "diagnosis_imaging_imaging_type": "cta_perf",
+    "diagnosis_stroke_type": "is",
+    "treatment_thrombolysis_thrombolysis_treatment": false,
+    "treatment_ischemic_stroke_mt_complications": {},
+    "treatment_ischemic_stroke_no_thrombolysis_reasons": "time_window",
+    "treatment_ischemic_stroke_thrombectomy_treatment": false,
+    "treatment_ischemic_stroke_no_thrombectomy_reasons": "time_window",
+    "treatment_intracerebral_hemorrhage_treatment": {},
+    "treatment_subarachnoid_hemorrhage_treatment": {},
+    "treatment_cerebral_venous_thrombosis_treatment": {},
+    "treatment_stroke_mimics": {},
+    "treatment_transient_ischemic_stroke": {},
+    "post_acute_care_24_hour_hospitalized_time": "yes",
+    "post_acute_care_atrial_fibrillation_or_flutter": "no_AF",
+    "post_acute_care_stroke_etiology": {},
+    "post_acute_care_vte_any_vte": false,
+    "post_acute_care_vte_ufh": false,
+    "post_acute_care_vte_lmwh": false,
+    "post_acute_care_vte_ipc": false,
+    "post_acute_care_vte_gcs": false,
+    "post_acute_care_vte_warfarin": false,
+    "post_acute_care_vte_vfp": false,
+    "post_acute_care_vte_xa_inhibitor": false,
+    "post_acute_care_vte_other": false,
+    "post_acute_care_post_stroke_complications": {},
+    "post_acute_care_hyperglycemia_hyperglycemia_diagnosed": null,
+    "post_acute_care_swallow": {},
+    "post_acute_care_rehabilitation_speech_therapy": "no",
+    "post_acute_care_rehabilitation_physiotherapy": "yes",
+    "post_acute_care_rehabilitation_occup_therapy": "no",
+    "post_acute_care_patient_ventilated": false,
+    "post_acute_care_carotid_arteries_carotid_arteries_imaging": true,
+    "post_acute_care_post_recanalization_imaging": {},
+    "post_acute_care_fever_fever_diagnosed": null,
+    "discharge_destination_discharge_destination": "home",
+    "discharge_medication_antiplatelet_substances": {},
+    "discharge_medication_anticoagulant_substances": {},
+    "post-discharge_3_month_follow_up": {},
+    "anamnesis_sex": "male",
+    "anamnesis_risk_factors": {},
+    "anamnesis_medication_antiplatelet_substances": {},
+    "anamnesis_medication_anticoagulant_substances": {},
+    "anamnesis_prestroke_mrs": null,
+    "onset_wakeup_stroke": false,
+    "onset_inhospital_stroke": false
   },
   "_reportDelta": {
     "ops": [
