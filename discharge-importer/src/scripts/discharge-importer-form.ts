@@ -1,8 +1,10 @@
 import {mapper} from "./Mapper.js";
 import jsonData1 from './reports/FNM-discharge-report-1.cs.json' assert {type: 'json'};
 import jsonData2 from './reports/FNUSA-discharge-report-1.cs.json' assert {type: 'json'};
+import jsonData3 from './reports/FNUSA-discharge-report-2.cs.json' assert {type: 'json'};
 
-let jsonDataStorage = [jsonData1, jsonData2];
+
+let jsonDataStorage = [jsonData1, jsonData2,jsonData3];
 
 interface formField {
     highLights: highLight[];

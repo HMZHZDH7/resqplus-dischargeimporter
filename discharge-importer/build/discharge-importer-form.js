@@ -10,7 +10,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 import { mapper } from "./Mapper.js";
 import jsonData1 from './reports/FNM-discharge-report-1.cs.json' assert { type: 'json' };
 import jsonData2 from './reports/FNUSA-discharge-report-1.cs.json' assert { type: 'json' };
-let jsonDataStorage = [jsonData1, jsonData2];
+import jsonData3 from './reports/FNUSA-discharge-report-2.cs.json' assert { type: 'json' };
+let jsonDataStorage = [jsonData1, jsonData2, jsonData3];
 const allFormFields = document.querySelectorAll('input, select');
 let switchForm = true;
 window.changeColor = changeColor;

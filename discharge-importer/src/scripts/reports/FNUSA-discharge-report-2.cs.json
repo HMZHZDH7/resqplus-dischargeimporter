@@ -1,0 +1,1997 @@
+{
+  "_version": 1,
+  "_uuid": "0111764c-4fb4-471c-a8b5-4e2e7ba4c612",
+  "_createdAt": "2023-05-23T09:59:03.692Z",
+  "_updatedAt": "2023-06-08T06:42:29.316Z",
+  "_formId": "ResQPlus Alpha 1.0",
+  "_formData": {
+    "admission_arrival_mode": "ems",
+    "admission_medical_examination_glucose": 7.5,
+    "admission_medical_examination_systolic_pressure": 180,
+    "admission_medical_examination_diastolic_pressure": 104,
+    "admission_medical_examination_nihss": 5,
+    "admission_medical_examination_inr_mode": "lab",
+    "diagnosis_imaging_old_infarcts_any_infarct": true,
+    "diagnosis_imaging_old_infarcts_cortical": false,
+    "diagnosis_imaging_old_infarcts_subcortical": true,
+    "diagnosis_imaging_old_infarcts_brainstem": false,
+    "diagnosis_imaging_occlusion_mca_m1_left": false,
+    "diagnosis_imaging_occlusion_mca_m2_left": false,
+    "diagnosis_imaging_occlusion_mca_m3_left": false,
+    "diagnosis_imaging_occlusion_cerebral_artery_left": false,
+    "diagnosis_imaging_occlusion_pca_p1_left": false,
+    "diagnosis_imaging_occlusion_pca_p2_left": false,
+    "diagnosis_imaging_occlusion_artery_extracranial_left": false,
+    "diagnosis_imaging_occlusion_artery_intracranial_left": false,
+    "diagnosis_imaging_occlusion_vertebral_artery": false,
+    "diagnosis_imaging_occlusion_mca_m1_right": false,
+    "diagnosis_imaging_occlusion_mca_m2_right": false,
+    "diagnosis_imaging_occlusion_mca_m3_right": false,
+    "diagnosis_imaging_occlusion_cerebral_artery_right": false,
+    "diagnosis_imaging_occlusion_pca_p1_right": false,
+    "diagnosis_imaging_occlusion_pca_p2_right": true,
+    "diagnosis_imaging_occlusion_artery_extracranial_right": false,
+    "diagnosis_imaging_occlusion_artery_intracranial_right": false,
+    "diagnosis_imaging_occlusion_basilar_artery": false,
+    "diagnosis_imaging_perfusion_perfusion_deficit": "no_deficit",
+    "diagnosis_imaging_imaging_type": "cta_perf",
+    "diagnosis_stroke_type": "is",
+    "treatment_thrombolysis_thrombolysis_treatment": false,
+    "treatment_ischemic_stroke_mt_complications": {},
+    "treatment_ischemic_stroke_no_thrombolysis_reasons": "mild_deficit",
+    "treatment_ischemic_stroke_thrombectomy_treatment": false,
+    "treatment_ischemic_stroke_no_thrombectomy_reasons": "mild_deficit",
+    "treatment_intracerebral_hemorrhage_treatment": {},
+    "treatment_subarachnoid_hemorrhage_treatment": {},
+    "treatment_cerebral_venous_thrombosis_treatment": {},
+    "treatment_stroke_mimics": {},
+    "treatment_transient_ischemic_stroke": {},
+    "post_acute_care_stroke_etiology_any_stroke_etiology": true,
+    "post_acute_care_stroke_etiology_la_atherosclerosis": false,
+    "post_acute_care_stroke_etiology_cardioembolism": true,
+    "post_acute_care_stroke_etiology_cryptogenic_stroke": false,
+    "post_acute_care_stroke_etiology_lacunar": false,
+    "post_acute_care_stroke_etiology_other": false,
+    "post_acute_care_vte_ufh": false,
+    "post_acute_care_vte_lmwh": false,
+    "post_acute_care_vte_ipc": false,
+    "post_acute_care_vte_gcs": false,
+    "post_acute_care_vte_warfarin": false,
+    "post_acute_care_vte_vfp": false,
+    "post_acute_care_vte_xa_inhibitor": false,
+    "post_acute_care_vte_other": false,
+    "post_acute_care_post_stroke_complications_any_post_stroke_complication": false,
+    "post_acute_care_post_stroke_complications_pneumonia": false,
+    "post_acute_care_post_stroke_complications_dvt": false,
+    "post_acute_care_post_stroke_complications_pulmonary_embolism": false,
+    "post_acute_care_post_stroke_complications_urinary_infection": false,
+    "post_acute_care_post_stroke_complications_pressure_sores": false,
+    "post_acute_care_post_stroke_complications_drip_site_sepsis": false,
+    "post_acute_care_post_stroke_complications_recurrence_or_extension": false,
+    "post_acute_care_post_stroke_complications_other": false,
+    "post_acute_care_hyperglycemia_hyperglycemia_diagnosed": false,
+    "post_acute_care_swallow": {},
+    "post_acute_care_rehabilitation_speech_therapy": "yes",
+    "post_acute_care_rehabilitation_physiotherapy": "yes",
+    "post_acute_care_carotid_arteries_carotid_arteries_imaging": true,
+    "post_acute_care_carotid_arteries_carotid_stenosis": "over70",
+    "post_acute_care_carotid_arteries_carotid_endarterectomy_within_2_weeks": "no",
+    "post_acute_care_post_recanalization_imaging": {},
+    "post_acute_care_fever_fever_diagnosed": false,
+    "discharge_destination_discharge_destination": "home",
+    "discharge_medication_antidiabetics": false,
+    "discharge_medication_antihypertensives": true,
+    "discharge_medication_antiplatelets": true,
+    "discharge_medication_antiplatelet_substances_asa": true,
+    "discharge_medication_antiplatelet_substances_cilostazol": false,
+    "discharge_medication_antiplatelet_substances_clopidogrel": false,
+    "discharge_medication_antiplatelet_substances_ticagrelor": false,
+    "discharge_medication_antiplatelet_substances_ticlopidine": false,
+    "discharge_medication_antiplatelet_substances_prasugrel": false,
+    "discharge_medication_antiplatelet_substances_dipyridamole": false,
+    "discharge_medication_anticoagulants": false,
+    "discharge_medication_anticoagulant_substances_warfarin": false,
+    "discharge_medication_anticoagulant_substances_heparin": false,
+    "discharge_medication_anticoagulant_substances_dabigatran": false,
+    "discharge_medication_anticoagulant_substances_rivaroxaban": false,
+    "discharge_medication_anticoagulant_substances_apixaban": false,
+    "discharge_medication_anticoagulant_substances_edoxaban": false,
+    "discharge_medication_anticoagulant_recommended": false,
+    "discharge_medication_statin": false,
+    "discharge_medication_other": false,
+    "discharge_mrs_score": 1,
+    "discharge_nihss": 0,
+    "discharge_smoking_cessation_recommended": "not_smoker",
+    "post-discharge_3_month_follow_up": {},
+    "anamnesis_sex": "male",
+    "anamnesis_risk_factors_hypertension": true,
+    "anamnesis_risk_factors_diabetes": false,
+    "anamnesis_risk_factors_hyperlypidemia": true,
+    "anamnesis_risk_factors_active_smoker": false,
+    "anamnesis_risk_factors_ischemic_stroke": true,
+    "anamnesis_risk_factors_hermorrhage_stroke": false,
+    "anamnesis_risk_factors_atrial_fibrillation": true,
+    "anamnesis_risk_factors_coronary_artery": true,
+    "anamnesis_risk_factors_heart_failure": true,
+    "anamnesis_risk_factors_hiv": false,
+    "anamnesis_risk_factors_covid_positive": false,
+    "anamnesis_medication_any_medication": false,
+    "anamnesis_medication_antidiabetics": false,
+    "anamnesis_medication_antihypertensives": false,
+    "anamnesis_medication_antiplatelets": false,
+    "anamnesis_medication_antiplatelet_substances_asa": false,
+    "anamnesis_medication_antiplatelet_substances_cilostazol": false,
+    "anamnesis_medication_antiplatelet_substances_clopidogrel": false,
+    "anamnesis_medication_antiplatelet_substances_ticagrelor": false,
+    "anamnesis_medication_antiplatelet_substances_ticlopidine": false,
+    "anamnesis_medication_antiplatelet_substances_prasugrel": false,
+    "anamnesis_medication_antiplatelet_substances_dipyridamole": false,
+    "anamnesis_medication_anticoagulants": false,
+    "anamnesis_medication_anticoagulant_substances_warfarin": false,
+    "anamnesis_medication_anticoagulant_substances_heparin": false,
+    "anamnesis_medication_anticoagulant_substances_dabigatran": false,
+    "anamnesis_medication_anticoagulant_substances_rivaroxaban": false,
+    "anamnesis_medication_anticoagulant_substances_apixaban": false,
+    "anamnesis_medication_anticoagulant_substances_edoxaban": false,
+    "anamnesis_medication_hormonal_contraception": false,
+    "anamnesis_medication_statin": false,
+    "anamnesis_medication_other": false,
+    "anamnesis_prestroke_mrs": null,
+    "onset_wakeup_stroke": false
+  },
+  "_reportDelta": {
+    "ops": [
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "Výška: "
+      },
+      {
+        "insert": "169 cm "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "Hmotnost: "
+      },
+      {
+        "insert": "78 kg (stanoveno odhadem) "
+      },
+      {
+        "attributes": {
+          "highlighted@admission.medical_examination.systolic_pressure": true,
+          "highlighted@admission.medical_examination.diastolic_pressure": true,
+          "bold": true
+        },
+        "insert": "Krevní tlak(u příjmu): "
+      },
+      {
+        "attributes": {
+          "highlighted@admission.medical_examination.systolic_pressure": true,
+          "highlighted@admission.medical_examination.diastolic_pressure": true
+        },
+        "insert": "180/104 mm Hg."
+      },
+      {
+        "insert": " "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "Srdeční pulz(u příjmu): "
+      },
+      {
+        "insert": "93/min\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "ANAMNÉSA:"
+      },
+      {
+        "insert": " \n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "Alergie:"
+      },
+      {
+        "insert": " neguje\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "rodinná anamnéza "
+      },
+      {
+        "insert": ": nevýznamná\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "osobní anamnéza"
+      },
+      {
+        "insert": " : viz dg. "
+      },
+      {
+        "attributes": {
+          "underline": true
+        },
+        "insert": "operace"
+      },
+      {
+        "insert": ": appe, ploténky, náhrada srdeční chlopně protézou\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "farmakologická anamnéza: "
+      },
+      {
+        "insert": "Anopyrin od 4/22 vysazen - po pádu ,0, Cordarone 200 mg 1-0-0 v Po-Sř-Pá , Letrox 50ug 1/2-0-0, Furon 40 1-0-0, KCL 1-0-0, Concor 2,5 1-0-0, Grimodin 2 tbl / N gramáž dcera neví\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "fyziologické funkce"
+      },
+      {
+        "insert": ":  častěj mikce bez inkontinece, stolie občas zacpa,  "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "pracovní a sociální anamnéza"
+      },
+      {
+        "insert": ": SD, dříve voják , žije "
+      },
+      {
+        "attributes": {
+          "highlighted@anamnesis.sex": true
+        },
+        "insert": "sám   "
+      },
+      {
+        "attributes": {
+          "highlighted@anamnesis.sex": true,
+          "bold": true
+        },
+        "insert": "alergie"
+      },
+      {
+        "attributes": {
+          "highlighted@anamnesis.sex": true
+        },
+        "insert": ":"
+      },
+      {
+        "insert": " neguje  "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "epidemiologická anamnéza:"
+      },
+      {
+        "insert": " 3x očkovaný proti COVID-19  "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "Abusus "
+      },
+      {
+        "attributes": {
+          "highlighted@discharge.smoking_cessation_recommended": true
+        },
+        "insert": "stopkuřák"
+      },
+      {
+        "insert": " , alkohol přílež. \n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": " "
+      },
+      {
+        "insert": "\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "NYNĚJŠÍ ONEMOCNĚNÍ:"
+      },
+      {
+        "insert": " "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "NO.:"
+      },
+      {
+        "insert": " "
+      },
+      {
+        "attributes": {
+          "highlighted@admission.arrival_mode": true
+        },
+        "insert": "Večer 18,10 "
+      },
+      {
+        "attributes": {
+          "highlighted@admission.arrival_mode": true,
+          "highlighted@onset.wakeup_stroke": true
+        },
+        "insert": "v křesle uTV zjistil"
+      },
+      {
+        "attributes": {
+          "highlighted@admission.arrival_mode": true
+        },
+        "insert": " že se nemůže hýbat KK - oslabení nejdřív LHK po té i PHK, obtížně hybal i s DKK, špatně se mu vyslovovalo, volal vnukovi, přivolána sanitka ."
+      },
+      {
+        "insert": " \n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": " "
+      },
+      {
+        "insert": "\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "OBJEKTIVNÍ NÁLEZ:"
+      },
+      {
+        "insert": " "
+      },
+      {
+        "attributes": {
+          "underline": true,
+          "bold": true
+        },
+        "insert": "Obj. neurol.:"
+      },
+      {
+        "insert": " při vědomí; orientace nelze, spolupracuje omezeně. Řeč s globální fatickou poruchou, dysartrie nelze. Zornice izo., fotoreakce + bilat., bulby deviovány ad sin., pohledy nepřetáhne ad dx., diplopie nelze, zorné pole orientačně s pravostrannou hemianopsií, cení asym. - centrální léze VII.l.dx., mimika symetrická, měkké patro symetrické. "
+      },
+      {
+        "attributes": {
+          "underline": true
+        },
+        "insert": "HKK"
+      },
+      {
+        "insert": ": tonus norma, hybnost omezena vpravo, síla s plegií na PHK, LHK norma, v Mi bez sklesu vlevo, vpravo nebržděný pád, bez pronace či retrakce, pyr. iritace Trömner bilat.negat.; taxe, metrie nelze validně, diadochokinesis v normě. "
+      },
+      {
+        "attributes": {
+          "underline": true
+        },
+        "insert": "DKK:"
+      },
+      {
+        "insert": " tonus norma, hybnost omezena vpravo, síla v normě vlevo , vpravo plegie, v Mi stabilní vlevo, vpravo nebržděný pád k podložce; Babinski 0; taxe, metrie nelze, Laségue negat.; "
+      },
+      {
+        "attributes": {
+          "underline": true
+        },
+        "insert": "Senzitivita:"
+      },
+      {
+        "insert": " taktilní i hluboká cítivost nelze; "
+      },
+      {
+        "attributes": {
+          "underline": true
+        },
+        "insert": "Mening. jevy"
+      },
+      {
+        "insert": ": horní i dolní negat. \n \n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "LABORATORNÍ VYŠETŘENÍ:"
+      },
+      {
+        "insert": " "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "6.9.2018"
+      },
+      {
+        "insert": " , Primární materiál Krev , Analyzovaný materiál Plazma , Vzhled vzorku fyziologický , Sodík_S,P 136 mmol/l, Draslík _S,P 3.8 mmol/l, Chloridy_S,P 102 mmol/l, Vápník_S,P "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "2.13"
+      },
+      {
+        "insert": " mmol/l, Fosfáty_S,P 1.28 mmol/l, Hořčík_S,P 0.86 mmol/l, "
+      },
+      {
+        "attributes": {
+          "highlighted@admission.medical_examination.glucose": true
+        },
+        "insert": "Glukóza_S,P "
+      },
+      {
+        "attributes": {
+          "highlighted@admission.medical_examination.glucose": true,
+          "bold": true
+        },
+        "insert": "7.5"
+      },
+      {
+        "attributes": {
+          "highlighted@admission.medical_examination.glucose": true
+        },
+        "insert": " mmol/l,"
+      },
+      {
+        "insert": " Močovina_S,P "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "9.1"
+      },
+      {
+        "insert": " mmol/l, Kreatinin_S,P "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "173"
+      },
+      {
+        "insert": " µmol/l, Glom. filtr. odhad dle CKD-EPI "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "0.49"
+      },
+      {
+        "insert": " ml/s/1.73m2, Bilirubin celkový_S,P 6.8 µmol/l, Osmolalita_S,P "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "303"
+      },
+      {
+        "insert": " mmol/kg, Troponin-T_P "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "55"
+      },
+      {
+        "insert": " ng/l, AST_S,P 0.46 µkat/l, ALT_S,P 0.26 µkat/l, ALP_S,P 1.06 µkat/l, GGT_S,P 0.79 µkat/l, LD_S,P "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "5.19"
+      },
+      {
+        "insert": " µkat/l, CK_S,P "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "3.75"
+      },
+      {
+        "insert": " µkat/l, CK-MB_S,P 0.23 µkat/l, AMS_S,P 0.88 µkat/l, Bílkoviny celkové_S,P "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "63.2"
+      },
+      {
+        "insert": " g/l, Albumin_S,P 37.0 g/l, CRP_S, P 3.4 mg/l, Lab. poznámka \"SUPERAKUTNĚ K TROMBOLÝZE\" "
+      },
+      {
+        "attributes": {
+          "highlighted@admission.medical_examination.inr_mode": true,
+          "bold": true
+        },
+        "insert": "6.9.2018"
+      },
+      {
+        "attributes": {
+          "highlighted@admission.medical_examination.inr_mode": true
+        },
+        "insert": ", Primární materiál krev \"Nestandardní odběr na koagulaci - vadný odběr - nelze provést.\","
+      },
+      {
+        "insert": " Erytrocyty "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "2.53"
+      },
+      {
+        "insert": " 10^12/l, Leukocyty 5.2 10^9/l, Hemoglobin "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "76"
+      },
+      {
+        "insert": " g/l, Hematokrit "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "0.238"
+      },
+      {
+        "insert": " l/l, Trombocyty 187 10^9/l, MCV 94.1 fl, MCH 30.0 pg, MCHC "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "319.3"
+      },
+      {
+        "insert": " g/l, RDW "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "17.2"
+      },
+      {
+        "insert": " %, MPV 9.0 fl, PDW "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "8.8"
+      },
+      {
+        "insert": " fl, PCT 1.7 ml/l, Normoblasty 0.00 %, Normoblasty - abs. počet 0.00 10^9/l, Lab. poznámka \"Nestandardní odběr na koagulaci - vadný odběr - nelze provést.\" "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "6.9.2018"
+      },
+      {
+        "insert": ", Primární vzorek plná krev , Materiál sérum , HBs Ag negativní "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "17.07.2022"
+      },
+      {
+        "insert": " , Primární materiál Krev , Analyzovaný materiál Plazma , Vzhled vzorku fyziologický , Sodík_S,P 138 mmol/l, Draslík _S,P 3.9 mmol/l, Chloridy_S,P 103 mmol/l, Vápník_S,P 2.26 mmol/l, Fosfáty_S,P 1.17 mmol/l, Hořčík_S,P 0.96 mmol/l, Glukóza_S,P "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "5.8"
+      },
+      {
+        "insert": " mmol/l, Močovina_S,P "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "8.6"
+      },
+      {
+        "insert": " mmol/l, Kreatinin_S,P "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "159"
+      },
+      {
+        "insert": " µmol/l, Glom. filtr. odhad dle CKD-EPI "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "0.55"
+      },
+      {
+        "insert": " ml/s/1.73m2, Materiál nedodán \"Vzorek moče nebyl do laboratoře dodán.\" "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "7.9.2018"
+      },
+      {
+        "insert": ", Primární materiál Krev , Analyzovaný materiál Sérum , Glykovaný hemoglobin (HbA1c)_B 38 mmol/mol \"Kompenzovaný diabetes: 43 - 53 mmol/mol\", Vzhled vzorku fyziologický , Cholesterol celkový_S,P 2.56 mmol/l, Triacylglyceroly_S,P "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "0.37"
+      },
+      {
+        "insert": " mmol/l, HDL-cholesterol_S,P "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "0.86"
+      },
+      {
+        "insert": " mmol/l, LDL-cholesterol_S,P 1.46 mmol/l, non HDL-cholesterol 1.70 mmol/l, Apolipoprotein A1_S,P "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "0.85"
+      },
+      {
+        "insert": " g/l, Apolipoprotein B_S,P "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "0.44"
+      },
+      {
+        "insert": " g/l "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "7.9.2018"
+      },
+      {
+        "insert": "  , Primární materiál krev , Erytrocyty "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "2.90"
+      },
+      {
+        "insert": " 10^12/l, Leukocyty 7.2 10^9/l, Hemoglobin "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "86"
+      },
+      {
+        "insert": " g/l, Hematokrit "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "0.283"
+      },
+      {
+        "insert": " l/l, Trombocyty 223 10^9/l, MCV 97.6 fl, MCH 29.7 pg, MCHC "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "303.9"
+      },
+      {
+        "insert": " g/l, RDW "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "17.1"
+      },
+      {
+        "insert": " %, MPV 9.7 fl, PDW 10.0 fl, PCT 2.2 ml/l, Normoblasty 0.10 %, Normoblasty - abs. počet 0.01 10^9/l "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "17.9.2018"
+      },
+      {
+        "insert": ", Primární materiál krev , Terapie žádná , Protrombinový test - ratio 1.18 1, Protrombinový test - INR 1.20 1, Protrombinový test - sec. 13.0 s, Akt.parciální trombopl.test 30.6 s, Akt.parciální trombopl.test-R 0.92 1, Trombinový test "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "21.0"
+      },
+      {
+        "insert": " s, Trombinový test-ratio "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "1.24"
+      },
+      {
+        "insert": " 1, Antitrombin "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "73"
+      },
+      {
+        "insert": " % "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "17.9.2018"
+      },
+      {
+        "insert": ", Primární materiál Krev , Analyzovaný materiál Plazma , Vzhled vzorku fyziologický , Sodík_S,P 139 mmol/l, Draslík _S,P 3.8 mmol/l, Chloridy_S,P 103 mmol/l, Vápník_S,P 2.26 mmol/l, Fosfáty_S,P 1.03 mmol/l, Hořčík_S,P 0.91 mmol/l, Glukóza_S,P 5.6 mmol/l, Močovina_S,P "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "8.3"
+      },
+      {
+        "insert": " mmol/l, Kreatinin_S,P "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "155"
+      },
+      {
+        "insert": " µmol/l, Glom. filtr. odhad dle CKD-EPI "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "0.56"
+      },
+      {
+        "insert": " ml/s/1.73m2 "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "18.07.2022"
+      },
+      {
+        "insert": " , Primární materiál krev , Terapie \"Nízkomolekulární heparin (Clexan)\", Erytrocyty "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "2.97"
+      },
+      {
+        "insert": " 10^12/l, Leukocyty 8.1 10^9/l, Hemoglobin "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "90"
+      },
+      {
+        "insert": " g/l, Hematokrit "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "0.285"
+      },
+      {
+        "insert": " l/l, Trombocyty 246 10^9/l, MCV 96.0 fl, MCH 30.3 pg, MCHC "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "315.8"
+      },
+      {
+        "insert": " g/l, RDW "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "17.2"
+      },
+      {
+        "insert": " %, MPV 9.7 fl, PDW 9.8 fl, PCT 2.4 ml/l, Normoblasty 0.10 %, Normoblasty - abs. počet 0.01 10^9/l, Protrombinový test - ratio 1.16 1, Protrombinový test - INR 1.13 1, Protrombinový test - sec. 12.4 s, Akt.parciální trombopl.test 33.1 s, Akt.parciální trombopl.test-R 1.00 1, Fibrinogen 3.19 g/l, Trombinový test 18.6 s, Trombinový test-ratio 1.09 1 "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "19.07.2022"
+      },
+      {
+        "insert": " , Primární materiál krev , Erytrocyty "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "3.02"
+      },
+      {
+        "insert": " 10^12/l, Leukocyty 7.0 10^9/l, Hemoglobin "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "91"
+      },
+      {
+        "insert": " g/l, Hematokrit "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "0.290"
+      },
+      {
+        "insert": " l/l, Trombocyty 246 10^9/l, MCV 96.0 fl, MCH 30.1 pg, MCHC "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "313.8"
+      },
+      {
+        "insert": " g/l, RDW "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "17.0"
+      },
+      {
+        "insert": " %, MPV 10.0 fl, PDW 9.8 fl, PCT 2.5 ml/l, Normoblasty 0.00 %, Normoblasty - abs. počet 0.00 10^9/l, Retikulocyty "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "0.026"
+      },
+      {
+        "insert": " 1, Retikulocyty - abs.počet 79.10 10^9/l, IRF - retikulocyty nezralá fr. "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "29.3"
+      },
+      {
+        "insert": " %, RET - HE - hemoglobin v ret. 31.6 pg\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": " "
+      },
+      {
+        "insert": "\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "DALŠÍ VYŠETŘENÍ:"
+      },
+      {
+        "insert": " \n"
+      },
+      {
+        "attributes": {
+          "highlighted@admission.admission_timestamp": true,
+          "highlighted@diagnosis.imaging.imaging_timestamp": true,
+          "bold": true
+        },
+        "insert": "6.9.2018"
+      },
+      {
+        "insert": " "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "KZM - "
+      },
+      {
+        "attributes": {
+          "highlighted@diagnosis.imaging.imaging_type": true,
+          "bold": true
+        },
+        "insert": "CT ICRC CT mozku nativně a CTA popalikaci 100ml Iomeronu i.v."
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": " : "
+      },
+      {
+        "insert": "V zadní jámě lební i supratentoriálně bez ložiskových změn, bez čerstvé hemoragie či "
+      },
+      {
+        "attributes": {
+          "highlighted@diagnosis.imaging.old_infarcts.subcortical": true
+        },
+        "insert": "ischemie. Staré postischemické změny v BG bilat."
+      },
+      {
+        "insert": " Stará postisceicmá area F l. sin. Středočárové struktury jsou bez dislokace. Komorový systém a zevní likvorové prostory a jsou přiměřené šíře, symetrické. Zobrazené VDN jsou volné. Normální nález na skeletu. Na CTA se tepny Willisova okruhu volně "
+      },
+      {
+        "attributes": {
+          "highlighted@post_acute_care.carotid_arteries.carotid_arteries_imaging": true
+        },
+        "insert": "plní. Karotické a vertebrální tepenné řečiště je volné."
+      },
+      {
+        "insert": " Venogram je volný. KArotické tepny jsou vinuté, AB ztaké vinutá. Rozšíření oblouku aorty na 40mm.\n"
+      },
+      {
+        "attributes": {
+          "highlighted@diagnosis.imaging.imaging_type": true,
+          "highlighted@diagnosis.imaging.perfusion.perfusion_deficit": true
+        },
+        "insert": "CTP"
+      },
+      {
+        "attributes": {
+          "highlighted@diagnosis.imaging.perfusion.perfusion_deficit": true
+        },
+        "insert": " je bez nálezu."
+      },
+      {
+        "insert": "\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "6.9.2018"
+      },
+      {
+        "insert": " "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "1.CHK-ambul.odd-A"
+      },
+      {
+        "insert": " Konzilium na NK ood.81- ošetření rány; Pacient hospitalizován k léčbě CMP \nObj: na L předloktí, lokti, stržená pergamenová kůže vel. 10x10cm, ronící\nTh: toiletta prontosanem, Gelaspon, krytí a bandáž\nDg: excoriatio antebrachii l.sin. Dop: ponechat krytí 2 dny pokud bude možné, jinak event. výměna krytí s Gelasponem nebo Framykoin prášek + mastný tyl. Naše kontrola při potížích kdykoliv, jinak naše konzilium za 2 dny.\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "6.9.2018"
+      },
+      {
+        "insert": " "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "KZM - Centrální rentgen: "
+      },
+      {
+        "attributes": {
+          "underline": true
+        },
+        "insert": "RTG srdce, plíce vleže"
+      },
+      {
+        "insert": ": Pl. křídla bilat. rozvinuta do periferie. Hily cévní konfigurace, cévní kresba hyperemická, "
+      },
+      {
+        "attributes": {
+          "italic": true
+        },
+        "insert": "v daném terénu "
+      },
+      {
+        "insert": "parenchym bez zjevných ložiskových či infiltrativních změn.Bránice bilat. částečně dekonturovaná - susp. menší množství volné tekutiny bilat. - zejména vpravo.\nSrdeční stín nerozšířený. AS aorty. Kličky po sternotomii intaktní.\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "6.9.2018"
+      },
+      {
+        "insert": " "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "1.CHK-ambul.odd-A "
+      },
+      {
+        "insert": " "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "NO:"
+      },
+      {
+        "insert": " Plánovaný převaz - pacient hosp.na od.81. Pacient hospitalizován k léčbě CMP "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "Obj.:"
+      },
+      {
+        "insert": " LHK - exkoriace již nekrvácející, gelaspon částečně resorbován, částečně lpí k ráně, okolí klidné, parc.avitální kůže.\nDg.: excoriatio antebrachii l.sin.\nTh.: desinfekce, snesení avitální kůže, MT, krytí\n"
+      },
+      {
+        "attributes": {
+          "underline": true
+        },
+        "insert": "Doporučení"
+      },
+      {
+        "insert": ": krytí ponechat, další převaz cestou chir. amb.B 10.9.2018 v 10:20hod cca.\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "6.9.2018"
+      },
+      {
+        "insert": " "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "1. IKAK - ambul. odd-všeobecné konziliár ANAMNÉZA:"
+      },
+      {
+        "insert": "\nrodinná anamnéza: nevýznamná\nosobní anamnéza: viz dg. operace: appe, ploténky, náhrada srdeční chlopně protézou\nfarmakologická anamnéza: Anopyrin od 4/22 vysazen - po pádu ,0, Cordarone 200 mg 1-0-0 v Po-Sř-Pá , Letrox 50ug 1/2-0-0, Furon 40 1-0-0, KCL 1-0-0, Concor 2,5 1-0-0, Grimodin 2 tbl / N gramáž dcera neví.\nfyziologické funkce: častěj mikce bez inkontinece, stolie občas zacpa\npracovní a sociální anamnéza: SD, dříve voják , žije sám\nepidemiologická anamnéza: 3x očkovaný proti COVID-19\nAbusus stopkuřák, alkohol přílež.\nalergie: neguje\n \nNYNĚJŠÍ ONEMOCNĚNÍ: "
+      },
+      {
+        "attributes": {
+          "highlighted@diagnosis.stroke_type": true
+        },
+        "insert": "Pacient s CMP"
+      },
+      {
+        "insert": " v.s. kardioembolizační etiologie při fibrilaci síní a srdečním selháním se sníženou ejekční frakcí levé komory, požadováno intrní konsilium stran ev. kard. dekompenzace či AK tetrapie. Subj.: doma se pac. zadýchává při námaze, bolesti na hrudi neguje. \n\nSTATUS PRAESENS: TK 110/80 mmHg\n"
+      },
+      {
+        "attributes": {
+          "highlighted@anamnesis.sex": true
+        },
+        "insert": "Pacient"
+      },
+      {
+        "insert": " lucidní, orient., spolupracuje. Bez klid. dušnosti, cyanosy, ikteru. Normostenický habitus. Kůže čistá, turgor v normě. HLAVA: mezocefalická. Zornice izokorické, skléry anikterické, spojivky prokrvené. Oči, uši, nos bez patol. sekrece. KRK: Náplň žil v normě. HRUDNÍK: symetrický. PLÍCE: dýchání alveolární, bez vedlejších fenoménů. SRDCE: akce pravidelná, ozvy ohraničené. BŘICHO: v niveau, měkké, prohmatné, nebolestivé, bez hm. rezistence. Hepar + Lien 0. Tapott. bilat. neg. DKK: mírné v.s. kardiální otoky, bez varixů, bez zn. zánětu.\nEKG: akce nepravidelná, fibrilace síní, 85 /min, osa 15 st., QRS 90 ms, QT 400 ms, PZ V2, ST bez denivelace, T pozit., RES.: bez známek významné patologie či akutní ischemie.\nLABORATOŘ: 7.9.2018, Primární materiál Krev , Analyzovaný materiál Plazma , Vzhled vzorku fyziologický , Sodík_S,P 139 mmol/l, Draslík _S,P 3.8 mmol/l, Chloridy_S,P 103 mmol/l, Vápník_S,P 2.26 mmol/l, Fosfáty_S,P 1.03 mmol/l, Hořčík_S,P 0.91 mmol/l, Glukóza_S,P 5.6 mmol/l, Močovina_S,P 8.3 mmol/l, Kreatinin_S,P 155 µmol/l, Glom. filtr. odhad dle CKD-EPI 0.56 ml/s/1.73m2 18.07.2022 , Primární materiál krev , Terapie \"Nízkomolekulární heparin (Clexan)\", Erytrocyty 2.97 10^12/l, Leukocyty 8.1 10^9/l, Hemoglobin 90 g/l, Hematokrit 0.285 l/l, Trombocyty 246 10^9/l, MCV 96.0 fl, MCH 30.3 pg, MCHC 315.8 g/l, RDW 17.2 %, MPV 9.7 fl, PDW 9.8 fl, PCT 2.4 ml/l, Normoblasty 0.10 %, Normoblasty - abs. počet 0.01 10^9/l, Protrombinový test - ratio 1.16 1, Protrombinový test - INR 1.13 1, Protrombinový test - sec. 12.4 s, Akt.parciální trombopl.test 33.1 s, Akt.parciální trombopl.test-R 1.00 1, Fibrinogen 3.19 g/l, Trombinový test 18.6 s, Trombinový test-ratio 1.09 1\n\n"
+      },
+      {
+        "attributes": {
+          "underline": true
+        },
+        "insert": "DIAGNÓZY:"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": " "
+      },
+      {
+        "insert": "\n"
+      },
+      {
+        "attributes": {
+          "highlighted@anamnesis.risk_factors.heart_failure": true
+        },
+        "insert": "Kardiální dekompenzace"
+      },
+      {
+        "insert": " mírná, k posílení diuretické terapie. NYHA II-III\n St.p. kardiální dekompenzaci v 3/22 s pleurálním výpotkem vpravo vs i potraumatický podíl EF 25-30%\n"
+      },
+      {
+        "attributes": {
+          "highlighted@anamnesis.risk_factors.ischemic_stroke": true
+        },
+        "insert": "CMP z ACI l. dx vznik 16.7.22 19,30"
+      },
+      {
+        "insert": " , klinicky dysatrie a lehká faciobrachiální symptomatolgie, NIHSS - 2. \n Etiol. kardioembol. při fibrilaci síní bez zajišt. terapie . CT mozku   V zadní jámě lební i supratentoriálně bez ložiskových změn, bez čerstvé hemoragie či ischemie. Staré postischemické změny v BG bilat. Stará postischem. area F l. sin. CT AG - bez okluzí či stenoz, bez poruchy perfuze \nStp NCH operaci 2014 - foraminotomie L4-5 l. sin, delibarace durálního vaku L4-5, interspinosní stabilizace L4-5\nStp akutní pankreatitidě 2019\nSt. p. AVR SJM epic 23 (bioprotéza) + aortoplastika 2007\n"
+      },
+      {
+        "attributes": {
+          "highlighted@anamnesis.risk_factors.coronary_artery": true
+        },
+        "insert": "Kalcifikace mitrální chlopně, středně těžká stenoza a regurgitace"
+      },
+      {
+        "insert": "\nDilatace ascend. aorty\n"
+      },
+      {
+        "attributes": {
+          "highlighted@anamnesis.risk_factors.atrial_fibrillation": true
+        },
+        "insert": "Perzistující fibrilace síní"
+      },
+      {
+        "insert": "\n CHA"
+      },
+      {
+        "attributes": {
+          "script": "sub"
+        },
+        "insert": "2"
+      },
+      {
+        "insert": "DS"
+      },
+      {
+        "attributes": {
+          "script": "sub"
+        },
+        "insert": "2"
+      },
+      {
+        "insert": "-Vasc 3, HAS-BLED 2, EHRA II\nChronická renální insuficience Stadium 3b dle KDIGO\n"
+      },
+      {
+        "attributes": {
+          "highlighted@anamnesis.risk_factors.hypertension": true
+        },
+        "insert": "Arteriální hypertenze"
+      },
+      {
+        "insert": "\nAnemie - normocytární, normochromní, chronická\nBenigní hyperplázie prostaty\nPresbyacusis\n\n"
+      },
+      {
+        "attributes": {
+          "underline": true
+        },
+        "insert": "DOPORUČENÍ"
+      },
+      {
+        "insert": ": Pacienta po domluvě překládáme na interní oddělení Nemocnice Blansko, za převzetí děkujeme. Překlad na ORTK FNUSA dne 10.9.2018, osteosyntéza naplánována na 1.10.2018, dne 16.9.2018 prosím informovat lékaře ortopedické kliniky o zdravotním stavu a způsobilosti k výkonu (tel. č. 222 18 7772). Vysazení Trombexu dne 13.9.2018, poté do doby výkonu zavést Fraxiparine 0,6ml s.c. 1x denně. Kontrolní CT mozku po provedení operačního výkonu 2.10.2018, s výsledkem kontrola neurologem a naplánování antikoagulace. Pro frakturu femuru vlevo vhodná aplikace náplasťové trakce. Šetřit horní levou končetinu, po dobu alespoň 2 měsíců po implantaci PM, extrakce stehů od 10.dne od operace (tedy do 29.7.2022. Zahušťování veškěrých tekutin 3 odměrky Thicken Up Clear/200 ml, dieta 15, "
+      },
+      {
+        "attributes": {
+          "highlighted@post_acute_care.rehabilitation.speech_therapy": true
+        },
+        "insert": "logopedická péče."
+      },
+      {
+        "insert": " Dále pokračovat v rehabilitaci hybnosti končetin. Titrace antipsychotik v terapii deliria, ev. konzultace psychiatra, po odeznění akutní zmatenosti vhodné doplnit neuropsychiatrické vyšetření a ev. objednání pacienta do kognitivní ambulance (susp. vaskulární demence). Nadále pravidelné kontroly CRP (elevace v.s. reaktivní při fraktuře femuru).\n.\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": " "
+      },
+      {
+        "insert": "\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "OPERAČNÍ VÝKON:"
+      },
+      {
+        "insert": " 0  "
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "JINÝ INVAZIVNÍ VÝKON:"
+      },
+      {
+        "insert": " 0\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "TERAPIE:"
+      },
+      {
+        "insert": " PLASMALYTE, Anopyrin, Concor, Cordarone, Fraxiparine, Fresubin Creme, Furon, KCl, Kalium chloratum, Letrox, Verospiron\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": " "
+      },
+      {
+        "insert": "\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "PRŮBĚH LÉČBY:"
+      },
+      {
+        "insert": " "
+      },
+      {
+        "attributes": {
+          "highlighted@diagnosis.stroke_type": true
+        },
+        "insert": "Pacient přijatý pro mozkový infarkt"
+      },
+      {
+        "insert": " v povodí a. cerebri media bilaterálně. Rozvoj symptomů v noci na 6.9.2018, anamnesticky dle rodiny náhly vznik. Manifestace recidivujícím amentním stavem. Objektivně neurologicky patrno lehce zpomalené PM tempo, anosognózie, parciální desorientace časem, porucha krátkodobé paměti (MOCA 25bb- s deficitem v krátkodobé paměti), pokles pravého koutku vs habituálně (dle OP). CT mozku bez akutní patologie, popsána nevýznamná odstupová stenosa ACI vpravo, vlevo bez stenosy. MR mozku stroke protokol s nálezem  drobných ložisek akutní subakutní ischemie v povodí ACM bilaterálně F bilat velikosti do 5-7mm. "
+      },
+      {
+        "attributes": {
+          "highlighted@post_acute_care.stroke_etiology.any_stroke_etiology": true,
+          "highlighted@post_acute_care.stroke_etiology.cardioembolism": true
+        },
+        "insert": "Etiologie vs kardioembolizační."
+      },
+      {
+        "insert": " Pacient recentně po výkonu v ECC dne 27.6 (st.p. výměně aortální chlopně+ náhrada asc.aorty protézou), dále paroxysmální fibrilaci síní. Chronická antikoagulační terapie warfarinem, vstupní INR 1,92. V úvodu přechodně warfarin vysazen, 4. den od mozkového infarktu navrácená do medikace za kontroly INR (cílová hodnota INR dle CKTCH FNUSA v rozmezí 2-3). Laboratorně dle elektroforézy bílkovin obraz chronického zánětu, dále nález hepatopatie ( 6/2022 JT v normě), v medikaci změna hypolipidemické terapie (rosuvastatin ex, nově atorvastatin). "
+      },
+      {
+        "attributes": {
+          "highlighted@post_acute_care.post_stroke_complications.any_post_stroke_complication": true
+        },
+        "insert": "Průbeh hospitalizace bez komplikací."
+      },
+      {
+        "insert": " Pacient tlakově stabilizovaný (intermintetně sklon k nižším TK, zatím bez úpravy chron. terapie), "
+      },
+      {
+        "attributes": {
+          "highlighted@post_acute_care.hyperglycemia.hyperglycemia_diagnosed": true
+        },
+        "insert": "glykemický profil v normě."
+      },
+      {
+        "insert": " "
+      },
+      {
+        "attributes": {
+          "highlighted@discharge.destination.discharge_destination": true
+        },
+        "insert": "Pacienta propouštíme do ambulantní péče,"
+      },
+      {
+        "insert": " pacient při dimisi KP kompenzován, neurologický status stacionární (parc. časová dezorientace, mnestické potíže), bez lateralizace na KK, habituální asymetrie mimiky (dle OP pravý koutek uložen níže), samostatně chodící, "
+      },
+      {
+        "attributes": {
+          "highlighted@discharge.mrs_score": true
+        },
+        "insert": "mRS1,"
+      },
+      {
+        "insert": " "
+      },
+      {
+        "attributes": {
+          "highlighted@discharge.nihss": true
+        },
+        "insert": "NIHSS0."
+      },
+      {
+        "insert": " \n \n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": " "
+      },
+      {
+        "insert": "\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "DIAGNÓZA:"
+      },
+      {
+        "insert": " \n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "1. "
+      },
+      {
+        "attributes": {
+          "highlighted@diagnosis.stroke_type": true,
+          "bold": true
+        },
+        "insert": "Mozkový infarkt"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": " v povodí a. cerebri posterior vpravo. "
+      },
+      {
+        "attributes": {
+          "highlighted@onset.onset_timestamp": true,
+          "bold": true
+        },
+        "insert": "Přesná doba vzniku nejasná,"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": " pravděpodobě dne 6.9.2018. Obj. při přijetí patrna levostranná homonymní hemianopsie, centrální léze n. VII vlevo, frustní centrální levostranná hemiparéza, "
+      },
+      {
+        "attributes": {
+          "highlighted@admission.medical_examination.nihss": true,
+          "bold": true
+        },
+        "insert": "NIHSS 5 bodů."
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": " Dle CT zobrazení mozku patrna rozvíjející se ischemie v povodí ACP vpravo, "
+      },
+      {
+        "attributes": {
+          "highlighted@diagnosis.imaging.occlusion.pca_p2_right": true,
+          "bold": true
+        },
+        "insert": "dle CTA patrný uzávěr P2 vpravo."
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": " "
+      },
+      {
+        "attributes": {
+          "highlighted@treatment.ischemic_stroke.no_thrombolysis_reasons": true,
+          "highlighted@treatment.ischemic_stroke.thrombectomy_treatment": true,
+          "highlighted@treatment.thrombolysis.thrombolysis_treatment": true,
+          "highlighted@treatment.ischemic_stroke.no_thrombectomy_reasons": true,
+          "bold": true
+        },
+        "insert": "Rekanalizační terapie neindikována"
+      },
+      {
+        "attributes": {
+          "highlighted@treatment.ischemic_stroke.no_thrombolysis_reasons": true,
+          "highlighted@treatment.ischemic_stroke.no_thrombectomy_reasons": true,
+          "bold": true
+        },
+        "insert": " pro nízký deficit."
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": " Proveden switch protidestičkové terapie ASA za Clopidogrel. Etiologie v.s. aterotrombotická. Reziduálně při propuštění přetrvává levostranná homonymní hemianopsie, centrální léze n. VII vlevo a frustní levostranná hemiparéza, NIHSS 5 bodů, mRS 2."
+      },
+      {
+        "insert": "\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "2. "
+      },
+      {
+        "attributes": {
+          "highlighted@post_acute_care.carotid_arteries.carotid_stenosis": true,
+          "bold": true
+        },
+        "insert": "Stenóza ACI vpravo 70%,"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": " vlevo 30%, odstupová stenóza a. vertebralis vpravo, "
+      },
+      {
+        "attributes": {
+          "highlighted@post_acute_care.carotid_arteries.carotid_endarterectomy_within_2_weeks": true,
+          "bold": true
+        },
+        "insert": "dispezarozována v cévní ambulanci I. NK FNUSA"
+      },
+      {
+        "insert": "\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "3. "
+      },
+      {
+        "attributes": {
+          "highlighted@anamnesis.risk_factors.hyperlypidemia": true,
+          "bold": true
+        },
+        "insert": "Dyslipidémie,"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": " navýšena dávka statinu."
+      },
+      {
+        "insert": "\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "4. "
+      },
+      {
+        "attributes": {
+          "highlighted@anamnesis.risk_factors.hypertension": true,
+          "bold": true
+        },
+        "insert": "Arteriální hypertenze."
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": " "
+      },
+      {
+        "insert": "\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "5. "
+      },
+      {
+        "attributes": {
+          "highlighted@anamnesis.risk_factors.coronary_artery": true,
+          "bold": true
+        },
+        "insert": "Ischemická choroba srdeční."
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": " "
+      },
+      {
+        "insert": "\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "6. St.p. tranzitorní ischemické atace 8/2011. "
+      },
+      {
+        "insert": "\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "7. Hypotyreosa, substituční terapie zavedena. "
+      },
+      {
+        "insert": "\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "8. Hypermetropie, presbyopie, katarakta, st.p. op. ODS v roce 2016Kalcifikace mitrální chlopně, středně těžká stenoza a regurgitace."
+      },
+      {
+        "insert": "\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "9. Dilatace ascend. aorty."
+      },
+      {
+        "insert": "\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "10.Presbyacusis."
+      },
+      {
+        "insert": "\n\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": " "
+      },
+      {
+        "insert": "\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "DOPORUČENÍ:"
+      },
+      {
+        "insert": " Došetření etiologie iktu- ECHO srdce (nejlépe za hospitalizace), dlouhodobý EKG Holter monitoring (amblantně). "
+      },
+      {
+        "attributes": {
+          "highlighted@post_acute_care.rehabilitation.physiotherapy": true
+        },
+        "insert": "Pokračovat v rehabilitaci."
+      },
+      {
+        "insert": " Dieta dle doporučení logopeda 3 mletá, tekutiny bez nutnosti zahušťování. \n \n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": " "
+      },
+      {
+        "insert": "\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "MEDIKACE:"
+      },
+      {
+        "insert": " Cordarone 200 mg tbl pouze 3x týdně 1-0-0 v po stř a pátek, Furon 40mg tbl 1-1/2-0, Kalium chloratum 500mg tbl 0-1-0, Letrox 50 ug tbl 1/2-0-0, "
+      },
+      {
+        "attributes": {
+          "highlighted@discharge.medication.antihypertensives": true
+        },
+        "insert": "Concor 2,5 mg"
+      },
+      {
+        "insert": " tbl 1-0-0, "
+      },
+      {
+        "attributes": {
+          "highlighted@discharge.medication.antiplatelet_substances.asa": true
+        },
+        "insert": "Anopyrin 100 mg tbl."
+      },
+      {
+        "insert": " 0-1-0, "
+      },
+      {
+        "attributes": {
+          "highlighted@discharge.medication.antihypertensives": true
+        },
+        "insert": "Verospiron 25 mg tbl."
+      },
+      {
+        "insert": " 1-0-0 + vhodné doplňky stravy, např. Fresubin Creme 2/den\n"
+      },
+      {
+        "attributes": {
+          "bold": true
+        },
+        "insert": "SOUHLAS S HOSPITALIZACÍ:"
+      },
+      {
+        "insert": " Souhlas byl podepsán dne 6.09.2018.\n\n"
+      }
+    ]
+  },
+  "_reportText": "Výška: 169 cm Hmotnost: 78 kg (stanoveno odhadem) Krevní tlak(u příjmu): 180/104 mm Hg. Srdeční pulz(u příjmu): 93/min\nANAMNÉSA: \nAlergie: neguje\nrodinná anamnéza : nevýznamná\nosobní anamnéza : viz dg. operace: appe, ploténky, náhrada srdeční chlopně protézou\nfarmakologická anamnéza: Anopyrin od 4/22 vysazen - po pádu ,0, Cordarone 200 mg 1-0-0 v Po-Sř-Pá , Letrox 50ug 1/2-0-0, Furon 40 1-0-0, KCL 1-0-0, Concor 2,5 1-0-0, Grimodin 2 tbl / N gramáž dcera neví\nfyziologické funkce:  častěj mikce bez inkontinece, stolie občas zacpa,  pracovní a sociální anamnéza: SD, dříve voják , žije sám   alergie: neguje  epidemiologická anamnéza: 3x očkovaný proti COVID-19  Abusus stopkuřák , alkohol přílež. \n \nNYNĚJŠÍ ONEMOCNĚNÍ: NO.: Večer 18,10 v křesle uTV zjistil že se nemůže hýbat KK - oslabení nejdřív LHK po té i PHK, obtížně hybal i s DKK, špatně se mu vyslovovalo, volal vnukovi, přivolána sanitka . \n \nOBJEKTIVNÍ NÁLEZ: Obj. neurol.: při vědomí; orientace nelze, spolupracuje omezeně. Řeč s globální fatickou poruchou, dysartrie nelze. Zornice izo., fotoreakce + bilat., bulby deviovány ad sin., pohledy nepřetáhne ad dx., diplopie nelze, zorné pole orientačně s pravostrannou hemianopsií, cení asym. - centrální léze VII.l.dx., mimika symetrická, měkké patro symetrické. HKK: tonus norma, hybnost omezena vpravo, síla s plegií na PHK, LHK norma, v Mi bez sklesu vlevo, vpravo nebržděný pád, bez pronace či retrakce, pyr. iritace Trömner bilat.negat.; taxe, metrie nelze validně, diadochokinesis v normě. DKK: tonus norma, hybnost omezena vpravo, síla v normě vlevo , vpravo plegie, v Mi stabilní vlevo, vpravo nebržděný pád k podložce; Babinski 0; taxe, metrie nelze, Laségue negat.; Senzitivita: taktilní i hluboká cítivost nelze; Mening. jevy: horní i dolní negat. \n \nLABORATORNÍ VYŠETŘENÍ: 6.9.2018 , Primární materiál Krev , Analyzovaný materiál Plazma , Vzhled vzorku fyziologický , Sodík_S,P 136 mmol/l, Draslík _S,P 3.8 mmol/l, Chloridy_S,P 102 mmol/l, Vápník_S,P 2.13 mmol/l, Fosfáty_S,P 1.28 mmol/l, Hořčík_S,P 0.86 mmol/l, Glukóza_S,P 7.5 mmol/l, Močovina_S,P 9.1 mmol/l, Kreatinin_S,P 173 µmol/l, Glom. filtr. odhad dle CKD-EPI 0.49 ml/s/1.73m2, Bilirubin celkový_S,P 6.8 µmol/l, Osmolalita_S,P 303 mmol/kg, Troponin-T_P 55 ng/l, AST_S,P 0.46 µkat/l, ALT_S,P 0.26 µkat/l, ALP_S,P 1.06 µkat/l, GGT_S,P 0.79 µkat/l, LD_S,P 5.19 µkat/l, CK_S,P 3.75 µkat/l, CK-MB_S,P 0.23 µkat/l, AMS_S,P 0.88 µkat/l, Bílkoviny celkové_S,P 63.2 g/l, Albumin_S,P 37.0 g/l, CRP_S, P 3.4 mg/l, Lab. poznámka \"SUPERAKUTNĚ K TROMBOLÝZE\" 6.9.2018, Primární materiál krev \"Nestandardní odběr na koagulaci - vadný odběr - nelze provést.\", Erytrocyty 2.53 10^12/l, Leukocyty 5.2 10^9/l, Hemoglobin 76 g/l, Hematokrit 0.238 l/l, Trombocyty 187 10^9/l, MCV 94.1 fl, MCH 30.0 pg, MCHC 319.3 g/l, RDW 17.2 %, MPV 9.0 fl, PDW 8.8 fl, PCT 1.7 ml/l, Normoblasty 0.00 %, Normoblasty - abs. počet 0.00 10^9/l, Lab. poznámka \"Nestandardní odběr na koagulaci - vadný odběr - nelze provést.\" 6.9.2018, Primární vzorek plná krev , Materiál sérum , HBs Ag negativní 17.07.2022 , Primární materiál Krev , Analyzovaný materiál Plazma , Vzhled vzorku fyziologický , Sodík_S,P 138 mmol/l, Draslík _S,P 3.9 mmol/l, Chloridy_S,P 103 mmol/l, Vápník_S,P 2.26 mmol/l, Fosfáty_S,P 1.17 mmol/l, Hořčík_S,P 0.96 mmol/l, Glukóza_S,P 5.8 mmol/l, Močovina_S,P 8.6 mmol/l, Kreatinin_S,P 159 µmol/l, Glom. filtr. odhad dle CKD-EPI 0.55 ml/s/1.73m2, Materiál nedodán \"Vzorek moče nebyl do laboratoře dodán.\" 7.9.2018, Primární materiál Krev , Analyzovaný materiál Sérum , Glykovaný hemoglobin (HbA1c)_B 38 mmol/mol \"Kompenzovaný diabetes: 43 - 53 mmol/mol\", Vzhled vzorku fyziologický , Cholesterol celkový_S,P 2.56 mmol/l, Triacylglyceroly_S,P 0.37 mmol/l, HDL-cholesterol_S,P 0.86 mmol/l, LDL-cholesterol_S,P 1.46 mmol/l, non HDL-cholesterol 1.70 mmol/l, Apolipoprotein A1_S,P 0.85 g/l, Apolipoprotein B_S,P 0.44 g/l 7.9.2018  , Primární materiál krev , Erytrocyty 2.90 10^12/l, Leukocyty 7.2 10^9/l, Hemoglobin 86 g/l, Hematokrit 0.283 l/l, Trombocyty 223 10^9/l, MCV 97.6 fl, MCH 29.7 pg, MCHC 303.9 g/l, RDW 17.1 %, MPV 9.7 fl, PDW 10.0 fl, PCT 2.2 ml/l, Normoblasty 0.10 %, Normoblasty - abs. počet 0.01 10^9/l 17.9.2018, Primární materiál krev , Terapie žádná , Protrombinový test - ratio 1.18 1, Protrombinový test - INR 1.20 1, Protrombinový test - sec. 13.0 s, Akt.parciální trombopl.test 30.6 s, Akt.parciální trombopl.test-R 0.92 1, Trombinový test 21.0 s, Trombinový test-ratio 1.24 1, Antitrombin 73 % 17.9.2018, Primární materiál Krev , Analyzovaný materiál Plazma , Vzhled vzorku fyziologický , Sodík_S,P 139 mmol/l, Draslík _S,P 3.8 mmol/l, Chloridy_S,P 103 mmol/l, Vápník_S,P 2.26 mmol/l, Fosfáty_S,P 1.03 mmol/l, Hořčík_S,P 0.91 mmol/l, Glukóza_S,P 5.6 mmol/l, Močovina_S,P 8.3 mmol/l, Kreatinin_S,P 155 µmol/l, Glom. filtr. odhad dle CKD-EPI 0.56 ml/s/1.73m2 18.07.2022 , Primární materiál krev , Terapie \"Nízkomolekulární heparin (Clexan)\", Erytrocyty 2.97 10^12/l, Leukocyty 8.1 10^9/l, Hemoglobin 90 g/l, Hematokrit 0.285 l/l, Trombocyty 246 10^9/l, MCV 96.0 fl, MCH 30.3 pg, MCHC 315.8 g/l, RDW 17.2 %, MPV 9.7 fl, PDW 9.8 fl, PCT 2.4 ml/l, Normoblasty 0.10 %, Normoblasty - abs. počet 0.01 10^9/l, Protrombinový test - ratio 1.16 1, Protrombinový test - INR 1.13 1, Protrombinový test - sec. 12.4 s, Akt.parciální trombopl.test 33.1 s, Akt.parciální trombopl.test-R 1.00 1, Fibrinogen 3.19 g/l, Trombinový test 18.6 s, Trombinový test-ratio 1.09 1 19.07.2022 , Primární materiál krev , Erytrocyty 3.02 10^12/l, Leukocyty 7.0 10^9/l, Hemoglobin 91 g/l, Hematokrit 0.290 l/l, Trombocyty 246 10^9/l, MCV 96.0 fl, MCH 30.1 pg, MCHC 313.8 g/l, RDW 17.0 %, MPV 10.0 fl, PDW 9.8 fl, PCT 2.5 ml/l, Normoblasty 0.00 %, Normoblasty - abs. počet 0.00 10^9/l, Retikulocyty 0.026 1, Retikulocyty - abs.počet 79.10 10^9/l, IRF - retikulocyty nezralá fr. 29.3 %, RET - HE - hemoglobin v ret. 31.6 pg\n \nDALŠÍ VYŠETŘENÍ: \n6.9.2018 KZM - CT ICRC CT mozku nativně a CTA popalikaci 100ml Iomeronu i.v. : V zadní jámě lební i supratentoriálně bez ložiskových změn, bez čerstvé hemoragie či ischemie. Staré postischemické změny v BG bilat. Stará postisceicmá area F l. sin. Středočárové struktury jsou bez dislokace. Komorový systém a zevní likvorové prostory a jsou přiměřené šíře, symetrické. Zobrazené VDN jsou volné. Normální nález na skeletu. Na CTA se tepny Willisova okruhu volně plní. Karotické a vertebrální tepenné řečiště je volné. Venogram je volný. KArotické tepny jsou vinuté, AB ztaké vinutá. Rozšíření oblouku aorty na 40mm.\nCTP je bez nálezu.\n6.9.2018 1.CHK-ambul.odd-A Konzilium na NK ood.81- ošetření rány; Pacient hospitalizován k léčbě CMP \nObj: na L předloktí, lokti, stržená pergamenová kůže vel. 10x10cm, ronící\nTh: toiletta prontosanem, Gelaspon, krytí a bandáž\nDg: excoriatio antebrachii l.sin. Dop: ponechat krytí 2 dny pokud bude možné, jinak event. výměna krytí s Gelasponem nebo Framykoin prášek + mastný tyl. Naše kontrola při potížích kdykoliv, jinak naše konzilium za 2 dny.\n6.9.2018 KZM - Centrální rentgen: RTG srdce, plíce vleže: Pl. křídla bilat. rozvinuta do periferie. Hily cévní konfigurace, cévní kresba hyperemická, v daném terénu parenchym bez zjevných ložiskových či infiltrativních změn.Bránice bilat. částečně dekonturovaná - susp. menší množství volné tekutiny bilat. - zejména vpravo.\nSrdeční stín nerozšířený. AS aorty. Kličky po sternotomii intaktní.\n6.9.2018 1.CHK-ambul.odd-A  NO: Plánovaný převaz - pacient hosp.na od.81. Pacient hospitalizován k léčbě CMP Obj.: LHK - exkoriace již nekrvácející, gelaspon částečně resorbován, částečně lpí k ráně, okolí klidné, parc.avitální kůže.\nDg.: excoriatio antebrachii l.sin.\nTh.: desinfekce, snesení avitální kůže, MT, krytí\nDoporučení: krytí ponechat, další převaz cestou chir. amb.B 10.9.2018 v 10:20hod cca.\n6.9.2018 1. IKAK - ambul. odd-všeobecné konziliár ANAMNÉZA:\nrodinná anamnéza: nevýznamná\nosobní anamnéza: viz dg. operace: appe, ploténky, náhrada srdeční chlopně protézou\nfarmakologická anamnéza: Anopyrin od 4/22 vysazen - po pádu ,0, Cordarone 200 mg 1-0-0 v Po-Sř-Pá , Letrox 50ug 1/2-0-0, Furon 40 1-0-0, KCL 1-0-0, Concor 2,5 1-0-0, Grimodin 2 tbl / N gramáž dcera neví.\nfyziologické funkce: častěj mikce bez inkontinece, stolie občas zacpa\npracovní a sociální anamnéza: SD, dříve voják , žije sám\nepidemiologická anamnéza: 3x očkovaný proti COVID-19\nAbusus stopkuřák, alkohol přílež.\nalergie: neguje\n \nNYNĚJŠÍ ONEMOCNĚNÍ: Pacient s CMP v.s. kardioembolizační etiologie při fibrilaci síní a srdečním selháním se sníženou ejekční frakcí levé komory, požadováno intrní konsilium stran ev. kard. dekompenzace či AK tetrapie. Subj.: doma se pac. zadýchává při námaze, bolesti na hrudi neguje. \n\nSTATUS PRAESENS: TK 110/80 mmHg\nPacient lucidní, orient., spolupracuje. Bez klid. dušnosti, cyanosy, ikteru. Normostenický habitus. Kůže čistá, turgor v normě. HLAVA: mezocefalická. Zornice izokorické, skléry anikterické, spojivky prokrvené. Oči, uši, nos bez patol. sekrece. KRK: Náplň žil v normě. HRUDNÍK: symetrický. PLÍCE: dýchání alveolární, bez vedlejších fenoménů. SRDCE: akce pravidelná, ozvy ohraničené. BŘICHO: v niveau, měkké, prohmatné, nebolestivé, bez hm. rezistence. Hepar + Lien 0. Tapott. bilat. neg. DKK: mírné v.s. kardiální otoky, bez varixů, bez zn. zánětu.\nEKG: akce nepravidelná, fibrilace síní, 85 /min, osa 15 st., QRS 90 ms, QT 400 ms, PZ V2, ST bez denivelace, T pozit., RES.: bez známek významné patologie či akutní ischemie.\nLABORATOŘ: 7.9.2018, Primární materiál Krev , Analyzovaný materiál Plazma , Vzhled vzorku fyziologický , Sodík_S,P 139 mmol/l, Draslík _S,P 3.8 mmol/l, Chloridy_S,P 103 mmol/l, Vápník_S,P 2.26 mmol/l, Fosfáty_S,P 1.03 mmol/l, Hořčík_S,P 0.91 mmol/l, Glukóza_S,P 5.6 mmol/l, Močovina_S,P 8.3 mmol/l, Kreatinin_S,P 155 µmol/l, Glom. filtr. odhad dle CKD-EPI 0.56 ml/s/1.73m2 18.07.2022 , Primární materiál krev , Terapie \"Nízkomolekulární heparin (Clexan)\", Erytrocyty 2.97 10^12/l, Leukocyty 8.1 10^9/l, Hemoglobin 90 g/l, Hematokrit 0.285 l/l, Trombocyty 246 10^9/l, MCV 96.0 fl, MCH 30.3 pg, MCHC 315.8 g/l, RDW 17.2 %, MPV 9.7 fl, PDW 9.8 fl, PCT 2.4 ml/l, Normoblasty 0.10 %, Normoblasty - abs. počet 0.01 10^9/l, Protrombinový test - ratio 1.16 1, Protrombinový test - INR 1.13 1, Protrombinový test - sec. 12.4 s, Akt.parciální trombopl.test 33.1 s, Akt.parciální trombopl.test-R 1.00 1, Fibrinogen 3.19 g/l, Trombinový test 18.6 s, Trombinový test-ratio 1.09 1\n\nDIAGNÓZY: \nKardiální dekompenzace mírná, k posílení diuretické terapie. NYHA II-III\n St.p. kardiální dekompenzaci v 3/22 s pleurálním výpotkem vpravo vs i potraumatický podíl EF 25-30%\nCMP z ACI l. dx vznik 16.7.22 19,30 , klinicky dysatrie a lehká faciobrachiální symptomatolgie, NIHSS - 2. \n Etiol. kardioembol. při fibrilaci síní bez zajišt. terapie . CT mozku   V zadní jámě lební i supratentoriálně bez ložiskových změn, bez čerstvé hemoragie či ischemie. Staré postischemické změny v BG bilat. Stará postischem. area F l. sin. CT AG - bez okluzí či stenoz, bez poruchy perfuze \nStp NCH operaci 2014 - foraminotomie L4-5 l. sin, delibarace durálního vaku L4-5, interspinosní stabilizace L4-5\nStp akutní pankreatitidě 2019\nSt. p. AVR SJM epic 23 (bioprotéza) + aortoplastika 2007\nKalcifikace mitrální chlopně, středně těžká stenoza a regurgitace\nDilatace ascend. aorty\nPerzistující fibrilace síní\n CHA2DS2-Vasc 3, HAS-BLED 2, EHRA II\nChronická renální insuficience Stadium 3b dle KDIGO\nArteriální hypertenze\nAnemie - normocytární, normochromní, chronická\nBenigní hyperplázie prostaty\nPresbyacusis\n\nDOPORUČENÍ: Pacienta po domluvě překládáme na interní oddělení Nemocnice Blansko, za převzetí děkujeme. Překlad na ORTK FNUSA dne 10.9.2018, osteosyntéza naplánována na 1.10.2018, dne 16.9.2018 prosím informovat lékaře ortopedické kliniky o zdravotním stavu a způsobilosti k výkonu (tel. č. 222 18 7772). Vysazení Trombexu dne 13.9.2018, poté do doby výkonu zavést Fraxiparine 0,6ml s.c. 1x denně. Kontrolní CT mozku po provedení operačního výkonu 2.10.2018, s výsledkem kontrola neurologem a naplánování antikoagulace. Pro frakturu femuru vlevo vhodná aplikace náplasťové trakce. Šetřit horní levou končetinu, po dobu alespoň 2 měsíců po implantaci PM, extrakce stehů od 10.dne od operace (tedy do 29.7.2022. Zahušťování veškěrých tekutin 3 odměrky Thicken Up Clear/200 ml, dieta 15, logopedická péče. Dále pokračovat v rehabilitaci hybnosti končetin. Titrace antipsychotik v terapii deliria, ev. konzultace psychiatra, po odeznění akutní zmatenosti vhodné doplnit neuropsychiatrické vyšetření a ev. objednání pacienta do kognitivní ambulance (susp. vaskulární demence). Nadále pravidelné kontroly CRP (elevace v.s. reaktivní při fraktuře femuru).\n.\n \nOPERAČNÍ VÝKON: 0  JINÝ INVAZIVNÍ VÝKON: 0\nTERAPIE: PLASMALYTE, Anopyrin, Concor, Cordarone, Fraxiparine, Fresubin Creme, Furon, KCl, Kalium chloratum, Letrox, Verospiron\n \nPRŮBĚH LÉČBY: Pacient přijatý pro mozkový infarkt v povodí a. cerebri media bilaterálně. Rozvoj symptomů v noci na 6.9.2018, anamnesticky dle rodiny náhly vznik. Manifestace recidivujícím amentním stavem. Objektivně neurologicky patrno lehce zpomalené PM tempo, anosognózie, parciální desorientace časem, porucha krátkodobé paměti (MOCA 25bb- s deficitem v krátkodobé paměti), pokles pravého koutku vs habituálně (dle OP). CT mozku bez akutní patologie, popsána nevýznamná odstupová stenosa ACI vpravo, vlevo bez stenosy. MR mozku stroke protokol s nálezem  drobných ložisek akutní subakutní ischemie v povodí ACM bilaterálně F bilat velikosti do 5-7mm. Etiologie vs kardioembolizační. Pacient recentně po výkonu v ECC dne 27.6 (st.p. výměně aortální chlopně+ náhrada asc.aorty protézou), dále paroxysmální fibrilaci síní. Chronická antikoagulační terapie warfarinem, vstupní INR 1,92. V úvodu přechodně warfarin vysazen, 4. den od mozkového infarktu navrácená do medikace za kontroly INR (cílová hodnota INR dle CKTCH FNUSA v rozmezí 2-3). Laboratorně dle elektroforézy bílkovin obraz chronického zánětu, dále nález hepatopatie ( 6/2022 JT v normě), v medikaci změna hypolipidemické terapie (rosuvastatin ex, nově atorvastatin). Průbeh hospitalizace bez komplikací. Pacient tlakově stabilizovaný (intermintetně sklon k nižším TK, zatím bez úpravy chron. terapie), glykemický profil v normě. Pacienta propouštíme do ambulantní péče, pacient při dimisi KP kompenzován, neurologický status stacionární (parc. časová dezorientace, mnestické potíže), bez lateralizace na KK, habituální asymetrie mimiky (dle OP pravý koutek uložen níže), samostatně chodící, mRS1, NIHSS0. \n \n \nDIAGNÓZA: \n1. Mozkový infarkt v povodí a. cerebri posterior vpravo. Přesná doba vzniku nejasná, pravděpodobě dne 6.9.2018. Obj. při přijetí patrna levostranná homonymní hemianopsie, centrální léze n. VII vlevo, frustní centrální levostranná hemiparéza, NIHSS 5 bodů. Dle CT zobrazení mozku patrna rozvíjející se ischemie v povodí ACP vpravo, dle CTA patrný uzávěr P2 vpravo. Rekanalizační terapie neindikována pro nízký deficit. Proveden switch protidestičkové terapie ASA za Clopidogrel. Etiologie v.s. aterotrombotická. Reziduálně při propuštění přetrvává levostranná homonymní hemianopsie, centrální léze n. VII vlevo a frustní levostranná hemiparéza, NIHSS 5 bodů, mRS 2.\n2. Stenóza ACI vpravo 70%, vlevo 30%, odstupová stenóza a. vertebralis vpravo, dispezarozována v cévní ambulanci I. NK FNUSA\n3. Dyslipidémie, navýšena dávka statinu.\n4. Arteriální hypertenze. \n5. Ischemická choroba srdeční. \n6. St.p. tranzitorní ischemické atace 8/2011. \n7. Hypotyreosa, substituční terapie zavedena. \n8. Hypermetropie, presbyopie, katarakta, st.p. op. ODS v roce 2016Kalcifikace mitrální chlopně, středně těžká stenoza a regurgitace.\n9. Dilatace ascend. aorty.\n10.Presbyacusis.\n\n \nDOPORUČENÍ: Došetření etiologie iktu- ECHO srdce (nejlépe za hospitalizace), dlouhodobý EKG Holter monitoring (amblantně). Pokračovat v rehabilitaci. Dieta dle doporučení logopeda 3 mletá, tekutiny bez nutnosti zahušťování. \n \n \nMEDIKACE: Cordarone 200 mg tbl pouze 3x týdně 1-0-0 v po stř a pátek, Furon 40mg tbl 1-1/2-0, Kalium chloratum 500mg tbl 0-1-0, Letrox 50 ug tbl 1/2-0-0, Concor 2,5 mg tbl 1-0-0, Anopyrin 100 mg tbl. 0-1-0, Verospiron 25 mg tbl. 1-0-0 + vhodné doplňky stravy, např. Fresubin Creme 2/den\nSOUHLAS S HOSPITALIZACÍ: Souhlas byl podepsán dne 6.09.2018.\n\n",
+  "_highlights": {
+    "admission.medical_examination.systolic_pressure": [
+      {
+        "index": 50,
+        "length": 37
+      }
+    ],
+    "admission.medical_examination.diastolic_pressure": [
+      {
+        "index": 50,
+        "length": 37
+      }
+    ],
+    "anamnesis.sex": [
+      {
+        "index": 589,
+        "length": 14
+      },
+      {
+        "index": 8693,
+        "length": 7
+      }
+    ],
+    "discharge.smoking_cessation_recommended": [
+      {
+        "index": 673,
+        "length": 9
+      }
+    ],
+    "admission.arrival_mode": [
+      {
+        "index": 729,
+        "length": 174
+      }
+    ],
+    "onset.wakeup_stroke": [
+      {
+        "index": 741,
+        "length": 20
+      }
+    ],
+    "admission.medical_examination.glucose": [
+      {
+        "index": 2039,
+        "length": 23
+      }
+    ],
+    "admission.medical_examination.inr_mode": [
+      {
+        "index": 2529,
+        "length": 98
+      }
+    ],
+    "admission.admission_timestamp": [
+      {
+        "index": 5886,
+        "length": 8
+      }
+    ],
+    "diagnosis.imaging.imaging_timestamp": [
+      {
+        "index": 5886,
+        "length": 8
+      }
+    ],
+    "diagnosis.imaging.imaging_type": [
+      {
+        "index": 5901,
+        "length": 61
+      },
+      {
+        "index": 6500,
+        "length": 3
+      }
+    ],
+    "diagnosis.imaging.old_infarcts.subcortical": [
+      {
+        "index": 6050,
+        "length": 48
+      }
+    ],
+    "post_acute_care.carotid_arteries.carotid_arteries_imaging": [
+      {
+        "index": 6346,
+        "length": 55
+      }
+    ],
+    "diagnosis.imaging.perfusion.perfusion_deficit": [
+      {
+        "index": 6500,
+        "length": 18
+      }
+    ],
+    "diagnosis.stroke_type": [
+      {
+        "index": 8393,
+        "length": 13
+      },
+      {
+        "index": 12826,
+        "length": 35
+      },
+      {
+        "index": 14499,
+        "length": 15
+      }
+    ],
+    "anamnesis.risk_factors.heart_failure": [
+      {
+        "index": 10395,
+        "length": 22
+      }
+    ],
+    "anamnesis.risk_factors.ischemic_stroke": [
+      {
+        "index": 10569,
+        "length": 35
+      }
+    ],
+    "anamnesis.risk_factors.coronary_artery": [
+      {
+        "index": 11168,
+        "length": 65
+      },
+      {
+        "index": 15357,
+        "length": 27
+      }
+    ],
+    "anamnesis.risk_factors.atrial_fibrillation": [
+      {
+        "index": 11257,
+        "length": 27
+      }
+    ],
+    "anamnesis.risk_factors.hypertension": [
+      {
+        "index": 11374,
+        "length": 21
+      },
+      {
+        "index": 15330,
+        "length": 22
+      }
+    ],
+    "post_acute_care.rehabilitation.speech_therapy": [
+      {
+        "index": 12271,
+        "length": 17
+      }
+    ],
+    "post_acute_care.stroke_etiology.any_stroke_etiology": [
+      {
+        "index": 13466,
+        "length": 31
+      }
+    ],
+    "post_acute_care.stroke_etiology.cardioembolism": [
+      {
+        "index": 13466,
+        "length": 31
+      }
+    ],
+    "post_acute_care.post_stroke_complications.any_post_stroke_complication": [
+      {
+        "index": 14042,
+        "length": 36
+      }
+    ],
+    "post_acute_care.hyperglycemia.hyperglycemia_diagnosed": [
+      {
+        "index": 14177,
+        "length": 26
+      }
+    ],
+    "discharge.destination.discharge_destination": [
+      {
+        "index": 14204,
+        "length": 40
+      }
+    ],
+    "discharge.mrs_score": [
+      {
+        "index": 14466,
+        "length": 5
+      }
+    ],
+    "discharge.nihss": [
+      {
+        "index": 14472,
+        "length": 7
+      }
+    ],
+    "onset.onset_timestamp": [
+      {
+        "index": 14553,
+        "length": 27
+      }
+    ],
+    "admission.medical_examination.nihss": [
+      {
+        "index": 14738,
+        "length": 13
+      }
+    ],
+    "diagnosis.imaging.occlusion.pca_p2_right": [
+      {
+        "index": 14827,
+        "length": 32
+      }
+    ],
+    "treatment.ischemic_stroke.no_thrombolysis_reasons": [
+      {
+        "index": 14860,
+        "length": 53
+      }
+    ],
+    "treatment.ischemic_stroke.thrombectomy_treatment": [
+      {
+        "index": 14860,
+        "length": 34
+      }
+    ],
+    "treatment.thrombolysis.thrombolysis_treatment": [
+      {
+        "index": 14860,
+        "length": 34
+      }
+    ],
+    "treatment.ischemic_stroke.no_thrombectomy_reasons": [
+      {
+        "index": 14860,
+        "length": 53
+      }
+    ],
+    "post_acute_care.carotid_arteries.carotid_stenosis": [
+      {
+        "index": 15164,
+        "length": 23
+      }
+    ],
+    "post_acute_care.carotid_arteries.carotid_endarterectomy_within_2_weeks": [
+      {
+        "index": 15240,
+        "length": 45
+      }
+    ],
+    "anamnesis.risk_factors.hyperlypidemia": [
+      {
+        "index": 15289,
+        "length": 13
+      }
+    ],
+    "post_acute_care.rehabilitation.physiotherapy": [
+      {
+        "index": 15783,
+        "length": 26
+      }
+    ],
+    "discharge.medication.antihypertensives": [
+      {
+        "index": 16043,
+        "length": 13
+      },
+      {
+        "index": 16096,
+        "length": 21
+      }
+    ],
+    "discharge.medication.antiplatelet_substances.asa": [
+      {
+        "index": 16068,
+        "length": 20
+      }
+    ]
+  },
+  "patientId": "FNUSA-discharge-report-2.cs"
+}
