@@ -53,8 +53,8 @@ let formFields: formField[] = [
     { highLights: [], FieldId: "wakeUpStrokeCheck", TrustCount: [65, 73, 80], Verified: [false, false, false], Value: "false", Edited: [false, false, false]},
     { highLights: [], FieldId: "wakeUpStrokeUnCheck", TrustCount: [67, 71, 62], Verified: [false, false, false], Value: "true", Edited: [false, false, false]},
     { highLights: [], FieldId: "wakeUpDate", TrustCount: [75, 60, 67], Verified: [false, false, false], Value: "", Edited: [false, false, false]},
-    { highLights: [], FieldId: "strokeCheck", TrustCount: [89, 69, 70], Verified: [false, false, false], Value: "false", Edited: [false, false, false]},
-    { highLights: [], FieldId: "strokeUnCheck", TrustCount: [68, 85, 64], Verified: [false, false, false], Value: "true", Edited: [false, false, false]},
+    { highLights: [], FieldId: "strokeCheck", TrustCount: [89, 69, 0], Verified: [false, false, false], Value: "false", Edited: [false, false, false]},
+    { highLights: [], FieldId: "strokeUnCheck", TrustCount: [68, 85, 0], Verified: [false, false, false], Value: "true", Edited: [false, false, false]},
     { highLights: [], FieldId: "firstAttented", TrustCount: [90, 80, 66], Verified: [false, false, false], Value: "", Edited: [false, false, false]},
     { highLights: [], FieldId: "arrivalDate", TrustCount: [76, 62, 79], Verified: [false, false, false], Value: "", Edited: [false, false, false]},
     { highLights: [], FieldId: "arrivalTime", TrustCount: [44, 67, 65], Verified: [false, false, false], Value: "", Edited: [false, false, false]},
@@ -217,8 +217,8 @@ let formFields: formField[] = [
     { highLights: [], FieldId: "appointmentScheduled", TrustCount: [16, 80, 80], Verified: [false, false, false], Value: "", Edited: [false, false, false]},
     { highLights: [], FieldId: "smokingCessation", TrustCount: [74, 5, 61], Verified: [false, false, false], Value: "", Edited: [false, false, false]},
     { highLights: [], FieldId: "hospitalised24Hour", TrustCount: [65, 65, 89], Verified: [false, false, false], Value: "", Edited: [false, false, false]},
-    { highLights: [], FieldId: "radioVentilatedYes", TrustCount: [86, 45, 64], Verified: [false, false, false], Value: "", Edited: [false, false, false]},
-    { highLights: [], FieldId: "radioVentilatedNo", TrustCount: [13, 71, 66], Verified: [false, false, false], Value: "", Edited: [false, false, false]},
+    { highLights: [], FieldId: "radioVentilatedYes", TrustCount: [86, 45, 0], Verified: [false, false, false], Value: "", Edited: [false, false, false]},
+    { highLights: [], FieldId: "radioVentilatedNo", TrustCount: [13, 71, 0], Verified: [false, false, false], Value: "", Edited: [false, false, false]},
     { highLights: [], FieldId: "radioCraniectomyYes", TrustCount: [85, 86, 72], Verified: [false, false, false], Value: "", Edited: [false, false, false]},
     { highLights: [], FieldId: "radioCraniectomyNo", TrustCount: [65, 83, 86], Verified: [false, false, false], Value: "", Edited: [false, false, false]},
     { highLights: [], FieldId: "radioThromboembolismYes", TrustCount: [67, 79, 74], Verified: [false, false, false], Value: "false", Edited: [false, false, false]},
@@ -265,8 +265,12 @@ loadButton.addEventListener('click', async () => {
         displayReportText();
         updateDataSummary(jsonData["_formData"]);
         initialiseForm()
-        const targetDiv = document.getElementById("targetDiv");
+        const targetDiv = document.getElementById("targetDivForm");
+        const targetText = document.getElementById("targetDivText");
         targetDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setTimeout(() => {
+            targetText.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 700);
     } else {
         jsonDataDisplay.textContent = 'Error loading JSON data.';
     }
@@ -568,8 +572,8 @@ function colorPercentage(percentage: number): string {
     }
 }
 
-function formSwitch() {
-    switchForm = !switchForm;
+function formSwitch(load: boolean = false) {
+    if (load) switchForm = !switchForm;
     formFields.forEach(o => {
         const element = document.getElementById(o.FieldId + 'Percentage') as HTMLInputElement | HTMLSelectElement;
         const elementValue = document.getElementById(o.FieldId) as HTMLInputElement | HTMLSelectElement;
@@ -857,13 +861,6 @@ function initialiseForm() {
 
     formSwitch();
     highLightIterators();
-    /*function updateTextareaHeight() {
-        textarea.style.height = 'auto';
-        textarea.style.height = `${textarea.scrollHeight}px`;
-    }
-
-    textarea.addEventListener('input', updateTextareaHeight);
-    window.addEventListener('load', updateTextareaHeight);*/
 
     const divWakeUp = document.getElementById("wakeUpDiv");
 

@@ -43,7 +43,7 @@
                 <div class="body">
                     <div class="note">
                         <div class="note-body">
-                            <div class="note-body-padding">
+                            <div id="targetDivText" class="note-body-padding">
                                 <div class="note-template">
                                     <div class="note-editor">
                                         <p id="note-editor-textarea" spellcheck="false"></p>
@@ -54,10 +54,14 @@
                     </div>
                     <div class="form-element">
                         <div class="form-body">
-                            <div id="targetDiv" class="form-body-padding">
+                            <div id="targetDivForm" class="form-body-padding">
                                 <div class="form-field">
                                     <form class="form" action="javascript:void(0);">
 
+                                        <div style="display: flex; justify-content: space-between">
+                                            <div></div>
+                                            <button class="btn" onclick="formSwitch(true)">Switch</button>
+                                        </div>
                                         <div class="data-summary">
                                             <div>
                                                 <h3>Auto-complete summary</h3>
@@ -72,12 +76,7 @@
                                             <span>
                                                 Data při přijetí
                                             </span>
-                                            <button class="btn" onclick="formSwitch()">Switch</button>
                                         </div>
-
-
-
-
 
                                         <div class="form-row">
                                             <div class="item">
