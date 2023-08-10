@@ -6,7 +6,7 @@ import jsonData3 from './reports/FNUSA-discharge-report-2.cs.json' assert {type:
 
 // Execute the function 10 minutes after page load
 window.onload = function() {
-    setTimeout(closeForm, 10000); // 660,000 milliseconds = 11 minutes
+    setTimeout(closeForm, 660000); // 660,000 milliseconds = 11 minutes
 }
 
 let jsonDataStorage = [jsonData1, jsonData2,jsonData3];
@@ -265,6 +265,8 @@ loadButton.addEventListener('click', async () => {
         displayReportText();
         updateDataSummary(jsonData["_formData"]);
         initialiseForm()
+        const targetDiv = document.getElementById("targetDiv");
+        targetDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
     } else {
         jsonDataDisplay.textContent = 'Error loading JSON data.';
     }
