@@ -563,20 +563,33 @@ function formSwitch() {
     switchForm = !switchForm;
     formFields.forEach(o => {
         const element = document.getElementById(o.FieldId + 'Percentage');
+        const elementValue = document.getElementById(o.FieldId) as HTMLInputElement | HTMLSelectElement;
         if (element) {
-            if (element.id.includes('checkBox') || element.id.includes('radio')) {
+            if (element.id.includes('checkBox') || element.id.includes('radio')) { // THIS IS WHAT DOES THE CHECKBOXES
                 element.style.backgroundColor = colorPercentage(o.TrustCount[counter] || null);
+
             } else {
-                element.parentElement.style.backgroundColor = colorPercentage(o.TrustCount[counter] || null);
+                if (elementValue.value) {
+                    element.parentElement.style.backgroundColor = colorPercentage(o.TrustCount[counter] || null);
+                } else {
+                    element.parentElement.style.backgroundColor = "";
+                }
+
             }
             if (!switchForm) {
-                element.innerText = o.TrustCount[counter] ? (o.TrustCount[counter].toString() + " %") : '';
+                if (elementValue.value) {
+                    element.innerText = o.TrustCount[counter] ? (o.TrustCount[counter].toString() + " %") : '';
+                } else {
+                    element.innerText = "";
+                }
+
             } else {
                 element.innerText = "";
             }
         }
     });
 
+    //THESE ARE ONLY HORIZONTAL RADIO BUTTONS WITH TWO OPTIONS
     document.getElementById("strokePercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'strokeCheck').TrustCount[counter], formFields.find(o => o.FieldId === 'strokeUnCheck').TrustCount[counter]].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || null);
     document.getElementById("wakeUpStrokePercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'wakeUpStrokeCheck').TrustCount[counter], formFields.find(o => o.FieldId === 'wakeUpStrokeUnCheck').TrustCount[counter]].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || null);
     document.getElementById("bleedingSubarachnoidPercentage").parentElement.style.backgroundColor = colorPercentage([formFields.find(o => o.FieldId === 'bleedingSubarachnoidCheck').TrustCount[counter], formFields.find(o => o.FieldId === 'bleedingSubarachnoidUnCheck').TrustCount[counter]].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0] || null);
