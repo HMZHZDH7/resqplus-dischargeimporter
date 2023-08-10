@@ -1,8 +1,15 @@
 import {mapper} from "./Mapper.js";
 import jsonData1 from './reports/FNM-discharge-report-1.cs.json' assert {type: 'json'};
 import jsonData2 from './reports/FNUSA-discharge-report-1.cs.json' assert {type: 'json'};
+import jsonData3 from './reports/FNUSA-discharge-report-2.cs.json' assert {type: 'json'};
 
-let jsonDataStorage = [jsonData1, jsonData2];
+
+// Execute the function 10 minutes after page load
+window.onload = function() {
+    setTimeout(myFunction, 600000); // 600,000 milliseconds = 10 minutes
+}
+
+let jsonDataStorage = [jsonData1, jsonData2,jsonData3];
 
 interface formField {
     highLights: highLight[];
@@ -587,13 +594,13 @@ function formSwitch() {
                     if (element.id.includes('checkBox') || element.id.includes('radio')) { // THIS IS WHAT DOES THE CHECKBOXES
                         if ("checked" in elementValue) {
                             if (elementValue.checked) {
-                                element.innerText = o.TrustCount[counter] ? (o.TrustCount[counter].toString() + " %") : '';
+                                element.innerText = o.TrustCount[counter] ? (o.TrustCount[counter].toString() + "%") : '';
                             } else {
                                 element.innerText = '';
                             }
                         }
                     } else {
-                        element.innerText = o.TrustCount[counter] ? (o.TrustCount[counter].toString() + " %") : '';
+                        element.innerText = o.TrustCount[counter] ? (o.TrustCount[counter].toString() + "%") : '';
                     }
                 } else {
                     element.innerText = "";
@@ -623,7 +630,7 @@ function formSwitch() {
     if (!switchForm) {
         const getValueText = (fieldId1, fieldId2) => {
             const value = [formFields.find(o => o.FieldId === fieldId1).TrustCount[counter], formFields.find(o => o.FieldId === fieldId2).TrustCount[counter]].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0];
-            return (value !== undefined && value !== null) ? (value.toString() + ' %') : '';
+            return (value !== undefined && value !== null) ? (value.toString() + '%') : '';
         };
 
         document.getElementById("strokePercentage").innerText = getValueText('strokeCheck', 'strokeUnCheck');
@@ -764,6 +771,10 @@ function highLightIterator(index: number = 0, id: string) {
 
     } catch {
     }
+}
+
+function myFunction() {
+    console.log("Executed after 10 minutes!");
 }
 
 function initialiseForm() {
