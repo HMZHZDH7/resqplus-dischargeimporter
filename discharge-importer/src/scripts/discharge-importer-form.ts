@@ -6,7 +6,7 @@ import jsonData3 from './reports/FNUSA-discharge-report-2.cs.json' assert {type:
 
 // Execute the function 10 minutes after page load
 window.onload = function() {
-    setTimeout(myFunction, 600000); // 600,000 milliseconds = 10 minutes
+    setTimeout(closeForm, 10000); // 660,000 milliseconds = 11 minutes
 }
 
 let jsonDataStorage = [jsonData1, jsonData2,jsonData3];
@@ -773,8 +773,9 @@ function highLightIterator(index: number = 0, id: string) {
     }
 }
 
-function myFunction() {
-    console.log("Executed after 10 minutes!");
+function closeForm() {
+    let button = document.getElementById('submitForm');
+    button.click();
 }
 
 function initialiseForm() {
