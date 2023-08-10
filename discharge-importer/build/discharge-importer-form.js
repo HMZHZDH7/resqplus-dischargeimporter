@@ -534,7 +534,7 @@ function formSwitch() {
             }
             if (!switchForm) {
                 if (elementValue.value) {
-                    element.innerText = o.TrustCount[counter] ? (o.TrustCount[counter].toString() + " %") : '';
+                    element.innerText = o.TrustCount[counter] ? (o.TrustCount[counter].toString() + "%") : '';
                 }
                 else {
                     element.innerText = "";
@@ -562,7 +562,7 @@ function formSwitch() {
     if (!switchForm) {
         const getValueText = (fieldId1, fieldId2) => {
             const value = [formFields.find(o => o.FieldId === fieldId1).TrustCount[counter], formFields.find(o => o.FieldId === fieldId2).TrustCount[counter]].filter(tc => !isNaN(tc)).sort((a, b) => b - a)[0];
-            return (value !== undefined && value !== null) ? (value.toString() + ' %') : '';
+            return (value !== undefined && value !== null) ? (value.toString() + '%') : '';
         };
         document.getElementById("strokePercentage").innerText = getValueText('strokeCheck', 'strokeUnCheck');
         document.getElementById("wakeUpStrokePercentage").innerText = getValueText('wakeUpStrokeCheck', 'wakeUpStrokeUnCheck');
