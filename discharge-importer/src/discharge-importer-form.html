@@ -21,7 +21,7 @@
                 <div class="header">
                     <div>
                         <img width="300px" src="../assets/resq_logo.png" alt="logo RES-Q">
-                        <span>Discharge RES-Q import</span>
+                        <span>RES-Q+ Discharge Importer</span>
                     </div>
                     <div>
                         <div class="legend-list">
@@ -70,7 +70,7 @@
 
                                         <div class="title">
                                             <span>
-                                                Admission data
+                                                Data při přijetí
                                             </span>
                                             <button class="btn" onclick="formSwitch()">Switch</button>
                                         </div>
@@ -83,7 +83,7 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        Age
+                                                        Věk při přijetí
                                                     </span>
                                                 </div>
                                                 <div class="input-item">
@@ -118,14 +118,14 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        Sex
+                                                        Biologické pohlaví
                                                     </span>
                                                 </div>
                                                 <div class="select" id="sexDiv">
                                                     <select id="sex" class="selection">
                                                         <option value="" disabled selected hidden>Select the Sex of the patient</option>
-                                                        <option value="female">Female</option>
-                                                        <option value="male">Male</option>
+                                                        <option value="female">žena</option>
+                                                        <option value="male">muž</option>
                                                     </select>
                                                 </div>
                                                 <div class="input-verification" id="sexVerification">
@@ -158,17 +158,17 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        Wakeup stroke
+                                                        Pacient se s příznaky CMP probudil?
                                                     </span>
                                                 </div>
                                                 <div class="div-button-form div-button-form-switch">
                                                     <label>
                                                         <input type="radio" name="wakeUpStroke" id="wakeUpStrokeCheck"/>
-                                                        <span class="switch-button">YES</span>
+                                                        <span class="switch-button">ANO</span>
                                                     </label>
                                                     <label>
                                                         <input type="radio" name="wakeUpStroke" id="wakeUpStrokeUnCheck" checked/>
-                                                        <span class="switch-button-2">NO</span>
+                                                        <span class="switch-button-2">NE</span>
                                                     </label>
                                                 </div>
                                                 <div class="input-verification">
@@ -200,7 +200,7 @@
                                                 <div id="wakeUpDiv" style="display: none">
                                                     <div class="title-header">
                                                         <span>
-                                                            Time when patient went to bed
+                                                            Kdy šel pacient spát?
                                                         </span>
                                                     </div>
                                                     <div class="input-item">
@@ -237,7 +237,7 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        Stroke while already hospitalised
+                                                        CMP během hospitalizace
                                                     </span>
                                                 </div>
                                                 <div class="div-button-form div-button-form-switch">
@@ -279,16 +279,16 @@
                                                 <div id="strokeDiv">
                                                     <div class="title-header">
                                                         <span>
-                                                            Where was the patient first attended to at your hospital?
+                                                            Místo prvního kontaktu s pacientem ve vaší nemocnici
                                                         </span>
                                                     </div>
                                                     <div class="select">
                                                         <select class="selection" id="firstAttented">
                                                             <option value="" disabled selected hidden>Select an option</option>
-                                                            <option value="direct_CT/MR">Direct to CT/MR imaging suite</option>
-                                                            <option value="emergency">Emergency department/Casualty</option>
-                                                            <option value="outpatient_clinic">Outpatient clinic/facility</option>
-                                                            <option value="other_department">Other department</option>
+                                                            <option value="direct_CT/MR">CT/MR vyšetřovna</option>
+                                                            <option value="emergency">iktová jednotka nebo ARO</option>
+                                                            <option value="outpatient_clinic">pohotovost/urgentní příjem</option>
+                                                            <option value="other_department">jinde</option>
                                                         </select>
                                                     </div>
                                                     <div class="input-verification" id="firstAttentedVerification">
@@ -394,7 +394,7 @@
                                         	<div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        Arrival date to hospital
+                                                        Čas příjezdu do nemocnice
                                                     </span>
                                                 </div>
                                             	<div class="input-item">
@@ -428,7 +428,7 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        Arrival time to hospital
+                                                        Čas příjezdu do nemocnice
                                                     </span>
                                                 </div>
                                                 <div class="input-item">
@@ -466,15 +466,15 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        Patient arrived to your hospital from?
+                                                        Odkud pacient přijel do vaší nemocnice?
                                                     </span>
                                                 </div>
                                                 <div class="select">
                                                     <select class="selection" id="arrivedFrom">
                                                         <option value="" disabled selected hidden>Select an option</option>
-                                                        <option value="ems">From home/scene by EMS/ambulance</option>
-                                                        <option value="private">From home/scene by private transportation</option>
-                                                        <option value="hospital">From another hospital</option>
+                                                        <option value="ems">z místa vzniku CMP sanitkou</option>
+                                                        <option value="private">z místa vzniku CMP vlastní dopravou</option>
+                                                        <option value="hospital">z iktového centra (IC/KCC)</option>
                                                     </select>
                                                 </div>
                                                 <div class="input-verification" id="arrivedFromVerification">
@@ -510,15 +510,15 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        The patient hospitalised in (Day 1)
+                                                        Pacient byl 1. den přijat na
                                                     </span>
                                                 </div>
                                                 <div class="select">
                                                     <select class="selection" id="hospitalizedIn">
                                                         <option value="" disabled selected hidden>Select an option</option>
-                                                        <option value="icu">ICU / Stroke unit</option>
-                                                        <option value="telemetry_bed">Other monitored bed with telemetry</option>
-                                                        <option value="standard_bed">Standard bed</option>
+                                                        <option value="icu">JIP</option>
+                                                        <option value="telemetry_bed">jiné monitorované lůžko (telemetrie)</option>
+                                                        <option value="standard_bed">standardní lůžko</option>
                                                     </select>
                                                 </div>
                                                 <div class="input-verification" id="hospitalizedInVerification">
@@ -548,17 +548,17 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        Patient admitted under which department?
+                                                        Na které oddělení byl pacient přijat?
                                                     </span>
                                                 </div>
                                                 <div class="select">
                                                     <select class="selection" id="department">
                                                         <option value="" disabled selected hidden>Select an option</option>
-                                                        <option value="neurology">Neurology</option>
-                                                        <option value="neurosurgery">Neurosurgery</option>
-                                                        <option value="critical_care">Critical care</option>
-                                                        <option value="internal_medicine">Internal medicine</option>
-                                                        <option value="other">Other</option>
+                                                        <option value="neurology">neurologie</option>
+                                                        <option value="neurosurgery">neurochirurgie</option>
+                                                        <option value="critical_care">ARO/anesteziologie</option>
+                                                        <option value="internal_medicine">interna</option>
+                                                        <option value="other">jiné</option>
                                                     </select>
                                                 </div>
                                                 <div class="input-verification" id="departmentVerification">
@@ -589,7 +589,7 @@
 
                                         <div class="title">
                                             <span>
-                                                Hospitalization data
+                                                Data při hospitalizaci
                                             </span>
                                         </div>
 
@@ -597,7 +597,7 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        Is patient's previous medical history known?
+                                                        Je známá anamnéza pacienta?
                                                     </span>
                                                 </div>
                                                 <div class="div-button-form" id="radioMedicalHistory" style="border-radius: unset;">
@@ -620,47 +620,47 @@
                                                 <div class="div-button-form" id="checkBoxMedicalHistory" style="display: none;">
                                                     <label>
                                                         <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryHypertension"/>
-                                                        <span class="checkbox">Hypertension (ICD-10: I10-I15)</span>
+                                                        <span class="checkbox">hypertenze (ICD-10: I10-I15)</span>
                                                         <b id="checkBoxMedicalHistoryHypertensionPercentage"></b>
                                                     </label>
                                                     <label>
                                                         <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryDiabetes"/>
-                                                        <span class="checkbox">Diabetes (ICD-10: E10-E14)</span>
+                                                        <span class="checkbox">diabetes (ICD-10: E10-E14)</span>
                                                         <b id="checkBoxMedicalHistoryDiabetesPercentage"></b>
                                                     </label>
                                                     <label>
                                                         <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryHyperlipidemia"/>
-                                                        <span class="checkbox">Hyperlypidemia (ICD-10: E78)</span>
+                                                        <span class="checkbox">hyperlipidémie (ICD-10: E78)</span>
                                                         <b id="checkBoxMedicalHistoryHyperlipidemiaPercentage"></b>
                                                     </label>
                                                     <label>
                                                         <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryActiveSmoker"/>
-                                                        <span class="checkbox">Active smoker in last 10 years (ICD-10: Z72.0)</span>
+                                                        <span class="checkbox">kuřák (alespoň 1 cigareta v posledním roce) (ICD-10: Z72.0)</span>
                                                         <b id="checkBoxMedicalHistoryActiveSmokerPercentage"></b>
                                                     </label>
                                                     <label>
                                                         <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryPreviousIschemic"/>
-                                                        <span class="checkbox">Previous ischemic stroke/TIA leading to hospitalization (ICD-10: I63, G45)</span>
+                                                        <span class="checkbox">předchozí ischemická/TIA CMP vedoucí k hospitalizaci (ICD-10: I63, G45)</span>
                                                         <b id="checkBoxMedicalHistoryPreviousIschemicPercentage">100 %</b>
                                                     </label>
                                                     <label>
                                                         <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryPreviousHemorrhage"/>
-                                                        <span class="checkbox">Previous hemorrhage stroke leading to hospitalization (ICD-10: I60, I61)</span>
+                                                        <span class="checkbox">předchozí hemoragická CMP vedoucí k hospitalizaci (ICD-10: I60, I61)</span>
                                                         <b id="checkBoxMedicalHistoryPreviousHemorrhagePercentage"></b>
                                                     </label>
                                                     <label>
                                                         <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryAtrialFibrillation"/>
-                                                        <span class="checkbox">Atrial fibrillation or flutter (paroxysmal/persistent/permanent) (ICD-10: I48)</span>
+                                                        <span class="checkbox">fibrilace nebo flutter síní (paroxysmální/přetrvávající/trvalé) (ICD-10: I48)</span>
                                                         <b id="checkBoxMedicalHistoryAtrialFibrillationPercentage"></b>
                                                     </label>
                                                     <label>
                                                         <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryCoronaryArtery"/>
-                                                        <span class="checkbox">Coronary artery disease/previous myocardial infarction (ICD-10: I21, I25)</span>
+                                                        <span class="checkbox">onemocnění koronárních tepen/předchozí infarkt myokardu (ICD-10: I21, I25)</span>
                                                         <b id="checkBoxMedicalHistoryCoronaryArteryPercentage"></b>
                                                     </label>
                                                     <label>
                                                         <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryCongestiveHeartFailure"/>
-                                                        <span class="checkbox">Congestive heart failure (ICD-10: I50.0)</span>
+                                                        <span class="checkbox">městnavé srdeční selhání (ICD-10: I50.0)</span>
                                                         <b id="checkBoxMedicalHistoryCongestiveHeartFailurePercentage"></b>
                                                     </label>
                                                     <label>
@@ -670,7 +670,7 @@
                                                     </label>
                                                     <label>
                                                         <input type="checkbox" name="checkBoxMedicalHistory" id="checkBoxMedicalHistoryCOVIDPositive"/>
-                                                        <span class="checkbox">COVID positive in last 6 months (ICD-10: U07.1, U08, U09)</span>
+                                                        <span class="checkbox">COVID pozitivní v posledních 6 měsících (ICD-10: U07.1, U08, U09)</span>
                                                         <b id="checkBoxMedicalHistoryCOVIDPositivePercentage"></b>
                                                     </label>
                                                 </div>
@@ -701,7 +701,7 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        Any known treatment before admission/event?
+                                                        Je známa léčba před vznikem CMP?
                                                     </span>
                                                 </div>
                                                 <div class="div-button-form" id="radioTreatmentEvent" style="border-radius: unset;">
@@ -724,27 +724,27 @@
                                                 <div class="div-button-form" id="checkBoxTreatment" style="display: none;">
                                                     <label>
                                                         <input type="checkbox" name="checkBoxTreatment" id="checkBoxTreatmentEventAntidiabetics"/>
-                                                        <span class="checkbox">Antidiabetics (ATC: A10)</span>
+                                                        <span class="checkbox">antidiabetika (ATC: A10)</span>
                                                         <b id="checkBoxTreatmentEventAntidiabeticsPercentage"></b>
                                                     </label>
                                                     <label>
                                                         <input type="checkbox" name="checkBoxTreatment" id="checkBoxTreatmentEventAntihypertensives"/>
-                                                        <span class="checkbox">Antihypertensives (ATC: C02)</span>
+                                                        <span class="checkbox">antihypertenzivní medikace (ATC: C02)</span>
                                                         <b id="checkBoxTreatmentEventAntihypertensivesPercentage"></b>
                                                     </label>
                                                     <label>
                                                         <input type="checkbox" name="checkBoxTreatment" id="checkBoxTreatmentEventAntiplatelets"/>
-                                                        <span class="checkbox">Antiplatelets (ATC: B01AC)</span>
+                                                        <span class="checkbox">protidestičková medikace (antiagregancia) (ATC: B01AC)</span>
                                                         <b id="checkBoxTreatmentEventAntiplateletsPercentage"></b>
                                                     </label>
                                                     <label>
                                                         <input type="checkbox" name="checkBoxTreatment" id="checkBoxTreatmentEventAnticoagulants"/>
-                                                        <span class="checkbox">Anticoagulants (ATC: B01AA, B01AB, B01AE, B01AF)</span>
+                                                        <span class="checkbox">antikoagulanty (ATC: B01AA, B01AB, B01AE, B01AF)</span>
                                                         <b id="checkBoxTreatmentEventAnticoagulantsPercentage"></b>
                                                     </label>
                                                     <label>
                                                         <input type="checkbox" name="checkBoxTreatment" id="checkBoxTreatmentEventHormonalContraception"/>
-                                                        <span class="checkbox">Hormonal contraception (ATC: G03A)</span>
+                                                        <span class="checkbox">hormonální antikoncepce (ATC: G03A)</span>
                                                         <b id="checkBoxTreatmentEventHormonalContraceptionPercentage"></b>
                                                     </label>
                                                     <label>
@@ -783,7 +783,7 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        Glucose (first measurement in hosp.)
+                                                        Hladina glukózy (1. měření v nemocnici)
                                                     </span>
                                                 </div>
                                                 <div class="input-item">
@@ -820,7 +820,7 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        LDL cholesterol (first measurement in hosp.)
+                                                        Hladina LDL cholesterolu (1. měření v nemocnici)
                                                     </span>
                                                 </div>
                                                 <div class="input-item">
@@ -859,7 +859,7 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        Systolic blood pressure (first measurement in hosp. in MMHG)
+                                                        Hodnota systolického tlaku (1. měření v nemocnici v mmHg)
                                                     </span>
                                                 </div>
                                                 <div class="input-item">
@@ -894,7 +894,7 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        Diastolic blood pressure (first measurement in hosp. in MMHG)
+                                                        Hodnota diastolického tlaku (1. měření v nemocnici v mmHg)
                                                     </span>
                                                 </div>
                                                 <div class="input-item">
@@ -930,7 +930,7 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        NIHSS score
+                                                        NIHSS při přijetí
                                                     </span>
                                                 </div>
                                                 <div class="input-item">
@@ -966,7 +966,7 @@
                                             <div class="item">
 						                        <div class="title-header">
                                                     <span>
-                                                        Modified Rankin Scale (mRS) before stroke
+                                                        Stav funkční nezávislosti (mRS) před CMP
                                                     </span>
                                                 </div>
                                                 <div class="select" id="mrsDiv">
@@ -1010,7 +1010,7 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        First INR testing done?
+                                                        Bylo provedeno vstupní vyšetření INR?
                                                     </span>
                                                 </div>
                                                 <div class="select">
@@ -1050,7 +1050,7 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        Glasgow coma scale (GCS)
+                                                        Glasgowská stupnice hloubky bezvědomí (GCS)
                                                     </span>
                                                 </div>
                                                 <div class="input-item">
@@ -1084,7 +1084,7 @@
 
                                         <div class="title">
                                             <span>
-                                                Imaging, diagnosis and treatment
+                                                Zobrazovací metody, diagnóza a léčba
                                             </span>
                                         </div>
 
@@ -1092,20 +1092,20 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        Brain imaging
+                                                        Použité zobrazovací metody
                                                     </span>
                                                 </div>
                                                 <div class="select">
                                                     <select class="selection" style="width: 80%" onchange="toggleSubDiv(this.value)" id="brainImaging">
                                                         <option value="" disabled selected hidden>Select an option</option>
-                                                        <option value="ct">Non-contrast CT (SCTID: 396205005)</option>
-                                                        <option value="cta">Non-contrast CT (SCTID: 396205005) + CT angiography (SCTID: 418272005)</option>
-                                                        <option value="cta_perf">Non-contrast CT (SCTID: 396205005) + CT angiography (SCTID: 418272005) + CT perfusion (SCTID: 433111008)</option>
+                                                        <option value="ct">nekontrastní CT (SCTID: 396205005)</option>
+                                                        <option value="cta">nekontrastní CT (SCTID: 396205005) + CT angiografie (SCTID: 418272005)</option>
+                                                        <option value="cta_perf">nekontrastní CT (SCTID: 396205005) + CT angiografie (SCTID: 418272005) + CT perfuze (SCTID: 433111008)</option>
                                                         <option value="mr">MR DWI/FLAIR</option>
-                                                        <option value="mra">MR DWI/FLAIR + MR angiography</option>
-                                                        <option value="mra_perf">MR DWI/FLAIR + angiography + MR perfusion</option>
-                                                        <option value="elsewhere">Imaging done in another hospital</option>
-                                                        <option value="not_done">Imaging not done</option>
+                                                        <option value="mra">MR DWI/FLAIR + MR angiografie</option>
+                                                        <option value="mra_perf">MR DWI/FLAIR + angiografie + MR perfuze</option>
+                                                        <option value="elsewhere">zobrazování provedeno jinde</option>
+                                                        <option value="not_done">zobrazování neprovedeno</option>
                                                     </select>
                                                 </div>
                                                 <div class="input-verification" id="brainImagingVerification">
@@ -1138,7 +1138,7 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        Imaging done at what date?
+                                                        Imaging done at what time?
                                                     </span>
                                                 </div>
                                                 <div class="input-item" id="imagingDateDone">
@@ -1174,7 +1174,7 @@
                                         <div id="infarctsDiv">
                                             <div class="title-header">
                                                 <span>
-                                                    Old infarcts seen on the imaging?
+                                                    Jsou na snímcích patrná starší ischemická ložiska?
                                                 </span>
                                             </div>
                                             <div class="div-button-form" id="radioInfarcts" style="border-radius: unset;">
@@ -1192,17 +1192,17 @@
                                             <div class="div-button-form" id="checkBoxInfarcts" style="display: none;">
                                                 <label>
                                                     <input type="checkbox" name="checkBoxInfarcts" id="checkBoxInfarctsCortical"/>
-                                                    <span class="checkbox">Cortical</span>
+                                                    <span class="checkbox">kortikální</span>
                                                     <b id="checkBoxInfarctsCorticalPercentage"></b>
                                                 </label>
                                                 <label>
                                                     <input type="checkbox" name="checkBoxInfarcts" id="checkBoxInfarctsSubCortical"/>
-                                                    <span class="checkbox">Subcortical (basal ganglia, internal capsule)</span>
+                                                    <span class="checkbox">subkortikální (bazální ganglia, vnitřní pouzdro)</span>
                                                     <b id="checkBoxInfarctsSubCorticalPercentage"></b>
                                                 </label>
                                                 <label>
                                                     <input type="checkbox" name="checkBoxInfarcts" id="checkBoxBrainstem"/>
-                                                    <span class="checkbox">Brainstem</span>
+                                                    <span class="checkbox">mozkový kmen</span>
                                                     <b id="checkBoxBrainstemPercentage"></b>
                                                 </label>
                                             </div>
@@ -1235,19 +1235,19 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        Stroke type
+                                                        Druh CMP
                                                     </span>
                                                 </div>
                                                 <div class="select">
                                                     <select class="selection" onchange="toggleDivImaging(this.selectedIndex)" id="typeStroke">
                                                         <option value="" disabled selected hidden>Select an option</option>
-                                                        <option value="is">Ischemic stroke (ICD-10: 163 except 163.6)</option>
-                                                        <option value="ich">Intracerebral hemorrhage (ICD-10: 161)</option>
-                                                        <option value="tia">Transient Ischemic Attack (ICD-10: G45)</option>
-                                                        <option value="sah">Subarachnoid hemorrhage (ICD-10: 160)</option>
-                                                        <option value="cvt">Cerebral venous thrombosis (ICD-10: 163.6)</option>
-                                                        <option value="mimics">Stroke mimics</option>
-                                                        <option value="undetermined">Undetermined</option>
+                                                        <option value="is">ischemická CMP (ICD-10: 163 except 163.6)</option>
+                                                        <option value="ich">intracerebrální krvácení (ICD-10: 161)</option>
+                                                        <option value="tia">tranzitorní ischemická ataka (ICD-10: G45)</option>
+                                                        <option value="sah">subarachnoidální krvácení (ICD-10: 160)</option>
+                                                        <option value="cvt">mozková žilní trombóza (ICD-10: 163.6)</option>
+                                                        <option value="mimics">stavy napodobující CMP</option>
+                                                        <option value="undetermined">neurčená</option>
                                                     </select>
                                                 </div>
                                                 <div class="input-verification" id="typeStrokeVerification">
@@ -1323,7 +1323,7 @@
                                                 <div id="imagingSubDiv" style="width: 100%">
                                                     <div class="title-header">
                                                         <span>
-                                                            Was arterial occlusion detected on CTA/MRA?
+                                                            Byla nalezena okluze na CTA/MRA?
                                                         </span>
                                                     </div>
                                                     <div class="div-button-form" id="radioArterial" style="border-radius: unset;">
@@ -1341,92 +1341,92 @@
                                                     <div class="div-button-form" id="checkBoxArterial" style="display: none; flex-direction: row; flex-wrap: wrap;">
                                                         <label style="flex: 50%">
                                                             <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialMCA1Left" />
-                                                            <span class="checkbox">MCA M1 - Middle cerebral artery M1 (LEFT)</span>
+                                                            <span class="checkbox">MCA M1 - Arteria cerebri media M1 (vlevo)</span>
                                                             <b id="checkBoxArterialMCA1LeftPercentage"></b>
                                                         </label>
                                                         <label style="flex: 50%">
                                                             <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialMCA2Left" />
-                                                            <span class="checkbox">MCA M2 - Middle cerebral artery M2 (LEFT)</span>
+                                                            <span class="checkbox">MCA M2 - Arteria cerebri media M2 (vlevo)</span>
                                                             <b id="checkBoxArterialMCA2LeftPercentage"></b>
                                                         </label>
                                                         <label style="flex: 50%">
                                                             <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialMCA3Left" />
-                                                            <span class="checkbox">MCA M3 - Middle cerebral artery M3 (LEFT)</span>
+                                                            <span class="checkbox">MCA M3 - Arteria cerebri media M3 (vlevo)</span>
                                                             <b id="checkBoxArterialMCA3LeftPercentage"></b>
                                                         </label>
                                                         <label style="flex: 50%">
                                                             <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialACA" />
-                                                            <span class="checkbox">Anterior cerebral artery (LEFT)</span>
+                                                            <span class="checkbox">Arteria cerebri anterior (vlevo)</span>
                                                             <b id="checkBoxArterialACAPercentage"></b>
                                                         </label>
                                                         <label style="flex: 50%">
                                                             <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialPCA1Left" />
-                                                            <span class="checkbox">PCA P1 - Posterior cerebral artery P1 (LEFT)</span>
+                                                            <span class="checkbox">PCA P1 - Arteria cerebri posterior P1 (vlevo)</span>
                                                             <b id="checkBoxArterialPCA1LeftPercentage"></b>
                                                         </label>
                                                         <label style="flex: 50%">
                                                             <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialPCA2Left" />
-                                                            <span class="checkbox">PCA P2 Posterior cerebral artery P2 (LEFT)</span>
+                                                            <span class="checkbox">PCA P2 - Arteria cerebri posterior P2 (vlevo)</span>
                                                             <b id="checkBoxArterialPCA2LeftPercentage"></b>
                                                         </label>
                                                         <label style="flex: 50%">
                                                             <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialCEALeft" />
-                                                            <span class="checkbox">Carotid artery extracranial (LEFT)</span>
+                                                            <span class="checkbox">Arteria carotis interna – extrakraniální (vlevo)</span>
                                                             <b id="checkBoxArterialCEALeftPercentage"></b>
                                                         </label>
                                                         <label style="flex: 50%">
                                                             <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialCIALeft" />
-                                                            <span class="checkbox">Carotid artery intracranial (LEFT)</span>
+                                                            <span class="checkbox">Arteria carotid interna – intrakraniální (vlevo)</span>
                                                             <b id="checkBoxArterialCIALeftPercentage"></b>
                                                         </label>
                                                         <label style="flex: 50%">
                                                             <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialVertebral" />
-                                                            <span class="checkbox">Vertebral artery</span>
+                                                            <span class="checkbox">Arteria vertebralis</span>
                                                             <b id="checkBoxArterialVertebralPercentage"></b>
                                                         </label>
                                                         <label style="flex: 50%">
                                                             <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialMCA1Right" />
-                                                            <span class="checkbox">MCA M1 Middle cerebral artery M1 (RIGHT)</span>
+                                                            <span class="checkbox">MCA M1 - Arteria cerebri media M1 (vpravo)</span>
                                                             <b id="checkBoxArterialMCA1RightPercentage"></b>
                                                         </label>
                                                         <label style="flex: 50%">
                                                             <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialMCA2Right" />
-                                                            <span class="checkbox">MCA M2 - Middle cerebral artery M2 (RIGHT)</span>
+                                                            <span class="checkbox">MCA M2 - Arteria cerebri media M2 (vpravo)</span>
                                                             <b id="checkBoxArterialMCA2RightPercentage"></b>
                                                         </label>
                                                         <label style="flex: 50%">
                                                             <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialMCA3Right" />
-                                                            <span class="checkbox">MCA M3 - Middle cerebral artery M3 (RIGHT)</span>
+                                                            <span class="checkbox">MCA M3 - Arteria cerebri media M3 (vpravo)</span>
                                                             <b id="checkBoxArterialMCA3RightPercentage"></b>
                                                         </label>
                                                         <label style="flex: 50%">
                                                             <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialACARight" />
-                                                            <span class="checkbox">Anterior cerebral artery (RIGHT)</span>
+                                                            <span class="checkbox">Arteria cerebri anterior (vpravo)</span>
                                                             <b id="checkBoxArterialACARightPercentage"></b>
                                                         </label>
                                                         <label style="flex: 50%">
                                                             <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialPCA1Right" />
-                                                            <span class="checkbox">PCA P1 - Posterior cerebral artery P1 (RIGHT)</span>
+                                                            <span class="checkbox">PCA P1 - Arteria cerebri posterior P1 (vpravo)</span>
                                                             <b id="checkBoxArterialPCA1RightPercentage"></b>
                                                         </label>
                                                         <label style="flex: 50%">
                                                             <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialPCA2Right" />
-                                                            <span class="checkbox">PCA P2 Posterior cerebral artery P2 (RIGHT)</span>
+                                                            <span class="checkbox">PCA P2 - Arteria cerebri posterior P2 (vpravo)</span>
                                                             <b id="checkBoxArterialPCA2RightPercentage"></b>
                                                         </label>
                                                         <label style="flex: 50%">
                                                             <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialCEARight" />
-                                                            <span class="checkbox">Carotid artery extracranial (RIGHT)</span>
+                                                            <span class="checkbox">Arteria carotis interna – extrakraniální (vpravo)</span>
                                                             <b id="checkBoxArterialCEARightPercentage"></b>
                                                         </label>
                                                         <label style="flex: 50%">
                                                             <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialCIARight" />
-                                                            <span class="checkbox">Carotid artery intracranial (RIGHT)</span>
+                                                            <span class="checkbox">Arteria carotid interna – intrakraniální (vpravo)</span>
                                                             <b id="checkBoxArterialCIARightPercentage"></b>
                                                         </label>
                                                         <label style="flex: 50%">
                                                             <input type="checkbox" name="checkBoxArterial" id="checkBoxArterialBasilar" />
-                                                            <span class="checkbox">Basilar artery</span>
+                                                            <span class="checkbox">Arteria basilaris</span>
                                                             <b id="checkBoxArterialBasilarPercentage"></b>
                                                         </label>
                                                     </div>
@@ -1460,7 +1460,7 @@
                                                 <div class="item">
                                                     <div class="title-header">
                                                         <span>
-                                                            Was the patient treated with IV thrombolysis in your hospital?
+                                                            Byla ve vaší nemocnici podána IV trombolýza?
                                                         </span>
                                                     </div>
                                                     <div class="div-button-form div-button-form-switch">
@@ -1501,21 +1501,21 @@
                                                     <div id="thrombolysisSelectDiv">
                                                         <div class="title-header">
                                                             <span>
-                                                                Select the main reason for not doing thrombolysis
+                                                                Uvěďte proč nebyla podána trombolýza
                                                             </span>
                                                         </div>
                                                         <div class="select">
                                                             <select class="selection" onchange="thrombolysisTimeToggle(this.value)"id="thrombolysisReason">
                                                                 <option value="" disabled selected hidden>Select an option</option>
-                                                                <option value="already_done_elsewhere">Already received IVT in another hospital</option>
-                                                                <option value="time_window">Out of time window</option>
-                                                                <option value="mild_deficit">Mild deficit</option>
-                                                                <option value="consent">Consent not given</option>
-                                                                <option value="cost">Cost of treatment</option>
-                                                                <option value="transferred">Transferred to another hospital for IVT</option>
-                                                                <option value="only_mt">Only mechanical thrombectomy preferred</option>
-                                                                <option value="no_drug">Thrombolysis drug not available</option>
-                                                                <option value="other">Other</option>
+                                                                <option value="already_done_elsewhere">již podstoupil trombolýzu v jiné nemocnici</option>
+                                                                <option value="time_window">mimo časové/tkáňové okno</option>
+                                                                <option value="mild_deficit">mírný deficit</option>
+                                                                <option value="consent">souhlas nebyl udělen</option>
+                                                                <option value="cost">náklady na léčbu</option>
+                                                                <option value="transferred">převezen na trombolýzu do jiné nemocnice</option>
+                                                                <option value="only_mt">upřednostňována pouze mechanická trombektomie</option>
+                                                                <option value="no_drug">lék na trombolýzu není k dispozici</option>
+                                                                <option value="other">jiné</option>
                                                             </select>
                                                         </div>
                                                         <div class="input-verification" id="thrombolysisReasonVerification">
@@ -1548,7 +1548,7 @@
                                                 <div id="thrombolysisDiv" class="item" style="display: none; flex-direction: column">
                                                     <div class="title-header">
                                                         <span>
-                                                            Transfer time (door-out)
+                                                            Datum a čas překladu pacienta z nemocnice (door-out)
                                                         </span>
                                                     </div>
                                                     <div class="input-item">
@@ -1588,16 +1588,16 @@
                                                         <div>
                                                             <div class="title-header">
                                                                 <span>
-                                                                    Drug used
+                                                                    Léčba
                                                                 </span>
                                                             </div>
                                                             <div class="select">
                                                                 <select class="selection" id="drugUsed">
                                                                     <option value="" disabled selected hidden>Select an option</option>
-                                                                    <option value="alteplase">Alteplase</option>
-                                                                    <option value="tenecteplase">Tenecteplase</option>
-                                                                    <option value="streptokinase">Streptokinase</option>
-                                                                    <option value="staphylokinase">Staphylokinase</option>
+                                                                    <option value="alteplase">altepláza</option>
+                                                                    <option value="tenecteplase">tenektepláza</option>
+                                                                    <option value="streptokinase">streptokináza</option>
+                                                                    <option value="staphylokinase">stafylokináza</option>
                                                                 </select>
                                                             </div>
                                                             <div class="input-verification" id="drugUsedVerification">
@@ -1628,7 +1628,7 @@
                                                     <div class="item">
                                                         <div class="title-header">
                                                             <span>
-                                                                Antidote to anticoagulent given
+                                                                Bylo podáno antidotum antikoagulační léčby?
                                                             </span>
                                                         </div>
                                                         <div class="div-button-form div-button-form-switch">
@@ -1670,7 +1670,7 @@
                                                     <div class="item">
                                                         <div class="title-header">
                                                     <span>
-                                                        Treatment dose (in MG)
+                                                        Dávka léčiva (v mg)
                                                     </span>
                                                         </div>
                                                         <div class="input-item">
@@ -1704,7 +1704,7 @@
                                                     <div class="item">
                                                         <div class="title-header">
                                                     <span>
-                                                        Bolus time
+                                                        Datum a čas podání bolusu
                                                     </span>
                                                         </div>
                                                         <div class="input-item" id="bolusDiv">
@@ -1739,16 +1739,16 @@
                                                     <div style="width: 100%">
                                                         <div class="title-header">
                                                             <span>
-                                                                IV Thrombolysis given in
+                                                                IV trombolýza podána v
                                                             </span>
                                                         </div>
                                                         <div class="select">
                                                             <select class="selection" id="thrombolysisGiven">
                                                                 <option value="" disabled selected hidden>Select an option</option>
-                                                                <option value="radiology">CT/MRI room</option>
-                                                                <option value="icu">Stroke unit or ICU</option>
-                                                                <option value="emergency">Emergency room</option>
-                                                                <option value="other">Other</option>
+                                                                <option value="radiology">CT/MR vyšetřovna</option>
+                                                                <option value="icu">iktová jednotka nebo ARO</option>
+                                                                <option value="emergency">pohotovost</option>
+                                                                <option value="other">jinde</option>
                                                             </select>
                                                         </div>
                                                         <div class="input-verification">
@@ -1781,7 +1781,7 @@
                                                 <div class="item">
                                                     <div class="title-header" style="height: 45px">
                                                         <span>
-                                                            Was the patient treated with thrombectomy in your hospital?
+                                                            Byla ve vaší nemocnici provedena trombektomie?
                                                         </span>
                                                     </div>
                                                     <div class="div-button-form div-button-form-switch">
