@@ -1458,7 +1458,7 @@
 
                                             <div class="form-row">
                                                 <div class="item">
-                                                    <div class="title-header" style="height: 45px">
+                                                    <div class="title-header">
                                                         <span>
                                                             Was the patient treated with IV thrombolysis in your hospital?
                                                         </span>
@@ -1524,11 +1524,11 @@
                                                                 <span id="thrombolysisReasonEdited" style="display: none">EDITED</span>
                                                             </div>
                                                             <div class="input-state">
-                                                        <button class="highLight-iterator" id="thrombolysisReasonIterator" onclick="highLight('thrombolysisReason')">
+                                                                <button class="highLight-iterator" id="thrombolysisReasonIterator" onclick="highLight('thrombolysisReason')">
 
-                                                        </button>
-                                                    </div>
-                                                    <div class="input-state">
+                                                                </button>
+                                                            </div>
+                                                            <div class="input-state">
                                                                 <button id="verify-thrombolysisReason" onclick="toggleVerification('thrombolysisReason')">
                                                                     <span>
                                                                         Verify
@@ -1545,11 +1545,11 @@
                                                 </div>
                                             </div>
                                             <div class="form-row">
-                                                <div id="thrombolysisDiv" class="item" style="display: none;">
+                                                <div id="thrombolysisDiv" class="item" style="display: none; flex-direction: column">
                                                     <div class="title-header">
-                                                    <span>
-                                                        Transfer time (door-out)
-                                                    </span>
+                                                        <span>
+                                                            Transfer time (door-out)
+                                                        </span>
                                                     </div>
                                                     <div class="input-item">
                                                         <input class="form-input" type="date" name="thrombolysisDate" id="thrombolysisDate" pattern="\w{1,}"/>
@@ -1560,11 +1560,11 @@
                                                             <span id="thrombolysisDateEdited" style="display: none">EDITED</span>
                                                         </div>
                                                         <div class="input-state">
-                                                        <button class="highLight-iterator" id="thrombolysisDateIterator" onclick="highLight('thrombolysisDate')">
+                                                            <button class="highLight-iterator" id="thrombolysisDateIterator" onclick="highLight('thrombolysisDate')">
 
-                                                        </button>
-                                                    </div>
-                                                    <div class="input-state">
+                                                            </button>
+                                                        </div>
+                                                        <div class="input-state">
                                                             <button id="verify-thrombolysisDate" onclick="toggleVerification('thrombolysisDate')">
                                                                 <span>
                                                                     Verify
@@ -3762,7 +3762,7 @@
 
                                         <div class="form-row">
                                             <div class="item">
-                                                <div class="title-header" style="height: 45px">
+                                                <div class="title-header">
                                                     <span>
                                                         Follow up appointment scheduled in your hospital for stroke management
                                                     </span>
@@ -3800,7 +3800,7 @@
                                                 </div>
                                             </div>
                                             <div class="item">
-                                                <div class="title-header" style="height: 45px">
+                                                <div class="title-header">
                                                     <span>
                                                         Was a smoking cessation program recommended?
                                                     </span>
@@ -3843,9 +3843,10 @@
                                     </form>
                                     <div style="display: flex; justify-content: center; align-items: center; height: 10vh";>
                                         <button id="loadButton">Load Next JSON</button>
+                                        <button class="btn" onclick="exportData()">Submit</button>
                                         <pre id="jsonDataDisplay"></pre>
 <!--                                        <input class="btn" type="button" onclick="stock_event='';stock_continuous_measurement='';stock_frequence='';stock_meta=''" value="Clear">-->
-<!--                                        <button class="btn" onclick="exportData()">Submit</button>-->
+<!--                                        -->
 <!--                                        <input class="btn" type="button" id="btn" onclick="stock_event+= logging_ended+','; Meta();Btn(stock_event,link_event,head_fields1);Btn(stock_frequence,link_continuous_measurment,head_fields2);Btn(stock_meta,link_meta,head_fields3)" value="download csv">-->
                                         <button class="btn" style="width: 400px; height:50px" onclick="exportData(); stock_event += logging_ended + ','; Meta(); Btn(stock_event, link_event, head_fields1); Btn(stock_frequence, link_continuous_measurment, head_fields2); Btn(stock_meta, link_meta, head_fields3)">Submit form</button>
                                     </div>
