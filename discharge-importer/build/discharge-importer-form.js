@@ -13,7 +13,7 @@ import jsonData2 from './reports/FNUSA-discharge-report-1.cs.json' assert { type
 import jsonData3 from './reports/FNUSA-discharge-report-2.cs.json' assert { type: 'json' };
 // Execute the function 10 minutes after page load
 window.onload = function () {
-    setTimeout(closeForm, 10000); // 660,000 milliseconds = 11 minutes
+    setTimeout(closeForm, 660000); // 660,000 milliseconds = 11 minutes
 };
 let jsonDataStorage = [jsonData1, jsonData2, jsonData3];
 const allFormFields = document.querySelectorAll('input, select');
@@ -41,8 +41,8 @@ let formFields = [
     { highLights: [], FieldId: "wakeUpStrokeCheck", TrustCount: [65, 73, 80], Verified: [false, false, false], Value: "false", Edited: [false, false, false] },
     { highLights: [], FieldId: "wakeUpStrokeUnCheck", TrustCount: [67, 71, 62], Verified: [false, false, false], Value: "true", Edited: [false, false, false] },
     { highLights: [], FieldId: "wakeUpDate", TrustCount: [75, 60, 67], Verified: [false, false, false], Value: "", Edited: [false, false, false] },
-    { highLights: [], FieldId: "strokeCheck", TrustCount: [89, 69, 70], Verified: [false, false, false], Value: "false", Edited: [false, false, false] },
-    { highLights: [], FieldId: "strokeUnCheck", TrustCount: [68, 85, 64], Verified: [false, false, false], Value: "true", Edited: [false, false, false] },
+    { highLights: [], FieldId: "strokeCheck", TrustCount: [89, 69, 0], Verified: [false, false, false], Value: "false", Edited: [false, false, false] },
+    { highLights: [], FieldId: "strokeUnCheck", TrustCount: [68, 85, 0], Verified: [false, false, false], Value: "true", Edited: [false, false, false] },
     { highLights: [], FieldId: "firstAttented", TrustCount: [90, 80, 66], Verified: [false, false, false], Value: "", Edited: [false, false, false] },
     { highLights: [], FieldId: "arrivalDate", TrustCount: [76, 62, 79], Verified: [false, false, false], Value: "", Edited: [false, false, false] },
     { highLights: [], FieldId: "arrivalTime", TrustCount: [44, 67, 65], Verified: [false, false, false], Value: "", Edited: [false, false, false] },
@@ -205,8 +205,8 @@ let formFields = [
     { highLights: [], FieldId: "appointmentScheduled", TrustCount: [16, 80, 80], Verified: [false, false, false], Value: "", Edited: [false, false, false] },
     { highLights: [], FieldId: "smokingCessation", TrustCount: [74, 5, 61], Verified: [false, false, false], Value: "", Edited: [false, false, false] },
     { highLights: [], FieldId: "hospitalised24Hour", TrustCount: [65, 65, 89], Verified: [false, false, false], Value: "", Edited: [false, false, false] },
-    { highLights: [], FieldId: "radioVentilatedYes", TrustCount: [86, 45, 64], Verified: [false, false, false], Value: "", Edited: [false, false, false] },
-    { highLights: [], FieldId: "radioVentilatedNo", TrustCount: [13, 71, 66], Verified: [false, false, false], Value: "", Edited: [false, false, false] },
+    { highLights: [], FieldId: "radioVentilatedYes", TrustCount: [86, 45, 0], Verified: [false, false, false], Value: "", Edited: [false, false, false] },
+    { highLights: [], FieldId: "radioVentilatedNo", TrustCount: [13, 71, 0], Verified: [false, false, false], Value: "", Edited: [false, false, false] },
     { highLights: [], FieldId: "radioCraniectomyYes", TrustCount: [85, 86, 72], Verified: [false, false, false], Value: "", Edited: [false, false, false] },
     { highLights: [], FieldId: "radioCraniectomyNo", TrustCount: [65, 83, 86], Verified: [false, false, false], Value: "", Edited: [false, false, false] },
     { highLights: [], FieldId: "radioThromboembolismYes", TrustCount: [67, 79, 74], Verified: [false, false, false], Value: "false", Edited: [false, false, false] },
@@ -250,6 +250,12 @@ loadButton.addEventListener('click', () => __awaiter(void 0, void 0, void 0, fun
         displayReportText();
         updateDataSummary(jsonData["_formData"]);
         initialiseForm();
+        const targetDiv = document.getElementById("targetDivForm");
+        const targetText = document.getElementById("targetDivText");
+        targetDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setTimeout(() => {
+            targetText.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 700);
     }
     else {
         jsonDataDisplay.textContent = 'Error loading JSON data.';
@@ -520,8 +526,9 @@ function colorPercentage(percentage) {
         return 'var(--warning)';
     }
 }
-function formSwitch() {
-    switchForm = !switchForm;
+function formSwitch(load = false) {
+    if (load)
+        switchForm = !switchForm;
     formFields.forEach(o => {
         const element = document.getElementById(o.FieldId + 'Percentage');
         const elementValue = document.getElementById(o.FieldId);
@@ -795,13 +802,6 @@ function initialiseForm() {
     });
     formSwitch();
     highLightIterators();
-    /*function updateTextareaHeight() {
-        textarea.style.height = 'auto';
-        textarea.style.height = `${textarea.scrollHeight}px`;
-    }
-
-    textarea.addEventListener('input', updateTextareaHeight);
-    window.addEventListener('load', updateTextareaHeight);*/
     const divWakeUp = document.getElementById("wakeUpDiv");
     const radioWakeUpStrokeCheck = document.getElementById("wakeUpStrokeCheck");
     const radioWakeUpDateVerification = document.getElementById("wakeUpDateVerification");
