@@ -260,11 +260,13 @@ loadButton.addEventListener('click', async () => {
     if (counter < jsonDataStorage.length - 1) {
         counter++;
         jsonData = jsonDataStorage[counter]
+        toggleEditForAll()
         resetFieldValues(formFields);
         updateListValuesFromJson();
         displayReportText();
         updateDataSummary(jsonData["_formData"]);
         initialiseForm()
+
         const targetDiv = document.getElementById("targetDivForm");
         const targetText = document.getElementById("targetDivText");
         targetDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -557,6 +559,18 @@ function toggleEdit(id: string, ids: string[] = [], checkBoxIds: string [] = [])
         (document.getElementById(id) as HTMLInputElement | HTMLSelectElement).disabled = false;
         formFields.find(o => o.FieldId == id).Edited[counter] = true;
     }
+}
+
+function toggleEditForAll() {
+    const editedSpans = document.querySelectorAll('span[id$="Edited"]');
+    const percentageSpans = document.querySelectorAll('span[id$="Percentage"]');
+
+    editedSpans.forEach((span) => {
+        (span as HTMLElement).style.display = 'none';
+    });
+    percentageSpans.forEach((span) => {
+        (span as HTMLElement).style.display = '';
+    });
 }
 
 function colorPercentage(percentage: number): string {

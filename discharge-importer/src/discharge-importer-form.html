@@ -12,7 +12,7 @@
         <script src="logging.js"></script>
         <link rel="stylesheet" href="css/discharge-importer-form.css">
     </head>
-    <body id="example" onmouseover="mouselog(event)" onmouseout="mouselog(event)" onclick="mouselog(event)" onpointermove="ContinuousMeasurement(event)">
+    <body id="example" onmouseover="mouselog(event)" onmouseout="mouselog(event)" onclick="mouselog(event)" onmousemove="ContinuousMeasurement(event)">
         <div class="application">
             <div>
 
@@ -20,9 +20,15 @@
             <div class="content">
                 <div class="header">
                     <div>
+                        <div style="display: flex; justify-content: space-between">
+                            <div></div>
+                            <button class="btn" onclick="formSwitch(true)">Switch</button>
+                        </div>
                         <img width="300px" src="../assets/resq_logo.png" alt="logo RES-Q">
                         <span>Discharge Importer</span>
+
                     </div>
+
                     <div>
                         <div class="legend-list">
                             <div class="legend">
@@ -58,10 +64,7 @@
                                 <div class="form-field">
                                     <form class="form" action="javascript:void(0);">
 
-                                        <div style="display: flex; justify-content: space-between">
-                                            <div></div>
-                                            <button class="btn" onclick="formSwitch(true)">Switch</button>
-                                        </div>
+
                                         <div class="data-summary">
                                             <div>
                                                 <h3>Auto-complete summary</h3>

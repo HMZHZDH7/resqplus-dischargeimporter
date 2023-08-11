@@ -245,6 +245,7 @@ loadButton.addEventListener('click', () => __awaiter(void 0, void 0, void 0, fun
     if (counter < jsonDataStorage.length - 1) {
         counter++;
         jsonData = jsonDataStorage[counter];
+        toggleEditForAll();
         resetFieldValues(formFields);
         updateListValuesFromJson();
         displayReportText();
@@ -511,6 +512,16 @@ function toggleEdit(id, ids = [], checkBoxIds = []) {
         document.getElementById(id).disabled = false;
         formFields.find(o => o.FieldId == id).Edited[counter] = true;
     }
+}
+function toggleEditForAll() {
+    const editedSpans = document.querySelectorAll('span[id$="Edited"]');
+    const percentageSpans = document.querySelectorAll('span[id$="Percentage"]');
+    editedSpans.forEach((span) => {
+        span.style.display = 'none';
+    });
+    percentageSpans.forEach((span) => {
+        span.style.display = '';
+    });
 }
 function colorPercentage(percentage) {
     if (percentage == null) {
@@ -800,7 +811,7 @@ function initialiseForm() {
             });
         }
     });
-    formSwitch();
+    formSwitch(true);
     highLightIterators();
     const divWakeUp = document.getElementById("wakeUpDiv");
     const radioWakeUpStrokeCheck = document.getElementById("wakeUpStrokeCheck");
