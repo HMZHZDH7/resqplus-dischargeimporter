@@ -47,7 +47,7 @@
                     </div>
                 </div>
                 <div class="body">
-                    <div class="note">
+                    <div  id="note-body" class="note">
                         <div class="note-body">
                             <div id="targetDivText" class="note-body-padding">
                                 <div class="note-template">
@@ -324,7 +324,7 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        Date on onset of stroke symptoms
+                                                        Datum nástupu příznaků mrtvice
                                                     </span>
                                                 </div>
                                                 <div class="input-item">
@@ -359,7 +359,7 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        Date on onset of stroke symptoms
+                                                        čas nástupu příznaků mrtvice
                                                     </span>
                                                 </div>
                                                 <div class="input-item">
@@ -1140,11 +1140,11 @@
                                             <div class="item">
                                                 <div class="title-header">
                                                     <span>
-                                                        Imaging done at what time?
+                                                        Čas pořízení snímku
                                                     </span>
                                                 </div>
                                                 <div class="input-item" id="imagingDateDone">
-                                                    <input class="form-input" type="date" name="imagingDate" id="imagingDate" pattern="\w{1,}"/>
+                                                    <input class="form-input" type="time" name="imagingDate" id="imagingDate" pattern="\w{1,}"/>
                                                 </div>
                                                 <div class="input-verification" id="imagingDateVerification">
                                                     <div class="input-trust">
@@ -1550,7 +1550,7 @@
                                                 <div id="thrombolysisDiv" class="item" style="display: none; flex-direction: column">
                                                     <div class="title-header">
                                                         <span>
-                                                            Datum a čas překladu pacienta z nemocnice (door-out)
+                                                            Datum překladu pacienta z nemocnice (door-out)
                                                         </span>
                                                     </div>
                                                     <div class="input-item">
@@ -1706,7 +1706,7 @@
                                                     <div class="item">
                                                         <div class="title-header">
                                                     <span>
-                                                        Datum a čas podání bolusu
+                                                        Datum podání bolusu
                                                     </span>
                                                         </div>
                                                         <div class="input-item" id="bolusDiv">
@@ -1908,7 +1908,7 @@
                                                     <div class="item">
                                                         <div class="title-header">
                                                     <span>
-                                                        Datum a čas punkce třísla
+                                                        Datum punkce třísla
                                                     </span>
                                                         </div>
                                                         <div class="input-item" id="groinDiv">
@@ -1985,7 +1985,7 @@
                                                     <div class="item">
                                                         <div class="title-header">
                                                     <span>
-                                                        Datum a čas reperfuze
+                                                        Datum reperfuze
                                                     </span>
                                                         </div>
                                                         <div class="input-item" id="mticiDiv" style="display: none;">
@@ -2933,7 +2933,7 @@
                                                     <div class="item">
                                                         <div class="title-header">
                                                     <span>
-                                                        Datum a čas podání bolusu
+                                                        Datum podání bolusu
                                                     </span>
                                                         </div>
                                                         <div class="input-item">
@@ -3030,6 +3030,7 @@
                                                         <option value="carotid">karotická</option>
                                                         <option value="bilateral_stenosis">ne, analýza nespolehlivá z důvodu oboustranné stenózy</option>
                                                         <option value="no_deficit">bez deficitu</option>
+                                                        <option value="na">N/A</option>
                                                     </select>
                                                 </div>
                                                 <div class="input-verification" id="ctmrPerfusionVerification">

@@ -735,6 +735,8 @@ function objectToCsvRow(obj: any): string {
 
 function highlightText(start: number, length: number) {
     quill.setSelection(start, length);
+    const targetText = document.getElementById("note-body");
+    targetText.scrollTo(0,5000)
 }
 
 function highLight(id: string) {

@@ -675,6 +675,8 @@ function objectToCsvRow(obj) {
 }
 function highlightText(start, length) {
     quill.setSelection(start, length);
+    const targetText = document.getElementById("note-body");
+    targetText.scrollTo(0, 5000);
 }
 function highLight(id) {
     const highLights = formFields.find(o => o.FieldId == id).highLights;
@@ -811,7 +813,7 @@ function initialiseForm() {
             });
         }
     });
-    formSwitch(true);
+    formSwitch();
     highLightIterators();
     const divWakeUp = document.getElementById("wakeUpDiv");
     const radioWakeUpStrokeCheck = document.getElementById("wakeUpStrokeCheck");
